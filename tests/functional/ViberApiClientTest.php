@@ -45,12 +45,14 @@ class ViberApiClientTest extends TestCase
             $this->assertArrayHasKey('currency', $answer);
             $this->assertEquals(self::ERR_NO, $answer['result'][0]['error']);
 
+            // Use live key, to check message status
+            /**
             $status = $this->viberClient->getStatusById($answer['result'][0]['id']);
             $this->assertArrayHasKey('price', $status);
             $this->assertArrayHasKey('msisdn', $status);
             $this->assertArrayHasKey('error', $status);
             $this->assertEquals(self::ERR_NO, $status['error']);
-
+             */
         } catch (Exception $e) {
             $this->fail(TestConfig::EXCEPTION_FAIL . $e->getMessage());
         }
