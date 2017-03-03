@@ -147,11 +147,9 @@ class SmsApiClient extends ApiClient {
     public function sendSmsMulti ($messages, $validity=72, $tariff=NULL, $only_price=false)
     {
 
-        foreach ($messages as &$msg) {
+        foreach ($messages as &$msg)
             if(!isset($msg['originator']) && $this->sender)
                 $msg['originator'] = $this->sender;
-        }
-
         $message = [];
         $message['destination'] = 'individual';
         $message['phones'] = $messages;
@@ -168,5 +166,4 @@ class SmsApiClient extends ApiClient {
         $result = json_decode($resp,true);
         return $result;
     }
-
 }

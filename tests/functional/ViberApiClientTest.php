@@ -28,7 +28,7 @@ class ViberApiClientTest extends TestCase
     /**
      * @test
      */
-    public function hlrNotFoundTest() {
+    public function ViberMessNotFoundTest() {
         $answer = $this->viberClient->getStatusById(1);
         $this->assertEquals(self::ERR_VIBER_MESS_NOT_FOUND, $answer['error']);
     }
@@ -39,20 +39,18 @@ class ViberApiClientTest extends TestCase
     public function sendSuccessViberTest() {
         try {
             $this->viberClient->addMessage([['msisdn' => TestConfig::TEST_PHONE_1]], 'test');
+
             $answer = $this->viberClient->sendMessages();
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
             $this->assertArrayHasKey('currency', $answer);
             $this->assertEquals(self::ERR_NO, $answer['result'][0]['error']);
 
-            // Use live key, to check message status
-            /**
             $status = $this->viberClient->getStatusById($answer['result'][0]['id']);
             $this->assertArrayHasKey('price', $status);
             $this->assertArrayHasKey('msisdn', $status);
             $this->assertArrayHasKey('error', $status);
             $this->assertEquals(self::ERR_NO, $status['error']);
-             */
         } catch (Exception $e) {
             $this->fail(TestConfig::EXCEPTION_FAIL . $e->getMessage());
         }

@@ -86,6 +86,26 @@ class HLRApiClientTest extends TestCase
         }
     }
 
+
+    /**
+     * @test
+     */
+    public function HLRssuccessTest() {
+        try {
+            $answer = $this->hlrClient->sendHLRS([
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => 'hlrs' . (string)time()],
+                ['msisdn' => TestConfig::TEST_PHONE_2, 'reference' => 'hlrs' . (string)(time()+1)],
+            ]);
+            $this->assertArrayHasKey('result', $answer);
+            $this->assertArrayHasKey('total_price', $answer);
+            $this->assertArrayHasKey('currency', $answer);
+            $this->assertEquals(self::ERR_NO, $answer['result'][0]['error']);
+            $this->assertEquals(self::ERR_NO, $answer['result'][1]['error']);
+        } catch (Exception $e) {
+            $this->fail(TestConfig::EXCEPTION_FAIL . $e->getMessage());
+        }
+    }
+
     /**
      * @test
      */

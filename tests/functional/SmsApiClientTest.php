@@ -57,6 +57,38 @@ class SmsApiClientTest extends TestCase
     /**
      * @test
      */
+    public function sendSuccessSmsStatusTest() {
+        try {
+            $answer = $this->smsClient->sendSms(TestConfig::TEST_PHONE_1, 'test', 'successSend' . (string)time());
+            $answer = $this->smsClient->getStatusById($answer['result']['id']);
+            $this->assertEquals(self::ERR_NO, $answer['error']);
+        } catch (Exception $e) {
+            $this->fail(TestConfig::EXCEPTION_FAIL . $e->getMessage());
+        }
+    }
+
+    /**
+     * @test
+     */
+    public function sendSuccessSmsMultiTest() {
+        try {
+            $answer = $this->smsClient->sendSmsMulti([
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'body' =>'test', 'reference' => 'successSendM' . (string)time()],
+                ['msisdn' => TestConfig::TEST_PHONE_2, 'body' =>'tes2', 'reference' => 'successSendM1' . (string)time()],
+            ]);
+            $this->assertArrayHasKey('result', $answer);
+            $this->assertArrayHasKey('total_price', $answer);
+            $this->assertArrayHasKey('currency', $answer);
+            $this->assertEquals(self::ERR_NO, $answer['result'][0]['error']);
+            $this->assertEquals(self::ERR_NO, $answer['result'][1]['error']);
+        } catch (Exception $e) {
+            $this->fail(TestConfig::EXCEPTION_FAIL . $e->getMessage());
+        }
+    }
+
+    /**
+     * @test
+     */
     public function sendInvalidPhoneSmsTest() {
         try {
             $answer = $this->smsClient->sendSms('invalidPhone', 'test', 'failed' . (string)time());
