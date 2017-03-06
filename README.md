@@ -518,15 +518,15 @@ Return chosen tariff prices<br>
 <br>**Parameters**
 > **tariff**           *(int)* The type of message campaign
 
-# HLR Price
+#### HLR Price
   
     $response = $hlrClient->getPrices();
   
-# SMS Price
+#### SMS Price
   
     $response = $smsClient->getPrices();
   
-#Viber price by tarif ID
+#### Viber price by tarif ID
  
     $response = $viberClient->getPrices();
 
