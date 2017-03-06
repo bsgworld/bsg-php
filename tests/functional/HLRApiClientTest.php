@@ -257,6 +257,7 @@ class HLRApiClientTest extends TestCase
     public function HLRSuccessGetById() {
         try {
             $hlr = $this->hlrClient->sendHLR('380501111111', 'su' . (string)time());
+            sleep(5); //wait for creating
             $answer = $this->hlrClient->getStatusById($hlr['result'][0]['id']);
             $this->assertArrayHasKey('msisdn', $answer);
             $this->assertArrayHasKey('brand', $answer);

@@ -6,6 +6,8 @@ This repository contains the open source Php client for BSG's REST API.
 - [Sign up](https://bsg.world) for a free account
 - Get api key
 
+# Instalation
+Download and use files from "src" directory. No installation needed. Composer used only for phpunit tests.
 
 ##BSG class
 Bsg class provide access to the hlr/sms/viber clients
@@ -345,11 +347,12 @@ Example response:
     $response = $smsClient->getStatusByReference(ref1);
     
   # by task ID
+  
     $response = $smsClient->getTaskStatus(214);
   
 Example response:
 
-     # SINGLE SMS RESPONSE
+### SINGLE SMS RESPONSE
       array(11) {
         ["error"]=>
         int(0)
@@ -375,7 +378,7 @@ Example response:
         string(3) "EUR"
       }
       
-      #TASK SMS RESPONSE
+###TASK SMS RESPONSE
       
       array(10) {
         ["originator"]=>

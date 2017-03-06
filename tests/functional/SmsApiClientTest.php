@@ -60,6 +60,7 @@ class SmsApiClientTest extends TestCase
     public function sendSuccessSmsStatusTest() {
         try {
             $answer = $this->smsClient->sendSms(TestConfig::TEST_PHONE_1, 'test', 'successSend' . (string)time());
+            sleep(5); //wait for creating sms
             $answer = $this->smsClient->getStatusById($answer['result']['id']);
             $this->assertEquals(self::ERR_NO, $answer['error']);
         } catch (Exception $e) {

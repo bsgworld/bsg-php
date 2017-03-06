@@ -16,7 +16,6 @@ class BSG
         $this->sender = $sender;
         $this->tariff = $tariff;
         $this->viberSender = $viberSender;
-
     }
 
     /**

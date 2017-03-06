@@ -45,7 +45,7 @@ class ViberApiClientTest extends TestCase
             $this->assertArrayHasKey('total_price', $answer);
             $this->assertArrayHasKey('currency', $answer);
             $this->assertEquals(self::ERR_NO, $answer['result'][0]['error']);
-
+            sleep(5); //wait for creating viber msg
             $status = $this->viberClient->getStatusById($answer['result'][0]['id']);
             $this->assertArrayHasKey('price', $status);
             $this->assertArrayHasKey('msisdn', $status);
@@ -150,7 +150,7 @@ class ViberApiClientTest extends TestCase
      */
     public function getWrongReferenceTest() {
         try {
-            $answer = $this->viberClient->getStatusByReference(-2);
+            $answer = $this->viberClient->getStatusByReference('999996543269999999999');
             $this->assertArrayNotHasKey('result', $answer);
             $this->assertEquals(self::ERR_VIBER_MESS_NOT_FOUND, $answer['error']);
         } catch (Exception $e) {
