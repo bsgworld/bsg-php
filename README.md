@@ -278,7 +278,7 @@ Creates a new message object. BSG returns the created message object with each r
 >  **originator**   *(string)* The sender of the message. This can be a telephone number 
 > (including country code) or an alphanumeric string. In case of an alphanumeric string, the maximum length is 11 characters. Uses value from BSG if it was set. In all other cases - required 
 
-# Single sms
+#### Single sms
   
   
     $smsClient = $BSG->getSmsClient();
@@ -288,7 +288,7 @@ Creates a new message object. BSG returns the created message object with each r
         'successSend' . (string)time()
     );
   
-# Multiple sms
+#### Multiple sms
 
     $smsclient->$answer = $this->smsClient->sendSmsMulti([
                                 ['msisdn' => 380501111111, 'body' =>'test', 'reference' => 'successSendM' . (string)time()],
@@ -339,14 +339,14 @@ Example response:
 
 ### View a status
 
-# by SMS ID
+#### by SMS ID
 
     $response = $smsClient->getStatusById(214);
-# by reference 
+#### by reference 
 
     $response = $smsClient->getStatusByReference(ref1);
     
-# by task ID
+#### by task ID
   
     $response = $smsClient->getTaskStatus(214);
   
