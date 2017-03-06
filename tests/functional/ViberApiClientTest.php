@@ -29,7 +29,7 @@ class ViberApiClientTest extends TestCase
      * @test
      */
     public function ViberMessNotFoundTest() {
-        $answer = $this->viberClient->getStatusById(1);
+        $answer = $this->viberClient->getStatusById(99999999999);
         $this->assertEquals(self::ERR_VIBER_MESS_NOT_FOUND, $answer['error']);
     }
 

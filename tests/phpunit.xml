@@ -1,6 +1,6 @@
 <phpunit>
     <testsuites>
-        <testsuite name="money">
+        <testsuite name="bsg">
             <directory>functional</directory>
         </testsuite>
     </testsuites>

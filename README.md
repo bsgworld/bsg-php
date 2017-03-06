@@ -580,3 +580,10 @@ Example response:
                       }
                      }
                     }
+
+###Tests
+This sdk also contain  phpunit tests with for all functions our API (with checking errors).
+To start them, check "/tests/TestConfig.php" and change value of api key, sender name and viber sender name. 
+After that, just use:
+
+    $ phpunit -c tests/

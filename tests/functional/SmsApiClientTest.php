@@ -35,7 +35,7 @@ class SmsApiClientTest extends TestCase
      * @test
      */
     public function SmsNotFoundTest() {
-        $answer = $this->smsClient->getStatusById(1);
+        $answer = $this->smsClient->getStatusById(99999999999);
         $this->assertEquals(self::ERR_SMS_NOT_FOUND, $answer['error']);
     }
 
@@ -231,7 +231,7 @@ class SmsApiClientTest extends TestCase
      */
     public function sendMissedIdTaskSmsTest() {
         try {
-            $answer = $this->smsClient->getTaskStatus(1);
+            $answer = $this->smsClient->getTaskStatus(99999999999);
             $this->assertArrayHasKey('error', $answer);
             $this->assertEquals(self::ERR_TASK_NOT_FOUND, $answer['error']);
         } catch (Exception $e) {

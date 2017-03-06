@@ -32,7 +32,7 @@ class HLRApiClientTest extends TestCase
      * @test
      */
     public function hlrNotFoundTest() {
-        $answer = $this->hlrClient->getStatusById(1);
+        $answer = $this->hlrClient->getStatusById(99999999999);
         $this->assertEquals(self::ERR_HLR_NOT_FOUND, $answer['error']);
     }
 
