@@ -339,14 +339,14 @@ Example response:
 
 ### View a status
 
-  # by SMS ID
+# by SMS ID
 
     $response = $smsClient->getStatusById(214);
-  # by reference 
+# by reference 
 
     $response = $smsClient->getStatusByReference(ref1);
     
-  # by task ID
+# by task ID
   
     $response = $smsClient->getTaskStatus(214);
   
@@ -518,15 +518,15 @@ Return chosen tariff prices<br>
 <br>**Parameters**
 > **tariff**           *(int)* The type of message campaign
 
-  # HLR Price
+# HLR Price
   
     $response = $hlrClient->getPrices();
   
-  # SMS Price
+# SMS Price
   
     $response = $smsClient->getPrices();
   
-  #Viber price by tarif ID
+#Viber price by tarif ID
  
     $response = $viberClient->getPrices();
 
