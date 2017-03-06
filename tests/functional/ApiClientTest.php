@@ -18,7 +18,7 @@ class ApiClientTest extends TestCase
     /**
      * @test
      */
-    public function hlrNotFoundTest()
+    public function getBalanceTest()
     {
         try {
             $answer = $this->apiClient->getBalance();

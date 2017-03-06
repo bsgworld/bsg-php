@@ -161,6 +161,19 @@ class ViberApiClientTest extends TestCase
     /**
      * @test
      */
+    public function getWrongReferenceZeroTest() {
+        try {
+            $answer = $this->viberClient->getStatusByReference(0);
+            $this->assertArrayNotHasKey('result', $answer);
+            $this->assertEquals(self::ERR_VIBER_MESS_NOT_FOUND, $answer['error']);
+        } catch (Exception $e) {
+            $this->fail(TestConfig::EXCEPTION_FAIL . $e->getMessage());
+        }
+    }
+
+    /**
+     * @test
+     */
     public function sendInvalidLifetimeTest() {
         try {
             $this->viberClient->addMessage([['msisdn' => TestConfig::TEST_PHONE_1]], 'test');
@@ -177,7 +190,7 @@ class ViberApiClientTest extends TestCase
      */
     public function sendWrongViberOptionsTest() {
         try {
-            $this->viberClient->addMessage([['msisdn' => '380937029501']], 'test', 'wrong options');
+            $this->viberClient->addMessage([['msisdn' => TestConfig::TEST_PHONE_1]], 'test', 'wrong options');
             $answer = $this->viberClient->sendMessages();
             $this->assertArrayHasKey('result', $answer);
             $this->assertEquals(self::ERR_WRONG_VIBER_OPTIONS, $answer['result'][0]['error']);
@@ -191,8 +204,8 @@ class ViberApiClientTest extends TestCase
      */
     public function sendSamePhoneViberTest() {
         try {
-            $this->viberClient->addMessage([['msisdn' => '380937029501']], 'test');
-            $this->viberClient->addMessage([['msisdn' => '380937029501']], 'test');
+            $this->viberClient->addMessage([['msisdn' => TestConfig::TEST_PHONE_1]], 'test');
+            $this->viberClient->addMessage([['msisdn' => TestConfig::TEST_PHONE_1]], 'test');
             $answer = $this->viberClient->sendMessages();
             $this->assertArrayHasKey('result', $answer);
             $this->assertEquals(self::ERR_PHONE_ALREADY_IN_USE, $answer['result'][1]['error']);

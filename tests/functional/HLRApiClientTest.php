@@ -58,7 +58,7 @@ class HLRApiClientTest extends TestCase
         try {
             $this->hlrClient->sendHLR(TestConfig::TEST_PHONE_1, 'a');  //necessary for working next tests;
             $answer = $this->hlrClient->sendHLRS([
-                ['msisdn' => '380937029501', 'reference' => 'a']
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => 'a']
             ]);
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
@@ -75,7 +75,7 @@ class HLRApiClientTest extends TestCase
     public function HLRsExtAbsentTest() {
         try {
             $answer = $this->hlrClient->sendHLRS([
-                ['msisdn' => '380937029501']
+                ['msisdn' => TestConfig::TEST_PHONE_1]
             ]);
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
@@ -112,7 +112,7 @@ class HLRApiClientTest extends TestCase
     public function HLRsExtAbsentOneMoreTest() {
         try {
             $answer = $this->hlrClient->sendHLRS([
-                ['msisdn' => '380937029501', 'reference' => null]
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => null]
             ]);
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
@@ -129,7 +129,7 @@ class HLRApiClientTest extends TestCase
     public function HLRsWrongTariffTest() {
         try {
             $answer = $this->hlrClient->sendHLRS([
-                ['msisdn' => '380937029501', 'reference' => 'wt'.(string)time(), 'tariff' => 111]
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => 'wt'.(string)time(), 'tariff' => 111]
             ]);
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
@@ -146,7 +146,7 @@ class HLRApiClientTest extends TestCase
     public function HLRsWrongTariffSecondTest() {
         try{
             $answer = $this->hlrClient->sendHLRS([
-                ['msisdn' => '380937029501', 'reference' => 'wt'.(string)(time()+1), 'tariff' => 'asd']
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => 'wt'.(string)(time()+1), 'tariff' => 'asd']
             ]);
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
@@ -163,7 +163,7 @@ class HLRApiClientTest extends TestCase
     public function HLRsWrongTariffThirdTest() {
         try {
             $answer = $this->hlrClient->sendHLRS([
-                ['msisdn' => '380937029501', 'reference' => 'wt'.(string)(time()+2), 'tariff' => -21]
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => 'wt'.(string)(time()+2), 'tariff' => -21]
             ]);
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
@@ -212,8 +212,8 @@ class HLRApiClientTest extends TestCase
     public function HLRsPhoneAlreadyInRequestTest() {
         try {
             $answer = $this->hlrClient->sendHLRS([
-                ['msisdn' => '380937029501', 'reference' => 'airt' . (string)time()],
-                ['msisdn' => '380937029501', 'reference' => 'airt' . (string)(time()+1)] //already in request
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => 'airt' . (string)time()],
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => 'airt' . (string)(time()+1)] //already in request
             ]);
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);

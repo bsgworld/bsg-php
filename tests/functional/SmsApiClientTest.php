@@ -198,7 +198,7 @@ class SmsApiClientTest extends TestCase
     public function sendSuccessTaskAndGetStatusSmsTest() {
         try {
             $answer = $this->smsClient->sendTask([
-                ['msisdn' => '380937029501', 'reference' => 't' . (string)time()],
+                ['msisdn' => TestConfig::TEST_PHONE_1, 'reference' => 't' . (string)time()],
             ], 'body');
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('task_id', $answer);
