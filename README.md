@@ -7,6 +7,7 @@ This repository contains the open source Php client for BSG's REST API.
 - Get api key
 
 # Instalation
+
 Download and use files from "src" directory. No installation needed. Composer used only for phpunit tests.
 
 ##BSG class
