@@ -434,6 +434,14 @@ Add a VIBER message into queue
     $viberClient = $bsg->getViberClient();
     
     $response = $viberClient->addMessage([['msisdn' => 380501111111]], 'test');
+    
+Add image and link to the message:
+
+    $viberClient->addMessage([['msisdn' => msisdn' => 380501111111]], 'test', [
+                        "img" => "http://my-cool-webpage.com/logo.png",
+                        "caption" => "Join us!",
+                        "action" => "http://my-cool-webpage.com"
+                    ]);
 
 Return: Void
      

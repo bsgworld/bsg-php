@@ -38,8 +38,14 @@ class ViberApiClientTest extends TestCase
      */
     public function sendSuccessViberTest() {
         try {
-            $this->viberClient->addMessage([['msisdn' => TestConfig::TEST_PHONE_1]], 'test');
-
+            /**
+             * Sending message with button, image and link
+             */
+            $this->viberClient->addMessage([['msisdn' => TestConfig::TEST_PHONE_1]], 'test', [
+                    "img" => "http://my-cool-webpage.com/logo.png",
+                    "caption" => "Join us!",
+                    "action" => "http://my-cool-webpage.com"
+                ]);
             $answer = $this->viberClient->sendMessages();
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
