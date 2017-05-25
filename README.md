@@ -32,7 +32,7 @@ BSG provides an API to get the balance information of your account.
     $apikey = 'test_8zWaPwOaHDPRFmgIldhl';
     $api = new BSG($apikey);
     $client = $api->getSmsClient(); //get one of the clients
-    $balance = $client->balance();
+    $balance = $client->getBalance();
 
 #### Simple response
 
