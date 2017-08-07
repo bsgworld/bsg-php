@@ -22,9 +22,11 @@ Bsg class provide access to the hlr/sms/viber clients
 >   **viberSender**     *(string)*        Sender name for viber (alpha name)
 >   
 >   **tariff**          *(int)*        Tariff that should be used for this session 
+>   
+>   **api source**          *(string)*        Name of your application (not required) 
     
     $apiKey = 'test_8zWaPwOaHDPRFmgIldhl'
-    $bsg = new BSG($apiKey, 'originator', 'aplhaname', 3)
+    $bsg = new BSG($apiKey, 'originator', 'aplhaname', 3, 'Bitrix-24')
 
 ## API function "balance"
 BSG provides an API to get the balance information of your account.

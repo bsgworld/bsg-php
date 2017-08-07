@@ -6,10 +6,10 @@ class ViberApiClient extends ApiClient {
 
     protected $messages = [];
     protected $sender;
-    public function __construct($api_key, $sender)
+    public function __construct($api_key, $sender, $source = null)
     {
         $this->sender = $sender;
-        parent::__construct($api_key);
+        parent::__construct($api_key, $source);
     }
 
     private function getStatus ($endpoint)

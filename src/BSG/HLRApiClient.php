@@ -6,10 +6,10 @@ class HLRApiClient extends ApiClient {
 
     protected $tariff;
 
-    public function __construct($api_key, $tariff=null)
+    public function __construct($api_key, $tariff=null, $source = null)
     {
         $this->tariff = $tariff;
-        parent::__construct($api_key);
+        parent::__construct($api_key, $source);
     }
 
     private function getStatus ($endpoint)
