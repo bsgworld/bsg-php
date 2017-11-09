@@ -19,7 +19,7 @@ class SmsApiClient extends ApiClient {
             $resp = $this->sendRequest($endpoint);
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -41,7 +41,7 @@ class SmsApiClient extends ApiClient {
             $resp = $this->sendRequest('sms/task/' . $task_id);
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -53,7 +53,7 @@ class SmsApiClient extends ApiClient {
             $resp = $this->sendRequest('sms/prices' . ($tariff !== NULL ? ('/' . $tariff) : ''));
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -84,7 +84,7 @@ class SmsApiClient extends ApiClient {
             $resp = $this->sendRequest($endpoint,json_encode($message),'PUT');
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -105,7 +105,6 @@ class SmsApiClient extends ApiClient {
      * @param $only_price
      *
      * @return array
-     * @throws Exception
      */
     public function sendTask ($msisdns, $body, $validity=72, $tariff=NULL, $originator=NULL, $only_price=false)
     {
@@ -123,7 +122,7 @@ class SmsApiClient extends ApiClient {
             $resp = $this->sendRequest($endpoint,json_encode($message),'PUT');
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -142,7 +141,6 @@ class SmsApiClient extends ApiClient {
      * @param $only_price
      *
      * @return array
-     * @throws Exception
      */
     public function sendSmsMulti ($messages, $validity=72, $tariff=NULL, $only_price=false)
     {
@@ -160,7 +158,7 @@ class SmsApiClient extends ApiClient {
             $resp = $this->sendRequest($endpoint,json_encode($message),'PUT');
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;

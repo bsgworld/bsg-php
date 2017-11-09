@@ -18,7 +18,7 @@ class HLRApiClient extends ApiClient {
             $resp = $this->sendRequest($endpoint);
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
 
         return json_decode($resp,true);
@@ -40,7 +40,7 @@ class HLRApiClient extends ApiClient {
             $resp = $this->sendRequest('hlr/prices' . ($tariff !== NULL ? ('/' . $tariff) : ''));
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -59,7 +59,7 @@ class HLRApiClient extends ApiClient {
             $resp = $this->sendRequest('hlr/create',$message);
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -71,7 +71,6 @@ class HLRApiClient extends ApiClient {
      * are optional
      * @param $payload
      * @return array
-     * @throws Exception
      */
     public function sendHLRs ($payload)
     {
@@ -79,7 +78,7 @@ class HLRApiClient extends ApiClient {
             $resp = $this->sendRequest('hlr/create',json_encode($payload),'PUT');
         } catch (Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
