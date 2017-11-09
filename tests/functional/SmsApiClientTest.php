@@ -74,9 +74,18 @@ class SmsApiClientTest extends TestCase
     public function sendSuccessSmsMultiTest() {
         try {
             $answer = $this->smsClient->sendSmsMulti([
-                ['msisdn' => TestConfig::TEST_PHONE_1, 'body' =>'test', 'reference' => 'successSendM' . (string)time()],
-                ['msisdn' => TestConfig::TEST_PHONE_2, 'body' =>'tes2', 'reference' => 'successSendM1' . (string)time()],
+
+
+
+                array (
+                    'msisdn' => '333333',
+                    'body' => 'Новый статус заказа NSC-29: Принят, ожидается оплата',
+                    'reference' => 'successSendModul43',
+                    'originator' => 'testsms',
+                )
             ]);
+            var_dump($answer);
+            die;
             $this->assertArrayHasKey('result', $answer);
             $this->assertArrayHasKey('total_price', $answer);
             $this->assertArrayHasKey('currency', $answer);

@@ -18,7 +18,7 @@ class ViberApiClient extends ApiClient {
             $resp = $this->sendRequest($endpoint);
         } catch (\Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new \Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -40,7 +40,7 @@ class ViberApiClient extends ApiClient {
             $resp = $this->sendRequest('viber/prices' . ($tariff !== NULL ? ('/' . $tariff) : ''));
         } catch (\Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new \Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
@@ -86,12 +86,11 @@ class ViberApiClient extends ApiClient {
      * @param null $tariff
      * @param bool $only_price
      * @return mixed
-     * @throws Exception
      */
     public function sendMessages ($validity=86400, $tariff=NULL, $only_price=false)
     {
         if (count($this->messages) == 0)
-            throw new \Exception ('No messages to send', -1);
+            return ['error' => 'No messages to send'];
         $message = [];
         $message['validity'] = $validity;
         if ($tariff !== NULL)
@@ -102,7 +101,7 @@ class ViberApiClient extends ApiClient {
             $resp = $this->sendRequest($endpoint,json_encode($message),'PUT');
         } catch (\Exception $e) {
             $error = 'Request failed (code: ' .$e->getCode() .'): ' . $e->getMessage();
-            throw new \Exception ($error, -1);
+            return ['error' => $error];
         }
         $result = json_decode($resp,true);
         return $result;
