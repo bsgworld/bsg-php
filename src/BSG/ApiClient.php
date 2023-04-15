@@ -2,7 +2,7 @@
 
 class ApiClient {
 
-    const API_URL = 'https://api.bsg.hk/v1.0/';
+    const API_URL = 'https://api.bsg.world/v1.0/';
 
     protected $api_url;
     protected $api_key;
