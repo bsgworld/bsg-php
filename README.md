@@ -1,18 +1,18 @@
-# BSG-sdk
+# BSG REST API. Free SMS API - PHP
 This repository contains the open source PHP client for BSG's REST API. 
 With this API, you can send both **single SMS** and **bulk SMS** messages, **Viber messages**, and verify phone numbers by sending **HLR requests**. The API is free to use, there are no connection fees or monthly payments. You only pay for the messages sent on a Pay-as-you-Go basis.
 
-# Pricing
+## Pricing
 
 Prices for sending messages can be found here: [Prices](https://bsg.world/pricing-sms/)
 
-# Requirements
+## Requirements
 
 - [Sign up](https://app.bsg.world/auth/signup) for a free account
 - Get api key [here](https://app.bsg.world/integration/remote)
 - Go through the [API documentation](https://bsg.world/documentations/rest-api/sms-api/sending-sms/)
 
-# Instalation
+## Instalation
 
 Download and use files from "src" directory. No installation needed. Composer used only for phpunit tests.
 
