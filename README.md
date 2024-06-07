@@ -3,8 +3,9 @@ This repository contains the open source Php client for BSG's REST API.
 
 # Requirements
 
-- [Sign up](https://bsg.world) for a free account
-- Get api key
+- [Sign up](https://app.bsg.world/auth/signup) for a free account
+- Get api key [here](https://app.bsg.world/integration/remote)
+- Go through the [API documentation](https://bsg.world/documentations/rest-api/sms-api/sending-sms/)
 
 # Instalation
 
