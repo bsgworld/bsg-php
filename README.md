@@ -10,7 +10,7 @@ Prices for sending messages can be found here: [Prices](https://bsg.world/pricin
 
 - [Sign up](https://app.bsg.world/auth/signup?utm_source=github&utm_medium=referral&utm_campaign=php) for a free account
 - Get api key [here](https://app.bsg.world/integration/remote?utm_source=github&utm_medium=referral&utm_campaign=php)
-- Go through the [API documentation](https://bsg.world/documentations/rest-api/sms-api/sending-sms/)
+- Go through the [API documentation](https://bsg.world/documentations/rest-api/sms-api/sending-sms/?utm_source=github&utm_medium=referral&utm_campaign=php)
 
 ## Instalation
 
