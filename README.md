@@ -4,12 +4,12 @@ With this API, you can send both **single SMS** and **bulk SMS** messages, **Vib
 
 ## Pricing
 
-Prices for sending messages can be found here: [Prices](https://bsg.world/pricing-sms/)
+Prices for sending messages can be found here: [Prices](https://bsg.world/pricing-sms/?utm_source=github&utm_medium=referral&utm_campaign=php)
 
 ## Requirements
 
-- [Sign up](https://app.bsg.world/auth/signup) for a free account
-- Get api key [here](https://app.bsg.world/integration/remote)
+- [Sign up](https://app.bsg.world/auth/signup?utm_source=github&utm_medium=referral&utm_campaign=php) for a free account
+- Get api key [here](https://app.bsg.world/integration/remote?utm_source=github&utm_medium=referral&utm_campaign=php)
 - Go through the [API documentation](https://bsg.world/documentations/rest-api/sms-api/sending-sms/)
 
 ## Instalation
