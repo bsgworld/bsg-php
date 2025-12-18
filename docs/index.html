@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSG PHP SDK - Documentation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f8f9fa;
+        }
+        h1 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #16213e;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e94560;
+        }
+        h3 {
+            color: #0f3460;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        h4 {
+            color: #16213e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .nav {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+        .nav ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .nav a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .package-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #e94560;
+        }
+        .package-card.v2 {
+            border-left-color: #28a745;
+        }
+        .package-card h4 {
+            color: #e94560;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        .package-card.v2 h4 {
+            color: #28a745;
+        }
+        .package-card code {
+            display: block;
+            background: #f1f1f1;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        .package-card .namespace {
+            color: #666;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #1a1a2e;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        code {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9em;
+        }
+        .inline-code {
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #e94560;
+        }
+        .step {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #e94560;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #856404;
+        }
+        .info {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .info-title {
+            font-weight: bold;
+            color: #0c5460;
+        }
+        .warning {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-title {
+            font-weight: bold;
+            color: #721c24;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #1a1a2e;
+            color: white;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .tree {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .workflow-steps {
+            counter-reset: step;
+        }
+        .workflow-step {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 60px;
+        }
+        .workflow-step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            background: #e94560;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+        .todo-list {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .todo-item {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .todo-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        .priority-high { border-left: 4px solid #dc3545; }
+        .priority-medium { border-left: 4px solid #ffc107; }
+        .priority-low { border-left: 4px solid #28a745; }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        a {
+            color: #e94560;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .badge-v1 {
+            background: #e94560;
+            color: white;
+        }
+        .badge-v2 {
+            background: #28a745;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>BSG PHP SDK Monorepo</h1>
+    <p class="subtitle">Complete Documentation for V1 (BSG API) and V2 (One-API)</p>
+
+    <nav class="nav">
+        <div class="nav-title">Quick Navigation</div>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#structure">Repository Structure</a></li>
+            <li><a href="#naming">Naming Convention</a></li>
+            <li><a href="#hosts">API Hosts</a></li>
+            <li><a href="#development">Development Commands</a></li>
+            <li><a href="#git">Git Workflow</a></li>
+            <li><a href="#github-actions">GitHub Actions</a></li>
+            <li><a href="#sdk-generation">SDK Generation</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#examples">Usage Examples</a></li>
+            <li><a href="#testing">Testing</a></li>
+            <li><a href="#todo">Pending Tasks</a></li>
+        </ul>
+    </nav>
+
+    <div class="package-info">
+        <div class="package-card">
+            <h4><span class="badge badge-v1">V1</span> BSG API</h4>
+            <code>bsg/php-api-sdk-v1</code>
+            <p class="namespace">Namespace: <code class="inline-code">BSG\Api\V1\</code></p>
+            <p>Legacy API for SMS, Viber, HLR, MNP services</p>
+        </div>
+        <div class="package-card v2">
+            <h4><span class="badge badge-v2">V2</span> One-API</h4>
+            <code>bsg/php-api-sdk</code>
+            <p class="namespace">Namespace: <code class="inline-code">BSG\Api\V2\</code></p>
+            <p>Unified API for all messengers</p>
+        </div>
+    </div>
+
+    <h2 id="overview">Overview</h2>
+    <p>This is a monorepo for BSG World PHP SDK libraries. It contains two separate SDKs for different APIs:</p>
+    <ul>
+        <li><strong>V1 (BSG API)</strong> - Legacy API for SMS, Viber, HLR, MNP services</li>
+        <li><strong>V2 (One-API)</strong> - New unified API for all messengers</li>
+    </ul>
+
+    <h2 id="structure">Repository Structure</h2>
+    <div class="tree">bsg-php/
+├── .github/
+│   └── workflows/
+│       └── split.yml          # Auto-split to separate repos
+├── docs/
+│   └── installation.html      # Installation documentation
+├── openapi-specs/             # OpenAPI specs for SDK generation
+│   ├── bsg-api-full.json      # V1 BSG API (~672KB)
+│   └── one-api-merged.json    # V2 One-API (~1.4MB)
+├── v1/                        # BSG API SDK (bsg/php-api-sdk-v1)
+│   ├── composer.json
+│   ├── README.md
+│   └── lib/
+│       ├── Api/               # SMSApi, ViberApi, HLRApi, MNPApi...
+│       ├── Model/             # DTO classes
+│       └── Configuration.php
+├── v2/                        # One-API SDK (bsg/php-api-sdk)
+│   ├── composer.json
+│   ├── README.md
+│   └── lib/
+│       ├── Api/               # AccountApi, SmsCampaignsApi...
+│       ├── Model/             # DTO classes
+│       └── Configuration.php
+├── composer.json              # Monorepo orchestrator
+├── .gitignore
+├── LICENSE
+└── README.md</div>
+
+    <h2 id="naming">Naming Convention</h2>
+
+    <h3>Composer Packages</h3>
+    <table>
+        <tr>
+            <th>Package</th>
+            <th>Repository</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code class="inline-code">bsg/php-sdk-monorepo</code></td>
+            <td>bsgworld/bsg-php</td>
+            <td>Monorepo (dev)</td>
+        </tr>
+        <tr>
+            <td><code class="inline-code">bsg/php-api-sdk</code></td>
+            <td>bsgworld/php-api-sdk</td>
+            <td>One-API V2 (production)</td>
+        </tr>
+        <tr>
+            <td><code class="inline-code">bsg/php-api-sdk-v1</code></td>
+            <td>bsgworld/php-api-sdk-v1</td>
+            <td>BSG API V1 (production)</td>
+        </tr>
+    </table>
+
+    <h3>Namespaces</h3>
+    <ul>
+        <li><strong>V1:</strong> <code class="inline-code">BSG\Api\V1\</code> (Configuration, Api\*, Model\*)</li>
+        <li><strong>V2:</strong> <code class="inline-code">BSG\Api\V2\</code> (Configuration, Api\*, Model\*)</li>
+    </ul>
+
+    <h3>Future SDKs (naming pattern)</h3>
+    <ul>
+        <li><code class="inline-code">bsg/js-api-sdk</code> - JavaScript/TypeScript</li>
+        <li><code class="inline-code">bsg/python-api-sdk</code> - Python</li>
+        <li><code class="inline-code">bsg/go-api-sdk</code> - Go</li>
+    </ul>
+
+    <h2 id="hosts">API Hosts</h2>
+    <table>
+        <tr>
+            <th>SDK</th>
+            <th>Production Host</th>
+            <th>Documentation</th>
+        </tr>
+        <tr>
+            <td>V1 - BSG API</td>
+            <td><code class="inline-code">https://api.bsg.world</code></td>
+            <td><a href="https://bsg.world/developers">bsg.world/developers</a></td>
+        </tr>
+        <tr>
+            <td>V2 - One-API</td>
+            <td><code class="inline-code">https://one-api.bsg.world</code></td>
+            <td><a href="https://bsg.world/developers">bsg.world/developers</a></td>
+        </tr>
+    </table>
+
+    <h2 id="development">Development Commands</h2>
+
+    <h3>Install Dependencies</h3>
+    <pre><code>composer install</code></pre>
+
+    <h3>Run Tests</h3>
+    <pre><code># All tests
+./vendor/bin/phpunit
+
+# V1 SDK tests only
+./vendor/bin/phpunit v1/tests/
+
+# V2 SDK tests only
+./vendor/bin/phpunit v2/tests/
+
+# Single test file
+./vendor/bin/phpunit v1/tests/Model/BalanceResponseTest.php</code></pre>
+
+    <h3>Code Style (PHP CS Fixer)</h3>
+    <pre><code># Check style
+./vendor/bin/php-cs-fixer fix --dry-run
+
+# Auto-fix
+./vendor/bin/php-cs-fixer fix</code></pre>
+
+    <h2 id="git">Git Workflow</h2>
+
+    <h3>Branches</h3>
+    <ul>
+        <li><code class="inline-code">master</code> - legacy code, tag v0.1.0</li>
+        <li><code class="inline-code">monorepo</code> - <strong>active branch</strong> with new structure</li>
+        <li><code class="inline-code">main</code> - may be outdated, use <code class="inline-code">monorepo</code></li>
+    </ul>
+
+    <h3>Tags</h3>
+    <ul>
+        <li><code class="inline-code">v0.1.0</code> - legacy on master</li>
+        <li><code class="inline-code">v1.0.0-beta</code> - first monorepo release (to be created)</li>
+    </ul>
+
+    <h2 id="github-actions">GitHub Actions - Auto-split</h2>
+    <p>The file <code class="inline-code">.github/workflows/split.yml</code> automatically splits the monorepo into separate repositories when tags are created.</p>
+
+    <h3>How it works:</h3>
+    <div class="workflow-steps">
+        <div class="workflow-step">Push a tag (e.g., <code class="inline-code">v1.0.0</code>) to <code class="inline-code">bsgworld/bsg-php</code></div>
+        <div class="workflow-step">GitHub Action starts</div>
+        <div class="workflow-step"><code class="inline-code">v1/</code> is copied to <code class="inline-code">bsgworld/php-api-sdk-v1</code> with the same tag</div>
+        <div class="workflow-step"><code class="inline-code">v2/</code> is copied to <code class="inline-code">bsgworld/php-api-sdk</code> with the same tag</div>
+    </div>
+
+    <div class="note">
+        <p class="note-title">Requirements</p>
+        <ul>
+            <li>Create repositories <code class="inline-code">bsgworld/php-api-sdk</code> and <code class="inline-code">bsgworld/php-api-sdk-v1</code> on GitHub</li>
+            <li>Add secret <code class="inline-code">SPLIT_TOKEN</code> with Personal Access Token (repo scope)</li>
+        </ul>
+    </div>
+
+    <h2 id="sdk-generation">SDK Generation</h2>
+
+    <h3>OpenAPI Specifications</h3>
+    <p>Specifications for SDK generation are located in <code class="inline-code">openapi-specs/</code>:</p>
+    <ul>
+        <li><code class="inline-code">bsg-api-full.json</code> - V1 BSG API (SMS, Viber, HLR, MNP)</li>
+        <li><code class="inline-code">one-api-merged.json</code> - V2 One-API (unified API)</li>
+    </ul>
+
+    <h3>OpenAPI Generator Versions</h3>
+    <ul>
+        <li><code class="inline-code">v7.10.0</code> &rarr; PHP 7.4+ (recommended)</li>
+        <li><code class="inline-code">v7.12.0</code> &rarr; PHP 7.4+</li>
+        <li><code class="inline-code">v7.17.0</code> &rarr; PHP 8.1+ (latest, October 2025)</li>
+    </ul>
+
+    <h3>Generate V1 SDK (BSG API)</h3>
+    <p>Run from monorepo root:</p>
+    <pre><code># Generate to temporary directory
+docker run --rm \
+    -v "$(pwd)":/workspace \
+    openapitools/openapi-generator-cli:v7.12.0 generate \
+    -i /workspace/openapi-specs/bsg-api-full.json \
+    -g php \
+    -o /workspace/v1-generated \
+    --git-user-id "bsgworld" \
+    --git-repo-id "php-api-sdk-v1" \
+    -p 'invokerPackage=BSG\\Api\\V1' \
+    -p 'packageName=BSG API PHP Client' \
+    -p 'composerPackageName=bsg/php-api-sdk-v1' \
+    --skip-validate-spec
+
+# Move generated files
+rm -rf v1/lib && mv v1-generated/lib v1/
+cp v1-generated/composer.json v1/
+cp v1-generated/README.md v1/
+rm -rf v1-generated</code></pre>
+
+    <h3>Generate V2 SDK (One-API)</h3>
+    <p>Run from monorepo root:</p>
+    <pre><code># Generate to temporary directory
+docker run --rm \
+    -v "$(pwd)":/workspace \
+    openapitools/openapi-generator-cli:v7.12.0 generate \
+    -i /workspace/openapi-specs/one-api-merged.json \
+    -g php \
+    -o /workspace/v2-generated \
+    --git-user-id "bsgworld" \
+    --git-repo-id "php-api-sdk" \
+    -p 'invokerPackage=BSG\\Api\\V2' \
+    -p 'packageName=BSG One-API PHP Client' \
+    -p 'composerPackageName=bsg/php-api-sdk' \
+    --skip-validate-spec
+
+# Move generated files
+rm -rf v2/lib && mv v2-generated/lib v2/
+cp v2-generated/composer.json v2/
+cp v2-generated/README.md v2/
+rm -rf v2-generated</code></pre>
+
+    <h3>Generator Parameters</h3>
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><code class="inline-code">invokerPackage</code></td>
+            <td>Namespace for PHP classes</td>
+            <td><code class="inline-code">BSG\\Api\\V1</code></td>
+        </tr>
+        <tr>
+            <td><code class="inline-code">composerPackageName</code></td>
+            <td>Package name in composer.json</td>
+            <td><code class="inline-code">bsg/php-api-sdk-v1</code></td>
+        </tr>
+        <tr>
+            <td><code class="inline-code">packageName</code></td>
+            <td>Human-readable package name</td>
+            <td><code class="inline-code">BSG API PHP Client</code></td>
+        </tr>
+        <tr>
+            <td><code class="inline-code">--git-user-id</code></td>
+            <td>GitHub organization</td>
+            <td><code class="inline-code">bsgworld</code></td>
+        </tr>
+        <tr>
+            <td><code class="inline-code">--git-repo-id</code></td>
+            <td>GitHub repository name</td>
+            <td><code class="inline-code">php-api-sdk-v1</code></td>
+        </tr>
+        <tr>
+            <td><code class="inline-code">--skip-validate-spec</code></td>
+            <td>Skip OpenAPI validation</td>
+            <td>-</td>
+        </tr>
+    </table>
+
+    <h2 id="installation">SDK Installation</h2>
+
+    <h3>Method 1: From Monorepo (dev)</h3>
+    <pre><code>{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:bsgworld/bsg-php.git"
+        }
+    ],
+    "require": {
+        "bsg/php-sdk-monorepo": "dev-monorepo"
+    },
+    "minimum-stability": "dev"
+}</code></pre>
+
+    <h3>Method 2: Split Packages (production)</h3>
+    <pre><code>{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:bsgworld/php-api-sdk-v1.git"
+        }
+    ],
+    "require": {
+        "bsg/php-api-sdk-v1": "^1.0"
+    }
+}</code></pre>
+
+    <h3>Method 3: Packagist (after registration)</h3>
+    <pre><code>composer require bsg/php-api-sdk        # One-API V2
+composer require bsg/php-api-sdk-v1     # BSG API V1</code></pre>
+
+    <h2 id="examples">Usage Examples</h2>
+
+    <h3>V1 - BSG API</h3>
+    <pre><code>&lt;?php
+require 'vendor/autoload.php';
+
+use BSG\Api\V1\Configuration;
+use BSG\Api\V1\Api\SMSApi;
+
+$config = Configuration::getDefaultConfiguration()
+    ->setHost('https://api.bsg.world')
+    ->setApiKey('X-API-KEY', 'your-api-key');
+
+$sms = new SMSApi(null, $config);
+$prices = $sms->smsGetPrices();</code></pre>
+
+    <h3>V2 - One-API</h3>
+    <pre><code>&lt;?php
+require 'vendor/autoload.php';
+
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\Api\AccountApi;
+
+$config = Configuration::getDefaultConfiguration()
+    ->setHost('https://one-api.bsg.world')
+    ->setApiKey('X-API-KEY', 'your-api-key');
+
+$account = new AccountApi(null, $config);
+$balance = $account->accountBalance();</code></pre>
+
+    <h2 id="testing">Testing SDK</h2>
+
+    <h3>Create Test Project</h3>
+    <pre><code>mkdir ~/test-bsg-sdk && cd ~/test-bsg-sdk
+
+cat > composer.json << 'EOF'
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:bsgworld/bsg-php.git"
+        }
+    ],
+    "require": {
+        "bsg/php-sdk-monorepo": "dev-monorepo"
+    },
+    "minimum-stability": "dev"
+}
+EOF
+
+composer update
+
+cat > test.php << 'EOF'
+&lt;?php
+require 'vendor/autoload.php';
+
+use BSG\Api\V1\Configuration;
+use BSG\Api\V2\Configuration as ConfigV2;
+
+echo "V1 Configuration: " . (class_exists(Configuration::class) ? "OK" : "FAIL") . "\n";
+echo "V2 Configuration: " . (class_exists(ConfigV2::class) ? "OK" : "FAIL") . "\n";
+EOF
+
+php test.php</code></pre>
+
+    <h2 id="todo">Pending Tasks (TODO)</h2>
+
+    <div class="todo-list priority-high">
+        <h4>High Priority</h4>
+        <div class="todo-item"><input type="checkbox" disabled> Commit new files to monorepo branch</div>
+        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">docs/installation.html</code> - Installation docs</div>
+        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">openapi-specs/bsg-api-full.json</code> - V1 OpenAPI spec</div>
+        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">openapi-specs/one-api-merged.json</code> - V2 OpenAPI spec</div>
+        <div class="todo-item"><input type="checkbox" disabled> Create GitHub repositories:</div>
+        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">bsgworld/php-api-sdk</code> (for V2 One-API)</div>
+        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">bsgworld/php-api-sdk-v1</code> (for V1 BSG API)</div>
+        <div class="todo-item"><input type="checkbox" disabled> Add <code class="inline-code">SPLIT_TOKEN</code> secret to bsg-php repository settings</div>
+        <div class="todo-item"><input type="checkbox" disabled> Create tag <code class="inline-code">v1.0.0-beta</code> for first release</div>
+    </div>
+
+    <div class="todo-list priority-medium">
+        <h4>Medium Priority</h4>
+        <div class="todo-item"><input type="checkbox" disabled> Test SDK installation from monorepo</div>
+        <div class="todo-item"><input type="checkbox" disabled> Test auto-split workflow</div>
+        <div class="todo-item"><input type="checkbox" disabled> Register packages on Packagist</div>
+    </div>
+
+    <div class="todo-list priority-low">
+        <h4>Low Priority</h4>
+        <div class="todo-item"><input type="checkbox" disabled> Add PHPUnit tests for SDK</div>
+        <div class="todo-item"><input type="checkbox" disabled> Setup CI/CD for auto-tests</div>
+        <div class="todo-item"><input type="checkbox" disabled> Create CHANGELOG.md</div>
+    </div>
+
+    <h2>Related Links</h2>
+    <ul>
+        <li><strong>GitHub Organization:</strong> <a href="https://github.com/bsgworld">github.com/bsgworld</a></li>
+        <li><strong>Website:</strong> <a href="https://bsg.world">bsg.world</a></li>
+        <li><strong>Developer Docs:</strong> <a href="https://bsg.world/developers">bsg.world/developers</a></li>
+        <li><strong>Support:</strong> <a href="mailto:support@bsg.world">support@bsg.world</a></li>
+    </ul>
+
+    <div class="info">
+        <p class="info-title">Requirements</p>
+        <p>PHP ^7.4 || ^8.0 &bull; ext-curl &bull; ext-json &bull; ext-mbstring &bull; guzzlehttp/guzzle ^7.3</p>
+    </div>
+
+    <p style="margin-top: 50px; color: #666; text-align: center;">
+        &copy; 2025 BSG World &bull; <a href="https://bsg.world">bsg.world</a><br>
+        <small>Last updated: December 2025</small>
+    </p>
+</body>
+</html>

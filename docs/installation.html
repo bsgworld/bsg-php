@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSG PHP SDK - Installation Guide</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f8f9fa;
+        }
+        h1 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #16213e;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e94560;
+        }
+        h3 {
+            color: #0f3460;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .package-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #e94560;
+        }
+        .package-card h4 {
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+        .package-card code {
+            display: block;
+            background: #f1f1f1;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        .package-card .namespace {
+            color: #666;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #1a1a2e;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        code {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9em;
+        }
+        .inline-code {
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #e94560;
+        }
+        .step {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #e94560;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .method-tabs {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0 20px;
+        }
+        .method-tab {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid #e94560;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .method-tab:hover, .method-tab.active {
+            background: #e94560;
+            color: white;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #856404;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #1a1a2e;
+            color: white;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .pros { color: #28a745; }
+        .cons { color: #dc3545; }
+    </style>
+</head>
+<body>
+    <h1>BSG PHP SDK</h1>
+    <p class="subtitle">Installation & Usage Guide</p>
+
+    <div class="package-info">
+        <div class="package-card">
+            <h4>V1 - BSG API</h4>
+            <code>bsg/php-api-sdk-v1</code>
+            <p class="namespace">Namespace: <code class="inline-code">BSG\Api\V1\</code></p>
+            <p>SMS, Viber, HLR, MNP services</p>
+        </div>
+        <div class="package-card">
+            <h4>V2 - One-API</h4>
+            <code>bsg/php-api-sdk</code>
+            <p class="namespace">Namespace: <code class="inline-code">BSG\Api\V2\</code></p>
+            <p>Unified messaging platform</p>
+        </div>
+    </div>
+
+    <h2>Installation Methods</h2>
+
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Package</th>
+            <th>Use Case</th>
+        </tr>
+        <tr>
+            <td>Monorepo (dev)</td>
+            <td><code class="inline-code">bsg/php-sdk-monorepo</code></td>
+            <td>Development, testing, get both SDKs</td>
+        </tr>
+        <tr>
+            <td>Split - V1</td>
+            <td><code class="inline-code">bsg/php-api-sdk-v1</code></td>
+            <td>Production, only BSG API</td>
+        </tr>
+        <tr>
+            <td>Split - V2</td>
+            <td><code class="inline-code">bsg/php-api-sdk</code></td>
+            <td>Production, only One-API</td>
+        </tr>
+    </table>
+
+    <!-- Method 1: Monorepo -->
+    <h2>Method 1: From Monorepo (Both SDKs)</h2>
+    <p>Install both V1 and V2 SDKs from a single package. Best for development and testing.</p>
+
+    <div class="step">
+        <h3><span class="step-number">1</span>Update composer.json</h3>
+        <pre><code>{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:bsgworld/bsg-php.git"
+        }
+    ],
+    "require": {
+        "bsg/php-sdk-monorepo": "dev-monorepo"
+    }
+}</code></pre>
+    </div>
+
+    <div class="step">
+        <h3><span class="step-number">2</span>Install via Composer</h3>
+        <pre><code>composer update</code></pre>
+    </div>
+
+    <div class="step">
+        <h3><span class="step-number">3</span>Use in your code</h3>
+        <pre><code>&lt;?php
+require 'vendor/autoload.php';
+
+// V1 - BSG API
+use BSG\Api\V1\Configuration;
+use BSG\Api\V1\Api\SMSApi;
+
+$config = Configuration::getDefaultConfiguration()
+    ->setHost('https://api.bsg.world')
+    ->setApiKey('X-API-KEY', 'your-api-key');
+
+$sms = new SMSApi(null, $config);
+$prices = $sms->smsGetPrices();
+
+// V2 - One-API
+use BSG\Api\V2\Configuration as ConfigV2;
+use BSG\Api\V2\Api\AccountApi;
+
+$configV2 = ConfigV2::getDefaultConfiguration()
+    ->setHost('https://one-api.bsg.world')
+    ->setApiKey('X-API-KEY', 'your-api-key');
+
+$account = new AccountApi(null, $configV2);
+$balance = $account->accountBalance();</code></pre>
+    </div>
+
+    <div class="note">
+        <p class="note-title">Note</p>
+        <p>Using <code class="inline-code">dev-monorepo</code> requires <code class="inline-code">"minimum-stability": "dev"</code> or specific branch alias. For stable versions, use tags like <code class="inline-code">v1.0.0-beta</code>.</p>
+    </div>
+
+    <!-- Method 2: Split Packages -->
+    <h2>Method 2: Split Packages (Production)</h2>
+    <p>Install only the SDK you need. Recommended for production use.</p>
+
+    <h3>V1 - BSG API Only</h3>
+    <div class="step">
+        <pre><code>{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:bsgworld/php-api-sdk-v1.git"
+        }
+    ],
+    "require": {
+        "bsg/php-api-sdk-v1": "^1.0"
+    }
+}</code></pre>
+    </div>
+
+    <pre><code>&lt;?php
+use BSG\Api\V1\Configuration;
+use BSG\Api\V1\Api\SMSApi;
+use BSG\Api\V1\Api\ViberApi;
+use BSG\Api\V1\Api\HLRApi;
+use BSG\Api\V1\Api\MNPApi;
+
+$config = Configuration::getDefaultConfiguration()
+    ->setHost('https://api.bsg.world')
+    ->setApiKey('X-API-KEY', 'your-api-key');
+
+// Send SMS
+$sms = new SMSApi(null, $config);
+$result = $sms->smsCreateObjects([
+    'destination' => 'phone',
+    'originator' => 'BSG',
+    'body' => 'Hello from BSG!',
+    'msisdn' => '380501234567'
+]);</code></pre>
+
+    <h3>V2 - One-API Only</h3>
+    <div class="step">
+        <pre><code>{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:bsgworld/php-api-sdk.git"
+        }
+    ],
+    "require": {
+        "bsg/php-api-sdk": "^1.0"
+    }
+}</code></pre>
+    </div>
+
+    <pre><code>&lt;?php
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\Api\AccountApi;
+use BSG\Api\V2\Api\SmsCampaignsApi;
+
+$config = Configuration::getDefaultConfiguration()
+    ->setHost('https://one-api.bsg.world')
+    ->setApiKey('X-API-KEY', 'your-api-key');
+
+// Get balance
+$account = new AccountApi(null, $config);
+$balance = $account->accountBalance();
+
+// Send SMS campaign
+$campaigns = new SmsCampaignsApi(null, $config);
+$result = $campaigns->smsSend([
+    'sender' => 'BSG',
+    'text' => 'Hello from One-API!',
+    'phones' => ['+380501234567']
+]);</code></pre>
+
+    <!-- Method 3: Packagist -->
+    <h2>Method 3: Via Packagist (Coming Soon)</h2>
+    <p>Once registered on Packagist, installation will be simplified:</p>
+
+    <pre><code>composer require bsg/php-api-sdk        # One-API (V2)
+composer require bsg/php-api-sdk-v1     # BSG API (V1)</code></pre>
+
+    <div class="note">
+        <p class="note-title">Requirements</p>
+        <p>PHP ^7.4 || ^8.0 &bull; ext-curl &bull; ext-json &bull; ext-mbstring &bull; guzzlehttp/guzzle ^7.3</p>
+    </div>
+
+    <h2>API Hosts</h2>
+    <table>
+        <tr>
+            <th>SDK</th>
+            <th>Production Host</th>
+            <th>Documentation</th>
+        </tr>
+        <tr>
+            <td>V1 - BSG API</td>
+            <td><code class="inline-code">https://api.bsg.world</code></td>
+            <td><a href="https://bsg.world/developers">bsg.world/developers</a></td>
+        </tr>
+        <tr>
+            <td>V2 - One-API</td>
+            <td><code class="inline-code">https://one-api.bsg.world</code></td>
+            <td><a href="https://bsg.world/developers">bsg.world/developers</a></td>
+        </tr>
+    </table>
+
+    <h2>Repository Structure</h2>
+    <pre><code>bsgworld/bsg-php (monorepo)
+├── v1/                     # bsg/php-api-sdk-v1
+│   ├── composer.json
+│   └── lib/
+│       ├── Api/            # SMSApi, ViberApi, HLRApi, MNPApi...
+│       └── Model/
+└── v2/                     # bsg/php-api-sdk
+    ├── composer.json
+    └── lib/
+        ├── Api/            # AccountApi, SmsCampaignsApi...
+        └── Model/</code></pre>
+
+    <p style="margin-top: 50px; color: #666; text-align: center;">
+        &copy; 2025 BSG World &bull; <a href="https://bsg.world">bsg.world</a>
+    </p>
+</body>
+</html>
