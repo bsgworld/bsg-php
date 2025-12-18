@@ -1,5 +1,45 @@
 {
+    "name": "bsg/php-sdk-monorepo",
+    "description": "BSG PHP SDK Monorepo - API V1 & One-API V2",
+    "type": "project",
+    "license": "MIT",
+    "homepage": "https://bsg.world/",
+    "authors": [
+        {
+            "name": "BSG World",
+            "email": "support@bsg.world"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
     "require-dev": {
-        "phpunit/phpunit": "^5.7"
+        "phpunit/phpunit": "^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
+    },
+    "replace": {
+        "bsg/php-api-sdk": "self.version",
+        "bsg/php-api-sdk-v1": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "BSG\\Api\\V1\\": "v1/lib/",
+            "BSG\\Api\\V2\\": "v2/lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BSG\\Api\\V1\\Test\\": "v1/tests/",
+            "BSG\\Api\\V2\\Test\\": "v2/tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
     }
 }

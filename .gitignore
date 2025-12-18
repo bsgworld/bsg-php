@@ -1,6 +1,30 @@
-.idea
-vendor
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Composer
+/vendor/
 composer.lock
 composer.phar
-phpunit-5.7.14.phar
+
+# PHPUnit
+.phpunit.result.cache
+phpunit*.phar
+
+# Coverage
+/coverage/
+.coverage
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+/tmp/
+/back/
+
+# Logs
+*.log
