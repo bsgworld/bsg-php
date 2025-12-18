@@ -1,0 +1,36 @@
+name: Split Packages
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - local_path: 'v1'
+            split_repository: 'php-api-sdk-v1'
+          - local_path: 'v2'
+            split_repository: 'php-api-sdk'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Split ${{ matrix.package.split_repository }}
+        uses: symplify/monorepo-split-github-action@v2.3.0
+        with:
+          package_directory: ${{ matrix.package.local_path }}
+          repository_organization: 'bsgworld'
+          repository_name: ${{ matrix.package.split_repository }}
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          tag: ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.SPLIT_TOKEN }}

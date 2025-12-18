@@ -1,0 +1,40 @@
+{
+    "name": "bsg/php-api-sdk-v1",
+    "description": "Comprehensive API for sending SMS, Viber messages, HLR/MNP requests and service management",
+    "keywords": [
+        "openapitools",
+        "openapi-generator",
+        "openapi",
+        "php",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "homepage": "https://bsg.world/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BSG World",
+            "email": "support@bsg.world",
+            "homepage": "bsg.world"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": { "BSG\\Api\\V1\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "BSG\\Api\\V1\\Test\\" : "tests/" }
+    }
+}
