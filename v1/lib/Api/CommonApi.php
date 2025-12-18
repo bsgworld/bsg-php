@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Api;
+namespace BSG\Api\V1\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V1\ApiException;
-use BSG\\Api\\V1\Configuration;
-use BSG\\Api\\V1\HeaderSelector;
-use BSG\\Api\\V1\ObjectSerializer;
+use BSG\Api\V1\ApiException;
+use BSG\Api\V1\Configuration;
+use BSG\Api\V1\HeaderSelector;
+use BSG\Api\V1\ObjectSerializer;
 
 /**
  * CommonApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -151,9 +151,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetBalanceBase'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function commonGetBalanceBase(string $contentType = self::contentTypes['commonGetBalanceBase'][0])
     {
@@ -168,9 +168,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetBalanceBase'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function commonGetBalanceBaseWithHttpInfo(string $contentType = self::contentTypes['commonGetBalanceBase'][0])
     {
@@ -201,11 +201,11 @@ class CommonApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\BalanceResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\BalanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\BalanceResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\BalanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -223,16 +223,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\BalanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\BalanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -250,16 +250,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -277,16 +277,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -304,16 +304,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -331,16 +331,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -358,16 +358,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -385,16 +385,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -412,7 +412,7 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -431,7 +431,7 @@ class CommonApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+            $returnType = '\BSG\Api\V1\Model\BalanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -464,7 +464,7 @@ class CommonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\BalanceResponse',
+                        '\BSG\Api\V1\Model\BalanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class CommonApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -480,7 +480,7 @@ class CommonApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -488,7 +488,7 @@ class CommonApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -496,7 +496,7 @@ class CommonApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class CommonApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -512,7 +512,7 @@ class CommonApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -520,7 +520,7 @@ class CommonApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -562,7 +562,7 @@ class CommonApi
      */
     public function commonGetBalanceBaseAsyncWithHttpInfo(string $contentType = self::contentTypes['commonGetBalanceBase'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+        $returnType = '\BSG\Api\V1\Model\BalanceResponse';
         $request = $this->commonGetBalanceBaseRequest($contentType);
 
         return $this->client
@@ -689,9 +689,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetBalanceBasePost'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function commonGetBalanceBasePost(string $contentType = self::contentTypes['commonGetBalanceBasePost'][0])
     {
@@ -706,9 +706,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetBalanceBasePost'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function commonGetBalanceBasePostWithHttpInfo(string $contentType = self::contentTypes['commonGetBalanceBasePost'][0])
     {
@@ -739,11 +739,11 @@ class CommonApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\BalanceResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\BalanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\BalanceResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\BalanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -761,16 +761,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\BalanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\BalanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -788,16 +788,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -815,16 +815,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -842,16 +842,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -869,16 +869,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -896,16 +896,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -923,16 +923,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -950,7 +950,7 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -969,7 +969,7 @@ class CommonApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+            $returnType = '\BSG\Api\V1\Model\BalanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1002,7 +1002,7 @@ class CommonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\BalanceResponse',
+                        '\BSG\Api\V1\Model\BalanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1010,7 +1010,7 @@ class CommonApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1018,7 +1018,7 @@ class CommonApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1026,7 +1026,7 @@ class CommonApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1034,7 +1034,7 @@ class CommonApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class CommonApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1050,7 +1050,7 @@ class CommonApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1058,7 +1058,7 @@ class CommonApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1100,7 +1100,7 @@ class CommonApi
      */
     public function commonGetBalanceBasePostAsyncWithHttpInfo(string $contentType = self::contentTypes['commonGetBalanceBasePost'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+        $returnType = '\BSG\Api\V1\Model\BalanceResponse';
         $request = $this->commonGetBalanceBasePostRequest($contentType);
 
         return $this->client
@@ -1227,9 +1227,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetBalanceV2'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function commonGetBalanceV2(string $contentType = self::contentTypes['commonGetBalanceV2'][0])
     {
@@ -1244,9 +1244,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetBalanceV2'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function commonGetBalanceV2WithHttpInfo(string $contentType = self::contentTypes['commonGetBalanceV2'][0])
     {
@@ -1277,11 +1277,11 @@ class CommonApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\BalanceResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\BalanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\BalanceResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\BalanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1299,16 +1299,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\BalanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\BalanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1326,16 +1326,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1353,16 +1353,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1380,16 +1380,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1407,16 +1407,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1434,16 +1434,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1461,16 +1461,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1488,7 +1488,7 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1507,7 +1507,7 @@ class CommonApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+            $returnType = '\BSG\Api\V1\Model\BalanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1540,7 +1540,7 @@ class CommonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\BalanceResponse',
+                        '\BSG\Api\V1\Model\BalanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1548,7 +1548,7 @@ class CommonApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1556,7 +1556,7 @@ class CommonApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1564,7 +1564,7 @@ class CommonApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1572,7 +1572,7 @@ class CommonApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1580,7 +1580,7 @@ class CommonApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1588,7 +1588,7 @@ class CommonApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1596,7 +1596,7 @@ class CommonApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1638,7 +1638,7 @@ class CommonApi
      */
     public function commonGetBalanceV2AsyncWithHttpInfo(string $contentType = self::contentTypes['commonGetBalanceV2'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+        $returnType = '\BSG\Api\V1\Model\BalanceResponse';
         $request = $this->commonGetBalanceV2Request($contentType);
 
         return $this->client
@@ -1765,9 +1765,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetBalanceV2Post'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function commonGetBalanceV2Post(string $contentType = self::contentTypes['commonGetBalanceV2Post'][0])
     {
@@ -1782,9 +1782,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetBalanceV2Post'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function commonGetBalanceV2PostWithHttpInfo(string $contentType = self::contentTypes['commonGetBalanceV2Post'][0])
     {
@@ -1815,11 +1815,11 @@ class CommonApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\BalanceResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\BalanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\BalanceResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\BalanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1837,16 +1837,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\BalanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\BalanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1864,16 +1864,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1891,16 +1891,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1918,16 +1918,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1945,16 +1945,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1972,16 +1972,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1999,16 +1999,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2026,7 +2026,7 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2045,7 +2045,7 @@ class CommonApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+            $returnType = '\BSG\Api\V1\Model\BalanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2078,7 +2078,7 @@ class CommonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\BalanceResponse',
+                        '\BSG\Api\V1\Model\BalanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2086,7 +2086,7 @@ class CommonApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2094,7 +2094,7 @@ class CommonApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2102,7 +2102,7 @@ class CommonApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2110,7 +2110,7 @@ class CommonApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2118,7 +2118,7 @@ class CommonApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2126,7 +2126,7 @@ class CommonApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2134,7 +2134,7 @@ class CommonApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2176,7 +2176,7 @@ class CommonApi
      */
     public function commonGetBalanceV2PostAsyncWithHttpInfo(string $contentType = self::contentTypes['commonGetBalanceV2Post'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+        $returnType = '\BSG\Api\V1\Model\BalanceResponse';
         $request = $this->commonGetBalanceV2PostRequest($contentType);
 
         return $this->client
@@ -2307,9 +2307,9 @@ class CommonApi
      * @param  string|null $tariff_code Tariff code (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetPrice'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\CommonPriceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\CommonPriceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function commonGetPrice($mcc = null, $mnc = null, $product = null, $tariff_code = null, string $contentType = self::contentTypes['commonGetPrice'][0])
     {
@@ -2328,9 +2328,9 @@ class CommonApi
      * @param  string|null $tariff_code Tariff code (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetPrice'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\CommonPriceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\CommonPriceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function commonGetPriceWithHttpInfo($mcc = null, $mnc = null, $product = null, $tariff_code = null, string $contentType = self::contentTypes['commonGetPrice'][0])
     {
@@ -2361,11 +2361,11 @@ class CommonApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\CommonPriceResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\CommonPriceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\CommonPriceResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\CommonPriceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2383,16 +2383,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\CommonPriceResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\CommonPriceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2410,16 +2410,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2437,16 +2437,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2464,16 +2464,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2491,16 +2491,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2518,16 +2518,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2545,16 +2545,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2572,7 +2572,7 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2591,7 +2591,7 @@ class CommonApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\CommonPriceResponse';
+            $returnType = '\BSG\Api\V1\Model\CommonPriceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2624,7 +2624,7 @@ class CommonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\CommonPriceResponse',
+                        '\BSG\Api\V1\Model\CommonPriceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2632,7 +2632,7 @@ class CommonApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2640,7 +2640,7 @@ class CommonApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2648,7 +2648,7 @@ class CommonApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2656,7 +2656,7 @@ class CommonApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2664,7 +2664,7 @@ class CommonApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2672,7 +2672,7 @@ class CommonApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2680,7 +2680,7 @@ class CommonApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2730,7 +2730,7 @@ class CommonApi
      */
     public function commonGetPriceAsyncWithHttpInfo($mcc = null, $mnc = null, $product = null, $tariff_code = null, string $contentType = self::contentTypes['commonGetPrice'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\CommonPriceResponse';
+        $returnType = '\BSG\Api\V1\Model\CommonPriceResponse';
         $request = $this->commonGetPriceRequest($mcc, $mnc, $product, $tariff_code, $contentType);
 
         return $this->client
@@ -2899,12 +2899,12 @@ class CommonApi
      *
      * Get SMS price (POST)
      *
-     * @param  \BSG\\Api\\V1\Model\CommonPriceRequest $common_price_request common_price_request (required)
+     * @param  \BSG\Api\V1\Model\CommonPriceRequest $common_price_request common_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetPricePost'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\CommonPriceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\CommonPriceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function commonGetPricePost($common_price_request, string $contentType = self::contentTypes['commonGetPricePost'][0])
     {
@@ -2917,12 +2917,12 @@ class CommonApi
      *
      * Get SMS price (POST)
      *
-     * @param  \BSG\\Api\\V1\Model\CommonPriceRequest $common_price_request (required)
+     * @param  \BSG\Api\V1\Model\CommonPriceRequest $common_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetPricePost'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\CommonPriceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\CommonPriceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function commonGetPricePostWithHttpInfo($common_price_request, string $contentType = self::contentTypes['commonGetPricePost'][0])
     {
@@ -2953,11 +2953,11 @@ class CommonApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\CommonPriceResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\CommonPriceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\CommonPriceResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\CommonPriceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2975,16 +2975,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\CommonPriceResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\CommonPriceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3002,16 +3002,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3029,16 +3029,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3056,16 +3056,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3083,16 +3083,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3110,16 +3110,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3137,16 +3137,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3164,7 +3164,7 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3183,7 +3183,7 @@ class CommonApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\CommonPriceResponse';
+            $returnType = '\BSG\Api\V1\Model\CommonPriceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3216,7 +3216,7 @@ class CommonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\CommonPriceResponse',
+                        '\BSG\Api\V1\Model\CommonPriceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3224,7 +3224,7 @@ class CommonApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3232,7 +3232,7 @@ class CommonApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3240,7 +3240,7 @@ class CommonApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3248,7 +3248,7 @@ class CommonApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3256,7 +3256,7 @@ class CommonApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3264,7 +3264,7 @@ class CommonApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3272,7 +3272,7 @@ class CommonApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3287,7 +3287,7 @@ class CommonApi
      *
      * Get SMS price (POST)
      *
-     * @param  \BSG\\Api\\V1\Model\CommonPriceRequest $common_price_request (required)
+     * @param  \BSG\Api\V1\Model\CommonPriceRequest $common_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetPricePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3308,7 +3308,7 @@ class CommonApi
      *
      * Get SMS price (POST)
      *
-     * @param  \BSG\\Api\\V1\Model\CommonPriceRequest $common_price_request (required)
+     * @param  \BSG\Api\V1\Model\CommonPriceRequest $common_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetPricePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3316,7 +3316,7 @@ class CommonApi
      */
     public function commonGetPricePostAsyncWithHttpInfo($common_price_request, string $contentType = self::contentTypes['commonGetPricePost'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\CommonPriceResponse';
+        $returnType = '\BSG\Api\V1\Model\CommonPriceResponse';
         $request = $this->commonGetPricePostRequest($common_price_request, $contentType);
 
         return $this->client
@@ -3358,7 +3358,7 @@ class CommonApi
     /**
      * Create request for operation 'commonGetPricePost'
      *
-     * @param  \BSG\\Api\\V1\Model\CommonPriceRequest $common_price_request (required)
+     * @param  \BSG\Api\V1\Model\CommonPriceRequest $common_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetPricePost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3458,9 +3458,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetTariff'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\CommonTariffResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\CommonTariffResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function commonGetTariff(string $contentType = self::contentTypes['commonGetTariff'][0])
     {
@@ -3475,9 +3475,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetTariff'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\CommonTariffResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\CommonTariffResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function commonGetTariffWithHttpInfo(string $contentType = self::contentTypes['commonGetTariff'][0])
     {
@@ -3508,11 +3508,11 @@ class CommonApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\CommonTariffResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\CommonTariffResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\CommonTariffResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\CommonTariffResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3530,16 +3530,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\CommonTariffResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\CommonTariffResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3557,16 +3557,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3584,16 +3584,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3611,16 +3611,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3638,16 +3638,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3665,16 +3665,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3692,16 +3692,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3719,7 +3719,7 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3738,7 +3738,7 @@ class CommonApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\CommonTariffResponse';
+            $returnType = '\BSG\Api\V1\Model\CommonTariffResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3771,7 +3771,7 @@ class CommonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\CommonTariffResponse',
+                        '\BSG\Api\V1\Model\CommonTariffResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3779,7 +3779,7 @@ class CommonApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3787,7 +3787,7 @@ class CommonApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3795,7 +3795,7 @@ class CommonApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3803,7 +3803,7 @@ class CommonApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3811,7 +3811,7 @@ class CommonApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3819,7 +3819,7 @@ class CommonApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3827,7 +3827,7 @@ class CommonApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3869,7 +3869,7 @@ class CommonApi
      */
     public function commonGetTariffAsyncWithHttpInfo(string $contentType = self::contentTypes['commonGetTariff'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\CommonTariffResponse';
+        $returnType = '\BSG\Api\V1\Model\CommonTariffResponse';
         $request = $this->commonGetTariffRequest($contentType);
 
         return $this->client
@@ -3996,9 +3996,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetTariffPost'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\CommonTariffResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\CommonTariffResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function commonGetTariffPost(string $contentType = self::contentTypes['commonGetTariffPost'][0])
     {
@@ -4013,9 +4013,9 @@ class CommonApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['commonGetTariffPost'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\CommonTariffResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\CommonTariffResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function commonGetTariffPostWithHttpInfo(string $contentType = self::contentTypes['commonGetTariffPost'][0])
     {
@@ -4046,11 +4046,11 @@ class CommonApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\CommonTariffResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\CommonTariffResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\CommonTariffResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\CommonTariffResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4068,16 +4068,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\CommonTariffResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\CommonTariffResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4095,16 +4095,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4122,16 +4122,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4149,16 +4149,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4176,16 +4176,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4203,16 +4203,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4230,16 +4230,16 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4257,7 +4257,7 @@ class CommonApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4276,7 +4276,7 @@ class CommonApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\CommonTariffResponse';
+            $returnType = '\BSG\Api\V1\Model\CommonTariffResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4309,7 +4309,7 @@ class CommonApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\CommonTariffResponse',
+                        '\BSG\Api\V1\Model\CommonTariffResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4317,7 +4317,7 @@ class CommonApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4325,7 +4325,7 @@ class CommonApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4333,7 +4333,7 @@ class CommonApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4341,7 +4341,7 @@ class CommonApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4349,7 +4349,7 @@ class CommonApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4357,7 +4357,7 @@ class CommonApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4365,7 +4365,7 @@ class CommonApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4407,7 +4407,7 @@ class CommonApi
      */
     public function commonGetTariffPostAsyncWithHttpInfo(string $contentType = self::contentTypes['commonGetTariffPost'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\CommonTariffResponse';
+        $returnType = '\BSG\Api\V1\Model\CommonTariffResponse';
         $request = $this->commonGetTariffPostRequest($contentType);
 
         return $this->client

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * AuthApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,12 +130,12 @@ class AuthApi
      *
      * Receive JWT token
      *
-     * @param  \BSG\\Api\\V2\Model\LoginRequest $login_request login_request (required)
+     * @param  \BSG\Api\V2\Model\LoginRequest $login_request login_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['login'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\TokenSchema|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Login422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\TokenSchema|\BSG\Api\V2\Model\Login400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\Login422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function login($login_request, string $contentType = self::contentTypes['login'][0])
     {
@@ -148,12 +148,12 @@ class AuthApi
      *
      * Receive JWT token
      *
-     * @param  \BSG\\Api\\V2\Model\LoginRequest $login_request (required)
+     * @param  \BSG\Api\V2\Model\LoginRequest $login_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['login'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\TokenSchema|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Login422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\TokenSchema|\BSG\Api\V2\Model\Login400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\Login422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function loginWithHttpInfo($login_request, string $contentType = self::contentTypes['login'][0])
     {
@@ -184,11 +184,11 @@ class AuthApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\TokenSchema' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TokenSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TokenSchema' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TokenSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,16 +206,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TokenSchema', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TokenSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Login400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Login400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,16 +233,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Login400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -260,16 +260,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -287,16 +287,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\Login422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Login422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Login422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Login422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -314,16 +314,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Login422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Login422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -341,7 +341,7 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -360,7 +360,7 @@ class AuthApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\TokenSchema';
+            $returnType = '\BSG\Api\V2\Model\TokenSchema';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -393,7 +393,7 @@ class AuthApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TokenSchema',
+                        '\BSG\Api\V2\Model\TokenSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -401,7 +401,7 @@ class AuthApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\Login400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -409,7 +409,7 @@ class AuthApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -417,7 +417,7 @@ class AuthApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -425,7 +425,7 @@ class AuthApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Login422Response',
+                        '\BSG\Api\V2\Model\Login422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -433,7 +433,7 @@ class AuthApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -448,7 +448,7 @@ class AuthApi
      *
      * Receive JWT token
      *
-     * @param  \BSG\\Api\\V2\Model\LoginRequest $login_request (required)
+     * @param  \BSG\Api\V2\Model\LoginRequest $login_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['login'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -469,7 +469,7 @@ class AuthApi
      *
      * Receive JWT token
      *
-     * @param  \BSG\\Api\\V2\Model\LoginRequest $login_request (required)
+     * @param  \BSG\Api\V2\Model\LoginRequest $login_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['login'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -477,7 +477,7 @@ class AuthApi
      */
     public function loginAsyncWithHttpInfo($login_request, string $contentType = self::contentTypes['login'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\TokenSchema';
+        $returnType = '\BSG\Api\V2\Model\TokenSchema';
         $request = $this->loginRequest($login_request, $contentType);
 
         return $this->client
@@ -519,7 +519,7 @@ class AuthApi
     /**
      * Create request for operation 'login'
      *
-     * @param  \BSG\\Api\\V2\Model\LoginRequest $login_request (required)
+     * @param  \BSG\Api\V2\Model\LoginRequest $login_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['login'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -614,9 +614,9 @@ class AuthApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['refreshToken'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\TokenSchema|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\RefreshToken401Response|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\RefreshToken422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\TokenSchema|\BSG\Api\V2\Model\RefreshToken400Response|\BSG\Api\V2\Model\RefreshToken401Response|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\RefreshToken422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function refreshToken(string $contentType = self::contentTypes['refreshToken'][0])
     {
@@ -631,9 +631,9 @@ class AuthApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['refreshToken'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\TokenSchema|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\RefreshToken401Response|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\RefreshToken422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\TokenSchema|\BSG\Api\V2\Model\RefreshToken400Response|\BSG\Api\V2\Model\RefreshToken401Response|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\RefreshToken422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function refreshTokenWithHttpInfo(string $contentType = self::contentTypes['refreshToken'][0])
     {
@@ -664,11 +664,11 @@ class AuthApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\TokenSchema' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TokenSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TokenSchema' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TokenSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -686,16 +686,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TokenSchema', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TokenSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\RefreshToken400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\RefreshToken400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -713,16 +713,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\RefreshToken400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\RefreshToken401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken401Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\RefreshToken401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -740,16 +740,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\RefreshToken401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -767,16 +767,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\RefreshToken422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\RefreshToken422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -794,16 +794,16 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\RefreshToken422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -821,7 +821,7 @@ class AuthApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -840,7 +840,7 @@ class AuthApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\TokenSchema';
+            $returnType = '\BSG\Api\V2\Model\TokenSchema';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -873,7 +873,7 @@ class AuthApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TokenSchema',
+                        '\BSG\Api\V2\Model\TokenSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class AuthApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\RefreshToken400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -889,7 +889,7 @@ class AuthApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken401Response',
+                        '\BSG\Api\V2\Model\RefreshToken401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -897,7 +897,7 @@ class AuthApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -905,7 +905,7 @@ class AuthApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken422Response',
+                        '\BSG\Api\V2\Model\RefreshToken422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -913,7 +913,7 @@ class AuthApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class AuthApi
      */
     public function refreshTokenAsyncWithHttpInfo(string $contentType = self::contentTypes['refreshToken'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\TokenSchema';
+        $returnType = '\BSG\Api\V2\Model\TokenSchema';
         $request = $this->refreshTokenRequest($contentType);
 
         return $this->client

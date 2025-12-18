@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TariffSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TariffSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'float',
         'name' => 'string',
-        'code' => 'AppUIHttpRestExternalResourceAccountTariffCode',
+        'code' => 'string',
         'is_active' => 'bool',
         'is_default' => 'bool'
     ];
@@ -374,7 +374,7 @@ class TariffSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets code
      *
-     * @return AppUIHttpRestExternalResourceAccountTariffCode|null
+     * @return string|null
      */
     public function getCode()
     {
@@ -384,7 +384,7 @@ class TariffSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets code
      *
-     * @param AppUIHttpRestExternalResourceAccountTariffCode|null $code code
+     * @param string|null $code Tariff code
      *
      * @return self
      */

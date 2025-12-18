@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * WhatsAppMessage Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,12 +57,12 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'phone' => '\BSG\\Api\\V2\Model\Phone',
+        'phone' => '\BSG\Api\V2\Model\Phone',
         'sender' => 'string',
         'type' => 'string',
-        'template' => '\BSG\\Api\\V2\Model\WhatsAppMessageTemplate',
-        'alternative_channel' => '\BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel',
-        'callback_url' => 'mixed',
+        'template' => '\BSG\Api\V2\Model\WhatsAppMessageTemplate',
+        'alternative_channel' => '\BSG\Api\V2\Model\WhatsAppMessageAlternativeChannel',
+        'callback_url' => 'string',
         'add_to_contact_book' => 'bool',
         'check_stop_list' => 'bool'
     ];
@@ -96,7 +96,7 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => false,
         'template' => true,
         'alternative_channel' => true,
-        'callback_url' => true,
+        'callback_url' => false,
         'add_to_contact_book' => false,
         'check_stop_list' => false
     ];
@@ -384,7 +384,7 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phone
      *
-     * @return \BSG\\Api\\V2\Model\Phone
+     * @return \BSG\Api\V2\Model\Phone
      */
     public function getPhone()
     {
@@ -394,7 +394,7 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phone
      *
-     * @param \BSG\\Api\\V2\Model\Phone $phone phone
+     * @param \BSG\Api\V2\Model\Phone $phone phone
      *
      * @return self
      */
@@ -482,7 +482,7 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets template
      *
-     * @return \BSG\\Api\\V2\Model\WhatsAppMessageTemplate|null
+     * @return \BSG\Api\V2\Model\WhatsAppMessageTemplate|null
      */
     public function getTemplate()
     {
@@ -492,7 +492,7 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets template
      *
-     * @param \BSG\\Api\\V2\Model\WhatsAppMessageTemplate|null $template template
+     * @param \BSG\Api\V2\Model\WhatsAppMessageTemplate|null $template template
      *
      * @return self
      */
@@ -516,7 +516,7 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets alternative_channel
      *
-     * @return \BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel|null
+     * @return \BSG\Api\V2\Model\WhatsAppMessageAlternativeChannel|null
      */
     public function getAlternativeChannel()
     {
@@ -526,7 +526,7 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets alternative_channel
      *
-     * @param \BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel|null $alternative_channel alternative_channel
+     * @param \BSG\Api\V2\Model\WhatsAppMessageAlternativeChannel|null $alternative_channel alternative_channel
      *
      * @return self
      */
@@ -550,7 +550,7 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets callback_url
      *
-     * @return mixed|null
+     * @return string|null
      */
     public function getCallbackUrl()
     {
@@ -560,23 +560,16 @@ class WhatsAppMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets callback_url
      *
-     * @param mixed|null $callback_url Link to get the delivery status of messages. If this parameter is specified in the method, it will take precedence over the value specified in the “Callback URL” field in the Personal Area.
+     * @param string|null $callback_url Link to get the delivery status of messages. If this parameter is specified in the method, it will take precedence over the value specified in the “Callback URL” field in the Personal Area.
      *
      * @return self
      */
     public function setCallbackUrl($callback_url)
     {
         if (is_null($callback_url)) {
-            array_push($this->openAPINullablesSetToNull, 'callback_url');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('callback_url', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable callback_url cannot be null');
         }
-        if (!is_null($callback_url) && (mb_strlen($callback_url) > 100)) {
+        if ((mb_strlen($callback_url) > 100)) {
             throw new \InvalidArgumentException('invalid length for $callback_url when calling WhatsAppMessage., must be smaller than or equal to 100.');
         }
 

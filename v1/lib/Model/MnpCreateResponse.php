@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * MnpCreateResponse Class Doc Comment
  *
  * @category Class
  * @description MNP lookup response with results and pricing
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MnpCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'result' => '\BSG\\Api\\V1\Model\MnpCreateResponseResultInner[]',
+        'result' => '\BSG\Api\V1\Model\ResultschemaResultItem5[]',
         'total_price' => 'float',
         'currency' => 'string'
     ];
@@ -325,7 +325,7 @@ class MnpCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets result
      *
-     * @return \BSG\\Api\\V1\Model\MnpCreateResponseResultInner[]
+     * @return \BSG\Api\V1\Model\ResultschemaResultItem5[]
      */
     public function getResult()
     {
@@ -335,7 +335,7 @@ class MnpCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets result
      *
-     * @param \BSG\\Api\\V1\Model\MnpCreateResponseResultInner[] $result Array of MNP lookup results for each requested number
+     * @param \BSG\Api\V1\Model\ResultschemaResultItem5[] $result Array of MNP lookup results for each requested number
      *
      * @return self
      */

@@ -1,17 +1,17 @@
-# BSG\\Api\\V2\InternalCorePriceApi
+# BSG\Api\V2\InternalCorePriceApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**d6429e9d3846f9ae5efa4c9d4d7bda10()**](InternalCorePriceApi.md#d6429e9d3846f9ae5efa4c9d4d7bda10) | **GET** /api/internal/core/prices/{countryCode} | Get prices for country |
-| [**ef361cc4d966acb533399907bc7084c2()**](InternalCorePriceApi.md#ef361cc4d966acb533399907bc7084c2) | **GET** /api/internal/core/prices | Get price list for each country |
+| [**internalCorePricesByCountry()**](InternalCorePriceApi.md#internalCorePricesByCountry) | **GET** /api/internal/core/prices/{countryCode} | Get prices for country |
+| [**internalCorePricesList()**](InternalCorePriceApi.md#internalCorePricesList) | **GET** /api/internal/core/prices | Get price list for each country |
 
 
-## `d6429e9d3846f9ae5efa4c9d4d7bda10()`
+## `internalCorePricesByCountry()`
 
 ```php
-d6429e9d3846f9ae5efa4c9d4d7bda10($country_code, $product): \BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response
+internalCorePricesByCountry($country_code, $product): \BSG\Api\V2\Model\InternalCorePricesByCountry200Response
 ```
 
 Get prices for country
@@ -24,23 +24,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: InternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\InternalCorePriceApi(
+$apiInstance = new BSG\Api\V2\Api\InternalCorePriceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$country_code = AB; // string | Country ISO Code
-$product = 'product_example'; // string | Product value
+| $country_code = AB; // string | Country ISO Code |
+| $product = 'product_example'; // string | Product value |
 
 try {
-    $result = $apiInstance->d6429e9d3846f9ae5efa4c9d4d7bda10($country_code, $product);
+    $result = $apiInstance->internalCorePricesByCountry($country_code, $product);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InternalCorePriceApi->d6429e9d3846f9ae5efa4c9d4d7bda10: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InternalCorePriceApi->internalCorePricesByCountry: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -53,7 +53,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response**](../Model/D6429e9d3846f9ae5efa4c9d4d7bda10200Response.md)
+[**\BSG\Api\V2\Model\InternalCorePricesByCountry200Response**](../Model/InternalCorePricesByCountry200Response.md)
 
 ### Authorization
 
@@ -68,10 +68,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `ef361cc4d966acb533399907bc7084c2()`
+## `internalCorePricesList()`
 
 ```php
-ef361cc4d966acb533399907bc7084c2($product): \BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response
+internalCorePricesList($product): \BSG\Api\V2\Model\InternalCorePricesList200Response
 ```
 
 Get price list for each country
@@ -84,22 +84,22 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: InternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\InternalCorePriceApi(
+$apiInstance = new BSG\Api\V2\Api\InternalCorePriceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$product = 'product_example'; // string | Product value
+| $product = 'product_example'; // string | Product value |
 
 try {
-    $result = $apiInstance->ef361cc4d966acb533399907bc7084c2($product);
+    $result = $apiInstance->internalCorePricesList($product);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InternalCorePriceApi->ef361cc4d966acb533399907bc7084c2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InternalCorePriceApi->internalCorePricesList: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response**](../Model/Ef361cc4d966acb533399907bc7084c2200Response.md)
+[**\BSG\Api\V2\Model\InternalCorePricesList200Response**](../Model/InternalCorePricesList200Response.md)
 
 ### Authorization
 

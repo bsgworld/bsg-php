@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * SmsCreateResponse Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class SmsCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'result' => '\BSG\\Api\\V1\Model\TaskResultsInner[]',
+        'result' => '\BSG\Api\V1\Model\TaskresultsResultItem[]',
         'task_id' => 'string',
         'total_price' => 'float',
         'currency' => 'string'
@@ -338,7 +338,7 @@ class SmsCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets result
      *
-     * @return \BSG\\Api\\V1\Model\TaskResultsInner[]
+     * @return \BSG\Api\V1\Model\TaskresultsResultItem[]
      */
     public function getResult()
     {
@@ -348,7 +348,7 @@ class SmsCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets result
      *
-     * @param \BSG\\Api\\V1\Model\TaskResultsInner[] $result Array of results for task-based SMS sending
+     * @param \BSG\Api\V1\Model\TaskresultsResultItem[] $result Array of results for task-based SMS sending
      *
      * @return self
      */

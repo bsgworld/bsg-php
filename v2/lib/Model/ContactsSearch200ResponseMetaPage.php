@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactsSearch200ResponseMetaPage Class Doc Comment
  *
  * @category Class
  * @description Pagination parameters and total results count
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -50,7 +50,7 @@ class ContactsSearch200ResponseMetaPage implements ModelInterface, ArrayAccess, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts_search_200_response_meta_page';
+    protected static $openAPIModelName = 'ContactsSearch200ResponseMetaPage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

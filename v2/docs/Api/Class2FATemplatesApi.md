@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\Class2FATemplatesApi
+# BSG\Api\V2\Class2FATemplatesApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `otpTemplate()`
 
 ```php
-otpTemplate($template_id): \BSG\\Api\\V2\Model\OtpTemplate200Response
+otpTemplate($template_id): \BSG\Api\V2\Model\OtpTemplate200Response
 ```
 
 Get message template
@@ -26,16 +26,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\Class2FATemplatesApi(
+$apiInstance = new BSG\Api\V2\Api\Class2FATemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$template_id = 56; // int | Template id
+| $template_id = 56; // int | Template id |
 
 try {
     $result = $apiInstance->otpTemplate($template_id);
@@ -53,7 +53,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\OtpTemplate200Response**](../Model/OtpTemplate200Response.md)
+[**\BSG\Api\V2\Model\OtpTemplate200Response**](../Model/OtpTemplate200Response.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ try {
 ## `otpTemplateCreate()`
 
 ```php
-otpTemplateCreate($otp_template_create_request): \BSG\\Api\\V2\Model\OtpTemplate200Response
+otpTemplateCreate($otp_template_create_request): \BSG\Api\V2\Model\OtpTemplateCreate200Response
 ```
 
 Create a message template
@@ -86,16 +86,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\Class2FATemplatesApi(
+$apiInstance = new BSG\Api\V2\Api\Class2FATemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$otp_template_create_request = new \BSG\\Api\\V2\Model\OtpTemplateCreateRequest(); // \BSG\\Api\\V2\Model\OtpTemplateCreateRequest
+$otp_template_create_request = new \BSG\Api\V2\Model\OtpTemplateCreateRequest(); // \BSG\Api\V2\Model\OtpTemplateCreateRequest
 
 try {
     $result = $apiInstance->otpTemplateCreate($otp_template_create_request);
@@ -109,11 +109,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **otp_template_create_request** | [**\BSG\\Api\\V2\Model\OtpTemplateCreateRequest**](../Model/OtpTemplateCreateRequest.md)|  | |
+| **otp_template_create_request** | [**\BSG\Api\V2\Model\OtpTemplateCreateRequest**](../Model/OtpTemplateCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\OtpTemplate200Response**](../Model/OtpTemplate200Response.md)
+[**\BSG\Api\V2\Model\OtpTemplateCreate200Response**](../Model/OtpTemplateCreate200Response.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ try {
 ## `otpTemplateDelete()`
 
 ```php
-otpTemplateDelete($template_id): \BSG\\Api\\V2\Model\OtpTemplateDelete200Response
+otpTemplateDelete($template_id): \BSG\Api\V2\Model\OtpTemplateDelete200Response
 ```
 
 Delete a message template
@@ -146,16 +146,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\Class2FATemplatesApi(
+$apiInstance = new BSG\Api\V2\Api\Class2FATemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$template_id = 56; // int | The ID of the message template that you want to delete. From 1 to 9 digits.
+| $template_id = 56; // int | The ID of the message template that you want to delete. From 1 to 9 digits. |
 
 try {
     $result = $apiInstance->otpTemplateDelete($template_id);
@@ -173,7 +173,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\OtpTemplateDelete200Response**](../Model/OtpTemplateDelete200Response.md)
+[**\BSG\Api\V2\Model\OtpTemplateDelete200Response**](../Model/OtpTemplateDelete200Response.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ try {
 ## `otpTemplateList()`
 
 ```php
-otpTemplateList($page_offset, $page_limit, $filter_ids, $filter_status, $sort, $way): \BSG\\Api\\V2\Model\OtpTemplateList200Response
+otpTemplateList($page_offset, $page_limit, $filter_ids, $filter_status, $sort, $way): \BSG\Api\V2\Model\OtpTemplateList200Response
 ```
 
 List of message templates
@@ -206,10 +206,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\Class2FATemplatesApi(
+$apiInstance = new BSG\Api\V2\Api\Class2FATemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -219,8 +219,8 @@ $page_offset = 0; // int
 $page_limit = 10; // int
 $filter_ids = array(56); // int[]
 $filter_status = 'filter_status_example'; // string
-$sort = 'template_id'; // string | Sorting by
-$way = new \BSG\\Api\\V2\Model\\BSG\\Api\\V2\Model\SortWay(); // \BSG\\Api\\V2\Model\SortWay
+| $sort = 'template_id'; // string | Sorting by |
+$way = new \BSG\Api\V2\Model\\BSG\Api\V2\Model\SortWay(); // \BSG\Api\V2\Model\SortWay
 
 try {
     $result = $apiInstance->otpTemplateList($page_offset, $page_limit, $filter_ids, $filter_status, $sort, $way);
@@ -239,11 +239,11 @@ try {
 | **filter_ids** | [**int[]**](../Model/int.md)|  | [optional] |
 | **filter_status** | **string**|  | [optional] |
 | **sort** | **string**| Sorting by | [optional] [default to &#39;template_id&#39;] |
-| **way** | [**\BSG\\Api\\V2\Model\SortWay**](../Model/.md)|  | [optional] |
+| **way** | [**\BSG\Api\V2\Model\SortWay**](../Model/.md)|  | [optional] |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\OtpTemplateList200Response**](../Model/OtpTemplateList200Response.md)
+[**\BSG\Api\V2\Model\OtpTemplateList200Response**](../Model/OtpTemplateList200Response.md)
 
 ### Authorization
 

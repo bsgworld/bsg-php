@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * AlternativeChannel Class Doc Comment
  *
  * @category Class
  * @description The object contains information for sending a message via an alternative SMS channel in case of non-delivery with primary channel
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class AlternativeChannel implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sms' => '\BSG\\Api\\V2\Model\Sms'
+        'sms' => '\BSG\Api\V2\Model\Sms'
     ];
 
     /**
@@ -293,7 +293,7 @@ class AlternativeChannel implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets sms
      *
-     * @return \BSG\\Api\\V2\Model\Sms|null
+     * @return \BSG\Api\V2\Model\Sms|null
      */
     public function getSms()
     {
@@ -303,7 +303,7 @@ class AlternativeChannel implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets sms
      *
-     * @param \BSG\\Api\\V2\Model\Sms|null $sms sms
+     * @param \BSG\Api\V2\Model\Sms|null $sms sms
      *
      * @return self
      */

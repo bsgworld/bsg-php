@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * DetailCampaignSchema Class Doc Comment
  *
  * @category Class
  * @description Detailed campaign data including delivery stats, total message count and price
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,14 +61,14 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
         'id' => 'int',
         'name' => 'string',
         'sender' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\CampaignStatus',
-        'type' => '\BSG\\Api\\V2\Model\MessageType',
+        'status' => '\BSG\Api\V2\Model\CampaignStatus',
+        'type' => '\BSG\Api\V2\Model\MessageType',
         'started_at' => '\DateTime',
         'actual_start_at' => '\DateTime',
         'finished_at' => '\DateTime',
         'created_at' => '\DateTime',
-        'statistics' => '\BSG\\Api\\V2\Model\StatisticsData',
-        'alternative_channels' => '\BSG\\Api\\V2\Model\DetailCampaignSchemaAlternativeChannels',
+        'statistics' => '\BSG\Api\V2\Model\StatisticsData',
+        'alternative_channels' => '\BSG\Api\V2\Model\DetailCampaignSchemaAlternativeChannels',
         'total_messages' => 'int',
         'total_phones' => 'int',
         'total_price' => 'float',
@@ -111,7 +111,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
         'sender' => false,
         'status' => false,
         'type' => false,
-        'started_at' => false,
+        'started_at' => true,
         'actual_start_at' => true,
         'finished_at' => true,
         'created_at' => false,
@@ -472,7 +472,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\CampaignStatus|null
+     * @return \BSG\Api\V2\Model\CampaignStatus|null
      */
     public function getStatus()
     {
@@ -482,7 +482,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\CampaignStatus|null $status status
+     * @param \BSG\Api\V2\Model\CampaignStatus|null $status status
      *
      * @return self
      */
@@ -499,7 +499,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\MessageType|null
+     * @return \BSG\Api\V2\Model\MessageType|null
      */
     public function getType()
     {
@@ -509,7 +509,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\MessageType|null $type type
+     * @param \BSG\Api\V2\Model\MessageType|null $type type
      *
      * @return self
      */
@@ -543,7 +543,14 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setStartedAt($started_at)
     {
         if (is_null($started_at)) {
-            throw new \InvalidArgumentException('non-nullable started_at cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'started_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('started_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['started_at'] = $started_at;
 
@@ -648,7 +655,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets statistics
      *
-     * @return \BSG\\Api\\V2\Model\StatisticsData|null
+     * @return \BSG\Api\V2\Model\StatisticsData|null
      */
     public function getStatistics()
     {
@@ -658,7 +665,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets statistics
      *
-     * @param \BSG\\Api\\V2\Model\StatisticsData|null $statistics statistics
+     * @param \BSG\Api\V2\Model\StatisticsData|null $statistics statistics
      *
      * @return self
      */
@@ -675,7 +682,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets alternative_channels
      *
-     * @return \BSG\\Api\\V2\Model\DetailCampaignSchemaAlternativeChannels|null
+     * @return \BSG\Api\V2\Model\DetailCampaignSchemaAlternativeChannels|null
      */
     public function getAlternativeChannels()
     {
@@ -685,7 +692,7 @@ class DetailCampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets alternative_channels
      *
-     * @param \BSG\\Api\\V2\Model\DetailCampaignSchemaAlternativeChannels|null $alternative_channels alternative_channels
+     * @param \BSG\Api\V2\Model\DetailCampaignSchemaAlternativeChannels|null $alternative_channels alternative_channels
      *
      * @return self
      */

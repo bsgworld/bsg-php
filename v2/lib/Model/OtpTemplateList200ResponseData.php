@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * OtpTemplateList200ResponseData Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class OtpTemplateList200ResponseData implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'otp_template_list_200_response_data';
+    protected static $openAPIModelName = 'OtpTemplateList200ResponseData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class OtpTemplateList200ResponseData implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'list' => '\BSG\\Api\\V2\Model\TwoFaTemplateResource[]',
+        'list' => '\BSG\Api\V2\Model\TwoFaTemplateResource[]',
         'total' => 'int'
     ];
 
@@ -299,7 +299,7 @@ class OtpTemplateList200ResponseData implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets list
      *
-     * @return \BSG\\Api\\V2\Model\TwoFaTemplateResource[]|null
+     * @return \BSG\Api\V2\Model\TwoFaTemplateResource[]|null
      */
     public function getList()
     {
@@ -309,7 +309,7 @@ class OtpTemplateList200ResponseData implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets list
      *
-     * @param \BSG\\Api\\V2\Model\TwoFaTemplateResource[]|null $list list
+     * @param \BSG\Api\V2\Model\TwoFaTemplateResource[]|null $list list
      *
      * @return self
      */

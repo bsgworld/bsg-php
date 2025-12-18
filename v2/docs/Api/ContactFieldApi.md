@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\ContactFieldApi
+# BSG\Api\V2\ContactFieldApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -7,13 +7,13 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 | [**contactFieldCreate()**](ContactFieldApi.md#contactFieldCreate) | **POST** /api/contacts/fields | Create contact field |
 | [**contactFieldUpdate()**](ContactFieldApi.md#contactFieldUpdate) | **PATCH** /api/contacts/fields/{id} | Update contact field |
 | [**contactFields()**](ContactFieldApi.md#contactFields) | **GET** /api/contacts/fields | List of contact fields |
-| [**ed8d272687f9ac68a20fe1c31dc3c042()**](ContactFieldApi.md#ed8d272687f9ac68a20fe1c31dc3c042) | **POST** /api/contacts/fields/delete | Delete contact fields by ids |
+| [**contactFieldsDeleteBatch()**](ContactFieldApi.md#contactFieldsDeleteBatch) | **POST** /api/contacts/fields/delete | Delete contact fields by ids |
 
 
 ## `contactFieldCreate()`
 
 ```php
-contactFieldCreate($contact_field_create_request): \BSG\\Api\\V2\Model\ContactFieldCreate201Response
+contactFieldCreate($contact_field_create_request): \BSG\Api\V2\Model\ContactFieldCreate201Response
 ```
 
 Create contact field
@@ -28,16 +28,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactFieldApi(
+$apiInstance = new BSG\Api\V2\Api\ContactFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$contact_field_create_request = new \BSG\\Api\\V2\Model\ContactFieldCreateRequest(); // \BSG\\Api\\V2\Model\ContactFieldCreateRequest
+$contact_field_create_request = new \BSG\Api\V2\Model\ContactFieldCreateRequest(); // \BSG\Api\V2\Model\ContactFieldCreateRequest
 
 try {
     $result = $apiInstance->contactFieldCreate($contact_field_create_request);
@@ -51,11 +51,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contact_field_create_request** | [**\BSG\\Api\\V2\Model\ContactFieldCreateRequest**](../Model/ContactFieldCreateRequest.md)|  | |
+| **contact_field_create_request** | [**\BSG\Api\V2\Model\ContactFieldCreateRequest**](../Model/ContactFieldCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ContactFieldCreate201Response**](../Model/ContactFieldCreate201Response.md)
+[**\BSG\Api\V2\Model\ContactFieldCreate201Response**](../Model/ContactFieldCreate201Response.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `contactFieldUpdate()`
 
 ```php
-contactFieldUpdate($id, $contact_field_update_request): \BSG\\Api\\V2\Model\ContactFieldCreate201Response
+contactFieldUpdate($id, $contact_field_update_request): \BSG\Api\V2\Model\ContactFieldUpdate200Response
 ```
 
 Update contact field
@@ -88,17 +88,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactFieldApi(
+$apiInstance = new BSG\Api\V2\Api\ContactFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Contact field id
-$contact_field_update_request = new \BSG\\Api\\V2\Model\ContactFieldUpdateRequest(); // \BSG\\Api\\V2\Model\ContactFieldUpdateRequest
+| $id = 56; // int | Contact field id |
+$contact_field_update_request = new \BSG\Api\V2\Model\ContactFieldUpdateRequest(); // \BSG\Api\V2\Model\ContactFieldUpdateRequest
 
 try {
     $result = $apiInstance->contactFieldUpdate($id, $contact_field_update_request);
@@ -113,11 +113,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Contact field id | |
-| **contact_field_update_request** | [**\BSG\\Api\\V2\Model\ContactFieldUpdateRequest**](../Model/ContactFieldUpdateRequest.md)|  | |
+| **contact_field_update_request** | [**\BSG\Api\V2\Model\ContactFieldUpdateRequest**](../Model/ContactFieldUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ContactFieldCreate201Response**](../Model/ContactFieldCreate201Response.md)
+[**\BSG\Api\V2\Model\ContactFieldUpdate200Response**](../Model/ContactFieldUpdate200Response.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ try {
 ## `contactFields()`
 
 ```php
-contactFields(): \BSG\\Api\\V2\Model\ContactFieldCollectionSchema
+contactFields(): \BSG\Api\V2\Model\ContactFieldCollectionSchema
 ```
 
 List of contact fields
@@ -150,10 +150,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactFieldApi(
+$apiInstance = new BSG\Api\V2\Api\ContactFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ContactFieldCollectionSchema**](../Model/ContactFieldCollectionSchema.md)
+[**\BSG\Api\V2\Model\ContactFieldCollectionSchema**](../Model/ContactFieldCollectionSchema.md)
 
 ### Authorization
 
@@ -189,10 +189,10 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `ed8d272687f9ac68a20fe1c31dc3c042()`
+## `contactFieldsDeleteBatch()`
 
 ```php
-ed8d272687f9ac68a20fe1c31dc3c042($ed8d272687f9ac68a20fe1c31dc3c042_request): object
+contactFieldsDeleteBatch($contact_fields_delete_batch_request): object
 ```
 
 Delete contact fields by ids
@@ -207,22 +207,22 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactFieldApi(
+$apiInstance = new BSG\Api\V2\Api\ContactFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ed8d272687f9ac68a20fe1c31dc3c042_request = new \BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042Request(); // \BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042Request
+$contact_fields_delete_batch_request = new \BSG\Api\V2\Model\ContactFieldsDeleteBatchRequest(); // \BSG\Api\V2\Model\ContactFieldsDeleteBatchRequest
 
 try {
-    $result = $apiInstance->ed8d272687f9ac68a20fe1c31dc3c042($ed8d272687f9ac68a20fe1c31dc3c042_request);
+    $result = $apiInstance->contactFieldsDeleteBatch($contact_fields_delete_batch_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContactFieldApi->ed8d272687f9ac68a20fe1c31dc3c042: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContactFieldApi->contactFieldsDeleteBatch: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -230,7 +230,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ed8d272687f9ac68a20fe1c31dc3c042_request** | [**\BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042Request**](../Model/Ed8d272687f9ac68a20fe1c31dc3c042Request.md)|  | |
+| **contact_fields_delete_batch_request** | [**\BSG\Api\V2\Model\ContactFieldsDeleteBatchRequest**](../Model/ContactFieldsDeleteBatchRequest.md)|  | |
 
 ### Return type
 

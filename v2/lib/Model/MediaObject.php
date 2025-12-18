@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * MediaObject Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -295,6 +295,14 @@ class MediaObject implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if (!is_null($this->container['caption']) && (mb_strlen($this->container['caption']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'caption', the character length must be smaller than or equal to 1024.";
+        }
+
+        if (!is_null($this->container['filename']) && (mb_strlen($this->container['filename']) > 1024)) {
+            $invalidProperties[] = "invalid value for 'filename', the character length must be smaller than or equal to 1024.";
+        }
+
         return $invalidProperties;
     }
 
@@ -407,7 +415,9 @@ class MediaObject implements ModelInterface, ArrayAccess, \JsonSerializable
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-
+        if (!is_null($caption) && (mb_strlen($caption) > 1024)) {
+            throw new \InvalidArgumentException('invalid length for $caption when calling MediaObject., must be smaller than or equal to 1024.');
+        }
 
         $this->container['caption'] = $caption;
 
@@ -443,7 +453,9 @@ class MediaObject implements ModelInterface, ArrayAccess, \JsonSerializable
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-
+        if (!is_null($filename) && (mb_strlen($filename) > 1024)) {
+            throw new \InvalidArgumentException('invalid length for $filename when calling MediaObject., must be smaller than or equal to 1024.');
+        }
 
         $this->container['filename'] = $filename;
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactFieldCreate201Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class ContactFieldCreate201Response implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact_field_create_201_response';
+    protected static $openAPIModelName = 'ContactFieldCreate201Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class ContactFieldCreate201Response implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\ContactFieldSchema'
+        'data' => '\BSG\Api\V2\Model\ContactFieldSchema'
     ];
 
     /**
@@ -292,7 +292,7 @@ class ContactFieldCreate201Response implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\ContactFieldSchema|null
+     * @return \BSG\Api\V2\Model\ContactFieldSchema|null
      */
     public function getData()
     {
@@ -302,7 +302,7 @@ class ContactFieldCreate201Response implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\ContactFieldSchema|null $data data
+     * @param \BSG\Api\V2\Model\ContactFieldSchema|null $data data
      *
      * @return self
      */

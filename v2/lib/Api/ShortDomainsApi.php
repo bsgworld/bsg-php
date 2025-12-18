@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * ShortDomainsApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -142,9 +142,9 @@ class ShortDomainsApi
      * @param  string $uuid Uuid of entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomain'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ShortUrlsDomain200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomain422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ShortUrlsDomain200Response|\BSG\Api\V2\Model\ShortUrlsDomain400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomain422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function shortUrlsDomain($uuid, string $contentType = self::contentTypes['shortUrlsDomain'][0])
     {
@@ -160,9 +160,9 @@ class ShortDomainsApi
      * @param  string $uuid Uuid of entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomain'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ShortUrlsDomain200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomain422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ShortUrlsDomain200Response|\BSG\Api\V2\Model\ShortUrlsDomain400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomain422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function shortUrlsDomainWithHttpInfo($uuid, string $contentType = self::contentTypes['shortUrlsDomain'][0])
     {
@@ -193,11 +193,11 @@ class ShortDomainsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomain200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomain200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomain200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomain200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -215,16 +215,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomain200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomain400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomain400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -242,16 +242,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomain400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -269,16 +269,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -296,16 +296,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomain422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomain422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomain422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomain422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -323,16 +323,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomain422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomain422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -350,7 +350,7 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -369,7 +369,7 @@ class ShortDomainsApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response';
+            $returnType = '\BSG\Api\V2\Model\ShortUrlsDomain200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -402,7 +402,7 @@ class ShortDomainsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomain200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -410,7 +410,7 @@ class ShortDomainsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomain400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -418,7 +418,7 @@ class ShortDomainsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -426,7 +426,7 @@ class ShortDomainsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -434,7 +434,7 @@ class ShortDomainsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomain422Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomain422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -442,7 +442,7 @@ class ShortDomainsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class ShortDomainsApi
      */
     public function shortUrlsDomainAsyncWithHttpInfo($uuid, string $contentType = self::contentTypes['shortUrlsDomain'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response';
+        $returnType = '\BSG\Api\V2\Model\ShortUrlsDomain200Response';
         $request = $this->shortUrlsDomainRequest($uuid, $contentType);
 
         return $this->client
@@ -626,12 +626,12 @@ class ShortDomainsApi
      *
      * Add domain
      *
-     * @param  \BSG\\Api\\V2\Model\DomainStoreRequest|null $domain_store_request domain_store_request (optional)
+     * @param  \BSG\Api\V2\Model\DomainStoreRequest|null $domain_store_request domain_store_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainCreate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ShortUrlsDomain200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomainCreate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ShortUrlsDomainCreate201Response|\BSG\Api\V2\Model\ShortUrlsDomainCreate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomainCreate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function shortUrlsDomainCreate($domain_store_request = null, string $contentType = self::contentTypes['shortUrlsDomainCreate'][0])
     {
@@ -644,12 +644,12 @@ class ShortDomainsApi
      *
      * Add domain
      *
-     * @param  \BSG\\Api\\V2\Model\DomainStoreRequest|null $domain_store_request (optional)
+     * @param  \BSG\Api\V2\Model\DomainStoreRequest|null $domain_store_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainCreate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ShortUrlsDomain200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomainCreate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ShortUrlsDomainCreate201Response|\BSG\Api\V2\Model\ShortUrlsDomainCreate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomainCreate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function shortUrlsDomainCreateWithHttpInfo($domain_store_request = null, string $contentType = self::contentTypes['shortUrlsDomainCreate'][0])
     {
@@ -680,11 +680,11 @@ class ShortDomainsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomain200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomainCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomain200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomainCreate201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -702,16 +702,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomainCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomainCreate400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomainCreate400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -729,16 +729,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomainCreate400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -756,16 +756,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -783,16 +783,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomainCreate422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomainCreate422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomainCreate422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomainCreate422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -810,16 +810,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomainCreate422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomainCreate422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -837,7 +837,7 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -856,7 +856,7 @@ class ShortDomainsApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response';
+            $returnType = '\BSG\Api\V2\Model\ShortUrlsDomainCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -889,7 +889,7 @@ class ShortDomainsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomainCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -897,7 +897,7 @@ class ShortDomainsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomainCreate400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -905,7 +905,7 @@ class ShortDomainsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -913,7 +913,7 @@ class ShortDomainsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -921,7 +921,7 @@ class ShortDomainsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomainCreate422Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomainCreate422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -929,7 +929,7 @@ class ShortDomainsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -944,7 +944,7 @@ class ShortDomainsApi
      *
      * Add domain
      *
-     * @param  \BSG\\Api\\V2\Model\DomainStoreRequest|null $domain_store_request (optional)
+     * @param  \BSG\Api\V2\Model\DomainStoreRequest|null $domain_store_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -965,7 +965,7 @@ class ShortDomainsApi
      *
      * Add domain
      *
-     * @param  \BSG\\Api\\V2\Model\DomainStoreRequest|null $domain_store_request (optional)
+     * @param  \BSG\Api\V2\Model\DomainStoreRequest|null $domain_store_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -973,7 +973,7 @@ class ShortDomainsApi
      */
     public function shortUrlsDomainCreateAsyncWithHttpInfo($domain_store_request = null, string $contentType = self::contentTypes['shortUrlsDomainCreate'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response';
+        $returnType = '\BSG\Api\V2\Model\ShortUrlsDomainCreate201Response';
         $request = $this->shortUrlsDomainCreateRequest($domain_store_request, $contentType);
 
         return $this->client
@@ -1015,7 +1015,7 @@ class ShortDomainsApi
     /**
      * Create request for operation 'shortUrlsDomainCreate'
      *
-     * @param  \BSG\\Api\\V2\Model\DomainStoreRequest|null $domain_store_request (optional)
+     * @param  \BSG\Api\V2\Model\DomainStoreRequest|null $domain_store_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1109,9 +1109,9 @@ class ShortDomainsApi
      * @param  string $uuid Uuid of entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainRemove'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return object|\BSG\Api\V2\Model\ShortUrlsDomainRemove400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomainRemove422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function shortUrlsDomainRemove($uuid, string $contentType = self::contentTypes['shortUrlsDomainRemove'][0])
     {
@@ -1127,9 +1127,9 @@ class ShortDomainsApi
      * @param  string $uuid Uuid of entity (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainRemove'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\BSG\Api\V2\Model\ShortUrlsDomainRemove400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomainRemove422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function shortUrlsDomainRemoveWithHttpInfo($uuid, string $contentType = self::contentTypes['shortUrlsDomainRemove'][0])
     {
@@ -1187,11 +1187,11 @@ class ShortDomainsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomainRemove400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomainRemove400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1209,16 +1209,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomainRemove400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1236,16 +1236,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1263,16 +1263,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomainRemove422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomainRemove422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1290,16 +1290,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomainRemove422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1317,7 +1317,7 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1377,7 +1377,7 @@ class ShortDomainsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomainRemove400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1385,7 +1385,7 @@ class ShortDomainsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1393,7 +1393,7 @@ class ShortDomainsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1401,7 +1401,7 @@ class ShortDomainsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomainRemove422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1409,7 +1409,7 @@ class ShortDomainsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1594,12 +1594,12 @@ class ShortDomainsApi
      * Update domain
      *
      * @param  string $uuid Uuid of entity (required)
-     * @param  \BSG\\Api\\V2\Model\DomainUpdateRequest $domain_update_request domain_update_request (required)
+     * @param  \BSG\Api\V2\Model\DomainUpdateRequest $domain_update_request domain_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainUpdate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ShortUrlsDomain200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomainUpdate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ShortUrlsDomainUpdate200Response|\BSG\Api\V2\Model\ShortUrlsDomainUpdate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomainUpdate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function shortUrlsDomainUpdate($uuid, $domain_update_request, string $contentType = self::contentTypes['shortUrlsDomainUpdate'][0])
     {
@@ -1613,12 +1613,12 @@ class ShortDomainsApi
      * Update domain
      *
      * @param  string $uuid Uuid of entity (required)
-     * @param  \BSG\\Api\\V2\Model\DomainUpdateRequest $domain_update_request (required)
+     * @param  \BSG\Api\V2\Model\DomainUpdateRequest $domain_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainUpdate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ShortUrlsDomain200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomainUpdate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ShortUrlsDomainUpdate200Response|\BSG\Api\V2\Model\ShortUrlsDomainUpdate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomainUpdate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function shortUrlsDomainUpdateWithHttpInfo($uuid, $domain_update_request, string $contentType = self::contentTypes['shortUrlsDomainUpdate'][0])
     {
@@ -1649,11 +1649,11 @@ class ShortDomainsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomain200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomainUpdate200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomain200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomainUpdate200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1671,16 +1671,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomainUpdate200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomainUpdate400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomainUpdate400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1698,16 +1698,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomainUpdate400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1725,16 +1725,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1752,16 +1752,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomainUpdate422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomainUpdate422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomainUpdate422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomainUpdate422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1779,16 +1779,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomainUpdate422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomainUpdate422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1806,7 +1806,7 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1825,7 +1825,7 @@ class ShortDomainsApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response';
+            $returnType = '\BSG\Api\V2\Model\ShortUrlsDomainUpdate200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1858,7 +1858,7 @@ class ShortDomainsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomainUpdate200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1866,7 +1866,7 @@ class ShortDomainsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomainUpdate400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1874,7 +1874,7 @@ class ShortDomainsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1882,7 +1882,7 @@ class ShortDomainsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1890,7 +1890,7 @@ class ShortDomainsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomainUpdate422Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomainUpdate422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1898,7 +1898,7 @@ class ShortDomainsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1914,7 +1914,7 @@ class ShortDomainsApi
      * Update domain
      *
      * @param  string $uuid Uuid of entity (required)
-     * @param  \BSG\\Api\\V2\Model\DomainUpdateRequest $domain_update_request (required)
+     * @param  \BSG\Api\V2\Model\DomainUpdateRequest $domain_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1936,7 +1936,7 @@ class ShortDomainsApi
      * Update domain
      *
      * @param  string $uuid Uuid of entity (required)
-     * @param  \BSG\\Api\\V2\Model\DomainUpdateRequest $domain_update_request (required)
+     * @param  \BSG\Api\V2\Model\DomainUpdateRequest $domain_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1944,7 +1944,7 @@ class ShortDomainsApi
      */
     public function shortUrlsDomainUpdateAsyncWithHttpInfo($uuid, $domain_update_request, string $contentType = self::contentTypes['shortUrlsDomainUpdate'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ShortUrlsDomain200Response';
+        $returnType = '\BSG\Api\V2\Model\ShortUrlsDomainUpdate200Response';
         $request = $this->shortUrlsDomainUpdateRequest($uuid, $domain_update_request, $contentType);
 
         return $this->client
@@ -1987,7 +1987,7 @@ class ShortDomainsApi
      * Create request for operation 'shortUrlsDomainUpdate'
      *
      * @param  string $uuid Uuid of entity (required)
-     * @param  \BSG\\Api\\V2\Model\DomainUpdateRequest $domain_update_request (required)
+     * @param  \BSG\Api\V2\Model\DomainUpdateRequest $domain_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomainUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2105,9 +2105,9 @@ class ShortDomainsApi
      * @param  int|null $per_page The number of items in the page. Possible values are from 10 to 500. (optional, default to 20)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomains'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ShortUrlsDomains200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ShortUrlsDomains200Response|\BSG\Api\V2\Model\ShortUrlsDomains400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomains422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function shortUrlsDomains($from, $to, $page = 1, $per_page = 20, string $contentType = self::contentTypes['shortUrlsDomains'][0])
     {
@@ -2126,9 +2126,9 @@ class ShortDomainsApi
      * @param  int|null $per_page The number of items in the page. Possible values are from 10 to 500. (optional, default to 20)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shortUrlsDomains'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ShortUrlsDomains200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ShortUrlsDomains200Response|\BSG\Api\V2\Model\ShortUrlsDomains400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ShortUrlsDomains422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function shortUrlsDomainsWithHttpInfo($from, $to, $page = 1, $per_page = 20, string $contentType = self::contentTypes['shortUrlsDomains'][0])
     {
@@ -2159,11 +2159,11 @@ class ShortDomainsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomains200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomains200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomains200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomains200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2181,16 +2181,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomains200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomains200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomains400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomains400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2208,16 +2208,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomains400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2235,16 +2235,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2262,16 +2262,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ShortUrlsDomains422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ShortUrlsDomains422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2289,16 +2289,16 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ShortUrlsDomains422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2316,7 +2316,7 @@ class ShortDomainsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2335,7 +2335,7 @@ class ShortDomainsApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ShortUrlsDomains200Response';
+            $returnType = '\BSG\Api\V2\Model\ShortUrlsDomains200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2368,7 +2368,7 @@ class ShortDomainsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomains200Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomains200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2376,7 +2376,7 @@ class ShortDomainsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomains400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2384,7 +2384,7 @@ class ShortDomainsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2392,7 +2392,7 @@ class ShortDomainsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2400,7 +2400,7 @@ class ShortDomainsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ShortUrlsDomainRemove422Response',
+                        '\BSG\Api\V2\Model\ShortUrlsDomains422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2408,7 +2408,7 @@ class ShortDomainsApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2458,7 +2458,7 @@ class ShortDomainsApi
      */
     public function shortUrlsDomainsAsyncWithHttpInfo($from, $to, $page = 1, $per_page = 20, string $contentType = self::contentTypes['shortUrlsDomains'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ShortUrlsDomains200Response';
+        $returnType = '\BSG\Api\V2\Model\ShortUrlsDomains200Response';
         $request = $this->shortUrlsDomainsRequest($from, $to, $page, $per_page, $contentType);
 
         return $this->client

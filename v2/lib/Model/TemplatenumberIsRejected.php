@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TemplatenumberIsRejected Class Doc Comment
  *
  * @category Class
  * @description Template {NUMBER} is rejected!
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TemplatenumberIsRejected implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\TemplatenumberIsRejectedErrors'
+        'errors' => '\BSG\Api\V2\Model\TemplatenumberIsRejectedErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class TemplatenumberIsRejected implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\TemplatenumberIsRejectedErrors|null
+     * @return \BSG\Api\V2\Model\TemplatenumberIsRejectedErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class TemplatenumberIsRejected implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\TemplatenumberIsRejectedErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\TemplatenumberIsRejectedErrors|null $errors errors
      *
      * @return self
      */

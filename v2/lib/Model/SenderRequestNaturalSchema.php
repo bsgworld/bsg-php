@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SenderRequestNaturalSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class SenderRequestNaturalSchema implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\SenderRequestStatus',
-        'type' => '\BSG\\Api\\V2\Model\SenderRequestType',
+        'status' => '\BSG\Api\V2\Model\SenderRequestStatus',
+        'type' => '\BSG\Api\V2\Model\SenderRequestType',
         'created_at' => '\DateTime',
         'country_code' => 'string',
         'sender' => 'string',
@@ -478,7 +478,7 @@ class SenderRequestNaturalSchema implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\SenderRequestStatus|null
+     * @return \BSG\Api\V2\Model\SenderRequestStatus|null
      */
     public function getStatus()
     {
@@ -488,7 +488,7 @@ class SenderRequestNaturalSchema implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\SenderRequestStatus|null $status status
+     * @param \BSG\Api\V2\Model\SenderRequestStatus|null $status status
      *
      * @return self
      */
@@ -505,7 +505,7 @@ class SenderRequestNaturalSchema implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\SenderRequestType|null
+     * @return \BSG\Api\V2\Model\SenderRequestType|null
      */
     public function getType()
     {
@@ -515,7 +515,7 @@ class SenderRequestNaturalSchema implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\SenderRequestType|null $type type
+     * @param \BSG\Api\V2\Model\SenderRequestType|null $type type
      *
      * @return self
      */

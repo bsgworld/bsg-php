@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * Class2FATemplatesApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,9 +139,9 @@ class Class2FATemplatesApi
      * @param  int $template_id Template id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\OtpTemplate200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\OtpTemplate404Response|\BSG\\Api\\V2\Model\AccountBalance422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\OtpTemplate200Response|\BSG\Api\V2\Model\OtpTemplate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\OtpTemplate404Response|\BSG\Api\V2\Model\OtpTemplate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function otpTemplate($template_id, string $contentType = self::contentTypes['otpTemplate'][0])
     {
@@ -157,9 +157,9 @@ class Class2FATemplatesApi
      * @param  int $template_id Template id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\OtpTemplate200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\OtpTemplate404Response|\BSG\\Api\\V2\Model\AccountBalance422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\OtpTemplate200Response|\BSG\Api\V2\Model\OtpTemplate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\OtpTemplate404Response|\BSG\Api\V2\Model\OtpTemplate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function otpTemplateWithHttpInfo($template_id, string $contentType = self::contentTypes['otpTemplate'][0])
     {
@@ -190,11 +190,11 @@ class Class2FATemplatesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\OtpTemplate200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplate200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\OtpTemplate200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplate200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -212,16 +212,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\OtpTemplate200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplate200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplate400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplate400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -239,16 +239,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplate400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -266,16 +266,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\OtpTemplate404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplate404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\OtpTemplate404Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplate404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -293,16 +293,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\OtpTemplate404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplate404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplate422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplate422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -320,16 +320,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplate422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -347,7 +347,7 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -366,7 +366,7 @@ class Class2FATemplatesApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\OtpTemplate200Response';
+            $returnType = '\BSG\Api\V2\Model\OtpTemplate200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -399,7 +399,7 @@ class Class2FATemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\OtpTemplate200Response',
+                        '\BSG\Api\V2\Model\OtpTemplate200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -407,7 +407,7 @@ class Class2FATemplatesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\OtpTemplate400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -415,7 +415,7 @@ class Class2FATemplatesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -423,7 +423,7 @@ class Class2FATemplatesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\OtpTemplate404Response',
+                        '\BSG\Api\V2\Model\OtpTemplate404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -431,7 +431,7 @@ class Class2FATemplatesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance422Response',
+                        '\BSG\Api\V2\Model\OtpTemplate422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class Class2FATemplatesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -483,7 +483,7 @@ class Class2FATemplatesApi
      */
     public function otpTemplateAsyncWithHttpInfo($template_id, string $contentType = self::contentTypes['otpTemplate'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\OtpTemplate200Response';
+        $returnType = '\BSG\Api\V2\Model\OtpTemplate200Response';
         $request = $this->otpTemplateRequest($template_id, $contentType);
 
         return $this->client
@@ -623,12 +623,12 @@ class Class2FATemplatesApi
      *
      * Create a message template
      *
-     * @param  \BSG\\Api\\V2\Model\OtpTemplateCreateRequest $otp_template_create_request otp_template_create_request (required)
+     * @param  \BSG\Api\V2\Model\OtpTemplateCreateRequest $otp_template_create_request otp_template_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateCreate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\OtpTemplate200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\OtpTemplateCreate422Response|\BSG\\Api\\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\OtpTemplateCreate200Response|\BSG\Api\V2\Model\OtpTemplateCreate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\OtpTemplateCreate422Response|\BSG\Api\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function otpTemplateCreate($otp_template_create_request, string $contentType = self::contentTypes['otpTemplateCreate'][0])
     {
@@ -641,12 +641,12 @@ class Class2FATemplatesApi
      *
      * Create a message template
      *
-     * @param  \BSG\\Api\\V2\Model\OtpTemplateCreateRequest $otp_template_create_request (required)
+     * @param  \BSG\Api\V2\Model\OtpTemplateCreateRequest $otp_template_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateCreate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\OtpTemplate200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\OtpTemplateCreate422Response|\BSG\\Api\\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\OtpTemplateCreate200Response|\BSG\Api\V2\Model\OtpTemplateCreate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\OtpTemplateCreate422Response|\BSG\Api\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function otpTemplateCreateWithHttpInfo($otp_template_create_request, string $contentType = self::contentTypes['otpTemplateCreate'][0])
     {
@@ -677,11 +677,11 @@ class Class2FATemplatesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\OtpTemplate200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateCreate200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\OtpTemplate200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateCreate200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -699,16 +699,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\OtpTemplate200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateCreate200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateCreate400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateCreate400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -726,16 +726,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateCreate400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -753,16 +753,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -780,16 +780,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -807,16 +807,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\OtpTemplateCreate422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateCreate422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\OtpTemplateCreate422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateCreate422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -834,16 +834,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\OtpTemplateCreate422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateCreate422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 424:
-                    if ('\BSG\\Api\\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -861,16 +861,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -888,7 +888,7 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -907,7 +907,7 @@ class Class2FATemplatesApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\OtpTemplate200Response';
+            $returnType = '\BSG\Api\V2\Model\OtpTemplateCreate200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -940,7 +940,7 @@ class Class2FATemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\OtpTemplate200Response',
+                        '\BSG\Api\V2\Model\OtpTemplateCreate200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -948,7 +948,7 @@ class Class2FATemplatesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\OtpTemplateCreate400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -956,7 +956,7 @@ class Class2FATemplatesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -964,7 +964,7 @@ class Class2FATemplatesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType',
+                        '\BSG\Api\V2\Model\ThisActionIsNotAvailableForTheAccountOfYourType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -972,7 +972,7 @@ class Class2FATemplatesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -980,7 +980,7 @@ class Class2FATemplatesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\OtpTemplateCreate422Response',
+                        '\BSG\Api\V2\Model\OtpTemplateCreate422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -988,7 +988,7 @@ class Class2FATemplatesApi
                 case 424:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest',
+                        '\BSG\Api\V2\Model\TheNumberOfRequestsToCreateATemplateIsLimitedTo10PleaseWaitForTheManagerApproveBeforeMakingANewRequest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class Class2FATemplatesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1011,7 +1011,7 @@ class Class2FATemplatesApi
      *
      * Create a message template
      *
-     * @param  \BSG\\Api\\V2\Model\OtpTemplateCreateRequest $otp_template_create_request (required)
+     * @param  \BSG\Api\V2\Model\OtpTemplateCreateRequest $otp_template_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1032,7 +1032,7 @@ class Class2FATemplatesApi
      *
      * Create a message template
      *
-     * @param  \BSG\\Api\\V2\Model\OtpTemplateCreateRequest $otp_template_create_request (required)
+     * @param  \BSG\Api\V2\Model\OtpTemplateCreateRequest $otp_template_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1040,7 +1040,7 @@ class Class2FATemplatesApi
      */
     public function otpTemplateCreateAsyncWithHttpInfo($otp_template_create_request, string $contentType = self::contentTypes['otpTemplateCreate'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\OtpTemplate200Response';
+        $returnType = '\BSG\Api\V2\Model\OtpTemplateCreate200Response';
         $request = $this->otpTemplateCreateRequest($otp_template_create_request, $contentType);
 
         return $this->client
@@ -1082,7 +1082,7 @@ class Class2FATemplatesApi
     /**
      * Create request for operation 'otpTemplateCreate'
      *
-     * @param  \BSG\\Api\\V2\Model\OtpTemplateCreateRequest $otp_template_create_request (required)
+     * @param  \BSG\Api\V2\Model\OtpTemplateCreateRequest $otp_template_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1182,9 +1182,9 @@ class Class2FATemplatesApi
      * @param  int $template_id The ID of the message template that you want to delete. From 1 to 9 digits. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateDelete'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\OtpTemplateDelete200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\OtpTemplateDelete404Response|\BSG\\Api\\V2\Model\RefreshToken422Response|\BSG\\Api\\V2\Model\DefaultTemplateIsNotAvailableForDeletion|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\OtpTemplateDelete200Response|\BSG\Api\V2\Model\OtpTemplateDelete400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\OtpTemplateDelete404Response|\BSG\Api\V2\Model\OtpTemplateDelete422Response|\BSG\Api\V2\Model\DefaultTemplateIsNotAvailableForDeletion|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function otpTemplateDelete($template_id, string $contentType = self::contentTypes['otpTemplateDelete'][0])
     {
@@ -1200,9 +1200,9 @@ class Class2FATemplatesApi
      * @param  int $template_id The ID of the message template that you want to delete. From 1 to 9 digits. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateDelete'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\OtpTemplateDelete200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\OtpTemplateDelete404Response|\BSG\\Api\\V2\Model\RefreshToken422Response|\BSG\\Api\\V2\Model\DefaultTemplateIsNotAvailableForDeletion|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\OtpTemplateDelete200Response|\BSG\Api\V2\Model\OtpTemplateDelete400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\OtpTemplateDelete404Response|\BSG\Api\V2\Model\OtpTemplateDelete422Response|\BSG\Api\V2\Model\DefaultTemplateIsNotAvailableForDeletion|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function otpTemplateDeleteWithHttpInfo($template_id, string $contentType = self::contentTypes['otpTemplateDelete'][0])
     {
@@ -1233,11 +1233,11 @@ class Class2FATemplatesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\OtpTemplateDelete200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateDelete200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\OtpTemplateDelete200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateDelete200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1255,16 +1255,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\OtpTemplateDelete200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateDelete200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateDelete400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateDelete400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1282,16 +1282,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateDelete400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1309,16 +1309,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\OtpTemplateDelete404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateDelete404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\OtpTemplateDelete404Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateDelete404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1336,16 +1336,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\OtpTemplateDelete404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateDelete404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateDelete422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateDelete422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1363,16 +1363,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateDelete422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 424:
-                    if ('\BSG\\Api\\V2\Model\DefaultTemplateIsNotAvailableForDeletion' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\DefaultTemplateIsNotAvailableForDeletion' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\DefaultTemplateIsNotAvailableForDeletion' !== 'string') {
+                        if ('\BSG\Api\V2\Model\DefaultTemplateIsNotAvailableForDeletion' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1390,16 +1390,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\DefaultTemplateIsNotAvailableForDeletion', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\DefaultTemplateIsNotAvailableForDeletion', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1417,7 +1417,7 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1436,7 +1436,7 @@ class Class2FATemplatesApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\OtpTemplateDelete200Response';
+            $returnType = '\BSG\Api\V2\Model\OtpTemplateDelete200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1469,7 +1469,7 @@ class Class2FATemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\OtpTemplateDelete200Response',
+                        '\BSG\Api\V2\Model\OtpTemplateDelete200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1477,7 +1477,7 @@ class Class2FATemplatesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\OtpTemplateDelete400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1485,7 +1485,7 @@ class Class2FATemplatesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1493,7 +1493,7 @@ class Class2FATemplatesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\OtpTemplateDelete404Response',
+                        '\BSG\Api\V2\Model\OtpTemplateDelete404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1501,7 +1501,7 @@ class Class2FATemplatesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken422Response',
+                        '\BSG\Api\V2\Model\OtpTemplateDelete422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1509,7 +1509,7 @@ class Class2FATemplatesApi
                 case 424:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\DefaultTemplateIsNotAvailableForDeletion',
+                        '\BSG\Api\V2\Model\DefaultTemplateIsNotAvailableForDeletion',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1517,7 +1517,7 @@ class Class2FATemplatesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1561,7 +1561,7 @@ class Class2FATemplatesApi
      */
     public function otpTemplateDeleteAsyncWithHttpInfo($template_id, string $contentType = self::contentTypes['otpTemplateDelete'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\OtpTemplateDelete200Response';
+        $returnType = '\BSG\Api\V2\Model\OtpTemplateDelete200Response';
         $request = $this->otpTemplateDeleteRequest($template_id, $contentType);
 
         return $this->client
@@ -1706,12 +1706,12 @@ class Class2FATemplatesApi
      * @param  int[]|null $filter_ids filter_ids (optional)
      * @param  string|null $filter_status filter_status (optional)
      * @param  string|null $sort Sorting by (optional, default to 'template_id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way way (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\OtpTemplateList200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\OtpTemplateList422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\OtpTemplateList200Response|\BSG\Api\V2\Model\OtpTemplateList400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\OtpTemplateList422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function otpTemplateList($page_offset = 0, $page_limit = 10, $filter_ids = null, $filter_status = null, $sort = 'template_id', $way = null, string $contentType = self::contentTypes['otpTemplateList'][0])
     {
@@ -1729,12 +1729,12 @@ class Class2FATemplatesApi
      * @param  int[]|null $filter_ids (optional)
      * @param  string|null $filter_status (optional)
      * @param  string|null $sort Sorting by (optional, default to 'template_id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\OtpTemplateList200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\OtpTemplateList422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\OtpTemplateList200Response|\BSG\Api\V2\Model\OtpTemplateList400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\OtpTemplateList422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function otpTemplateListWithHttpInfo($page_offset = 0, $page_limit = 10, $filter_ids = null, $filter_status = null, $sort = 'template_id', $way = null, string $contentType = self::contentTypes['otpTemplateList'][0])
     {
@@ -1765,11 +1765,11 @@ class Class2FATemplatesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\OtpTemplateList200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateList200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\OtpTemplateList200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateList200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1787,16 +1787,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\OtpTemplateList200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateList200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateList400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateList400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1814,16 +1814,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateList400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1841,16 +1841,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1868,16 +1868,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\OtpTemplateList422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\OtpTemplateList422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\OtpTemplateList422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\OtpTemplateList422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1895,16 +1895,16 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\OtpTemplateList422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\OtpTemplateList422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1922,7 +1922,7 @@ class Class2FATemplatesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1941,7 +1941,7 @@ class Class2FATemplatesApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\OtpTemplateList200Response';
+            $returnType = '\BSG\Api\V2\Model\OtpTemplateList200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1974,7 +1974,7 @@ class Class2FATemplatesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\OtpTemplateList200Response',
+                        '\BSG\Api\V2\Model\OtpTemplateList200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1982,7 +1982,7 @@ class Class2FATemplatesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\OtpTemplateList400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1990,7 +1990,7 @@ class Class2FATemplatesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1998,7 +1998,7 @@ class Class2FATemplatesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2006,7 +2006,7 @@ class Class2FATemplatesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\OtpTemplateList422Response',
+                        '\BSG\Api\V2\Model\OtpTemplateList422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2014,7 +2014,7 @@ class Class2FATemplatesApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2034,7 +2034,7 @@ class Class2FATemplatesApi
      * @param  int[]|null $filter_ids (optional)
      * @param  string|null $filter_status (optional)
      * @param  string|null $sort Sorting by (optional, default to 'template_id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2060,7 +2060,7 @@ class Class2FATemplatesApi
      * @param  int[]|null $filter_ids (optional)
      * @param  string|null $filter_status (optional)
      * @param  string|null $sort Sorting by (optional, default to 'template_id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2068,7 +2068,7 @@ class Class2FATemplatesApi
      */
     public function otpTemplateListAsyncWithHttpInfo($page_offset = 0, $page_limit = 10, $filter_ids = null, $filter_status = null, $sort = 'template_id', $way = null, string $contentType = self::contentTypes['otpTemplateList'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\OtpTemplateList200Response';
+        $returnType = '\BSG\Api\V2\Model\OtpTemplateList200Response';
         $request = $this->otpTemplateListRequest($page_offset, $page_limit, $filter_ids, $filter_status, $sort, $way, $contentType);
 
         return $this->client
@@ -2115,7 +2115,7 @@ class Class2FATemplatesApi
      * @param  int[]|null $filter_ids (optional)
      * @param  string|null $filter_status (optional)
      * @param  string|null $sort Sorting by (optional, default to 'template_id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['otpTemplateList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

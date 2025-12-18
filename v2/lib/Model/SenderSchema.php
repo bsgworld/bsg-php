@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SenderSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class SenderSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'status' => 'string',
-        'country' => '\BSG\\Api\\V2\Model\SenderSchemaCountry',
+        'country' => '\BSG\Api\V2\Model\SenderSchemaCountry',
         'sender' => 'string',
         'created_at' => '\DateTime',
         'is_default' => 'bool'
@@ -433,7 +433,7 @@ class SenderSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets country
      *
-     * @return \BSG\\Api\\V2\Model\SenderSchemaCountry|null
+     * @return \BSG\Api\V2\Model\SenderSchemaCountry|null
      */
     public function getCountry()
     {
@@ -443,7 +443,7 @@ class SenderSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets country
      *
-     * @param \BSG\\Api\\V2\Model\SenderSchemaCountry|null $country country
+     * @param \BSG\Api\V2\Model\SenderSchemaCountry|null $country country
      *
      * @return self
      */

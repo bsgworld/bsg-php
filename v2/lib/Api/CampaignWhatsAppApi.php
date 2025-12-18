@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * CampaignWhatsAppApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -71,7 +71,7 @@ class CampaignWhatsAppApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'call34da90b5e9b23d2ba3752779bc3e2e18' => [
+        'whatsappSend' => [
             'application/json',
         ],
         'whatsappSingle' => [
@@ -126,34 +126,34 @@ class CampaignWhatsAppApi
     }
 
     /**
-     * Operation call34da90b5e9b23d2ba3752779bc3e2e18
+     * Operation whatsappSend
      *
-     * @param  \BSG\\Api\\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign send_whats_app_campaign (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign send_whats_app_campaign (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\CampaignSchema
+     * @return \BSG\Api\V2\Model\CampaignSchema
      */
-    public function call34da90b5e9b23d2ba3752779bc3e2e18($send_whats_app_campaign, string $contentType = self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'][0])
+    public function whatsappSend($send_whats_app_campaign, string $contentType = self::contentTypes['whatsappSend'][0])
     {
-        list($response) = $this->call34da90b5e9b23d2ba3752779bc3e2e18WithHttpInfo($send_whats_app_campaign, $contentType);
+        list($response) = $this->whatsappSendWithHttpInfo($send_whats_app_campaign, $contentType);
         return $response;
     }
 
     /**
-     * Operation call34da90b5e9b23d2ba3752779bc3e2e18WithHttpInfo
+     * Operation whatsappSendWithHttpInfo
      *
-     * @param  \BSG\\Api\\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\CampaignSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\CampaignSchema, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call34da90b5e9b23d2ba3752779bc3e2e18WithHttpInfo($send_whats_app_campaign, string $contentType = self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'][0])
+    public function whatsappSendWithHttpInfo($send_whats_app_campaign, string $contentType = self::contentTypes['whatsappSend'][0])
     {
-        $request = $this->call34da90b5e9b23d2ba3752779bc3e2e18Request($send_whats_app_campaign, $contentType);
+        $request = $this->whatsappSendRequest($send_whats_app_campaign, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -180,11 +180,11 @@ class CampaignWhatsAppApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\CampaignSchema' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\CampaignSchema' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -202,7 +202,7 @@ class CampaignWhatsAppApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\CampaignSchema', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -221,7 +221,7 @@ class CampaignWhatsAppApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\CampaignSchema';
+            $returnType = '\BSG\Api\V2\Model\CampaignSchema';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -254,7 +254,7 @@ class CampaignWhatsAppApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\CampaignSchema',
+                        '\BSG\Api\V2\Model\CampaignSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -265,17 +265,17 @@ class CampaignWhatsAppApi
     }
 
     /**
-     * Operation call34da90b5e9b23d2ba3752779bc3e2e18Async
+     * Operation whatsappSendAsync
      *
-     * @param  \BSG\\Api\\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call34da90b5e9b23d2ba3752779bc3e2e18Async($send_whats_app_campaign, string $contentType = self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'][0])
+    public function whatsappSendAsync($send_whats_app_campaign, string $contentType = self::contentTypes['whatsappSend'][0])
     {
-        return $this->call34da90b5e9b23d2ba3752779bc3e2e18AsyncWithHttpInfo($send_whats_app_campaign, $contentType)
+        return $this->whatsappSendAsyncWithHttpInfo($send_whats_app_campaign, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -284,18 +284,18 @@ class CampaignWhatsAppApi
     }
 
     /**
-     * Operation call34da90b5e9b23d2ba3752779bc3e2e18AsyncWithHttpInfo
+     * Operation whatsappSendAsyncWithHttpInfo
      *
-     * @param  \BSG\\Api\\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call34da90b5e9b23d2ba3752779bc3e2e18AsyncWithHttpInfo($send_whats_app_campaign, string $contentType = self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'][0])
+    public function whatsappSendAsyncWithHttpInfo($send_whats_app_campaign, string $contentType = self::contentTypes['whatsappSend'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\CampaignSchema';
-        $request = $this->call34da90b5e9b23d2ba3752779bc3e2e18Request($send_whats_app_campaign, $contentType);
+        $returnType = '\BSG\Api\V2\Model\CampaignSchema';
+        $request = $this->whatsappSendRequest($send_whats_app_campaign, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -334,21 +334,21 @@ class CampaignWhatsAppApi
     }
 
     /**
-     * Create request for operation 'call34da90b5e9b23d2ba3752779bc3e2e18'
+     * Create request for operation 'whatsappSend'
      *
-     * @param  \BSG\\Api\\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\SendWhatsAppCampaign $send_whats_app_campaign (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call34da90b5e9b23d2ba3752779bc3e2e18Request($send_whats_app_campaign, string $contentType = self::contentTypes['call34da90b5e9b23d2ba3752779bc3e2e18'][0])
+    public function whatsappSendRequest($send_whats_app_campaign, string $contentType = self::contentTypes['whatsappSend'][0])
     {
 
         // verify the required parameter 'send_whats_app_campaign' is set
         if ($send_whats_app_campaign === null || (is_array($send_whats_app_campaign) && count($send_whats_app_campaign) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $send_whats_app_campaign when calling call34da90b5e9b23d2ba3752779bc3e2e18'
+                'Missing the required parameter $send_whats_app_campaign when calling whatsappSend'
             );
         }
 
@@ -433,12 +433,12 @@ class CampaignWhatsAppApi
      *
      * Send single WhatsApp message
      *
-     * @param  \BSG\\Api\\V2\Model\WhatsAppMessage $whats_app_message whats_app_message (required)
+     * @param  \BSG\Api\V2\Model\WhatsAppMessage $whats_app_message whats_app_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSingle'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\RcsSingle200Response|\BSG\\Api\\V2\Model\RcsSend429Response
+     * @return \BSG\Api\V2\Model\WhatsappSingle200Response|\BSG\Api\V2\Model\TooManyRequestsResponseSchema
      */
     public function whatsappSingle($whats_app_message, string $contentType = self::contentTypes['whatsappSingle'][0])
     {
@@ -451,12 +451,12 @@ class CampaignWhatsAppApi
      *
      * Send single WhatsApp message
      *
-     * @param  \BSG\\Api\\V2\Model\WhatsAppMessage $whats_app_message (required)
+     * @param  \BSG\Api\V2\Model\WhatsAppMessage $whats_app_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSingle'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\RcsSingle200Response|\BSG\\Api\\V2\Model\RcsSend429Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\WhatsappSingle200Response|\BSG\Api\V2\Model\TooManyRequestsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function whatsappSingleWithHttpInfo($whats_app_message, string $contentType = self::contentTypes['whatsappSingle'][0])
     {
@@ -487,11 +487,11 @@ class CampaignWhatsAppApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\RcsSingle200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\WhatsappSingle200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSingle200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\WhatsappSingle200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -509,16 +509,16 @@ class CampaignWhatsAppApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSingle200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\WhatsappSingle200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\RcsSend429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend429Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -536,7 +536,7 @@ class CampaignWhatsAppApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyRequestsResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -555,7 +555,7 @@ class CampaignWhatsAppApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\RcsSingle200Response';
+            $returnType = '\BSG\Api\V2\Model\WhatsappSingle200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -588,7 +588,7 @@ class CampaignWhatsAppApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSingle200Response',
+                        '\BSG\Api\V2\Model\WhatsappSingle200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -596,7 +596,7 @@ class CampaignWhatsAppApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend429Response',
+                        '\BSG\Api\V2\Model\TooManyRequestsResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -611,7 +611,7 @@ class CampaignWhatsAppApi
      *
      * Send single WhatsApp message
      *
-     * @param  \BSG\\Api\\V2\Model\WhatsAppMessage $whats_app_message (required)
+     * @param  \BSG\Api\V2\Model\WhatsAppMessage $whats_app_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -632,7 +632,7 @@ class CampaignWhatsAppApi
      *
      * Send single WhatsApp message
      *
-     * @param  \BSG\\Api\\V2\Model\WhatsAppMessage $whats_app_message (required)
+     * @param  \BSG\Api\V2\Model\WhatsAppMessage $whats_app_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -640,7 +640,7 @@ class CampaignWhatsAppApi
      */
     public function whatsappSingleAsyncWithHttpInfo($whats_app_message, string $contentType = self::contentTypes['whatsappSingle'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\RcsSingle200Response';
+        $returnType = '\BSG\Api\V2\Model\WhatsappSingle200Response';
         $request = $this->whatsappSingleRequest($whats_app_message, $contentType);
 
         return $this->client
@@ -682,7 +682,7 @@ class CampaignWhatsAppApi
     /**
      * Create request for operation 'whatsappSingle'
      *
-     * @param  \BSG\\Api\\V2\Model\WhatsAppMessage $whats_app_message (required)
+     * @param  \BSG\Api\V2\Model\WhatsAppMessage $whats_app_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['whatsappSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

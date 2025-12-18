@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace BSG\\Api\\V2\Test\Model;
+namespace BSG\Api\V2\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description The source how message was sent by  - rest - by this api - web - by web interface of [personal account](https://app.bsg.world) - smpp - by smpp connection - 2fa - sent by 2fa - voicebot - sent by voicebot - twoway - two way sms by interface - twoway_api - two way sms by api - xml - service messages
- * @package     BSG\\Api\\V2
+ * @package     BSG\Api\V2
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

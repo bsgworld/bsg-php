@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * CampaignApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -142,9 +142,9 @@ class CampaignApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaign'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\RcsSend200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Campaign422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\Campaign200Response|\BSG\Api\V2\Model\Campaign400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\Campaign422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function campaign($id, string $contentType = self::contentTypes['campaign'][0])
     {
@@ -160,9 +160,9 @@ class CampaignApi
      * @param  int $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaign'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\RcsSend200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Campaign422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\Campaign200Response|\BSG\Api\V2\Model\Campaign400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\Campaign422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function campaignWithHttpInfo($id, string $contentType = self::contentTypes['campaign'][0])
     {
@@ -193,11 +193,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\RcsSend200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Campaign200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Campaign200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -215,16 +215,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Campaign200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Campaign400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Campaign400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -242,16 +242,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Campaign400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -269,16 +269,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -296,16 +296,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\Campaign422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Campaign422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Campaign422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Campaign422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -323,16 +323,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Campaign422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Campaign422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -350,7 +350,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -369,7 +369,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\RcsSend200Response';
+            $returnType = '\BSG\Api\V2\Model\Campaign200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -402,7 +402,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend200Response',
+                        '\BSG\Api\V2\Model\Campaign200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -410,7 +410,7 @@ class CampaignApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\Campaign400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -418,7 +418,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -426,7 +426,7 @@ class CampaignApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -434,7 +434,7 @@ class CampaignApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Campaign422Response',
+                        '\BSG\Api\V2\Model\Campaign422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -442,7 +442,7 @@ class CampaignApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class CampaignApi
      */
     public function campaignAsyncWithHttpInfo($id, string $contentType = self::contentTypes['campaign'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\RcsSend200Response';
+        $returnType = '\BSG\Api\V2\Model\Campaign200Response';
         $request = $this->campaignRequest($id, $contentType);
 
         return $this->client
@@ -629,9 +629,9 @@ class CampaignApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignDetails'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\CampaignDetails200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\CampaignDetails422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\CampaignDetails200Response|\BSG\Api\V2\Model\CampaignDetails400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\CampaignDetails422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function campaignDetails($id, string $contentType = self::contentTypes['campaignDetails'][0])
     {
@@ -647,9 +647,9 @@ class CampaignApi
      * @param  int $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignDetails'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\CampaignDetails200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\CampaignDetails422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\CampaignDetails200Response|\BSG\Api\V2\Model\CampaignDetails400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\CampaignDetails422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function campaignDetailsWithHttpInfo($id, string $contentType = self::contentTypes['campaignDetails'][0])
     {
@@ -680,11 +680,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\CampaignDetails200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignDetails200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\CampaignDetails200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignDetails200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -702,16 +702,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\CampaignDetails200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignDetails200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignDetails400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignDetails400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -729,16 +729,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignDetails400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -756,16 +756,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -783,16 +783,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\CampaignDetails422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignDetails422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\CampaignDetails422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignDetails422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -810,16 +810,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\CampaignDetails422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignDetails422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -837,7 +837,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -856,7 +856,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\CampaignDetails200Response';
+            $returnType = '\BSG\Api\V2\Model\CampaignDetails200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -889,7 +889,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\CampaignDetails200Response',
+                        '\BSG\Api\V2\Model\CampaignDetails200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -897,7 +897,7 @@ class CampaignApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\CampaignDetails400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -905,7 +905,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -913,7 +913,7 @@ class CampaignApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -921,7 +921,7 @@ class CampaignApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\CampaignDetails422Response',
+                        '\BSG\Api\V2\Model\CampaignDetails422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -929,7 +929,7 @@ class CampaignApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -973,7 +973,7 @@ class CampaignApi
      */
     public function campaignDetailsAsyncWithHttpInfo($id, string $contentType = self::contentTypes['campaignDetails'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\CampaignDetails200Response';
+        $returnType = '\BSG\Api\V2\Model\CampaignDetails200Response';
         $request = $this->campaignDetailsRequest($id, $contentType);
 
         return $this->client
@@ -1113,12 +1113,12 @@ class CampaignApi
      *
      * Calculate campaign price
      *
-     * @param  \BSG\\Api\\V2\Model\CampaignPriceRequest $campaign_price_request campaign_price_request (required)
+     * @param  \BSG\Api\V2\Model\CampaignPriceRequest $campaign_price_request campaign_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignPrice'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\CampaignPrice200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\CampaignPrice422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\CampaignPrice200Response|\BSG\Api\V2\Model\CampaignPrice400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\CampaignPrice422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function campaignPrice($campaign_price_request, string $contentType = self::contentTypes['campaignPrice'][0])
     {
@@ -1131,12 +1131,12 @@ class CampaignApi
      *
      * Calculate campaign price
      *
-     * @param  \BSG\\Api\\V2\Model\CampaignPriceRequest $campaign_price_request (required)
+     * @param  \BSG\Api\V2\Model\CampaignPriceRequest $campaign_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignPrice'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\CampaignPrice200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\CampaignPrice422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\CampaignPrice200Response|\BSG\Api\V2\Model\CampaignPrice400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\CampaignPrice422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function campaignPriceWithHttpInfo($campaign_price_request, string $contentType = self::contentTypes['campaignPrice'][0])
     {
@@ -1167,11 +1167,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\CampaignPrice200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignPrice200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\CampaignPrice200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignPrice200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1189,16 +1189,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\CampaignPrice200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignPrice200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignPrice400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignPrice400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1216,16 +1216,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignPrice400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1243,16 +1243,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1270,16 +1270,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\CampaignPrice422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignPrice422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\CampaignPrice422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignPrice422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1297,16 +1297,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\CampaignPrice422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignPrice422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1324,7 +1324,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1343,7 +1343,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\CampaignPrice200Response';
+            $returnType = '\BSG\Api\V2\Model\CampaignPrice200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1376,7 +1376,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\CampaignPrice200Response',
+                        '\BSG\Api\V2\Model\CampaignPrice200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1384,7 +1384,7 @@ class CampaignApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\CampaignPrice400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1392,7 +1392,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1400,7 +1400,7 @@ class CampaignApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1408,7 +1408,7 @@ class CampaignApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\CampaignPrice422Response',
+                        '\BSG\Api\V2\Model\CampaignPrice422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1416,7 +1416,7 @@ class CampaignApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1431,7 +1431,7 @@ class CampaignApi
      *
      * Calculate campaign price
      *
-     * @param  \BSG\\Api\\V2\Model\CampaignPriceRequest $campaign_price_request (required)
+     * @param  \BSG\Api\V2\Model\CampaignPriceRequest $campaign_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1452,7 +1452,7 @@ class CampaignApi
      *
      * Calculate campaign price
      *
-     * @param  \BSG\\Api\\V2\Model\CampaignPriceRequest $campaign_price_request (required)
+     * @param  \BSG\Api\V2\Model\CampaignPriceRequest $campaign_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1460,7 +1460,7 @@ class CampaignApi
      */
     public function campaignPriceAsyncWithHttpInfo($campaign_price_request, string $contentType = self::contentTypes['campaignPrice'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\CampaignPrice200Response';
+        $returnType = '\BSG\Api\V2\Model\CampaignPrice200Response';
         $request = $this->campaignPriceRequest($campaign_price_request, $contentType);
 
         return $this->client
@@ -1502,7 +1502,7 @@ class CampaignApi
     /**
      * Create request for operation 'campaignPrice'
      *
-     * @param  \BSG\\Api\\V2\Model\CampaignPriceRequest $campaign_price_request (required)
+     * @param  \BSG\Api\V2\Model\CampaignPriceRequest $campaign_price_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1602,9 +1602,9 @@ class CampaignApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignStop'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\RcsSend200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\CampaignStop422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\CampaignStop200Response|\BSG\Api\V2\Model\CampaignStop400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\CampaignStop422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function campaignStop($id, string $contentType = self::contentTypes['campaignStop'][0])
     {
@@ -1620,9 +1620,9 @@ class CampaignApi
      * @param  int $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaignStop'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\RcsSend200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\CampaignStop422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\CampaignStop200Response|\BSG\Api\V2\Model\CampaignStop400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\CampaignStop422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function campaignStopWithHttpInfo($id, string $contentType = self::contentTypes['campaignStop'][0])
     {
@@ -1653,11 +1653,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\RcsSend200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignStop200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignStop200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1675,16 +1675,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignStop200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignStop400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignStop400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1702,16 +1702,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignStop400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1729,16 +1729,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1756,16 +1756,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\CampaignStop422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\CampaignStop422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\CampaignStop422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\CampaignStop422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1783,16 +1783,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\CampaignStop422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\CampaignStop422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1810,7 +1810,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1829,7 +1829,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\RcsSend200Response';
+            $returnType = '\BSG\Api\V2\Model\CampaignStop200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1862,7 +1862,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend200Response',
+                        '\BSG\Api\V2\Model\CampaignStop200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1870,7 +1870,7 @@ class CampaignApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\CampaignStop400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1878,7 +1878,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1886,7 +1886,7 @@ class CampaignApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1894,7 +1894,7 @@ class CampaignApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\CampaignStop422Response',
+                        '\BSG\Api\V2\Model\CampaignStop422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1902,7 +1902,7 @@ class CampaignApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1946,7 +1946,7 @@ class CampaignApi
      */
     public function campaignStopAsyncWithHttpInfo($id, string $contentType = self::contentTypes['campaignStop'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\RcsSend200Response';
+        $returnType = '\BSG\Api\V2\Model\CampaignStop200Response';
         $request = $this->campaignStopRequest($id, $contentType);
 
         return $this->client
@@ -2089,7 +2089,7 @@ class CampaignApi
      * @param  int|null $page_offset page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort items by (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way way (optional)
      * @param  \DateTime|null $filter_from Include items from (optional)
      * @param  \DateTime|null $filter_to Include items to (optional)
      * @param  string|null $filter_type Filter items by type type (optional)
@@ -2097,9 +2097,9 @@ class CampaignApi
      * @param  string|null $search_value Filter items by search[field]&#x3D;search[value] (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaigns'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\SearchCampaignResource|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Campaigns422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\SearchCampaignResource|\BSG\Api\V2\Model\Campaigns400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\Campaigns422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function campaigns($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_from = null, $filter_to = null, $filter_type = null, $search_field = null, $search_value = null, string $contentType = self::contentTypes['campaigns'][0])
     {
@@ -2115,7 +2115,7 @@ class CampaignApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort items by (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  \DateTime|null $filter_from Include items from (optional)
      * @param  \DateTime|null $filter_to Include items to (optional)
      * @param  string|null $filter_type Filter items by type type (optional)
@@ -2123,9 +2123,9 @@ class CampaignApi
      * @param  string|null $search_value Filter items by search[field]&#x3D;search[value] (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['campaigns'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\SearchCampaignResource|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Campaigns422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\SearchCampaignResource|\BSG\Api\V2\Model\Campaigns400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\Campaigns422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function campaignsWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_from = null, $filter_to = null, $filter_type = null, $search_field = null, $search_value = null, string $contentType = self::contentTypes['campaigns'][0])
     {
@@ -2156,11 +2156,11 @@ class CampaignApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\SearchCampaignResource' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SearchCampaignResource' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SearchCampaignResource' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SearchCampaignResource' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2178,16 +2178,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SearchCampaignResource', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SearchCampaignResource', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Campaigns400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Campaigns400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2205,16 +2205,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Campaigns400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2232,16 +2232,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2259,16 +2259,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\Campaigns422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Campaigns422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Campaigns422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Campaigns422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2286,16 +2286,16 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Campaigns422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Campaigns422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2313,7 +2313,7 @@ class CampaignApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2332,7 +2332,7 @@ class CampaignApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\SearchCampaignResource';
+            $returnType = '\BSG\Api\V2\Model\SearchCampaignResource';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2365,7 +2365,7 @@ class CampaignApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SearchCampaignResource',
+                        '\BSG\Api\V2\Model\SearchCampaignResource',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2373,7 +2373,7 @@ class CampaignApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\Campaigns400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2381,7 +2381,7 @@ class CampaignApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2389,7 +2389,7 @@ class CampaignApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2397,7 +2397,7 @@ class CampaignApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Campaigns422Response',
+                        '\BSG\Api\V2\Model\Campaigns422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2405,7 +2405,7 @@ class CampaignApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2423,7 +2423,7 @@ class CampaignApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort items by (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  \DateTime|null $filter_from Include items from (optional)
      * @param  \DateTime|null $filter_to Include items to (optional)
      * @param  string|null $filter_type Filter items by type type (optional)
@@ -2452,7 +2452,7 @@ class CampaignApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort items by (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  \DateTime|null $filter_from Include items from (optional)
      * @param  \DateTime|null $filter_to Include items to (optional)
      * @param  string|null $filter_type Filter items by type type (optional)
@@ -2465,7 +2465,7 @@ class CampaignApi
      */
     public function campaignsAsyncWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_from = null, $filter_to = null, $filter_type = null, $search_field = null, $search_value = null, string $contentType = self::contentTypes['campaigns'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\SearchCampaignResource';
+        $returnType = '\BSG\Api\V2\Model\SearchCampaignResource';
         $request = $this->campaignsRequest($page_offset, $page_limit, $sort, $way, $filter_from, $filter_to, $filter_type, $search_field, $search_value, $contentType);
 
         return $this->client
@@ -2510,7 +2510,7 @@ class CampaignApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort items by (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  \DateTime|null $filter_from Include items from (optional)
      * @param  \DateTime|null $filter_to Include items to (optional)
      * @param  string|null $filter_type Filter items by type type (optional)

@@ -1,4 +1,4 @@
-# BSG\\Api\\V1\ExportsApi
+# BSG\Api\V1\ExportsApi
 
 All URIs are relative to https://api.sms-service.local, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.sms-service.local, except if the operation 
 ## `exportsDeleteFile()`
 
 ```php
-exportsDeleteFile($id): \BSG\\Api\\V1\Model\ExportsStatusResponse
+exportsDeleteFile($id): \BSG\Api\V1\Model\ExportsStatusResponse
 ```
 
 Delete export file
@@ -29,18 +29,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ExportsApi(
+$apiInstance = new BSG\Api\V1\Api\ExportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = export_123.csv; // string | Export file ID or filename
+| $id = export_123.csv; // string | Export file ID or filename |
 
 try {
     $result = $apiInstance->exportsDeleteFile($id);
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ExportsStatusResponse**](../Model/ExportsStatusResponse.md)
+[**\BSG\Api\V1\Model\ExportsStatusResponse**](../Model/ExportsStatusResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `exportsGetFile()`
 
 ```php
-exportsGetFile($id, $format): \BSG\\Api\\V1\Model\ExportsStatusResponse
+exportsGetFile($id, $format): \BSG\Api\V1\Model\ExportsStatusResponse
 ```
 
 Download export file
@@ -91,19 +91,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ExportsApi(
+$apiInstance = new BSG\Api\V1\Api\ExportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = export_123.csv; // string | Export file ID or filename
-$format = csv; // string | File format for download (json, xml, csv)
+| $id = export_123.csv; // string | Export file ID or filename |
+| $format = csv; // string | File format for download (json, xml, csv) |
 
 try {
     $result = $apiInstance->exportsGetFile($id, $format);
@@ -122,7 +122,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ExportsStatusResponse**](../Model/ExportsStatusResponse.md)
+[**\BSG\Api\V1\Model\ExportsStatusResponse**](../Model/ExportsStatusResponse.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ try {
 ## `exportsGetList()`
 
 ```php
-exportsGetList(): \BSG\\Api\\V1\Model\ExportsStatusResponse
+exportsGetList(): \BSG\Api\V1\Model\ExportsStatusResponse
 ```
 
 List export jobs
@@ -155,12 +155,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ExportsApi(
+$apiInstance = new BSG\Api\V1\Api\ExportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -181,7 +181,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ExportsStatusResponse**](../Model/ExportsStatusResponse.md)
+[**\BSG\Api\V1\Model\ExportsStatusResponse**](../Model/ExportsStatusResponse.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ This endpoint does not need any parameter.
 ## `exportsRequestExport()`
 
 ```php
-exportsRequestExport($export_create_request): \BSG\\Api\\V1\Model\ExportCreateResponse
+exportsRequestExport($export_create_request): \BSG\Api\V1\Model\ExportCreateResponse
 ```
 
 Request data export
@@ -214,18 +214,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ExportsApi(
+$apiInstance = new BSG\Api\V1\Api\ExportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$export_create_request = new \BSG\\Api\\V1\Model\ExportCreateRequest(); // \BSG\\Api\\V1\Model\ExportCreateRequest
+$export_create_request = new \BSG\Api\V1\Model\ExportCreateRequest(); // \BSG\Api\V1\Model\ExportCreateRequest
 
 try {
     $result = $apiInstance->exportsRequestExport($export_create_request);
@@ -239,11 +239,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **export_create_request** | [**\BSG\\Api\\V1\Model\ExportCreateRequest**](../Model/ExportCreateRequest.md)|  | |
+| **export_create_request** | [**\BSG\Api\V1\Model\ExportCreateRequest**](../Model/ExportCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ExportCreateResponse**](../Model/ExportCreateResponse.md)
+[**\BSG\Api\V1\Model\ExportCreateResponse**](../Model/ExportCreateResponse.md)
 
 ### Authorization
 
@@ -261,7 +261,7 @@ try {
 ## `exportsRequestExportPut()`
 
 ```php
-exportsRequestExportPut($export_create_request): \BSG\\Api\\V1\Model\ExportCreateResponse
+exportsRequestExportPut($export_create_request): \BSG\Api\V1\Model\ExportCreateResponse
 ```
 
 Request data export (PUT)
@@ -276,18 +276,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ExportsApi(
+$apiInstance = new BSG\Api\V1\Api\ExportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$export_create_request = new \BSG\\Api\\V1\Model\ExportCreateRequest(); // \BSG\\Api\\V1\Model\ExportCreateRequest
+$export_create_request = new \BSG\Api\V1\Model\ExportCreateRequest(); // \BSG\Api\V1\Model\ExportCreateRequest
 
 try {
     $result = $apiInstance->exportsRequestExportPut($export_create_request);
@@ -301,11 +301,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **export_create_request** | [**\BSG\\Api\\V1\Model\ExportCreateRequest**](../Model/ExportCreateRequest.md)|  | |
+| **export_create_request** | [**\BSG\Api\V1\Model\ExportCreateRequest**](../Model/ExportCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ExportCreateResponse**](../Model/ExportCreateResponse.md)
+[**\BSG\Api\V1\Model\ExportCreateResponse**](../Model/ExportCreateResponse.md)
 
 ### Authorization
 

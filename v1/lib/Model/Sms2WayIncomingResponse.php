@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * Sms2WayIncomingResponse Class Doc Comment
  *
  * @category Class
  * @description Response containing incoming 2-way SMS messages
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class Sms2WayIncomingResponse implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'error' => 'int',
         'error_description' => 'string',
-        'result' => '\BSG\\Api\\V1\Model\Sms2WayIncomingResponseResultInner[]',
+        'result' => '\BSG\Api\V1\Model\ResultschemaResultItem1[]',
         'total_count' => 'int'
     ];
 
@@ -381,7 +381,7 @@ class Sms2WayIncomingResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets result
      *
-     * @return \BSG\\Api\\V1\Model\Sms2WayIncomingResponseResultInner[]
+     * @return \BSG\Api\V1\Model\ResultschemaResultItem1[]
      */
     public function getResult()
     {
@@ -391,7 +391,7 @@ class Sms2WayIncomingResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets result
      *
-     * @param \BSG\\Api\\V1\Model\Sms2WayIncomingResponseResultInner[] $result Array of incoming messages
+     * @param \BSG\Api\V1\Model\ResultschemaResultItem1[] $result Array of incoming messages
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * OtpTemplateCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class OtpTemplateCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'otp_template_create_request';
+    protected static $openAPIModelName = 'OtpTemplateCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OtpTemplateCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPITypes = [
         'name' => 'string',
         'text' => 'string',
-        'countries' => 'string[]'
+        'countries' => '\BSG\Api\V2\Model\OtpTemplateCountries'
     ];
 
     /**
@@ -366,7 +366,7 @@ class OtpTemplateCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets countries
      *
-     * @return string[]|null
+     * @return \BSG\Api\V2\Model\OtpTemplateCountries|null
      */
     public function getCountries()
     {
@@ -376,7 +376,7 @@ class OtpTemplateCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets countries
      *
-     * @param string[]|null $countries Two-letter country code(s) for which the template must apply. Sending messages with the OTP code will only be possible if the recipient’s number belongs to the country you specify for the template.
+     * @param \BSG\Api\V2\Model\OtpTemplateCountries|null $countries countries
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * Viber Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class Viber implements ModelInterface, ArrayAccess, \JsonSerializable
         'sender' => 'string',
         'validity_seconds' => 'int',
         'validity' => 'int',
-        'options' => '\BSG\\Api\\V2\Model\ViberOptions',
+        'options' => '\BSG\Api\V2\Model\ViberOptions',
         'check_stop_list' => 'bool'
     ];
 
@@ -497,7 +497,7 @@ class Viber implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets options
      *
-     * @return \BSG\\Api\\V2\Model\ViberOptions|null
+     * @return \BSG\Api\V2\Model\ViberOptions|null
      */
     public function getOptions()
     {
@@ -507,7 +507,7 @@ class Viber implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets options
      *
-     * @param \BSG\\Api\\V2\Model\ViberOptions|null $options options
+     * @param \BSG\Api\V2\Model\ViberOptions|null $options options
      *
      * @return self
      */

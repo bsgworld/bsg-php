@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace BSG\\Api\\V2\Test\Api;
+namespace BSG\Api\V2\Test\Api;
 
-use \BSG\\Api\\V2\Configuration;
-use \BSG\\Api\\V2\ApiException;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\Configuration;
+use \BSG\Api\V2\ApiException;
+use \BSG\Api\V2\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * InternalCurrencyApiTest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -72,12 +72,12 @@ class InternalCurrencyApiTest extends TestCase
     }
 
     /**
-     * Test case for call1fdbf152055bcdd473b0a3c82567c161
+     * Test case for internalCurrenciesList
      *
      * Get currencies list.
      *
      */
-    public function testCall1fdbf152055bcdd473b0a3c82567c161()
+    public function testInternalCurrenciesList()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

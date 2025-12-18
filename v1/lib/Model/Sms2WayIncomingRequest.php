@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * Sms2WayIncomingRequest Class Doc Comment
  *
  * @category Class
  * @description Request to retrieve incoming 2-way SMS messages for a date range
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>

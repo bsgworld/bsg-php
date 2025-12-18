@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\ContactApi
+# BSG\Api\V2\ContactApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `contact()`
 
 ```php
-contact($id): \BSG\\Api\\V2\Model\Contact200Response
+contact($id): \BSG\Api\V2\Model\Contact200Response
 ```
 
 Get contact by ID
@@ -31,16 +31,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactApi(
+$apiInstance = new BSG\Api\V2\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 248452739; // int | Contact id
+| $id = 248452739; // int | Contact id |
 
 try {
     $result = $apiInstance->contact($id);
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\Contact200Response**](../Model/Contact200Response.md)
+[**\BSG\Api\V2\Model\Contact200Response**](../Model/Contact200Response.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `contactCreate()`
 
 ```php
-contactCreate($store_contact): \BSG\\Api\\V2\Model\Contact200Response
+contactCreate($store_contact): \BSG\Api\V2\Model\ContactCreate201Response
 ```
 
 Create a contact
@@ -91,16 +91,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactApi(
+$apiInstance = new BSG\Api\V2\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$store_contact = {"phone":61401629754}; // \BSG\\Api\\V2\Model\StoreContact
+$store_contact = {"phone":61401629754}; // \BSG\Api\V2\Model\StoreContact
 
 try {
     $result = $apiInstance->contactCreate($store_contact);
@@ -114,11 +114,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **store_contact** | [**\BSG\\Api\\V2\Model\StoreContact**](../Model/StoreContact.md)|  | |
+| **store_contact** | [**\BSG\Api\V2\Model\StoreContact**](../Model/StoreContact.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\Contact200Response**](../Model/Contact200Response.md)
+[**\BSG\Api\V2\Model\ContactCreate201Response**](../Model/ContactCreate201Response.md)
 
 ### Authorization
 
@@ -151,16 +151,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactApi(
+$apiInstance = new BSG\Api\V2\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Contact id
+| $id = 56; // int | Contact id |
 
 try {
     $result = $apiInstance->contactDelete($id);
@@ -196,7 +196,7 @@ try {
 ## `contactUpdate()`
 
 ```php
-contactUpdate($id, $contact_update_request): \BSG\\Api\\V2\Model\Contact200Response
+contactUpdate($id, $contact_update_request): \BSG\Api\V2\Model\ContactUpdate200Response
 ```
 
 Update contact
@@ -211,17 +211,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactApi(
+$apiInstance = new BSG\Api\V2\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Contact id
-$contact_update_request = {"phone":61401629754,"fields":[{"id":387714,"value":"Ilya Muromets"}],"groups":[1864618]}; // \BSG\\Api\\V2\Model\ContactUpdateRequest
+| $id = 56; // int | Contact id |
+$contact_update_request = {"phone":61401629754,"fields":[{"id":387714,"value":"Ilya Muromets"}],"groups":[1864618]}; // \BSG\Api\V2\Model\ContactUpdateRequest
 
 try {
     $result = $apiInstance->contactUpdate($id, $contact_update_request);
@@ -236,11 +236,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Contact id | |
-| **contact_update_request** | [**\BSG\\Api\\V2\Model\ContactUpdateRequest**](../Model/ContactUpdateRequest.md)|  | |
+| **contact_update_request** | [**\BSG\Api\V2\Model\ContactUpdateRequest**](../Model/ContactUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\Contact200Response**](../Model/Contact200Response.md)
+[**\BSG\Api\V2\Model\ContactUpdate200Response**](../Model/ContactUpdate200Response.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ try {
 ## `contacts()`
 
 ```php
-contacts($page_offset, $page_limit, $groups): \BSG\\Api\\V2\Model\Contacts200Response
+contacts($page_offset, $page_limit, $groups): \BSG\Api\V2\Model\Contacts200Response
 ```
 
 List of contacts
@@ -273,18 +273,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactApi(
+$apiInstance = new BSG\Api\V2\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $page_offset = 0; // int
-$page_limit = 50; // int | The number of items in the response
-$groups = [1864618]; // int[] | Index of IDs of the lists for which you want to display contacts
+| $page_limit = 50; // int | The number of items in the response |
+| $groups = [1864618]; // int[] | Index of IDs of the lists for which you want to display contacts |
 
 try {
     $result = $apiInstance->contacts($page_offset, $page_limit, $groups);
@@ -304,7 +304,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\Contacts200Response**](../Model/Contacts200Response.md)
+[**\BSG\Api\V2\Model\Contacts200Response**](../Model/Contacts200Response.md)
 
 ### Authorization
 
@@ -337,17 +337,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactApi(
+$apiInstance = new BSG\Api\V2\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$contact_ids = array(56); // int[] | Contact ids to delete
-$group_ids = array(56); // int[] | Contact lists ids to delete **contacts** included into these lists
+| $contact_ids = array(56); // int[] | Contact ids to delete |
+| $group_ids = array(56); // int[] | Contact lists ids to delete **contacts** included into these lists |
 
 try {
     $result = $apiInstance->contactsDelete($contact_ids, $group_ids);
@@ -384,7 +384,7 @@ try {
 ## `contactsSearch()`
 
 ```php
-contactsSearch($page_offset, $page_limit, $sort, $way, $search_field, $search_operator, $search_value, $search_fields_0_field, $search_fields_0_operator, $search_fields_0_value): \BSG\\Api\\V2\Model\ContactsSearch200Response
+contactsSearch($page_offset, $page_limit, $sort, $way, $search_field, $search_operator, $search_value, $search_fields_0_field, $search_fields_0_operator, $search_fields_0_value): \BSG\Api\V2\Model\ContactsSearch200Response
 ```
 
 Search contacts
@@ -399,24 +399,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ContactApi(
+$apiInstance = new BSG\Api\V2\Api\ContactApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $page_offset = 0; // int
-$page_limit = 50; // int | The number of items in the response
-$sort = 'id'; // string | Sort by conditions: id, phone
-$way = new \BSG\\Api\\V2\Model\\BSG\\Api\\V2\Model\SortWay(); // \BSG\\Api\\V2\Model\SortWay
+| $page_limit = 50; // int | The number of items in the response |
+| $sort = 'id'; // string | Sort by conditions: id, phone |
+$way = new \BSG\Api\V2\Model\\BSG\Api\V2\Model\SortWay(); // \BSG\Api\V2\Model\SortWay
 $search_field = 'search_field_example'; // string
-$search_operator = new \BSG\\Api\\V2\Model\\BSG\\Api\\V2\Model\SearchOperator(); // \BSG\\Api\\V2\Model\SearchOperator
+$search_operator = new \BSG\Api\V2\Model\\BSG\Api\V2\Model\SearchOperator(); // \BSG\Api\V2\Model\SearchOperator
 $search_value = 'search_value_example'; // string
 $search_fields_0_field = 'search_fields_0_field_example'; // string
-$search_fields_0_operator = new \BSG\\Api\\V2\Model\\BSG\\Api\\V2\Model\SearchOperator(); // \BSG\\Api\\V2\Model\SearchOperator
+$search_fields_0_operator = new \BSG\Api\V2\Model\\BSG\Api\V2\Model\SearchOperator(); // \BSG\Api\V2\Model\SearchOperator
 $search_fields_0_value = 'search_fields_0_value_example'; // string
 
 try {
@@ -434,17 +434,17 @@ try {
 | **page_offset** | **int**|  | [optional] [default to 0] |
 | **page_limit** | **int**| The number of items in the response | [optional] [default to 50] |
 | **sort** | **string**| Sort by conditions: id, phone | [optional] [default to &#39;id&#39;] |
-| **way** | [**\BSG\\Api\\V2\Model\SortWay**](../Model/.md)|  | [optional] |
+| **way** | [**\BSG\Api\V2\Model\SortWay**](../Model/.md)|  | [optional] |
 | **search_field** | **string**|  | [optional] |
-| **search_operator** | [**\BSG\\Api\\V2\Model\SearchOperator**](../Model/.md)|  | [optional] |
+| **search_operator** | [**\BSG\Api\V2\Model\SearchOperator**](../Model/.md)|  | [optional] |
 | **search_value** | **string**|  | [optional] |
 | **search_fields_0_field** | **string**|  | [optional] |
-| **search_fields_0_operator** | [**\BSG\\Api\\V2\Model\SearchOperator**](../Model/.md)|  | [optional] |
+| **search_fields_0_operator** | [**\BSG\Api\V2\Model\SearchOperator**](../Model/.md)|  | [optional] |
 | **search_fields_0_value** | **string**|  | [optional] |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ContactsSearch200Response**](../Model/ContactsSearch200Response.md)
+[**\BSG\Api\V2\Model\ContactsSearch200Response**](../Model/ContactsSearch200Response.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SmsSendGroupsRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class SmsSendGroupsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'sms_send_groups_request';
+    protected static $openAPIModelName = 'SmsSendGroupsRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -63,7 +63,7 @@ class SmsSendGroupsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'tariff_code' => 'int',
         'validity' => 'int',
         'start_at' => '\DateTime',
-        'short_links' => '\BSG\\Api\\V2\Model\ShortLink[]',
+        'short_links' => '\BSG\Api\V2\Model\ShortLink[]',
         'transliterate' => 'bool'
     ];
 
@@ -96,8 +96,8 @@ class SmsSendGroupsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'text' => false,
         'tariff_code' => false,
         'validity' => false,
-        'start_at' => false,
-        'short_links' => false,
+        'start_at' => true,
+        'short_links' => true,
         'transliterate' => false
     ];
 
@@ -323,6 +323,10 @@ class SmsSendGroupsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
+        if (!is_null($this->container['groups']) && (count($this->container['groups']) < 1)) {
+            $invalidProperties[] = "invalid value for 'groups', number of items must be greater than or equal to 1.";
+        }
+
         if ($this->container['sender'] === null) {
             $invalidProperties[] = "'sender' can't be null";
         }
@@ -380,6 +384,9 @@ class SmsSendGroupsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         }
 
 
+        if ((count($groups) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $groups when calling SmsSendGroupsRequest., number of items must be greater than or equal to 1.');
+        }
         $this->container['groups'] = $groups;
 
         return $this;
@@ -525,7 +532,14 @@ class SmsSendGroupsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setStartAt($start_at)
     {
         if (is_null($start_at)) {
-            throw new \InvalidArgumentException('non-nullable start_at cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'start_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('start_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['start_at'] = $start_at;
 
@@ -535,7 +549,7 @@ class SmsSendGroupsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets short_links
      *
-     * @return \BSG\\Api\\V2\Model\ShortLink[]|null
+     * @return \BSG\Api\V2\Model\ShortLink[]|null
      */
     public function getShortLinks()
     {
@@ -545,14 +559,21 @@ class SmsSendGroupsRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets short_links
      *
-     * @param \BSG\\Api\\V2\Model\ShortLink[]|null $short_links short_links
+     * @param \BSG\Api\V2\Model\ShortLink[]|null $short_links short_links
      *
      * @return self
      */
     public function setShortLinks($short_links)
     {
         if (is_null($short_links)) {
-            throw new \InvalidArgumentException('non-nullable short_links cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'short_links');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('short_links', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['short_links'] = $short_links;
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * DescriptionThisValueIsTooLongItShouldHave255CharactersOrLess Class Doc Comment
  *
  * @category Class
  * @description {description} - This value is too long. It should have 255 characters or less.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class DescriptionThisValueIsTooLongItShouldHave255CharactersOrLess implements Mo
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\DescriptionThisValueIsTooLongItShouldHave255CharactersOrLessErrors'
+        'errors' => '\BSG\Api\V2\Model\DescriptionThisValueIsTooLongItShouldHave255CharactersOrLessErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class DescriptionThisValueIsTooLongItShouldHave255CharactersOrLess implements Mo
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\DescriptionThisValueIsTooLongItShouldHave255CharactersOrLessErrors|null
+     * @return \BSG\Api\V2\Model\DescriptionThisValueIsTooLongItShouldHave255CharactersOrLessErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class DescriptionThisValueIsTooLongItShouldHave255CharactersOrLess implements Mo
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\DescriptionThisValueIsTooLongItShouldHave255CharactersOrLessErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\DescriptionThisValueIsTooLongItShouldHave255CharactersOrLessErrors|null $errors errors
      *
      * @return self
      */

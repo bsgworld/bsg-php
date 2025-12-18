@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * IdsThisCollectionShouldContain1ElementOrMore2Id Class Doc Comment
  *
  * @category Class
  * @description {ids} - This collection should contain 1 element or more. якщо в запиті 2 рази вказати один і той самий ID - повертається успішний респонс і поле не видаляється. Потрібно доопрацювати
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class IdsThisCollectionShouldContain1ElementOrMore2Id implements ModelInterface,
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\IdsThisCollectionShouldContain1ElementOrMore2IdErrors'
+        'errors' => '\BSG\Api\V2\Model\IdsThisCollectionShouldContain1ElementOrMore2IdErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class IdsThisCollectionShouldContain1ElementOrMore2Id implements ModelInterface,
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\IdsThisCollectionShouldContain1ElementOrMore2IdErrors|null
+     * @return \BSG\Api\V2\Model\IdsThisCollectionShouldContain1ElementOrMore2IdErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class IdsThisCollectionShouldContain1ElementOrMore2Id implements ModelInterface,
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\IdsThisCollectionShouldContain1ElementOrMore2IdErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\IdsThisCollectionShouldContain1ElementOrMore2IdErrors|null $errors errors
      *
      * @return self
      */

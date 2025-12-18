@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * CampaignSchema Class Doc Comment
  *
  * @category Class
  * @description Main campaign properties
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,13 +61,13 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'name' => 'string',
         'sender' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\CampaignStatus',
-        'message_type' => '\BSG\\Api\\V2\Model\MessageType',
+        'status' => '\BSG\Api\V2\Model\CampaignStatus',
+        'message_type' => '\BSG\Api\V2\Model\MessageType',
         'start_at' => '\DateTime',
         'real_start_at' => '\DateTime',
         'finished_at' => '\DateTime',
         'created_at' => '\DateTime',
-        'statistics' => '\BSG\\Api\\V2\Model\StatisticsShort',
+        'statistics' => '\BSG\Api\V2\Model\StatisticsShort',
         'calculated_price' => 'float',
         'currency' => 'string'
     ];
@@ -90,7 +90,7 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
         'finished_at' => 'date-time',
         'created_at' => 'date-time',
         'statistics' => null,
-        'calculated_price' => null,
+        'calculated_price' => 'float',
         'currency' => null
     ];
 
@@ -105,7 +105,7 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
         'sender' => false,
         'status' => false,
         'message_type' => false,
-        'start_at' => false,
+        'start_at' => true,
         'real_start_at' => true,
         'finished_at' => true,
         'created_at' => false,
@@ -451,7 +451,7 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\CampaignStatus|null
+     * @return \BSG\Api\V2\Model\CampaignStatus|null
      */
     public function getStatus()
     {
@@ -461,7 +461,7 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\CampaignStatus|null $status status
+     * @param \BSG\Api\V2\Model\CampaignStatus|null $status status
      *
      * @return self
      */
@@ -478,7 +478,7 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets message_type
      *
-     * @return \BSG\\Api\\V2\Model\MessageType|null
+     * @return \BSG\Api\V2\Model\MessageType|null
      */
     public function getMessageType()
     {
@@ -488,7 +488,7 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets message_type
      *
-     * @param \BSG\\Api\\V2\Model\MessageType|null $message_type message_type
+     * @param \BSG\Api\V2\Model\MessageType|null $message_type message_type
      *
      * @return self
      */
@@ -522,7 +522,14 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setStartAt($start_at)
     {
         if (is_null($start_at)) {
-            throw new \InvalidArgumentException('non-nullable start_at cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'start_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('start_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['start_at'] = $start_at;
 
@@ -627,7 +634,7 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets statistics
      *
-     * @return \BSG\\Api\\V2\Model\StatisticsShort|null
+     * @return \BSG\Api\V2\Model\StatisticsShort|null
      */
     public function getStatistics()
     {
@@ -637,7 +644,7 @@ class CampaignSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets statistics
      *
-     * @param \BSG\\Api\\V2\Model\StatisticsShort|null $statistics statistics
+     * @param \BSG\Api\V2\Model\StatisticsShort|null $statistics statistics
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * FilterfromfiltertoThisValueShouldNotBeNull Class Doc Comment
  *
  * @category Class
  * @description {filter.from}, {filter.to} - This value should not be null
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class FilterfromfiltertoThisValueShouldNotBeNull implements ModelInterface, Arra
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\FilterfromfiltertoThisValueShouldNotBeNullErrors'
+        'errors' => '\BSG\Api\V2\Model\FilterfromfiltertoThisValueShouldNotBeNullErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class FilterfromfiltertoThisValueShouldNotBeNull implements ModelInterface, Arra
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\FilterfromfiltertoThisValueShouldNotBeNullErrors|null
+     * @return \BSG\Api\V2\Model\FilterfromfiltertoThisValueShouldNotBeNullErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class FilterfromfiltertoThisValueShouldNotBeNull implements ModelInterface, Arra
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\FilterfromfiltertoThisValueShouldNotBeNullErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\FilterfromfiltertoThisValueShouldNotBeNullErrors|null $errors errors
      *
      * @return self
      */

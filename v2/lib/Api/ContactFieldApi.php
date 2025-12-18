@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactFieldApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -80,7 +80,7 @@ class ContactFieldApi
         'contactFields' => [
             'application/json',
         ],
-        'ed8d272687f9ac68a20fe1c31dc3c042' => [
+        'contactFieldsDeleteBatch' => [
             'application/json',
         ],
     ];
@@ -136,12 +136,12 @@ class ContactFieldApi
      *
      * Create contact field
      *
-     * @param  \BSG\\Api\\V2\Model\ContactFieldCreateRequest $contact_field_create_request contact_field_create_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldCreateRequest $contact_field_create_request contact_field_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldCreate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ContactFieldCreate201Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactFieldCreate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ContactFieldCreate201Response|\BSG\Api\V2\Model\ContactFieldCreate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactFieldCreate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactFieldCreate($contact_field_create_request, string $contentType = self::contentTypes['contactFieldCreate'][0])
     {
@@ -154,12 +154,12 @@ class ContactFieldApi
      *
      * Create contact field
      *
-     * @param  \BSG\\Api\\V2\Model\ContactFieldCreateRequest $contact_field_create_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldCreateRequest $contact_field_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldCreate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ContactFieldCreate201Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactFieldCreate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ContactFieldCreate201Response|\BSG\Api\V2\Model\ContactFieldCreate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactFieldCreate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactFieldCreateWithHttpInfo($contact_field_create_request, string $contentType = self::contentTypes['contactFieldCreate'][0])
     {
@@ -190,11 +190,11 @@ class ContactFieldApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\BSG\\Api\\V2\Model\ContactFieldCreate201Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactFieldCreate201Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldCreate201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -212,16 +212,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactFieldCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldCreate400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldCreate400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -239,16 +239,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldCreate400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -266,16 +266,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -293,16 +293,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactFieldCreate422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldCreate422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactFieldCreate422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldCreate422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -320,16 +320,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactFieldCreate422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldCreate422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -347,7 +347,7 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -366,7 +366,7 @@ class ContactFieldApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ContactFieldCreate201Response';
+            $returnType = '\BSG\Api\V2\Model\ContactFieldCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -399,7 +399,7 @@ class ContactFieldApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactFieldCreate201Response',
+                        '\BSG\Api\V2\Model\ContactFieldCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -407,7 +407,7 @@ class ContactFieldApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ContactFieldCreate400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -415,7 +415,7 @@ class ContactFieldApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -423,7 +423,7 @@ class ContactFieldApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -431,7 +431,7 @@ class ContactFieldApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactFieldCreate422Response',
+                        '\BSG\Api\V2\Model\ContactFieldCreate422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class ContactFieldApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -454,7 +454,7 @@ class ContactFieldApi
      *
      * Create contact field
      *
-     * @param  \BSG\\Api\\V2\Model\ContactFieldCreateRequest $contact_field_create_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldCreateRequest $contact_field_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -475,7 +475,7 @@ class ContactFieldApi
      *
      * Create contact field
      *
-     * @param  \BSG\\Api\\V2\Model\ContactFieldCreateRequest $contact_field_create_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldCreateRequest $contact_field_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -483,7 +483,7 @@ class ContactFieldApi
      */
     public function contactFieldCreateAsyncWithHttpInfo($contact_field_create_request, string $contentType = self::contentTypes['contactFieldCreate'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ContactFieldCreate201Response';
+        $returnType = '\BSG\Api\V2\Model\ContactFieldCreate201Response';
         $request = $this->contactFieldCreateRequest($contact_field_create_request, $contentType);
 
         return $this->client
@@ -525,7 +525,7 @@ class ContactFieldApi
     /**
      * Create request for operation 'contactFieldCreate'
      *
-     * @param  \BSG\\Api\\V2\Model\ContactFieldCreateRequest $contact_field_create_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldCreateRequest $contact_field_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -623,12 +623,12 @@ class ContactFieldApi
      * Update contact field
      *
      * @param  int $id Contact field id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactFieldUpdateRequest $contact_field_update_request contact_field_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldUpdateRequest $contact_field_update_request contact_field_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldUpdate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ContactFieldCreate201Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactFieldUpdate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ContactFieldUpdate200Response|\BSG\Api\V2\Model\ContactFieldUpdate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactFieldUpdate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactFieldUpdate($id, $contact_field_update_request, string $contentType = self::contentTypes['contactFieldUpdate'][0])
     {
@@ -642,12 +642,12 @@ class ContactFieldApi
      * Update contact field
      *
      * @param  int $id Contact field id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactFieldUpdateRequest $contact_field_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldUpdateRequest $contact_field_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldUpdate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ContactFieldCreate201Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactFieldUpdate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ContactFieldUpdate200Response|\BSG\Api\V2\Model\ContactFieldUpdate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactFieldUpdate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactFieldUpdateWithHttpInfo($id, $contact_field_update_request, string $contentType = self::contentTypes['contactFieldUpdate'][0])
     {
@@ -678,11 +678,11 @@ class ContactFieldApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ContactFieldCreate201Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldUpdate200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactFieldCreate201Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldUpdate200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -700,16 +700,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactFieldCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldUpdate200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldUpdate400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldUpdate400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -727,16 +727,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldUpdate400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -754,16 +754,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -781,16 +781,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactFieldUpdate422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldUpdate422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactFieldUpdate422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldUpdate422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -808,16 +808,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactFieldUpdate422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldUpdate422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -835,7 +835,7 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -854,7 +854,7 @@ class ContactFieldApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ContactFieldCreate201Response';
+            $returnType = '\BSG\Api\V2\Model\ContactFieldUpdate200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -887,7 +887,7 @@ class ContactFieldApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactFieldCreate201Response',
+                        '\BSG\Api\V2\Model\ContactFieldUpdate200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -895,7 +895,7 @@ class ContactFieldApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ContactFieldUpdate400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -903,7 +903,7 @@ class ContactFieldApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -911,7 +911,7 @@ class ContactFieldApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -919,7 +919,7 @@ class ContactFieldApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactFieldUpdate422Response',
+                        '\BSG\Api\V2\Model\ContactFieldUpdate422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -927,7 +927,7 @@ class ContactFieldApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -943,7 +943,7 @@ class ContactFieldApi
      * Update contact field
      *
      * @param  int $id Contact field id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactFieldUpdateRequest $contact_field_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldUpdateRequest $contact_field_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -965,7 +965,7 @@ class ContactFieldApi
      * Update contact field
      *
      * @param  int $id Contact field id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactFieldUpdateRequest $contact_field_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldUpdateRequest $contact_field_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -973,7 +973,7 @@ class ContactFieldApi
      */
     public function contactFieldUpdateAsyncWithHttpInfo($id, $contact_field_update_request, string $contentType = self::contentTypes['contactFieldUpdate'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ContactFieldCreate201Response';
+        $returnType = '\BSG\Api\V2\Model\ContactFieldUpdate200Response';
         $request = $this->contactFieldUpdateRequest($id, $contact_field_update_request, $contentType);
 
         return $this->client
@@ -1016,7 +1016,7 @@ class ContactFieldApi
      * Create request for operation 'contactFieldUpdate'
      *
      * @param  int $id Contact field id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactFieldUpdateRequest $contact_field_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactFieldUpdateRequest $contact_field_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1130,9 +1130,9 @@ class ContactFieldApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFields'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ContactFieldCollectionSchema|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\AccountBalance422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ContactFieldCollectionSchema|\BSG\Api\V2\Model\ContactFields400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactFields422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactFields(string $contentType = self::contentTypes['contactFields'][0])
     {
@@ -1147,9 +1147,9 @@ class ContactFieldApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFields'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ContactFieldCollectionSchema|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\AccountBalance422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ContactFieldCollectionSchema|\BSG\Api\V2\Model\ContactFields400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactFields422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactFieldsWithHttpInfo(string $contentType = self::contentTypes['contactFields'][0])
     {
@@ -1180,11 +1180,11 @@ class ContactFieldApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ContactFieldCollectionSchema' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldCollectionSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactFieldCollectionSchema' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldCollectionSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1202,16 +1202,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactFieldCollectionSchema', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldCollectionSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFields400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFields400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1229,16 +1229,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFields400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1256,16 +1256,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1283,16 +1283,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFields422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFields422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1310,16 +1310,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFields422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1337,7 +1337,7 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1356,7 +1356,7 @@ class ContactFieldApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ContactFieldCollectionSchema';
+            $returnType = '\BSG\Api\V2\Model\ContactFieldCollectionSchema';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1389,7 +1389,7 @@ class ContactFieldApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactFieldCollectionSchema',
+                        '\BSG\Api\V2\Model\ContactFieldCollectionSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1397,7 +1397,7 @@ class ContactFieldApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ContactFields400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1405,7 +1405,7 @@ class ContactFieldApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1413,7 +1413,7 @@ class ContactFieldApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1421,7 +1421,7 @@ class ContactFieldApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance422Response',
+                        '\BSG\Api\V2\Model\ContactFields422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1429,7 +1429,7 @@ class ContactFieldApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1471,7 +1471,7 @@ class ContactFieldApi
      */
     public function contactFieldsAsyncWithHttpInfo(string $contentType = self::contentTypes['contactFields'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ContactFieldCollectionSchema';
+        $returnType = '\BSG\Api\V2\Model\ContactFieldCollectionSchema';
         $request = $this->contactFieldsRequest($contentType);
 
         return $this->client
@@ -1591,38 +1591,38 @@ class ContactFieldApi
     }
 
     /**
-     * Operation ed8d272687f9ac68a20fe1c31dc3c042
+     * Operation contactFieldsDeleteBatch
      *
      * Delete contact fields by ids
      *
-     * @param  \BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042Request $ed8d272687f9ac68a20fe1c31dc3c042_request ed8d272687f9ac68a20fe1c31dc3c042_request (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\ContactFieldsDeleteBatchRequest $contact_fields_delete_batch_request contact_fields_delete_batch_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldsDeleteBatch'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return object|\BSG\Api\V2\Model\ContactFieldsDeleteBatch400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactFieldsDeleteBatch422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
-    public function ed8d272687f9ac68a20fe1c31dc3c042($ed8d272687f9ac68a20fe1c31dc3c042_request, string $contentType = self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'][0])
+    public function contactFieldsDeleteBatch($contact_fields_delete_batch_request, string $contentType = self::contentTypes['contactFieldsDeleteBatch'][0])
     {
-        list($response) = $this->ed8d272687f9ac68a20fe1c31dc3c042WithHttpInfo($ed8d272687f9ac68a20fe1c31dc3c042_request, $contentType);
+        list($response) = $this->contactFieldsDeleteBatchWithHttpInfo($contact_fields_delete_batch_request, $contentType);
         return $response;
     }
 
     /**
-     * Operation ed8d272687f9ac68a20fe1c31dc3c042WithHttpInfo
+     * Operation contactFieldsDeleteBatchWithHttpInfo
      *
      * Delete contact fields by ids
      *
-     * @param  \BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042Request $ed8d272687f9ac68a20fe1c31dc3c042_request (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\ContactFieldsDeleteBatchRequest $contact_fields_delete_batch_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldsDeleteBatch'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\BSG\Api\V2\Model\ContactFieldsDeleteBatch400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactFieldsDeleteBatch422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
-    public function ed8d272687f9ac68a20fe1c31dc3c042WithHttpInfo($ed8d272687f9ac68a20fe1c31dc3c042_request, string $contentType = self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'][0])
+    public function contactFieldsDeleteBatchWithHttpInfo($contact_fields_delete_batch_request, string $contentType = self::contentTypes['contactFieldsDeleteBatch'][0])
     {
-        $request = $this->ed8d272687f9ac68a20fe1c31dc3c042Request($ed8d272687f9ac68a20fe1c31dc3c042_request, $contentType);
+        $request = $this->contactFieldsDeleteBatchRequest($contact_fields_delete_batch_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1676,11 +1676,11 @@ class ContactFieldApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldsDeleteBatch400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldsDeleteBatch400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1698,16 +1698,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldsDeleteBatch400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1725,16 +1725,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1752,16 +1752,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactFieldsDeleteBatch422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactFieldsDeleteBatch422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1779,16 +1779,16 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactFieldsDeleteBatch422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1806,7 +1806,7 @@ class ContactFieldApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1866,7 +1866,7 @@ class ContactFieldApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\ContactFieldsDeleteBatch400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1874,7 +1874,7 @@ class ContactFieldApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1882,7 +1882,7 @@ class ContactFieldApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1890,7 +1890,7 @@ class ContactFieldApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042422Response',
+                        '\BSG\Api\V2\Model\ContactFieldsDeleteBatch422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1898,7 +1898,7 @@ class ContactFieldApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1909,19 +1909,19 @@ class ContactFieldApi
     }
 
     /**
-     * Operation ed8d272687f9ac68a20fe1c31dc3c042Async
+     * Operation contactFieldsDeleteBatchAsync
      *
      * Delete contact fields by ids
      *
-     * @param  \BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042Request $ed8d272687f9ac68a20fe1c31dc3c042_request (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\ContactFieldsDeleteBatchRequest $contact_fields_delete_batch_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldsDeleteBatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ed8d272687f9ac68a20fe1c31dc3c042Async($ed8d272687f9ac68a20fe1c31dc3c042_request, string $contentType = self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'][0])
+    public function contactFieldsDeleteBatchAsync($contact_fields_delete_batch_request, string $contentType = self::contentTypes['contactFieldsDeleteBatch'][0])
     {
-        return $this->ed8d272687f9ac68a20fe1c31dc3c042AsyncWithHttpInfo($ed8d272687f9ac68a20fe1c31dc3c042_request, $contentType)
+        return $this->contactFieldsDeleteBatchAsyncWithHttpInfo($contact_fields_delete_batch_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1930,20 +1930,20 @@ class ContactFieldApi
     }
 
     /**
-     * Operation ed8d272687f9ac68a20fe1c31dc3c042AsyncWithHttpInfo
+     * Operation contactFieldsDeleteBatchAsyncWithHttpInfo
      *
      * Delete contact fields by ids
      *
-     * @param  \BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042Request $ed8d272687f9ac68a20fe1c31dc3c042_request (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\ContactFieldsDeleteBatchRequest $contact_fields_delete_batch_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldsDeleteBatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ed8d272687f9ac68a20fe1c31dc3c042AsyncWithHttpInfo($ed8d272687f9ac68a20fe1c31dc3c042_request, string $contentType = self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'][0])
+    public function contactFieldsDeleteBatchAsyncWithHttpInfo($contact_fields_delete_batch_request, string $contentType = self::contentTypes['contactFieldsDeleteBatch'][0])
     {
         $returnType = 'object';
-        $request = $this->ed8d272687f9ac68a20fe1c31dc3c042Request($ed8d272687f9ac68a20fe1c31dc3c042_request, $contentType);
+        $request = $this->contactFieldsDeleteBatchRequest($contact_fields_delete_batch_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1982,21 +1982,21 @@ class ContactFieldApi
     }
 
     /**
-     * Create request for operation 'ed8d272687f9ac68a20fe1c31dc3c042'
+     * Create request for operation 'contactFieldsDeleteBatch'
      *
-     * @param  \BSG\\Api\\V2\Model\Ed8d272687f9ac68a20fe1c31dc3c042Request $ed8d272687f9ac68a20fe1c31dc3c042_request (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'] to see the possible values for this operation
+     * @param  \BSG\Api\V2\Model\ContactFieldsDeleteBatchRequest $contact_fields_delete_batch_request (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactFieldsDeleteBatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function ed8d272687f9ac68a20fe1c31dc3c042Request($ed8d272687f9ac68a20fe1c31dc3c042_request, string $contentType = self::contentTypes['ed8d272687f9ac68a20fe1c31dc3c042'][0])
+    public function contactFieldsDeleteBatchRequest($contact_fields_delete_batch_request, string $contentType = self::contentTypes['contactFieldsDeleteBatch'][0])
     {
 
-        // verify the required parameter 'ed8d272687f9ac68a20fe1c31dc3c042_request' is set
-        if ($ed8d272687f9ac68a20fe1c31dc3c042_request === null || (is_array($ed8d272687f9ac68a20fe1c31dc3c042_request) && count($ed8d272687f9ac68a20fe1c31dc3c042_request) === 0)) {
+        // verify the required parameter 'contact_fields_delete_batch_request' is set
+        if ($contact_fields_delete_batch_request === null || (is_array($contact_fields_delete_batch_request) && count($contact_fields_delete_batch_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ed8d272687f9ac68a20fe1c31dc3c042_request when calling ed8d272687f9ac68a20fe1c31dc3c042'
+                'Missing the required parameter $contact_fields_delete_batch_request when calling contactFieldsDeleteBatch'
             );
         }
 
@@ -2019,12 +2019,12 @@ class ContactFieldApi
         );
 
         // for model (json/xml)
-        if (isset($ed8d272687f9ac68a20fe1c31dc3c042_request)) {
+        if (isset($contact_fields_delete_batch_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($ed8d272687f9ac68a20fe1c31dc3c042_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contact_fields_delete_batch_request));
             } else {
-                $httpBody = $ed8d272687f9ac68a20fe1c31dc3c042_request;
+                $httpBody = $contact_fields_delete_batch_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

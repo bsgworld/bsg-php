@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * CallbackCreateResponse Class Doc Comment
  *
  * @category Class
  * @description Response after creating callback webhook
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CallbackCreateResponse implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'status' => 'string',
-        'data' => '\BSG\\Api\\V1\Model\CallbackCreateResponseData'
+        'data' => '\BSG\Api\V1\Model\DataSchema'
     ];
 
     /**
@@ -334,7 +334,7 @@ class CallbackCreateResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V1\Model\CallbackCreateResponseData
+     * @return \BSG\Api\V1\Model\DataSchema
      */
     public function getData()
     {
@@ -344,7 +344,7 @@ class CallbackCreateResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V1\Model\CallbackCreateResponseData $data data
+     * @param \BSG\Api\V1\Model\DataSchema $data data
      *
      * @return self
      */

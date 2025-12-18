@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace BSG\\Api\\V2\Test\Api;
+namespace BSG\Api\V2\Test\Api;
 
-use \BSG\\Api\\V2\Configuration;
-use \BSG\\Api\\V2\ApiException;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\Configuration;
+use \BSG\Api\V2\ApiException;
+use \BSG\Api\V2\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * MessagesSMSApiTest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -72,12 +72,12 @@ class MessagesSMSApiTest extends TestCase
     }
 
     /**
-     * Test case for b696e239f742e868841bd2173294ef8e
+     * Test case for smsMessagesFind
      *
      * Find messages.
      *
      */
-    public function testB696e239f742e868841bd2173294ef8e()
+    public function testSmsMessagesFind()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

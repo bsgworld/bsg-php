@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SearchCampaignResourceMeta Class Doc Comment
  *
  * @category Class
  * @description Total count of items, current offset and page limit
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -50,7 +50,7 @@ class SearchCampaignResourceMeta implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SearchCampaignResource_meta';
+    protected static $openAPIModelName = 'SearchCampaignResourceMeta';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class SearchCampaignResourceMeta implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'page' => '\BSG\\Api\\V2\Model\SearchCampaignResourceMetaPage'
+        'page' => '\BSG\Api\V2\Model\SearchCampaignResourceMetaPage'
     ];
 
     /**
@@ -293,7 +293,7 @@ class SearchCampaignResourceMeta implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets page
      *
-     * @return \BSG\\Api\\V2\Model\SearchCampaignResourceMetaPage|null
+     * @return \BSG\Api\V2\Model\SearchCampaignResourceMetaPage|null
      */
     public function getPage()
     {
@@ -303,7 +303,7 @@ class SearchCampaignResourceMeta implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets page
      *
-     * @param \BSG\\Api\\V2\Model\SearchCampaignResourceMetaPage|null $page page
+     * @param \BSG\Api\V2\Model\SearchCampaignResourceMetaPage|null $page page
      *
      * @return self
      */

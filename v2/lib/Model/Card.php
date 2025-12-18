@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * Card Class Doc Comment
  *
  * @category Class
  * @description Either \&quot;media\&quot; or \&quot;text\&quot; is required.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class Card implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'title' => 'string',
         'text' => 'string',
-        'media' => '\BSG\\Api\\V2\Model\Media',
-        'suggestions' => '\BSG\\Api\\V2\Model\Suggestion[]'
+        'media' => '\BSG\Api\V2\Model\Media',
+        'suggestions' => '\BSG\Api\V2\Model\Suggestion[]'
     ];
 
     /**
@@ -395,7 +395,7 @@ class Card implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets media
      *
-     * @return \BSG\\Api\\V2\Model\Media|null
+     * @return \BSG\Api\V2\Model\Media|null
      */
     public function getMedia()
     {
@@ -405,7 +405,7 @@ class Card implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets media
      *
-     * @param \BSG\\Api\\V2\Model\Media|null $media media
+     * @param \BSG\Api\V2\Model\Media|null $media media
      *
      * @return self
      */
@@ -422,7 +422,7 @@ class Card implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets suggestions
      *
-     * @return \BSG\\Api\\V2\Model\Suggestion[]|null
+     * @return \BSG\Api\V2\Model\Suggestion[]|null
      */
     public function getSuggestions()
     {
@@ -432,7 +432,7 @@ class Card implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets suggestions
      *
-     * @param \BSG\\Api\\V2\Model\Suggestion[]|null $suggestions An array of objects containing information about nested buttons. Only up to 2 buttons can be added to a card.
+     * @param \BSG\Api\V2\Model\Suggestion[]|null $suggestions An array of objects containing information about nested buttons. Only up to 2 buttons can be added to a card.
      *
      * @return self
      */

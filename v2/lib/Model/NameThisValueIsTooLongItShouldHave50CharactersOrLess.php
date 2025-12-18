@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * NameThisValueIsTooLongItShouldHave50CharactersOrLess Class Doc Comment
  *
  * @category Class
  * @description {name} - This value is too long. It should have 50 characters or less.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class NameThisValueIsTooLongItShouldHave50CharactersOrLess implements ModelInter
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\NameThisValueIsTooLongItShouldHave50CharactersOrLessErrors'
+        'errors' => '\BSG\Api\V2\Model\NameThisValueIsTooLongItShouldHave50CharactersOrLessErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class NameThisValueIsTooLongItShouldHave50CharactersOrLess implements ModelInter
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\NameThisValueIsTooLongItShouldHave50CharactersOrLessErrors|null
+     * @return \BSG\Api\V2\Model\NameThisValueIsTooLongItShouldHave50CharactersOrLessErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class NameThisValueIsTooLongItShouldHave50CharactersOrLess implements ModelInter
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\NameThisValueIsTooLongItShouldHave50CharactersOrLessErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\NameThisValueIsTooLongItShouldHave50CharactersOrLessErrors|null $errors errors
      *
      * @return self
      */

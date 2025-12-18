@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * ViberPricesRequest Class Doc Comment
  *
  * @category Class
  * @description Price check request - same structure as ViberCreateRequest but used to calculate pricing without sending
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ViberPricesRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'messages' => '\BSG\\Api\\V1\Model\ViberPricesRequestMessagesInner[]'
+        'messages' => '\BSG\Api\V1\Model\MessagesschemaMessagesItem1[]'
     ];
 
     /**
@@ -301,7 +301,7 @@ class ViberPricesRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets messages
      *
-     * @return \BSG\\Api\\V1\Model\ViberPricesRequestMessagesInner[]
+     * @return \BSG\Api\V1\Model\MessagesschemaMessagesItem1[]
      */
     public function getMessages()
     {
@@ -311,7 +311,7 @@ class ViberPricesRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets messages
      *
-     * @param \BSG\\Api\\V1\Model\ViberPricesRequestMessagesInner[] $messages Array of Viber messages for price calculation
+     * @param \BSG\Api\V1\Model\MessagesschemaMessagesItem1[] $messages Array of Viber messages for price calculation
      *
      * @return self
      */

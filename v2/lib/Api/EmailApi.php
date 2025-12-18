@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * EmailApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,12 +130,12 @@ class EmailApi
      *
      * Send Email
      *
-     * @param  \BSG\\Api\\V2\Model\SendEmail $send_email send_email (required)
+     * @param  \BSG\Api\V2\Model\SendEmail $send_email send_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\EmailResponse|\BSG\\Api\\V2\Model\RcsSend429Response
+     * @return \BSG\Api\V2\Model\EmailResponse|\BSG\Api\V2\Model\TooManyRequestsResponseSchema
      */
     public function emailSend($send_email, string $contentType = self::contentTypes['emailSend'][0])
     {
@@ -148,12 +148,12 @@ class EmailApi
      *
      * Send Email
      *
-     * @param  \BSG\\Api\\V2\Model\SendEmail $send_email (required)
+     * @param  \BSG\Api\V2\Model\SendEmail $send_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\EmailResponse|\BSG\\Api\\V2\Model\RcsSend429Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\EmailResponse|\BSG\Api\V2\Model\TooManyRequestsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function emailSendWithHttpInfo($send_email, string $contentType = self::contentTypes['emailSend'][0])
     {
@@ -184,11 +184,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\BSG\\Api\\V2\Model\EmailResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\EmailResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\EmailResponse' !== 'string') {
+                        if ('\BSG\Api\V2\Model\EmailResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,16 +206,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\EmailResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\EmailResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\RcsSend429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend429Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,7 +233,7 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyRequestsResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -252,7 +252,7 @@ class EmailApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\EmailResponse';
+            $returnType = '\BSG\Api\V2\Model\EmailResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -285,7 +285,7 @@ class EmailApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\EmailResponse',
+                        '\BSG\Api\V2\Model\EmailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -293,7 +293,7 @@ class EmailApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend429Response',
+                        '\BSG\Api\V2\Model\TooManyRequestsResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -308,7 +308,7 @@ class EmailApi
      *
      * Send Email
      *
-     * @param  \BSG\\Api\\V2\Model\SendEmail $send_email (required)
+     * @param  \BSG\Api\V2\Model\SendEmail $send_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -329,7 +329,7 @@ class EmailApi
      *
      * Send Email
      *
-     * @param  \BSG\\Api\\V2\Model\SendEmail $send_email (required)
+     * @param  \BSG\Api\V2\Model\SendEmail $send_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -337,7 +337,7 @@ class EmailApi
      */
     public function emailSendAsyncWithHttpInfo($send_email, string $contentType = self::contentTypes['emailSend'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\EmailResponse';
+        $returnType = '\BSG\Api\V2\Model\EmailResponse';
         $request = $this->emailSendRequest($send_email, $contentType);
 
         return $this->client
@@ -379,7 +379,7 @@ class EmailApi
     /**
      * Create request for operation 'emailSend'
      *
-     * @param  \BSG\\Api\\V2\Model\SendEmail $send_email (required)
+     * @param  \BSG\Api\V2\Model\SendEmail $send_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -476,12 +476,12 @@ class EmailApi
      *
      * Send Email template
      *
-     * @param  \BSG\\Api\\V2\Model\SendTemplateEmail $send_template_email send_template_email (required)
+     * @param  \BSG\Api\V2\Model\SendTemplateEmail $send_template_email send_template_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailTemplateSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\EmailResponse|\BSG\\Api\\V2\Model\RcsSend429Response
+     * @return \BSG\Api\V2\Model\EmailResponse|\BSG\Api\V2\Model\TooManyRequestsResponseSchema
      */
     public function emailTemplateSend($send_template_email, string $contentType = self::contentTypes['emailTemplateSend'][0])
     {
@@ -494,12 +494,12 @@ class EmailApi
      *
      * Send Email template
      *
-     * @param  \BSG\\Api\\V2\Model\SendTemplateEmail $send_template_email (required)
+     * @param  \BSG\Api\V2\Model\SendTemplateEmail $send_template_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailTemplateSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\EmailResponse|\BSG\\Api\\V2\Model\RcsSend429Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\EmailResponse|\BSG\Api\V2\Model\TooManyRequestsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function emailTemplateSendWithHttpInfo($send_template_email, string $contentType = self::contentTypes['emailTemplateSend'][0])
     {
@@ -530,11 +530,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\BSG\\Api\\V2\Model\EmailResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\EmailResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\EmailResponse' !== 'string') {
+                        if ('\BSG\Api\V2\Model\EmailResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -552,16 +552,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\EmailResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\EmailResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\RcsSend429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend429Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -579,7 +579,7 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyRequestsResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -598,7 +598,7 @@ class EmailApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\EmailResponse';
+            $returnType = '\BSG\Api\V2\Model\EmailResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -631,7 +631,7 @@ class EmailApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\EmailResponse',
+                        '\BSG\Api\V2\Model\EmailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -639,7 +639,7 @@ class EmailApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend429Response',
+                        '\BSG\Api\V2\Model\TooManyRequestsResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -654,7 +654,7 @@ class EmailApi
      *
      * Send Email template
      *
-     * @param  \BSG\\Api\\V2\Model\SendTemplateEmail $send_template_email (required)
+     * @param  \BSG\Api\V2\Model\SendTemplateEmail $send_template_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailTemplateSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -675,7 +675,7 @@ class EmailApi
      *
      * Send Email template
      *
-     * @param  \BSG\\Api\\V2\Model\SendTemplateEmail $send_template_email (required)
+     * @param  \BSG\Api\V2\Model\SendTemplateEmail $send_template_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailTemplateSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -683,7 +683,7 @@ class EmailApi
      */
     public function emailTemplateSendAsyncWithHttpInfo($send_template_email, string $contentType = self::contentTypes['emailTemplateSend'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\EmailResponse';
+        $returnType = '\BSG\Api\V2\Model\EmailResponse';
         $request = $this->emailTemplateSendRequest($send_template_email, $contentType);
 
         return $this->client
@@ -725,7 +725,7 @@ class EmailApi
     /**
      * Create request for operation 'emailTemplateSend'
      *
-     * @param  \BSG\\Api\\V2\Model\SendTemplateEmail $send_template_email (required)
+     * @param  \BSG\Api\V2\Model\SendTemplateEmail $send_template_email (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailTemplateSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * ViberStatusResponse Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -69,8 +69,8 @@ class ViberStatusResponse implements ModelInterface, ArrayAccess, \JsonSerializa
         'status' => 'string',
         'price' => 'float',
         'currency' => 'string',
-        'alt_route' => '\BSG\\Api\\V1\Model\ViberStatusResponseAltRouteInner[]',
-        'alt_route_messages' => '\BSG\\Api\\V1\Model\ViberStatusResponseAltRouteMessagesInner[]'
+        'alt_route' => '\BSG\Api\V1\Model\AltRouteschemaAltRouteItem[]',
+        'alt_route_messages' => '\BSG\Api\V1\Model\AltRouteMessagesschemaAltRouteMessagesItem[]'
     ];
 
     /**
@@ -753,7 +753,7 @@ class ViberStatusResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets alt_route
      *
-     * @return \BSG\\Api\\V1\Model\ViberStatusResponseAltRouteInner[]|null
+     * @return \BSG\Api\V1\Model\AltRouteschemaAltRouteItem[]|null
      */
     public function getAltRoute()
     {
@@ -763,7 +763,7 @@ class ViberStatusResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets alt_route
      *
-     * @param \BSG\\Api\\V1\Model\ViberStatusResponseAltRouteInner[]|null $alt_route Alternative route information (when resend_on_undelivery is used)
+     * @param \BSG\Api\V1\Model\AltRouteschemaAltRouteItem[]|null $alt_route Alternative route information (when resend_on_undelivery is used)
      *
      * @return self
      */
@@ -787,7 +787,7 @@ class ViberStatusResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets alt_route_messages
      *
-     * @return \BSG\\Api\\V1\Model\ViberStatusResponseAltRouteMessagesInner[]|null
+     * @return \BSG\Api\V1\Model\AltRouteMessagesschemaAltRouteMessagesItem[]|null
      */
     public function getAltRouteMessages()
     {
@@ -797,7 +797,7 @@ class ViberStatusResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets alt_route_messages
      *
-     * @param \BSG\\Api\\V1\Model\ViberStatusResponseAltRouteMessagesInner[]|null $alt_route_messages Alternative route messages details
+     * @param \BSG\Api\V1\Model\AltRouteMessagesschemaAltRouteMessagesItem[]|null $alt_route_messages Alternative route messages details
      *
      * @return self
      */

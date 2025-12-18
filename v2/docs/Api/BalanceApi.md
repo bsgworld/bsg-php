@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\BalanceApi
+# BSG\Api\V2\BalanceApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `accountBalance()`
 
 ```php
-accountBalance(): \BSG\\Api\\V2\Model\AccountBalance200Response
+accountBalance(): \BSG\Api\V2\Model\AccountBalance200Response
 ```
 
 Get balance
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\BalanceApi(
+$apiInstance = new BSG\Api\V2\Api\BalanceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\AccountBalance200Response**](../Model/AccountBalance200Response.md)
+[**\BSG\Api\V2\Model\AccountBalance200Response**](../Model/AccountBalance200Response.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ This endpoint does not need any parameter.
 ## `accountTariffs()`
 
 ```php
-accountTariffs($page_offset, $page_limit): \BSG\\Api\\V2\Model\AccountTariffs200Response
+accountTariffs($page_offset, $page_limit): \BSG\Api\V2\Model\AccountTariffs200Response
 ```
 
 Get tariffs
@@ -83,17 +83,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\BalanceApi(
+$apiInstance = new BSG\Api\V2\Api\BalanceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $page_offset = 0; // int
-$page_limit = 50; // int | The number of items in the response
+| $page_limit = 50; // int | The number of items in the response |
 
 try {
     $result = $apiInstance->accountTariffs($page_offset, $page_limit);
@@ -112,7 +112,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\AccountTariffs200Response**](../Model/AccountTariffs200Response.md)
+[**\BSG\Api\V2\Model\AccountTariffs200Response**](../Model/AccountTariffs200Response.md)
 
 ### Authorization
 

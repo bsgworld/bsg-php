@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace BSG\\Api\\V2\Test\Api;
+namespace BSG\Api\V2\Test\Api;
 
-use \BSG\\Api\\V2\Configuration;
-use \BSG\\Api\\V2\ApiException;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\Configuration;
+use \BSG\Api\V2\ApiException;
+use \BSG\Api\V2\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * InternalCorePriceApiTest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -72,24 +72,24 @@ class InternalCorePriceApiTest extends TestCase
     }
 
     /**
-     * Test case for d6429e9d3846f9ae5efa4c9d4d7bda10
+     * Test case for internalCorePricesByCountry
      *
      * Get prices for country.
      *
      */
-    public function testD6429e9d3846f9ae5efa4c9d4d7bda10()
+    public function testInternalCorePricesByCountry()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for ef361cc4d966acb533399907bc7084c2
+     * Test case for internalCorePricesList
      *
      * Get price list for each country.
      *
      */
-    public function testEf361cc4d966acb533399907bc7084c2()
+    public function testInternalCorePricesList()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

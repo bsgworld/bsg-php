@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * Contacts200Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class Contacts200Response implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts_200_response';
+    protected static $openAPIModelName = 'Contacts200Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class Contacts200Response implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\ContactSchema[]',
+        'data' => '\BSG\Api\V2\Model\ContactSchema[]',
         'total' => 'int'
     ];
 
@@ -299,7 +299,7 @@ class Contacts200Response implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\ContactSchema[]|null
+     * @return \BSG\Api\V2\Model\ContactSchema[]|null
      */
     public function getData()
     {
@@ -309,7 +309,7 @@ class Contacts200Response implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\ContactSchema[]|null $data list of contacts
+     * @param \BSG\Api\V2\Model\ContactSchema[]|null $data list of contacts
      *
      * @return self
      */

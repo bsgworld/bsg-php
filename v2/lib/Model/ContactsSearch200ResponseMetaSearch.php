@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactsSearch200ResponseMetaSearch Class Doc Comment
  *
  * @category Class
  * @description Search criteria
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -50,7 +50,7 @@ class ContactsSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts_search_200_response_meta_search';
+    protected static $openAPIModelName = 'ContactsSearch200ResponseMetaSearch';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class ContactsSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'field' => 'string',
-        'operator' => '\BSG\\Api\\V2\Model\SearchOperator',
+        'operator' => '\BSG\Api\V2\Model\SearchOperator',
         'value' => 'string'
     ];
 
@@ -343,7 +343,7 @@ class ContactsSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
     /**
      * Gets operator
      *
-     * @return \BSG\\Api\\V2\Model\SearchOperator|null
+     * @return \BSG\Api\V2\Model\SearchOperator|null
      */
     public function getOperator()
     {
@@ -353,7 +353,7 @@ class ContactsSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
     /**
      * Sets operator
      *
-     * @param \BSG\\Api\\V2\Model\SearchOperator|null $operator operator
+     * @param \BSG\Api\V2\Model\SearchOperator|null $operator operator
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SenderRequestLegalRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class SenderRequestLegalRequest implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'sender_request_legal_request';
+    protected static $openAPIModelName = 'SenderRequestLegalRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class SenderRequestLegalRequest implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'country_code' => 'string',
-        'type' => '\BSG\\Api\\V2\Model\SenderRequestType',
+        'type' => '\BSG\Api\V2\Model\SenderRequestType',
         'sender' => 'string',
         'code_of_company' => 'string',
         'tax_number' => 'string',
@@ -474,7 +474,7 @@ class SenderRequestLegalRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\SenderRequestType
+     * @return \BSG\Api\V2\Model\SenderRequestType
      */
     public function getType()
     {
@@ -484,7 +484,7 @@ class SenderRequestLegalRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\SenderRequestType $type type
+     * @param \BSG\Api\V2\Model\SenderRequestType $type type
      *
      * @return self
      */

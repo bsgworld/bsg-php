@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\CampaignRCSApi
+# BSG\Api\V2\CampaignRCSApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `rcsSend()`
 
 ```php
-rcsSend($send_rcs_campaign): \BSG\\Api\\V2\Model\RcsSend200Response
+rcsSend($send_rcs_campaign): \BSG\Api\V2\Model\RcsSend200Response
 ```
 
 Send RCS message
@@ -27,16 +27,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignRCSApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignRCSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$send_rcs_campaign = {"phones":[{"number":"380661231231"}],"sender":"rcs_sender","options":{"text":"Hello! ☺️"}}; // \BSG\\Api\\V2\Model\SendRcsCampaign
+$send_rcs_campaign = {"phones":[{"number":"380661231231"}],"sender":"rcs_sender","options":{"text":"Hello! ☺️"}}; // \BSG\Api\V2\Model\SendRcsCampaign
 
 try {
     $result = $apiInstance->rcsSend($send_rcs_campaign);
@@ -50,11 +50,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_rcs_campaign** | [**\BSG\\Api\\V2\Model\SendRcsCampaign**](../Model/SendRcsCampaign.md)|  | |
+| **send_rcs_campaign** | [**\BSG\Api\V2\Model\SendRcsCampaign**](../Model/SendRcsCampaign.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\RcsSend200Response**](../Model/RcsSend200Response.md)
+[**\BSG\Api\V2\Model\RcsSend200Response**](../Model/RcsSend200Response.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ try {
 ## `rcsSendGroups()`
 
 ```php
-rcsSendGroups($send_rcs_campaign_groups): \BSG\\Api\\V2\Model\RcsSend200Response
+rcsSendGroups($send_rcs_campaign_groups): \BSG\Api\V2\Model\RcsSendGroups200Response
 ```
 
 Send RCS message to contact list
@@ -87,16 +87,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignRCSApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignRCSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$send_rcs_campaign_groups = {"groups":[1864275],"sender":"rcs_sender","options":{"text":"Hello! ☺️"}}; // \BSG\\Api\\V2\Model\SendRcsCampaignGroups
+$send_rcs_campaign_groups = {"groups":[1864275],"sender":"rcs_sender","options":{"text":"Hello! ☺️"}}; // \BSG\Api\V2\Model\SendRcsCampaignGroups
 
 try {
     $result = $apiInstance->rcsSendGroups($send_rcs_campaign_groups);
@@ -110,11 +110,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_rcs_campaign_groups** | [**\BSG\\Api\\V2\Model\SendRcsCampaignGroups**](../Model/SendRcsCampaignGroups.md)|  | |
+| **send_rcs_campaign_groups** | [**\BSG\Api\V2\Model\SendRcsCampaignGroups**](../Model/SendRcsCampaignGroups.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\RcsSend200Response**](../Model/RcsSend200Response.md)
+[**\BSG\Api\V2\Model\RcsSendGroups200Response**](../Model/RcsSendGroups200Response.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ try {
 ## `rcsSingle()`
 
 ```php
-rcsSingle($rcs_message): \BSG\\Api\\V2\Model\RcsSingle200Response
+rcsSingle($rcs_message): \BSG\Api\V2\Model\RcsSingle200Response
 ```
 
 Send single RCS message
@@ -147,16 +147,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignRCSApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignRCSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$rcs_message = {"phone":{"number":"380661231231"},"sender":"rcs_sender","options":{"text":"Hello! ☺️"}}; // \BSG\\Api\\V2\Model\RcsMessage
+$rcs_message = {"phone":{"number":"380661231231"},"sender":"rcs_sender","options":{"text":"Hello! ☺️"}}; // \BSG\Api\V2\Model\RcsMessage
 
 try {
     $result = $apiInstance->rcsSingle($rcs_message);
@@ -170,11 +170,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **rcs_message** | [**\BSG\\Api\\V2\Model\RcsMessage**](../Model/RcsMessage.md)|  | |
+| **rcs_message** | [**\BSG\Api\V2\Model\RcsMessage**](../Model/RcsMessage.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\RcsSingle200Response**](../Model/RcsSingle200Response.md)
+[**\BSG\Api\V2\Model\RcsSingle200Response**](../Model/RcsSingle200Response.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace BSG\\Api\\V2\Test\Api;
+namespace BSG\Api\V2\Test\Api;
 
-use \BSG\\Api\\V2\Configuration;
-use \BSG\\Api\\V2\ApiException;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\Configuration;
+use \BSG\Api\V2\ApiException;
+use \BSG\Api\V2\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * ContactFieldApiTest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -108,12 +108,12 @@ class ContactFieldApiTest extends TestCase
     }
 
     /**
-     * Test case for ed8d272687f9ac68a20fe1c31dc3c042
+     * Test case for contactFieldsDeleteBatch
      *
      * Delete contact fields by ids.
      *
      */
-    public function testEd8d272687f9ac68a20fe1c31dc3c042()
+    public function testContactFieldsDeleteBatch()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

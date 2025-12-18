@@ -1,4 +1,4 @@
-# BSG\\Api\\V1\MNPSyncApi
+# BSG\Api\V1\MNPSyncApi
 
 All URIs are relative to https://api.sms-service.local, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.sms-service.local, except if the operation 
 ## `mnpSyncCreateObjects()`
 
 ```php
-mnpSyncCreateObjects($msisdn, $tariff, $mnp_create_request): \BSG\\Api\\V1\Model\MnpCreateResponse
+mnpSyncCreateObjects($msisdn, $tariff, $mnp_create_request): \BSG\Api\V1\Model\MnpCreateResponse
 ```
 
 Perform synchronous MNP lookup
@@ -27,20 +27,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\MNPSyncApi(
+$apiInstance = new BSG\Api\V1\Api\MNPSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body)
-$tariff = 5; // int | Tariff code (optional, uses default if not provided)
-$mnp_create_request = new \BSG\\Api\\V1\Model\MnpCreateRequest(); // \BSG\\Api\\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters
+| $msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body) |
+| $tariff = 5; // int | Tariff code (optional, uses default if not provided) |
+| $mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters |
 
 try {
     $result = $apiInstance->mnpSyncCreateObjects($msisdn, $tariff, $mnp_create_request);
@@ -56,11 +56,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **msisdn** | **string**| Phone number in international format (alternative to JSON body) | [optional] |
 | **tariff** | **int**| Tariff code (optional, uses default if not provided) | [optional] |
-| **mnp_create_request** | [**\BSG\\Api\\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)| JSON payload for batch requests or alternative to query parameters | [optional] |
+| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)| JSON payload for batch requests or alternative to query parameters | [optional] |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\MnpCreateResponse**](../Model/MnpCreateResponse.md)
+[**\BSG\Api\V1\Model\MnpCreateResponse**](../Model/MnpCreateResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `mnpSyncCreateObjectsPut()`
 
 ```php
-mnpSyncCreateObjectsPut($msisdn, $tariff, $mnp_create_request): \BSG\\Api\\V1\Model\MnpCreateResponse
+mnpSyncCreateObjectsPut($msisdn, $tariff, $mnp_create_request): \BSG\Api\V1\Model\MnpCreateResponse
 ```
 
 Perform synchronous MNP lookup (PUT)
@@ -93,20 +93,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\MNPSyncApi(
+$apiInstance = new BSG\Api\V1\Api\MNPSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body)
-$tariff = 5; // int | Tariff code (optional, uses default if not provided)
-$mnp_create_request = new \BSG\\Api\\V1\Model\MnpCreateRequest(); // \BSG\\Api\\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters
+| $msisdn = 380953227271; // string | Phone number in international format (alternative to JSON body) |
+| $tariff = 5; // int | Tariff code (optional, uses default if not provided) |
+| $mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest | JSON payload for batch requests or alternative to query parameters |
 
 try {
     $result = $apiInstance->mnpSyncCreateObjectsPut($msisdn, $tariff, $mnp_create_request);
@@ -122,11 +122,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **msisdn** | **string**| Phone number in international format (alternative to JSON body) | [optional] |
 | **tariff** | **int**| Tariff code (optional, uses default if not provided) | [optional] |
-| **mnp_create_request** | [**\BSG\\Api\\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)| JSON payload for batch requests or alternative to query parameters | [optional] |
+| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)| JSON payload for batch requests or alternative to query parameters | [optional] |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\MnpCreateResponse**](../Model/MnpCreateResponse.md)
+[**\BSG\Api\V1\Model\MnpCreateResponse**](../Model/MnpCreateResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `mnpSyncGetPrices()`
 
 ```php
-mnpSyncGetPrices(): \BSG\\Api\\V1\Model\MnpPricesResponse
+mnpSyncGetPrices(): \BSG\Api\V1\Model\MnpPricesResponse
 ```
 
 Get MNP pricing
@@ -159,12 +159,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\MNPSyncApi(
+$apiInstance = new BSG\Api\V1\Api\MNPSyncApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\MnpPricesResponse**](../Model/MnpPricesResponse.md)
+[**\BSG\Api\V1\Model\MnpPricesResponse**](../Model/MnpPricesResponse.md)
 
 ### Authorization
 

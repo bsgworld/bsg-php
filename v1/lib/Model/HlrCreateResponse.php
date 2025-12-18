@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * HlrCreateResponse Class Doc Comment
  *
  * @category Class
  * @description Response for async HLR lookup request
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class HlrCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'result' => '\BSG\\Api\\V1\Model\HlrCreateResponseResultInner[]'
+        'result' => '\BSG\Api\V1\Model\ResultschemaResultItem4[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class HlrCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets result
      *
-     * @return \BSG\\Api\\V1\Model\HlrCreateResponseResultInner[]
+     * @return \BSG\Api\V1\Model\ResultschemaResultItem4[]
      */
     public function getResult()
     {
@@ -307,7 +307,7 @@ class HlrCreateResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets result
      *
-     * @param \BSG\\Api\\V1\Model\HlrCreateResponseResultInner[] $result Array of HLR request results
+     * @param \BSG\Api\V1\Model\ResultschemaResultItem4[] $result Array of HLR request results
      *
      * @return self
      */

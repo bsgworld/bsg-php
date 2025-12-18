@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * CampaignSMSApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -133,12 +133,12 @@ class CampaignSMSApi
      *
      * Send SMS campaign
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendRequest $sms_send_request sms_send_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendRequest $sms_send_request sms_send_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\SmsSendGroups200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SmsSend422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\SmsCampaignResponseSchema|\BSG\Api\V2\Model\SmsSend400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SmsSend422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function smsSend($sms_send_request, string $contentType = self::contentTypes['smsSend'][0])
     {
@@ -151,12 +151,12 @@ class CampaignSMSApi
      *
      * Send SMS campaign
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendRequest $sms_send_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendRequest $sms_send_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\SmsSendGroups200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SmsSend422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\SmsCampaignResponseSchema|\BSG\Api\V2\Model\SmsSend400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SmsSend422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function smsSendWithHttpInfo($sms_send_request, string $contentType = self::contentTypes['smsSend'][0])
     {
@@ -187,11 +187,11 @@ class CampaignSMSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\SmsSendGroups200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsCampaignResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SmsSendGroups200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsCampaignResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -209,16 +209,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SmsSendGroups200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsCampaignResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsSend400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsSend400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -236,16 +236,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsSend400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -263,16 +263,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -290,16 +290,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -317,16 +317,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\SmsSend422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsSend422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SmsSend422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsSend422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -344,16 +344,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SmsSend422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsSend422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -371,7 +371,7 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -390,7 +390,7 @@ class CampaignSMSApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\SmsSendGroups200Response';
+            $returnType = '\BSG\Api\V2\Model\SmsCampaignResponseSchema';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -423,7 +423,7 @@ class CampaignSMSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SmsSendGroups200Response',
+                        '\BSG\Api\V2\Model\SmsCampaignResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -431,7 +431,7 @@ class CampaignSMSApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\SmsSend400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class CampaignSMSApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -447,7 +447,7 @@ class CampaignSMSApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode',
+                        '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -455,7 +455,7 @@ class CampaignSMSApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -463,7 +463,7 @@ class CampaignSMSApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SmsSend422Response',
+                        '\BSG\Api\V2\Model\SmsSend422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -471,7 +471,7 @@ class CampaignSMSApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class CampaignSMSApi
      *
      * Send SMS campaign
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendRequest $sms_send_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendRequest $sms_send_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -507,7 +507,7 @@ class CampaignSMSApi
      *
      * Send SMS campaign
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendRequest $sms_send_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendRequest $sms_send_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -515,7 +515,7 @@ class CampaignSMSApi
      */
     public function smsSendAsyncWithHttpInfo($sms_send_request, string $contentType = self::contentTypes['smsSend'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\SmsSendGroups200Response';
+        $returnType = '\BSG\Api\V2\Model\SmsCampaignResponseSchema';
         $request = $this->smsSendRequest($sms_send_request, $contentType);
 
         return $this->client
@@ -557,7 +557,7 @@ class CampaignSMSApi
     /**
      * Create request for operation 'smsSend'
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendRequest $sms_send_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendRequest $sms_send_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -654,12 +654,12 @@ class CampaignSMSApi
      *
      * Send SMS to contact list
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendGroupsRequest $sms_send_groups_request sms_send_groups_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendGroupsRequest $sms_send_groups_request sms_send_groups_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendGroups'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\SmsSendGroups200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SmsSendGroups422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\SmsCampaignResponseSchema|\BSG\Api\V2\Model\SmsSendGroups400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SmsSendGroups422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function smsSendGroups($sms_send_groups_request, string $contentType = self::contentTypes['smsSendGroups'][0])
     {
@@ -672,12 +672,12 @@ class CampaignSMSApi
      *
      * Send SMS to contact list
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendGroupsRequest $sms_send_groups_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendGroupsRequest $sms_send_groups_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendGroups'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\SmsSendGroups200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SmsSendGroups422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\SmsCampaignResponseSchema|\BSG\Api\V2\Model\SmsSendGroups400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SmsSendGroups422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function smsSendGroupsWithHttpInfo($sms_send_groups_request, string $contentType = self::contentTypes['smsSendGroups'][0])
     {
@@ -708,11 +708,11 @@ class CampaignSMSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\SmsSendGroups200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsCampaignResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SmsSendGroups200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsCampaignResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -730,16 +730,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SmsSendGroups200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsCampaignResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsSendGroups400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsSendGroups400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -757,16 +757,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsSendGroups400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -784,16 +784,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -811,16 +811,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -838,16 +838,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\SmsSendGroups422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsSendGroups422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SmsSendGroups422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsSendGroups422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -865,16 +865,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SmsSendGroups422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsSendGroups422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -892,7 +892,7 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -911,7 +911,7 @@ class CampaignSMSApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\SmsSendGroups200Response';
+            $returnType = '\BSG\Api\V2\Model\SmsCampaignResponseSchema';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -944,7 +944,7 @@ class CampaignSMSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SmsSendGroups200Response',
+                        '\BSG\Api\V2\Model\SmsCampaignResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -952,7 +952,7 @@ class CampaignSMSApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\SmsSendGroups400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -960,7 +960,7 @@ class CampaignSMSApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -968,7 +968,7 @@ class CampaignSMSApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode',
+                        '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -976,7 +976,7 @@ class CampaignSMSApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -984,7 +984,7 @@ class CampaignSMSApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SmsSendGroups422Response',
+                        '\BSG\Api\V2\Model\SmsSendGroups422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -992,7 +992,7 @@ class CampaignSMSApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1007,7 +1007,7 @@ class CampaignSMSApi
      *
      * Send SMS to contact list
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendGroupsRequest $sms_send_groups_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendGroupsRequest $sms_send_groups_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1028,7 +1028,7 @@ class CampaignSMSApi
      *
      * Send SMS to contact list
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendGroupsRequest $sms_send_groups_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendGroupsRequest $sms_send_groups_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1036,7 +1036,7 @@ class CampaignSMSApi
      */
     public function smsSendGroupsAsyncWithHttpInfo($sms_send_groups_request, string $contentType = self::contentTypes['smsSendGroups'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\SmsSendGroups200Response';
+        $returnType = '\BSG\Api\V2\Model\SmsCampaignResponseSchema';
         $request = $this->smsSendGroupsRequest($sms_send_groups_request, $contentType);
 
         return $this->client
@@ -1078,7 +1078,7 @@ class CampaignSMSApi
     /**
      * Create request for operation 'smsSendGroups'
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendGroupsRequest $sms_send_groups_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendGroupsRequest $sms_send_groups_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1175,12 +1175,12 @@ class CampaignSMSApi
      *
      * Send SMS with different text
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendIndividualRequest $sms_send_individual_request sms_send_individual_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendIndividualRequest $sms_send_individual_request sms_send_individual_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendIndividual'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\SmsSendGroups200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SmsSendIndividual422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\SmsCampaignResponseSchema|\BSG\Api\V2\Model\SmsSendIndividual400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SmsSendIndividual422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function smsSendIndividual($sms_send_individual_request, string $contentType = self::contentTypes['smsSendIndividual'][0])
     {
@@ -1193,12 +1193,12 @@ class CampaignSMSApi
      *
      * Send SMS with different text
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendIndividualRequest $sms_send_individual_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendIndividualRequest $sms_send_individual_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendIndividual'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\SmsSendGroups200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SmsSendIndividual422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\SmsCampaignResponseSchema|\BSG\Api\V2\Model\SmsSendIndividual400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SmsSendIndividual422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function smsSendIndividualWithHttpInfo($sms_send_individual_request, string $contentType = self::contentTypes['smsSendIndividual'][0])
     {
@@ -1229,11 +1229,11 @@ class CampaignSMSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\SmsSendGroups200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsCampaignResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SmsSendGroups200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsCampaignResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1251,16 +1251,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SmsSendGroups200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsCampaignResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsSendIndividual400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsSendIndividual400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1278,16 +1278,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsSendIndividual400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1305,16 +1305,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1332,16 +1332,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1359,16 +1359,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\SmsSendIndividual422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsSendIndividual422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SmsSendIndividual422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsSendIndividual422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1386,16 +1386,16 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SmsSendIndividual422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsSendIndividual422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1413,7 +1413,7 @@ class CampaignSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1432,7 +1432,7 @@ class CampaignSMSApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\SmsSendGroups200Response';
+            $returnType = '\BSG\Api\V2\Model\SmsCampaignResponseSchema';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1465,7 +1465,7 @@ class CampaignSMSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SmsSendGroups200Response',
+                        '\BSG\Api\V2\Model\SmsCampaignResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1473,7 +1473,7 @@ class CampaignSMSApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\SmsSendIndividual400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1481,7 +1481,7 @@ class CampaignSMSApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1489,7 +1489,7 @@ class CampaignSMSApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode',
+                        '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1497,7 +1497,7 @@ class CampaignSMSApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1505,7 +1505,7 @@ class CampaignSMSApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SmsSendIndividual422Response',
+                        '\BSG\Api\V2\Model\SmsSendIndividual422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1513,7 +1513,7 @@ class CampaignSMSApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1528,7 +1528,7 @@ class CampaignSMSApi
      *
      * Send SMS with different text
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendIndividualRequest $sms_send_individual_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendIndividualRequest $sms_send_individual_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendIndividual'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1549,7 +1549,7 @@ class CampaignSMSApi
      *
      * Send SMS with different text
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendIndividualRequest $sms_send_individual_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendIndividualRequest $sms_send_individual_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendIndividual'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1557,7 +1557,7 @@ class CampaignSMSApi
      */
     public function smsSendIndividualAsyncWithHttpInfo($sms_send_individual_request, string $contentType = self::contentTypes['smsSendIndividual'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\SmsSendGroups200Response';
+        $returnType = '\BSG\Api\V2\Model\SmsCampaignResponseSchema';
         $request = $this->smsSendIndividualRequest($sms_send_individual_request, $contentType);
 
         return $this->client
@@ -1599,7 +1599,7 @@ class CampaignSMSApi
     /**
      * Create request for operation 'smsSendIndividual'
      *
-     * @param  \BSG\\Api\\V2\Model\SmsSendIndividualRequest $sms_send_individual_request (required)
+     * @param  \BSG\Api\V2\Model\SmsSendIndividualRequest $sms_send_individual_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsSendIndividual'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

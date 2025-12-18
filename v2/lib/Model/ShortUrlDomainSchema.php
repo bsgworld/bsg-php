@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ShortUrlDomainSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class ShortUrlDomainSchema implements ModelInterface, ArrayAccess, \JsonSerializ
         'status' => 'string',
         'name' => 'string',
         'is_default' => 'bool',
-        'slug_type' => '\BSG\\Api\\V2\Model\ShortDomainSlugType',
+        'slug_type' => '\BSG\Api\V2\Model\ShortDomainSlugType',
         'init_deleted_at' => '\DateTime',
         'created_at' => '\DateTime',
         'not_found_page' => 'string',
@@ -587,7 +587,7 @@ class ShortUrlDomainSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets slug_type
      *
-     * @return \BSG\\Api\\V2\Model\ShortDomainSlugType|null
+     * @return \BSG\Api\V2\Model\ShortDomainSlugType|null
      */
     public function getSlugType()
     {
@@ -597,7 +597,7 @@ class ShortUrlDomainSchema implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets slug_type
      *
-     * @param \BSG\\Api\\V2\Model\ShortDomainSlugType|null $slug_type slug_type
+     * @param \BSG\Api\V2\Model\ShortDomainSlugType|null $slug_type slug_type
      *
      * @return self
      */

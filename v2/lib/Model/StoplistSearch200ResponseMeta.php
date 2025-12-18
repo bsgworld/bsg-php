@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * StoplistSearch200ResponseMeta Class Doc Comment
  *
  * @category Class
  * @description Information about search criteria and total results count
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -50,7 +50,7 @@ class StoplistSearch200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'stoplist_search_200_response_meta';
+    protected static $openAPIModelName = 'StoplistSearch200ResponseMeta';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,8 @@ class StoplistSearch200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'page' => '\BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage',
-        'search' => '\BSG\\Api\\V2\Model\StoplistSearch200ResponseMetaSearch'
+        'page' => '\BSG\Api\V2\Model\StoplistSearch200ResponseMetaPage',
+        'search' => '\BSG\Api\V2\Model\StoplistSearch200ResponseMetaSearch'
     ];
 
     /**
@@ -300,7 +300,7 @@ class StoplistSearch200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets page
      *
-     * @return \BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage|null
+     * @return \BSG\Api\V2\Model\StoplistSearch200ResponseMetaPage|null
      */
     public function getPage()
     {
@@ -310,7 +310,7 @@ class StoplistSearch200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets page
      *
-     * @param \BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage|null $page page
+     * @param \BSG\Api\V2\Model\StoplistSearch200ResponseMetaPage|null $page page
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class StoplistSearch200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets search
      *
-     * @return \BSG\\Api\\V2\Model\StoplistSearch200ResponseMetaSearch|null
+     * @return \BSG\Api\V2\Model\StoplistSearch200ResponseMetaSearch|null
      */
     public function getSearch()
     {
@@ -337,7 +337,7 @@ class StoplistSearch200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets search
      *
-     * @param \BSG\\Api\\V2\Model\StoplistSearch200ResponseMetaSearch|null $search search
+     * @param \BSG\Api\V2\Model\StoplistSearch200ResponseMetaSearch|null $search search
      *
      * @return self
      */

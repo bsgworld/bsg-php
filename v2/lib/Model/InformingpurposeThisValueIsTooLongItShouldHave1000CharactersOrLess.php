@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLess Class Doc Comment
  *
  * @category Class
  * @description {informing_purpose} - This value is too long. It should have 1000 characters or less.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLess impleme
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLessErrors'
+        'errors' => '\BSG\Api\V2\Model\InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLessErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLess impleme
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLessErrors|null
+     * @return \BSG\Api\V2\Model\InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLessErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLess impleme
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLessErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\InformingpurposeThisValueIsTooLongItShouldHave1000CharactersOrLessErrors|null $errors errors
      *
      * @return self
      */

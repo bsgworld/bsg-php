@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\SendersApi
+# BSG\Api\V2\SendersApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `senderRequestLegal()`
 
 ```php
-senderRequestLegal($sender_request_legal_request): \BSG\\Api\\V2\Model\SenderRequestLegal201Response
+senderRequestLegal($sender_request_legal_request): \BSG\Api\V2\Model\SenderRequestLegal201Response
 ```
 
 Sender registration by a legal entity
@@ -28,16 +28,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\SendersApi(
+$apiInstance = new BSG\Api\V2\Api\SendersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sender_request_legal_request = new \BSG\\Api\\V2\Model\SenderRequestLegalRequest(); // \BSG\\Api\\V2\Model\SenderRequestLegalRequest
+$sender_request_legal_request = new \BSG\Api\V2\Model\SenderRequestLegalRequest(); // \BSG\Api\V2\Model\SenderRequestLegalRequest
 
 try {
     $result = $apiInstance->senderRequestLegal($sender_request_legal_request);
@@ -51,11 +51,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sender_request_legal_request** | [**\BSG\\Api\\V2\Model\SenderRequestLegalRequest**](../Model/SenderRequestLegalRequest.md)|  | |
+| **sender_request_legal_request** | [**\BSG\Api\V2\Model\SenderRequestLegalRequest**](../Model/SenderRequestLegalRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\SenderRequestLegal201Response**](../Model/SenderRequestLegal201Response.md)
+[**\BSG\Api\V2\Model\SenderRequestLegal201Response**](../Model/SenderRequestLegal201Response.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `senderRequestNatural()`
 
 ```php
-senderRequestNatural($sender_request_natural_request): \BSG\\Api\\V2\Model\SenderRequestNatural201Response
+senderRequestNatural($sender_request_natural_request): \BSG\Api\V2\Model\SenderRequestNatural201Response
 ```
 
 Sender registration by an individual
@@ -88,16 +88,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\SendersApi(
+$apiInstance = new BSG\Api\V2\Api\SendersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sender_request_natural_request = new \BSG\\Api\\V2\Model\SenderRequestNaturalRequest(); // \BSG\\Api\\V2\Model\SenderRequestNaturalRequest
+$sender_request_natural_request = new \BSG\Api\V2\Model\SenderRequestNaturalRequest(); // \BSG\Api\V2\Model\SenderRequestNaturalRequest
 
 try {
     $result = $apiInstance->senderRequestNatural($sender_request_natural_request);
@@ -111,11 +111,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sender_request_natural_request** | [**\BSG\\Api\\V2\Model\SenderRequestNaturalRequest**](../Model/SenderRequestNaturalRequest.md)|  | |
+| **sender_request_natural_request** | [**\BSG\Api\V2\Model\SenderRequestNaturalRequest**](../Model/SenderRequestNaturalRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\SenderRequestNatural201Response**](../Model/SenderRequestNatural201Response.md)
+[**\BSG\Api\V2\Model\SenderRequestNatural201Response**](../Model/SenderRequestNatural201Response.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ try {
 ## `senderRequests()`
 
 ```php
-senderRequests($page_limit, $page_offset, $sort, $way, $filter_status, $filter_id, $filter_country_code, $filter_sender, $filter_created_at): \BSG\\Api\\V2\Model\SenderRequests200Response
+senderRequests($page_limit, $page_offset, $sort, $way, $filter_status, $filter_id, $filter_country_code, $filter_sender, $filter_created_at): \BSG\Api\V2\Model\SenderRequests200Response
 ```
 
 List of Sender Requests
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\SendersApi(
+$apiInstance = new BSG\Api\V2\Api\SendersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -160,8 +160,8 @@ $apiInstance = new BSG\\Api\\V2\Api\SendersApi(
 $page_limit = 50; // int
 $page_offset = 0; // int
 $sort = 'id'; // string
-$way = new \BSG\\Api\\V2\Model\\BSG\\Api\\V2\Model\SortWay(); // \BSG\\Api\\V2\Model\SortWay
-$filter_status = new \BSG\\Api\\V2\Model\\BSG\\Api\\V2\Model\SenderRequestStatus(); // \BSG\\Api\\V2\Model\SenderRequestStatus
+$way = new \BSG\Api\V2\Model\\BSG\Api\V2\Model\SortWay(); // \BSG\Api\V2\Model\SortWay
+$filter_status = new \BSG\Api\V2\Model\\BSG\Api\V2\Model\SenderRequestStatus(); // \BSG\Api\V2\Model\SenderRequestStatus
 $filter_id = 56; // int
 $filter_country_code = 'filter_country_code_example'; // string
 $filter_sender = 'filter_sender_example'; // string
@@ -182,8 +182,8 @@ try {
 | **page_limit** | **int**|  | [optional] [default to 50] |
 | **page_offset** | **int**|  | [optional] [default to 0] |
 | **sort** | **string**|  | [optional] [default to &#39;id&#39;] |
-| **way** | [**\BSG\\Api\\V2\Model\SortWay**](../Model/.md)|  | [optional] |
-| **filter_status** | [**\BSG\\Api\\V2\Model\SenderRequestStatus**](../Model/.md)|  | [optional] |
+| **way** | [**\BSG\Api\V2\Model\SortWay**](../Model/.md)|  | [optional] |
+| **filter_status** | [**\BSG\Api\V2\Model\SenderRequestStatus**](../Model/.md)|  | [optional] |
 | **filter_id** | **int**|  | [optional] |
 | **filter_country_code** | **string**|  | [optional] |
 | **filter_sender** | **string**|  | [optional] |
@@ -191,7 +191,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\SenderRequests200Response**](../Model/SenderRequests200Response.md)
+[**\BSG\Api\V2\Model\SenderRequests200Response**](../Model/SenderRequests200Response.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ try {
 ## `senders()`
 
 ```php
-senders($type): \BSG\\Api\\V2\Model\Senders200Response
+senders($type): \BSG\Api\V2\Model\Senders200Response
 ```
 
 List of Senders
@@ -224,16 +224,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\SendersApi(
+$apiInstance = new BSG\Api\V2\Api\SendersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$type = 'type_example'; // string | Sender type to list
+| $type = 'type_example'; // string | Sender type to list |
 
 try {
     $result = $apiInstance->senders($type);
@@ -251,7 +251,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\Senders200Response**](../Model/Senders200Response.md)
+[**\BSG\Api\V2\Model\Senders200Response**](../Model/Senders200Response.md)
 
 ### Authorization
 

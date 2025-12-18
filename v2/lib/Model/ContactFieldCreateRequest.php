@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactFieldCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class ContactFieldCreateRequest implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact_field_create_request';
+    protected static $openAPIModelName = 'ContactFieldCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,7 +60,7 @@ class ContactFieldCreateRequest implements ModelInterface, ArrayAccess, \JsonSer
         'name' => 'string',
         'description' => 'string',
         'is_visible' => 'bool',
-        'type' => '\BSG\\Api\\V2\Model\ContactFieldType'
+        'type' => '\BSG\Api\V2\Model\ContactFieldType'
     ];
 
     /**
@@ -430,7 +430,7 @@ class ContactFieldCreateRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\ContactFieldType
+     * @return \BSG\Api\V2\Model\ContactFieldType
      */
     public function getType()
     {
@@ -440,7 +440,7 @@ class ContactFieldCreateRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\ContactFieldType $type type
+     * @param \BSG\Api\V2\Model\ContactFieldType $type type
      *
      * @return self
      */

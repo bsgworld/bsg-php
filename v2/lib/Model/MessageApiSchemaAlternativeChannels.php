@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * MessageApiSchemaAlternativeChannels Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class MessageApiSchemaAlternativeChannels implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'MessageApiSchema_alternative_channels';
+    protected static $openAPIModelName = 'MessageApiSchemaAlternativeChannels';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,8 @@ class MessageApiSchemaAlternativeChannels implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sms' => '\BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannelsOneOfSms',
-        'viber' => '\BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannelsOneOfSms'
+        'sms' => '\BSG\Api\V2\Model\SmsMessageChannelSms',
+        'viber' => '\BSG\Api\V2\Model\ViberMessageChannelViber'
     ];
 
     /**
@@ -299,7 +299,7 @@ class MessageApiSchemaAlternativeChannels implements ModelInterface, ArrayAccess
     /**
      * Gets sms
      *
-     * @return \BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannelsOneOfSms|null
+     * @return \BSG\Api\V2\Model\SmsMessageChannelSms|null
      */
     public function getSms()
     {
@@ -309,7 +309,7 @@ class MessageApiSchemaAlternativeChannels implements ModelInterface, ArrayAccess
     /**
      * Sets sms
      *
-     * @param \BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannelsOneOfSms|null $sms sms
+     * @param \BSG\Api\V2\Model\SmsMessageChannelSms|null $sms sms
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class MessageApiSchemaAlternativeChannels implements ModelInterface, ArrayAccess
     /**
      * Gets viber
      *
-     * @return \BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannelsOneOfSms|null
+     * @return \BSG\Api\V2\Model\ViberMessageChannelViber|null
      */
     public function getViber()
     {
@@ -336,7 +336,7 @@ class MessageApiSchemaAlternativeChannels implements ModelInterface, ArrayAccess
     /**
      * Sets viber
      *
-     * @param \BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannelsOneOfSms|null $viber viber
+     * @param \BSG\Api\V2\Model\ViberMessageChannelViber|null $viber viber
      *
      * @return self
      */

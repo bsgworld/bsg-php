@@ -1,4 +1,4 @@
-# BSG\\Api\\V1\SMSApi
+# BSG\Api\V1\SMSApi
 
 All URIs are relative to https://api.sms-service.local, except if the operation defines another base path.
 
@@ -22,7 +22,7 @@ All URIs are relative to https://api.sms-service.local, except if the operation 
 ## `smsCheckPrice()`
 
 ```php
-smsCheckPrice($sms_price_check_request): \BSG\\Api\\V1\Model\SmsPriceCheckResponse
+smsCheckPrice($sms_price_check_request): \BSG\Api\V1\Model\SmsPriceCheckResponse
 ```
 
 Check SMS price
@@ -37,18 +37,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sms_price_check_request = {"destination":"phone","msisdn":"380953227271","originator":"BSG","body":"Hello! This is a test message for price calculation.","transliterate":true}; // \BSG\\Api\\V1\Model\SmsPriceCheckRequest
+$sms_price_check_request = {"destination":"phone","msisdn":"380953227271","originator":"BSG","body":"Hello! This is a test message for price calculation.","transliterate":true}; // \BSG\Api\V1\Model\SmsPriceCheckRequest
 
 try {
     $result = $apiInstance->smsCheckPrice($sms_price_check_request);
@@ -62,11 +62,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_price_check_request** | [**\BSG\\Api\\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md)|  | |
+| **sms_price_check_request** | [**\BSG\Api\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsPriceCheckResponse**](../Model/SmsPriceCheckResponse.md)
+[**\BSG\Api\V1\Model\SmsPriceCheckResponse**](../Model/SmsPriceCheckResponse.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ try {
 ## `smsCheckPricePut()`
 
 ```php
-smsCheckPricePut($sms_price_check_request): \BSG\\Api\\V1\Model\SmsPriceCheckResponse
+smsCheckPricePut($sms_price_check_request): \BSG\Api\V1\Model\SmsPriceCheckResponse
 ```
 
 Check SMS price (PUT)
@@ -99,18 +99,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sms_price_check_request = {"destination":"phone","msisdn":"380953227271","originator":"BSG","body":"Hello! This is a test message for price calculation.","transliterate":true}; // \BSG\\Api\\V1\Model\SmsPriceCheckRequest
+$sms_price_check_request = {"destination":"phone","msisdn":"380953227271","originator":"BSG","body":"Hello! This is a test message for price calculation.","transliterate":true}; // \BSG\Api\V1\Model\SmsPriceCheckRequest
 
 try {
     $result = $apiInstance->smsCheckPricePut($sms_price_check_request);
@@ -124,11 +124,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_price_check_request** | [**\BSG\\Api\\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md)|  | |
+| **sms_price_check_request** | [**\BSG\Api\V1\Model\SmsPriceCheckRequest**](../Model/SmsPriceCheckRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsPriceCheckResponse**](../Model/SmsPriceCheckResponse.md)
+[**\BSG\Api\V1\Model\SmsPriceCheckResponse**](../Model/SmsPriceCheckResponse.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ try {
 ## `smsCreateObjects()`
 
 ```php
-smsCreateObjects($sms_create_request): \BSG\\Api\\V1\Model\SmsCreateResponse
+smsCreateObjects($sms_create_request): \BSG\Api\V1\Model\SmsCreateResponse
 ```
 
 Send SMS message
@@ -161,18 +161,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sms_create_request = {"destination":"phone","msisdn":"380953227271","originator":"testsms","body":"k TEST Hello12 SMS 1115222","reference":"1737033400123","validity":72,"callback_url":"https://webhook.site/wh-delivery-reports","2way":0,"transliterate":false}; // \BSG\\Api\\V1\Model\SmsCreateRequest
+$sms_create_request = {"destination":"phone","msisdn":"380953227271","originator":"testsms","body":"k TEST Hello12 SMS 1115222","reference":"1737033400123","validity":72,"callback_url":"https://webhook.site/wh-delivery-reports","2way":0,"transliterate":false}; // \BSG\Api\V1\Model\SmsCreateRequest
 
 try {
     $result = $apiInstance->smsCreateObjects($sms_create_request);
@@ -186,11 +186,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_create_request** | [**\BSG\\Api\\V1\Model\SmsCreateRequest**](../Model/SmsCreateRequest.md)|  | |
+| **sms_create_request** | [**\BSG\Api\V1\Model\SmsCreateRequest**](../Model/SmsCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsCreateResponse**](../Model/SmsCreateResponse.md)
+[**\BSG\Api\V1\Model\SmsCreateResponse**](../Model/SmsCreateResponse.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ try {
 ## `smsCreateObjectsPut()`
 
 ```php
-smsCreateObjectsPut($sms_create_request): \BSG\\Api\\V1\Model\SmsCreateResponse
+smsCreateObjectsPut($sms_create_request): \BSG\Api\V1\Model\SmsCreateResponse
 ```
 
 Send SMS message (PUT)
@@ -223,18 +223,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sms_create_request = {"destination":"phone","msisdn":"380953227271","originator":"testsms","body":"k TEST Hello12 SMS 1115222","reference":"1737033400123","validity":72,"callback_url":"https://webhook.site/wh-delivery-reports","2way":0,"transliterate":false}; // \BSG\\Api\\V1\Model\SmsCreateRequest
+$sms_create_request = {"destination":"phone","msisdn":"380953227271","originator":"testsms","body":"k TEST Hello12 SMS 1115222","reference":"1737033400123","validity":72,"callback_url":"https://webhook.site/wh-delivery-reports","2way":0,"transliterate":false}; // \BSG\Api\V1\Model\SmsCreateRequest
 
 try {
     $result = $apiInstance->smsCreateObjectsPut($sms_create_request);
@@ -248,11 +248,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_create_request** | [**\BSG\\Api\\V1\Model\SmsCreateRequest**](../Model/SmsCreateRequest.md)|  | |
+| **sms_create_request** | [**\BSG\Api\V1\Model\SmsCreateRequest**](../Model/SmsCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsCreateResponse**](../Model/SmsCreateResponse.md)
+[**\BSG\Api\V1\Model\SmsCreateResponse**](../Model/SmsCreateResponse.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ try {
 ## `smsGet2WayIncoming()`
 
 ```php
-smsGet2WayIncoming(): \BSG\\Api\\V1\Model\Sms2WayIncomingResponse
+smsGet2WayIncoming(): \BSG\Api\V1\Model\Sms2WayIncomingResponse
 ```
 
 Get 2-way incoming messages
@@ -285,12 +285,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -311,7 +311,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\Sms2WayIncomingResponse**](../Model/Sms2WayIncomingResponse.md)
+[**\BSG\Api\V1\Model\Sms2WayIncomingResponse**](../Model/Sms2WayIncomingResponse.md)
 
 ### Authorization
 
@@ -329,7 +329,7 @@ This endpoint does not need any parameter.
 ## `smsGet2WaySenders()`
 
 ```php
-smsGet2WaySenders(): \BSG\\Api\\V1\Model\SuccessResponse
+smsGet2WaySenders(): \BSG\Api\V1\Model\SuccessResponse
 ```
 
 Get 2-way senders
@@ -344,12 +344,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -370,7 +370,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SuccessResponse**](../Model/SuccessResponse.md)
+[**\BSG\Api\V1\Model\SuccessResponse**](../Model/SuccessResponse.md)
 
 ### Authorization
 
@@ -388,7 +388,7 @@ This endpoint does not need any parameter.
 ## `smsGetBalance()`
 
 ```php
-smsGetBalance(): \BSG\\Api\\V1\Model\SmsBalanceResponse
+smsGetBalance(): \BSG\Api\V1\Model\SmsBalanceResponse
 ```
 
 Get account balance
@@ -403,12 +403,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -429,7 +429,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsBalanceResponse**](../Model/SmsBalanceResponse.md)
+[**\BSG\Api\V1\Model\SmsBalanceResponse**](../Model/SmsBalanceResponse.md)
 
 ### Authorization
 
@@ -447,7 +447,7 @@ This endpoint does not need any parameter.
 ## `smsGetBalancePost()`
 
 ```php
-smsGetBalancePost(): \BSG\\Api\\V1\Model\SmsBalanceResponse
+smsGetBalancePost(): \BSG\Api\V1\Model\SmsBalanceResponse
 ```
 
 Get account balance
@@ -462,12 +462,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -488,7 +488,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsBalanceResponse**](../Model/SmsBalanceResponse.md)
+[**\BSG\Api\V1\Model\SmsBalanceResponse**](../Model/SmsBalanceResponse.md)
 
 ### Authorization
 
@@ -506,7 +506,7 @@ This endpoint does not need any parameter.
 ## `smsGetMassStatus()`
 
 ```php
-smsGetMassStatus($sms_mass_status_request): \BSG\\Api\\V1\Model\SmsMassStatusResponse
+smsGetMassStatus($sms_mass_status_request): \BSG\Api\V1\Model\SmsMassStatusResponse
 ```
 
 Get status for multiple SMS messages
@@ -521,18 +521,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sms_mass_status_request = {"ids":[123,124,125]}; // \BSG\\Api\\V1\Model\SmsMassStatusRequest
+$sms_mass_status_request = {"ids":[123,124,125]}; // \BSG\Api\V1\Model\SmsMassStatusRequest
 
 try {
     $result = $apiInstance->smsGetMassStatus($sms_mass_status_request);
@@ -546,11 +546,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_mass_status_request** | [**\BSG\\Api\\V1\Model\SmsMassStatusRequest**](../Model/SmsMassStatusRequest.md)|  | |
+| **sms_mass_status_request** | [**\BSG\Api\V1\Model\SmsMassStatusRequest**](../Model/SmsMassStatusRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsMassStatusResponse**](../Model/SmsMassStatusResponse.md)
+[**\BSG\Api\V1\Model\SmsMassStatusResponse**](../Model/SmsMassStatusResponse.md)
 
 ### Authorization
 
@@ -568,7 +568,7 @@ try {
 ## `smsGetPrices()`
 
 ```php
-smsGetPrices(): \BSG\\Api\\V1\Model\SmsPricesListResponse
+smsGetPrices(): \BSG\Api\V1\Model\SmsPricesListResponse
 ```
 
 Get SMS pricing
@@ -583,12 +583,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -609,7 +609,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsPricesListResponse**](../Model/SmsPricesListResponse.md)
+[**\BSG\Api\V1\Model\SmsPricesListResponse**](../Model/SmsPricesListResponse.md)
 
 ### Authorization
 
@@ -627,7 +627,7 @@ This endpoint does not need any parameter.
 ## `smsGetStatusByExtId()`
 
 ```php
-smsGetStatusByExtId($reference): \BSG\\Api\\V1\Model\SmsStatusResponse
+smsGetStatusByExtId($reference): \BSG\Api\V1\Model\SmsStatusResponse
 ```
 
 Get SMS status by reference
@@ -642,18 +642,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$reference = unique_ref_123; // string | External reference ID
+| $reference = unique_ref_123; // string | External reference ID |
 
 try {
     $result = $apiInstance->smsGetStatusByExtId($reference);
@@ -671,7 +671,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsStatusResponse**](../Model/SmsStatusResponse.md)
+[**\BSG\Api\V1\Model\SmsStatusResponse**](../Model/SmsStatusResponse.md)
 
 ### Authorization
 
@@ -689,7 +689,7 @@ try {
 ## `smsGetStatusById()`
 
 ```php
-smsGetStatusById($id): \BSG\\Api\\V1\Model\SmsStatusResponse
+smsGetStatusById($id): \BSG\Api\V1\Model\SmsStatusResponse
 ```
 
 Get SMS status by ID
@@ -704,18 +704,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 123456; // string | Message ID
+| $id = 123456; // string | Message ID |
 
 try {
     $result = $apiInstance->smsGetStatusById($id);
@@ -733,7 +733,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsStatusResponse**](../Model/SmsStatusResponse.md)
+[**\BSG\Api\V1\Model\SmsStatusResponse**](../Model/SmsStatusResponse.md)
 
 ### Authorization
 
@@ -751,7 +751,7 @@ try {
 ## `smsGetTaskStatus()`
 
 ```php
-smsGetTaskStatus($task_id): \BSG\\Api\\V1\Model\SmsTaskStatusResponse
+smsGetTaskStatus($task_id): \BSG\Api\V1\Model\SmsTaskStatusResponse
 ```
 
 Get task status
@@ -766,18 +766,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\SMSApi(
+$apiInstance = new BSG\Api\V1\Api\SMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$task_id = 123; // string | Task ID
+| $task_id = 123; // string | Task ID |
 
 try {
     $result = $apiInstance->smsGetTaskStatus($task_id);
@@ -795,7 +795,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\SmsTaskStatusResponse**](../Model/SmsTaskStatusResponse.md)
+[**\BSG\Api\V1\Model\SmsTaskStatusResponse**](../Model/SmsTaskStatusResponse.md)
 
 ### Authorization
 

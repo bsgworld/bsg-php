@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ShortUrlLinkSchema Class Doc Comment
  *
  * @category Class
  * @description Short Link object
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ShortUrlLinkSchema implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\ShortLinkStatus',
+        'status' => '\BSG\Api\V2\Model\ShortLinkStatus',
         'name' => 'string',
         'slug' => 'string',
         'campaign_id' => 'int',
@@ -435,7 +435,7 @@ class ShortUrlLinkSchema implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\ShortLinkStatus|null
+     * @return \BSG\Api\V2\Model\ShortLinkStatus|null
      */
     public function getStatus()
     {
@@ -445,7 +445,7 @@ class ShortUrlLinkSchema implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\ShortLinkStatus|null $status status
+     * @param \BSG\Api\V2\Model\ShortLinkStatus|null $status status
      *
      * @return self
      */

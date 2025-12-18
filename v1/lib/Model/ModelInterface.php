@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1\Model
+ * @package  BSG\Api\V1\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package BSG\\Api\\V1\Model
+ * @package BSG\Api\V1\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * CodedigitsThisValueShouldBeBetween3And9Errors Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class CodedigitsThisValueShouldBeBetween3And9Errors implements ModelInterface, A
       *
       * @var string
       */
-    protected static $openAPIModelName = 'codedigitsThisValueShouldBeBetween3And9_errors';
+    protected static $openAPIModelName = 'codedigitsThisValueShouldBeBetween3And9Errors';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

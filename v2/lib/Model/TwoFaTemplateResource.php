@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TwoFaTemplateResource Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class TwoFaTemplateResource implements ModelInterface, ArrayAccess, \JsonSeriali
         'template_id' => 'int',
         'name' => 'string',
         'text' => 'string',
-        'countries' => 'string[]',
-        'status' => '\BSG\\Api\\V2\Model\OtpTemplateStatus',
+        'countries' => '\BSG\Api\V2\Model\OtpTemplateCountries',
+        'status' => '\BSG\Api\V2\Model\OtpTemplateStatus',
         'updated_at' => '\DateTime'
     ];
 
@@ -408,7 +408,7 @@ class TwoFaTemplateResource implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets countries
      *
-     * @return string[]|null
+     * @return \BSG\Api\V2\Model\OtpTemplateCountries|null
      */
     public function getCountries()
     {
@@ -418,7 +418,7 @@ class TwoFaTemplateResource implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets countries
      *
-     * @param string[]|null $countries Two-letter country code(s) for which the template must apply. Sending messages with the OTP code will only be possible if the recipient’s number belongs to the country you specify for the template.
+     * @param \BSG\Api\V2\Model\OtpTemplateCountries|null $countries countries
      *
      * @return self
      */
@@ -435,7 +435,7 @@ class TwoFaTemplateResource implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\OtpTemplateStatus|null
+     * @return \BSG\Api\V2\Model\OtpTemplateStatus|null
      */
     public function getStatus()
     {
@@ -445,7 +445,7 @@ class TwoFaTemplateResource implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\OtpTemplateStatus|null $status status
+     * @param \BSG\Api\V2\Model\OtpTemplateStatus|null $status status
      *
      * @return self
      */

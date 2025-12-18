@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SiteurlThisValueIsTooLongItShouldHave150CharactersOrLess Class Doc Comment
  *
  * @category Class
  * @description {site_url} - This value is too long. It should have 150 characters or less.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class SiteurlThisValueIsTooLongItShouldHave150CharactersOrLess implements ModelI
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\SiteurlThisValueIsTooLongItShouldHave150CharactersOrLessErrors'
+        'errors' => '\BSG\Api\V2\Model\SiteurlThisValueIsTooLongItShouldHave150CharactersOrLessErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class SiteurlThisValueIsTooLongItShouldHave150CharactersOrLess implements ModelI
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\SiteurlThisValueIsTooLongItShouldHave150CharactersOrLessErrors|null
+     * @return \BSG\Api\V2\Model\SiteurlThisValueIsTooLongItShouldHave150CharactersOrLessErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class SiteurlThisValueIsTooLongItShouldHave150CharactersOrLess implements ModelI
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\SiteurlThisValueIsTooLongItShouldHave150CharactersOrLessErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\SiteurlThisValueIsTooLongItShouldHave150CharactersOrLessErrors|null $errors errors
      *
      * @return self
      */

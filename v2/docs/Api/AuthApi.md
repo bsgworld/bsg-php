@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\AuthApi
+# BSG\Api\V2\AuthApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `login()`
 
 ```php
-login($login_request): \BSG\\Api\\V2\Model\TokenSchema
+login($login_request): \BSG\Api\V2\Model\TokenSchema
 ```
 
 Receive JWT token
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new BSG\\Api\\V2\Api\AuthApi(
+$apiInstance = new BSG\Api\V2\Api\AuthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$login_request = new \BSG\\Api\\V2\Model\LoginRequest(); // \BSG\\Api\\V2\Model\LoginRequest
+$login_request = new \BSG\Api\V2\Model\LoginRequest(); // \BSG\Api\V2\Model\LoginRequest
 
 try {
     $result = $apiInstance->login($login_request);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **login_request** | [**\BSG\\Api\\V2\Model\LoginRequest**](../Model/LoginRequest.md)|  | |
+| **login_request** | [**\BSG\Api\V2\Model\LoginRequest**](../Model/LoginRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\TokenSchema**](../Model/TokenSchema.md)
+[**\BSG\Api\V2\Model\TokenSchema**](../Model/TokenSchema.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `refreshToken()`
 
 ```php
-refreshToken(): \BSG\\Api\\V2\Model\TokenSchema
+refreshToken(): \BSG\Api\V2\Model\TokenSchema
 ```
 
 Refresh JWT token
@@ -82,10 +82,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\AuthApi(
+$apiInstance = new BSG\Api\V2\Api\AuthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\TokenSchema**](../Model/TokenSchema.md)
+[**\BSG\Api\V2\Model\TokenSchema**](../Model/TokenSchema.md)
 
 ### Authorization
 

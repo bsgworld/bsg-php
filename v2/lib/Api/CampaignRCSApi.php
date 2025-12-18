@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * CampaignRCSApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -133,12 +133,12 @@ class CampaignRCSApi
      *
      * Send RCS message
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaign $send_rcs_campaign send_rcs_campaign (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaign $send_rcs_campaign send_rcs_campaign (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\RcsSend200Response|\BSG\\Api\\V2\Model\RcsSend429Response
+     * @return \BSG\Api\V2\Model\RcsSend200Response|\BSG\Api\V2\Model\TooManyRequestsResponseSchema
      */
     public function rcsSend($send_rcs_campaign, string $contentType = self::contentTypes['rcsSend'][0])
     {
@@ -151,12 +151,12 @@ class CampaignRCSApi
      *
      * Send RCS message
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaign $send_rcs_campaign (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaign $send_rcs_campaign (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSend'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\RcsSend200Response|\BSG\\Api\\V2\Model\RcsSend429Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\RcsSend200Response|\BSG\Api\V2\Model\TooManyRequestsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function rcsSendWithHttpInfo($send_rcs_campaign, string $contentType = self::contentTypes['rcsSend'][0])
     {
@@ -187,11 +187,11 @@ class CampaignRCSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\RcsSend200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\RcsSend200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\RcsSend200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -209,16 +209,16 @@ class CampaignRCSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\RcsSend200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\RcsSend429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend429Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -236,7 +236,7 @@ class CampaignRCSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyRequestsResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -255,7 +255,7 @@ class CampaignRCSApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\RcsSend200Response';
+            $returnType = '\BSG\Api\V2\Model\RcsSend200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -288,7 +288,7 @@ class CampaignRCSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend200Response',
+                        '\BSG\Api\V2\Model\RcsSend200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -296,7 +296,7 @@ class CampaignRCSApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend429Response',
+                        '\BSG\Api\V2\Model\TooManyRequestsResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -311,7 +311,7 @@ class CampaignRCSApi
      *
      * Send RCS message
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaign $send_rcs_campaign (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaign $send_rcs_campaign (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -332,7 +332,7 @@ class CampaignRCSApi
      *
      * Send RCS message
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaign $send_rcs_campaign (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaign $send_rcs_campaign (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -340,7 +340,7 @@ class CampaignRCSApi
      */
     public function rcsSendAsyncWithHttpInfo($send_rcs_campaign, string $contentType = self::contentTypes['rcsSend'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\RcsSend200Response';
+        $returnType = '\BSG\Api\V2\Model\RcsSend200Response';
         $request = $this->rcsSendRequest($send_rcs_campaign, $contentType);
 
         return $this->client
@@ -382,7 +382,7 @@ class CampaignRCSApi
     /**
      * Create request for operation 'rcsSend'
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaign $send_rcs_campaign (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaign $send_rcs_campaign (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSend'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -479,12 +479,12 @@ class CampaignRCSApi
      *
      * Send RCS message to contact list
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups send_rcs_campaign_groups (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups send_rcs_campaign_groups (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSendGroups'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\RcsSend200Response|\BSG\\Api\\V2\Model\RcsSend429Response
+     * @return \BSG\Api\V2\Model\RcsSendGroups200Response|\BSG\Api\V2\Model\TooManyRequestsResponseSchema
      */
     public function rcsSendGroups($send_rcs_campaign_groups, string $contentType = self::contentTypes['rcsSendGroups'][0])
     {
@@ -497,12 +497,12 @@ class CampaignRCSApi
      *
      * Send RCS message to contact list
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSendGroups'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\RcsSend200Response|\BSG\\Api\\V2\Model\RcsSend429Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\RcsSendGroups200Response|\BSG\Api\V2\Model\TooManyRequestsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function rcsSendGroupsWithHttpInfo($send_rcs_campaign_groups, string $contentType = self::contentTypes['rcsSendGroups'][0])
     {
@@ -533,11 +533,11 @@ class CampaignRCSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\RcsSend200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\RcsSendGroups200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\RcsSendGroups200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -555,16 +555,16 @@ class CampaignRCSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\RcsSendGroups200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\RcsSend429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend429Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -582,7 +582,7 @@ class CampaignRCSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyRequestsResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -601,7 +601,7 @@ class CampaignRCSApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\RcsSend200Response';
+            $returnType = '\BSG\Api\V2\Model\RcsSendGroups200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -634,7 +634,7 @@ class CampaignRCSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend200Response',
+                        '\BSG\Api\V2\Model\RcsSendGroups200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -642,7 +642,7 @@ class CampaignRCSApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend429Response',
+                        '\BSG\Api\V2\Model\TooManyRequestsResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -657,7 +657,7 @@ class CampaignRCSApi
      *
      * Send RCS message to contact list
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSendGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -678,7 +678,7 @@ class CampaignRCSApi
      *
      * Send RCS message to contact list
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSendGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -686,7 +686,7 @@ class CampaignRCSApi
      */
     public function rcsSendGroupsAsyncWithHttpInfo($send_rcs_campaign_groups, string $contentType = self::contentTypes['rcsSendGroups'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\RcsSend200Response';
+        $returnType = '\BSG\Api\V2\Model\RcsSendGroups200Response';
         $request = $this->rcsSendGroupsRequest($send_rcs_campaign_groups, $contentType);
 
         return $this->client
@@ -728,7 +728,7 @@ class CampaignRCSApi
     /**
      * Create request for operation 'rcsSendGroups'
      *
-     * @param  \BSG\\Api\\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups (required)
+     * @param  \BSG\Api\V2\Model\SendRcsCampaignGroups $send_rcs_campaign_groups (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSendGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -825,12 +825,12 @@ class CampaignRCSApi
      *
      * Send single RCS message
      *
-     * @param  \BSG\\Api\\V2\Model\RcsMessage $rcs_message rcs_message (required)
+     * @param  \BSG\Api\V2\Model\RcsMessage $rcs_message rcs_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSingle'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\RcsSingle200Response|\BSG\\Api\\V2\Model\RcsSend429Response
+     * @return \BSG\Api\V2\Model\RcsSingle200Response|\BSG\Api\V2\Model\TooManyRequestsResponseSchema
      */
     public function rcsSingle($rcs_message, string $contentType = self::contentTypes['rcsSingle'][0])
     {
@@ -843,12 +843,12 @@ class CampaignRCSApi
      *
      * Send single RCS message
      *
-     * @param  \BSG\\Api\\V2\Model\RcsMessage $rcs_message (required)
+     * @param  \BSG\Api\V2\Model\RcsMessage $rcs_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSingle'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\RcsSingle200Response|\BSG\\Api\\V2\Model\RcsSend429Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\RcsSingle200Response|\BSG\Api\V2\Model\TooManyRequestsResponseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function rcsSingleWithHttpInfo($rcs_message, string $contentType = self::contentTypes['rcsSingle'][0])
     {
@@ -879,11 +879,11 @@ class CampaignRCSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\RcsSingle200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\RcsSingle200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSingle200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\RcsSingle200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -901,16 +901,16 @@ class CampaignRCSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSingle200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\RcsSingle200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\RcsSend429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RcsSend429Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyRequestsResponseSchema' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -928,7 +928,7 @@ class CampaignRCSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RcsSend429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyRequestsResponseSchema', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -947,7 +947,7 @@ class CampaignRCSApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\RcsSingle200Response';
+            $returnType = '\BSG\Api\V2\Model\RcsSingle200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -980,7 +980,7 @@ class CampaignRCSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSingle200Response',
+                        '\BSG\Api\V2\Model\RcsSingle200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -988,7 +988,7 @@ class CampaignRCSApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RcsSend429Response',
+                        '\BSG\Api\V2\Model\TooManyRequestsResponseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1003,7 +1003,7 @@ class CampaignRCSApi
      *
      * Send single RCS message
      *
-     * @param  \BSG\\Api\\V2\Model\RcsMessage $rcs_message (required)
+     * @param  \BSG\Api\V2\Model\RcsMessage $rcs_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1024,7 +1024,7 @@ class CampaignRCSApi
      *
      * Send single RCS message
      *
-     * @param  \BSG\\Api\\V2\Model\RcsMessage $rcs_message (required)
+     * @param  \BSG\Api\V2\Model\RcsMessage $rcs_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1032,7 +1032,7 @@ class CampaignRCSApi
      */
     public function rcsSingleAsyncWithHttpInfo($rcs_message, string $contentType = self::contentTypes['rcsSingle'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\RcsSingle200Response';
+        $returnType = '\BSG\Api\V2\Model\RcsSingle200Response';
         $request = $this->rcsSingleRequest($rcs_message, $contentType);
 
         return $this->client
@@ -1074,7 +1074,7 @@ class CampaignRCSApi
     /**
      * Create request for operation 'rcsSingle'
      *
-     * @param  \BSG\\Api\\V2\Model\RcsMessage $rcs_message (required)
+     * @param  \BSG\Api\V2\Model\RcsMessage $rcs_message (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rcsSingle'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

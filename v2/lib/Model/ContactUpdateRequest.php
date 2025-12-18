@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactUpdateRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class ContactUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact_update_request';
+    protected static $openAPIModelName = 'ContactUpdateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,8 @@ class ContactUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'phone' => 'int',
-        'groups' => '\BSG\\Api\\V2\Model\ContactGroupSchema[]',
-        'fields' => '\BSG\\Api\\V2\Model\ContactFieldValuePair[]'
+        'groups' => '\BSG\Api\V2\Model\ContactGroups',
+        'fields' => '\BSG\Api\V2\Model\StoreContactFields'
     ];
 
     /**
@@ -352,7 +352,7 @@ class ContactUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets groups
      *
-     * @return \BSG\\Api\\V2\Model\ContactGroupSchema[]|null
+     * @return \BSG\Api\V2\Model\ContactGroups|null
      */
     public function getGroups()
     {
@@ -362,7 +362,7 @@ class ContactUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets groups
      *
-     * @param \BSG\\Api\\V2\Model\ContactGroupSchema[]|null $groups contains embedded data of the list where the contact is added
+     * @param \BSG\Api\V2\Model\ContactGroups|null $groups groups
      *
      * @return self
      */
@@ -371,8 +371,6 @@ class ContactUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         if (is_null($groups)) {
             throw new \InvalidArgumentException('non-nullable groups cannot be null');
         }
-
-
         $this->container['groups'] = $groups;
 
         return $this;
@@ -381,7 +379,7 @@ class ContactUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets fields
      *
-     * @return \BSG\\Api\\V2\Model\ContactFieldValuePair[]|null
+     * @return \BSG\Api\V2\Model\StoreContactFields|null
      */
     public function getFields()
     {
@@ -391,7 +389,7 @@ class ContactUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets fields
      *
-     * @param \BSG\\Api\\V2\Model\ContactFieldValuePair[]|null $fields Array of custom fields values
+     * @param \BSG\Api\V2\Model\StoreContactFields|null $fields fields
      *
      * @return self
      */

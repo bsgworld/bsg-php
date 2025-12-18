@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * PhoneThisValueIsTooLongItShouldHave15CharactersOrLess1 Class Doc Comment
  *
  * @category Class
  * @description {phone} - This value is too long. It should have 15 characters or less
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PhoneThisValueIsTooLongItShouldHave15CharactersOrLess1 implements ModelInt
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\PhoneThisValueIsTooLongItShouldHave15CharactersOrLessErrors'
+        'errors' => '\BSG\Api\V2\Model\PhoneThisValueIsTooLongItShouldHave15CharactersOrLess1Errors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class PhoneThisValueIsTooLongItShouldHave15CharactersOrLess1 implements ModelInt
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\PhoneThisValueIsTooLongItShouldHave15CharactersOrLessErrors|null
+     * @return \BSG\Api\V2\Model\PhoneThisValueIsTooLongItShouldHave15CharactersOrLess1Errors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class PhoneThisValueIsTooLongItShouldHave15CharactersOrLess1 implements ModelInt
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\PhoneThisValueIsTooLongItShouldHave15CharactersOrLessErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\PhoneThisValueIsTooLongItShouldHave15CharactersOrLess1Errors|null $errors errors
      *
      * @return self
      */

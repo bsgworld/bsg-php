@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactFieldSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ContactFieldSchema implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'type' => '\BSG\\Api\\V2\Model\ContactFieldType',
+        'type' => '\BSG\Api\V2\Model\ContactFieldType',
         'description' => 'string',
         'is_visible' => 'bool'
     ];
@@ -397,7 +397,7 @@ class ContactFieldSchema implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\ContactFieldType|null
+     * @return \BSG\Api\V2\Model\ContactFieldType|null
      */
     public function getType()
     {
@@ -407,7 +407,7 @@ class ContactFieldSchema implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\ContactFieldType|null $type type
+     * @param \BSG\Api\V2\Model\ContactFieldType|null $type type
      *
      * @return self
      */

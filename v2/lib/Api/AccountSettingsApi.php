@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * AccountSettingsApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -71,7 +71,7 @@ class AccountSettingsApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'call67fcf8f95df598a1f7b26a5665f5478c' => [
+        'accountSettingsAddressBookFields' => [
             'application/json',
         ],
     ];
@@ -123,38 +123,38 @@ class AccountSettingsApi
     }
 
     /**
-     * Operation call67fcf8f95df598a1f7b26a5665f5478c
+     * Operation accountSettingsAddressBookFields
      *
      * Get settings value
      *
      * @param  int $id Address Book ID (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountSettingsAddressBookFields'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
-    public function call67fcf8f95df598a1f7b26a5665f5478c($id, string $contentType = self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'][0])
+    public function accountSettingsAddressBookFields($id, string $contentType = self::contentTypes['accountSettingsAddressBookFields'][0])
     {
-        list($response) = $this->call67fcf8f95df598a1f7b26a5665f5478cWithHttpInfo($id, $contentType);
+        list($response) = $this->accountSettingsAddressBookFieldsWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation call67fcf8f95df598a1f7b26a5665f5478cWithHttpInfo
+     * Operation accountSettingsAddressBookFieldsWithHttpInfo
      *
      * Get settings value
      *
      * @param  int $id Address Book ID (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountSettingsAddressBookFields'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call67fcf8f95df598a1f7b26a5665f5478cWithHttpInfo($id, string $contentType = self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'][0])
+    public function accountSettingsAddressBookFieldsWithHttpInfo($id, string $contentType = self::contentTypes['accountSettingsAddressBookFields'][0])
     {
-        $request = $this->call67fcf8f95df598a1f7b26a5665f5478cRequest($id, $contentType);
+        $request = $this->accountSettingsAddressBookFieldsRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -266,19 +266,19 @@ class AccountSettingsApi
     }
 
     /**
-     * Operation call67fcf8f95df598a1f7b26a5665f5478cAsync
+     * Operation accountSettingsAddressBookFieldsAsync
      *
      * Get settings value
      *
      * @param  int $id Address Book ID (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountSettingsAddressBookFields'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call67fcf8f95df598a1f7b26a5665f5478cAsync($id, string $contentType = self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'][0])
+    public function accountSettingsAddressBookFieldsAsync($id, string $contentType = self::contentTypes['accountSettingsAddressBookFields'][0])
     {
-        return $this->call67fcf8f95df598a1f7b26a5665f5478cAsyncWithHttpInfo($id, $contentType)
+        return $this->accountSettingsAddressBookFieldsAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -287,20 +287,20 @@ class AccountSettingsApi
     }
 
     /**
-     * Operation call67fcf8f95df598a1f7b26a5665f5478cAsyncWithHttpInfo
+     * Operation accountSettingsAddressBookFieldsAsyncWithHttpInfo
      *
      * Get settings value
      *
      * @param  int $id Address Book ID (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountSettingsAddressBookFields'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call67fcf8f95df598a1f7b26a5665f5478cAsyncWithHttpInfo($id, string $contentType = self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'][0])
+    public function accountSettingsAddressBookFieldsAsyncWithHttpInfo($id, string $contentType = self::contentTypes['accountSettingsAddressBookFields'][0])
     {
         $returnType = 'object';
-        $request = $this->call67fcf8f95df598a1f7b26a5665f5478cRequest($id, $contentType);
+        $request = $this->accountSettingsAddressBookFieldsRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -339,25 +339,25 @@ class AccountSettingsApi
     }
 
     /**
-     * Create request for operation 'call67fcf8f95df598a1f7b26a5665f5478c'
+     * Create request for operation 'accountSettingsAddressBookFields'
      *
      * @param  int $id Address Book ID (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountSettingsAddressBookFields'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call67fcf8f95df598a1f7b26a5665f5478cRequest($id, string $contentType = self::contentTypes['call67fcf8f95df598a1f7b26a5665f5478c'][0])
+    public function accountSettingsAddressBookFieldsRequest($id, string $contentType = self::contentTypes['accountSettingsAddressBookFields'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling call67fcf8f95df598a1f7b26a5665f5478c'
+                'Missing the required parameter $id when calling accountSettingsAddressBookFields'
             );
         }
         if ($id < 1) {
-            throw new \InvalidArgumentException('invalid value for "$id" when calling AccountSettingsApi.call67fcf8f95df598a1f7b26a5665f5478c, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid value for "$id" when calling AccountSettingsApi.accountSettingsAddressBookFields, must be bigger than or equal to 1.');
         }
         
 

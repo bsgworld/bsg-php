@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateValue Class Doc Comment
  *
  * @category Class
  * @description The phones.0.number field has a duplicate value The phones.1.number field has a duplicate value
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateV
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateValueErrors'
+        'errors' => '\BSG\Api\V2\Model\ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateValueErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateV
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateValueErrors|null
+     * @return \BSG\Api\V2\Model\ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateValueErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateV
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateValueErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\ThePhones0numberFieldHasADuplicateValueThePhones1numberFieldHasADuplicateValueErrors|null $errors errors
      *
      * @return self
      */

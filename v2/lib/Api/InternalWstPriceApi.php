@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * InternalWstPriceApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -71,10 +71,10 @@ class InternalWstPriceApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'call080fd855565c5398b6a59d479c5269ef' => [
+        'internalWstPricesByCountry' => [
             'application/json',
         ],
-        'call399285196dea87b1e684e5d7d70116b7' => [
+        'internalWstPricesList' => [
             'application/json',
         ],
     ];
@@ -126,38 +126,40 @@ class InternalWstPriceApi
     }
 
     /**
-     * Operation call080fd855565c5398b6a59d479c5269ef
+     * Operation internalWstPricesByCountry
      *
-     * Get price list for each country
+     * Get prices for country
      *
+     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call080fd855565c5398b6a59d479c5269ef'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesByCountry'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\Model080fd855565c5398b6a59d479c5269ef200Response
+     * @return \BSG\Api\V2\Model\InternalWstPricesByCountry200Response
      */
-    public function call080fd855565c5398b6a59d479c5269ef($product, string $contentType = self::contentTypes['call080fd855565c5398b6a59d479c5269ef'][0])
+    public function internalWstPricesByCountry($country_code, $product, string $contentType = self::contentTypes['internalWstPricesByCountry'][0])
     {
-        list($response) = $this->call080fd855565c5398b6a59d479c5269efWithHttpInfo($product, $contentType);
+        list($response) = $this->internalWstPricesByCountryWithHttpInfo($country_code, $product, $contentType);
         return $response;
     }
 
     /**
-     * Operation call080fd855565c5398b6a59d479c5269efWithHttpInfo
+     * Operation internalWstPricesByCountryWithHttpInfo
      *
-     * Get price list for each country
+     * Get prices for country
      *
+     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call080fd855565c5398b6a59d479c5269ef'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesByCountry'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\Model080fd855565c5398b6a59d479c5269ef200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\InternalWstPricesByCountry200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call080fd855565c5398b6a59d479c5269efWithHttpInfo($product, string $contentType = self::contentTypes['call080fd855565c5398b6a59d479c5269ef'][0])
+    public function internalWstPricesByCountryWithHttpInfo($country_code, $product, string $contentType = self::contentTypes['internalWstPricesByCountry'][0])
     {
-        $request = $this->call080fd855565c5398b6a59d479c5269efRequest($product, $contentType);
+        $request = $this->internalWstPricesByCountryRequest($country_code, $product, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -184,11 +186,11 @@ class InternalWstPriceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\Model080fd855565c5398b6a59d479c5269ef200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\InternalWstPricesByCountry200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Model080fd855565c5398b6a59d479c5269ef200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\InternalWstPricesByCountry200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,7 +208,7 @@ class InternalWstPriceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Model080fd855565c5398b6a59d479c5269ef200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\InternalWstPricesByCountry200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -225,7 +227,7 @@ class InternalWstPriceApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\Model080fd855565c5398b6a59d479c5269ef200Response';
+            $returnType = '\BSG\Api\V2\Model\InternalWstPricesByCountry200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -258,7 +260,7 @@ class InternalWstPriceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Model080fd855565c5398b6a59d479c5269ef200Response',
+                        '\BSG\Api\V2\Model\InternalWstPricesByCountry200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -269,19 +271,20 @@ class InternalWstPriceApi
     }
 
     /**
-     * Operation call080fd855565c5398b6a59d479c5269efAsync
+     * Operation internalWstPricesByCountryAsync
      *
-     * Get price list for each country
+     * Get prices for country
      *
+     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call080fd855565c5398b6a59d479c5269ef'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesByCountry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call080fd855565c5398b6a59d479c5269efAsync($product, string $contentType = self::contentTypes['call080fd855565c5398b6a59d479c5269ef'][0])
+    public function internalWstPricesByCountryAsync($country_code, $product, string $contentType = self::contentTypes['internalWstPricesByCountry'][0])
     {
-        return $this->call080fd855565c5398b6a59d479c5269efAsyncWithHttpInfo($product, $contentType)
+        return $this->internalWstPricesByCountryAsyncWithHttpInfo($country_code, $product, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -290,20 +293,21 @@ class InternalWstPriceApi
     }
 
     /**
-     * Operation call080fd855565c5398b6a59d479c5269efAsyncWithHttpInfo
+     * Operation internalWstPricesByCountryAsyncWithHttpInfo
      *
-     * Get price list for each country
+     * Get prices for country
      *
+     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call080fd855565c5398b6a59d479c5269ef'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesByCountry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call080fd855565c5398b6a59d479c5269efAsyncWithHttpInfo($product, string $contentType = self::contentTypes['call080fd855565c5398b6a59d479c5269ef'][0])
+    public function internalWstPricesByCountryAsyncWithHttpInfo($country_code, $product, string $contentType = self::contentTypes['internalWstPricesByCountry'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\Model080fd855565c5398b6a59d479c5269ef200Response';
-        $request = $this->call080fd855565c5398b6a59d479c5269efRequest($product, $contentType);
+        $returnType = '\BSG\Api\V2\Model\InternalWstPricesByCountry200Response';
+        $request = $this->internalWstPricesByCountryRequest($country_code, $product, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -342,26 +346,40 @@ class InternalWstPriceApi
     }
 
     /**
-     * Create request for operation 'call080fd855565c5398b6a59d479c5269ef'
+     * Create request for operation 'internalWstPricesByCountry'
      *
+     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call080fd855565c5398b6a59d479c5269ef'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesByCountry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call080fd855565c5398b6a59d479c5269efRequest($product, string $contentType = self::contentTypes['call080fd855565c5398b6a59d479c5269ef'][0])
+    public function internalWstPricesByCountryRequest($country_code, $product, string $contentType = self::contentTypes['internalWstPricesByCountry'][0])
     {
 
+        // verify the required parameter 'country_code' is set
+        if ($country_code === null || (is_array($country_code) && count($country_code) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $country_code when calling internalWstPricesByCountry'
+            );
+        }
+        if (strlen($country_code) > 2) {
+            throw new \InvalidArgumentException('invalid length for "$country_code" when calling InternalWstPriceApi.internalWstPricesByCountry, must be smaller than or equal to 2.');
+        }
+        if (strlen($country_code) < 2) {
+            throw new \InvalidArgumentException('invalid length for "$country_code" when calling InternalWstPriceApi.internalWstPricesByCountry, must be bigger than or equal to 2.');
+        }
+        
         // verify the required parameter 'product' is set
         if ($product === null || (is_array($product) && count($product) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $product when calling call080fd855565c5398b6a59d479c5269ef'
+                'Missing the required parameter $product when calling internalWstPricesByCountry'
             );
         }
 
 
-        $resourcePath = '/api/internal/wst/prices';
+        $resourcePath = '/api/internal/wst/prices/{countryCode}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -379,6 +397,14 @@ class InternalWstPriceApi
         ) ?? []);
 
 
+        // path params
+        if ($country_code !== null) {
+            $resourcePath = str_replace(
+                '{' . 'countryCode' . '}',
+                ObjectSerializer::toPathValue($country_code),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(
@@ -439,40 +465,38 @@ class InternalWstPriceApi
     }
 
     /**
-     * Operation call399285196dea87b1e684e5d7d70116b7
+     * Operation internalWstPricesList
      *
-     * Get prices for country
+     * Get price list for each country
      *
-     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call399285196dea87b1e684e5d7d70116b7'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\Model399285196dea87b1e684e5d7d70116b7200Response
+     * @return \BSG\Api\V2\Model\InternalWstPricesList200Response
      */
-    public function call399285196dea87b1e684e5d7d70116b7($country_code, $product, string $contentType = self::contentTypes['call399285196dea87b1e684e5d7d70116b7'][0])
+    public function internalWstPricesList($product, string $contentType = self::contentTypes['internalWstPricesList'][0])
     {
-        list($response) = $this->call399285196dea87b1e684e5d7d70116b7WithHttpInfo($country_code, $product, $contentType);
+        list($response) = $this->internalWstPricesListWithHttpInfo($product, $contentType);
         return $response;
     }
 
     /**
-     * Operation call399285196dea87b1e684e5d7d70116b7WithHttpInfo
+     * Operation internalWstPricesListWithHttpInfo
      *
-     * Get prices for country
+     * Get price list for each country
      *
-     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call399285196dea87b1e684e5d7d70116b7'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\Model399285196dea87b1e684e5d7d70116b7200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\InternalWstPricesList200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call399285196dea87b1e684e5d7d70116b7WithHttpInfo($country_code, $product, string $contentType = self::contentTypes['call399285196dea87b1e684e5d7d70116b7'][0])
+    public function internalWstPricesListWithHttpInfo($product, string $contentType = self::contentTypes['internalWstPricesList'][0])
     {
-        $request = $this->call399285196dea87b1e684e5d7d70116b7Request($country_code, $product, $contentType);
+        $request = $this->internalWstPricesListRequest($product, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -499,11 +523,11 @@ class InternalWstPriceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\Model399285196dea87b1e684e5d7d70116b7200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\InternalWstPricesList200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Model399285196dea87b1e684e5d7d70116b7200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\InternalWstPricesList200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -521,7 +545,7 @@ class InternalWstPriceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Model399285196dea87b1e684e5d7d70116b7200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\InternalWstPricesList200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -540,7 +564,7 @@ class InternalWstPriceApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\Model399285196dea87b1e684e5d7d70116b7200Response';
+            $returnType = '\BSG\Api\V2\Model\InternalWstPricesList200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -573,7 +597,7 @@ class InternalWstPriceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Model399285196dea87b1e684e5d7d70116b7200Response',
+                        '\BSG\Api\V2\Model\InternalWstPricesList200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -584,20 +608,19 @@ class InternalWstPriceApi
     }
 
     /**
-     * Operation call399285196dea87b1e684e5d7d70116b7Async
+     * Operation internalWstPricesListAsync
      *
-     * Get prices for country
+     * Get price list for each country
      *
-     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call399285196dea87b1e684e5d7d70116b7'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call399285196dea87b1e684e5d7d70116b7Async($country_code, $product, string $contentType = self::contentTypes['call399285196dea87b1e684e5d7d70116b7'][0])
+    public function internalWstPricesListAsync($product, string $contentType = self::contentTypes['internalWstPricesList'][0])
     {
-        return $this->call399285196dea87b1e684e5d7d70116b7AsyncWithHttpInfo($country_code, $product, $contentType)
+        return $this->internalWstPricesListAsyncWithHttpInfo($product, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -606,21 +629,20 @@ class InternalWstPriceApi
     }
 
     /**
-     * Operation call399285196dea87b1e684e5d7d70116b7AsyncWithHttpInfo
+     * Operation internalWstPricesListAsyncWithHttpInfo
      *
-     * Get prices for country
+     * Get price list for each country
      *
-     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call399285196dea87b1e684e5d7d70116b7'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call399285196dea87b1e684e5d7d70116b7AsyncWithHttpInfo($country_code, $product, string $contentType = self::contentTypes['call399285196dea87b1e684e5d7d70116b7'][0])
+    public function internalWstPricesListAsyncWithHttpInfo($product, string $contentType = self::contentTypes['internalWstPricesList'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\Model399285196dea87b1e684e5d7d70116b7200Response';
-        $request = $this->call399285196dea87b1e684e5d7d70116b7Request($country_code, $product, $contentType);
+        $returnType = '\BSG\Api\V2\Model\InternalWstPricesList200Response';
+        $request = $this->internalWstPricesListRequest($product, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -659,40 +681,26 @@ class InternalWstPriceApi
     }
 
     /**
-     * Create request for operation 'call399285196dea87b1e684e5d7d70116b7'
+     * Create request for operation 'internalWstPricesList'
      *
-     * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call399285196dea87b1e684e5d7d70116b7'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalWstPricesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call399285196dea87b1e684e5d7d70116b7Request($country_code, $product, string $contentType = self::contentTypes['call399285196dea87b1e684e5d7d70116b7'][0])
+    public function internalWstPricesListRequest($product, string $contentType = self::contentTypes['internalWstPricesList'][0])
     {
 
-        // verify the required parameter 'country_code' is set
-        if ($country_code === null || (is_array($country_code) && count($country_code) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $country_code when calling call399285196dea87b1e684e5d7d70116b7'
-            );
-        }
-        if (strlen($country_code) > 2) {
-            throw new \InvalidArgumentException('invalid length for "$country_code" when calling InternalWstPriceApi.call399285196dea87b1e684e5d7d70116b7, must be smaller than or equal to 2.');
-        }
-        if (strlen($country_code) < 2) {
-            throw new \InvalidArgumentException('invalid length for "$country_code" when calling InternalWstPriceApi.call399285196dea87b1e684e5d7d70116b7, must be bigger than or equal to 2.');
-        }
-        
         // verify the required parameter 'product' is set
         if ($product === null || (is_array($product) && count($product) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $product when calling call399285196dea87b1e684e5d7d70116b7'
+                'Missing the required parameter $product when calling internalWstPricesList'
             );
         }
 
 
-        $resourcePath = '/api/internal/wst/prices/{countryCode}';
+        $resourcePath = '/api/internal/wst/prices';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -710,14 +718,6 @@ class InternalWstPriceApi
         ) ?? []);
 
 
-        // path params
-        if ($country_code !== null) {
-            $resourcePath = str_replace(
-                '{' . 'countryCode' . '}',
-                ObjectSerializer::toPathValue($country_code),
-                $resourcePath
-            );
-        }
 
 
         $headers = $this->headerSelector->selectHeaders(

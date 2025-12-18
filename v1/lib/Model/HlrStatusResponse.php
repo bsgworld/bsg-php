@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * HlrStatusResponse Class Doc Comment
  *
  * @category Class
  * @description HLR lookup result retrieved by ID or reference
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -69,7 +69,7 @@ class HlrStatusResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
         'brand_name' => 'string',
         'network' => 'string',
         'status' => 'string',
-        'details' => '\BSG\\Api\\V1\Model\HlrSyncResponseDetails',
+        'details' => '\BSG\Api\V1\Model\DetailsSchema',
         'created_datetime' => '\DateTime',
         'status_datetime' => '\DateTime'
     ];
@@ -701,7 +701,7 @@ class HlrStatusResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets details
      *
-     * @return \BSG\\Api\\V1\Model\HlrSyncResponseDetails|null
+     * @return \BSG\Api\V1\Model\DetailsSchema|null
      */
     public function getDetails()
     {
@@ -711,7 +711,7 @@ class HlrStatusResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets details
      *
-     * @param \BSG\\Api\\V1\Model\HlrSyncResponseDetails|null $details details
+     * @param \BSG\Api\V1\Model\DetailsSchema|null $details details
      *
      * @return self
      */

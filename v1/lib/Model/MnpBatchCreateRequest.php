@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * MnpBatchCreateRequest Class Doc Comment
  *
  * @category Class
  * @description Batch MNP lookup request with multiple phone numbers
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MnpBatchCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'msisdns' => '\BSG\\Api\\V1\Model\MnpCreateRequestOneOf1MsisdnsInner[]',
+        'msisdns' => '\BSG\Api\V1\Model\MsisdnsschemaMsisdnsItem[]',
         'reference' => 'string'
     ];
 
@@ -304,7 +304,7 @@ class MnpBatchCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets msisdns
      *
-     * @return \BSG\\Api\\V1\Model\MnpCreateRequestOneOf1MsisdnsInner[]
+     * @return \BSG\Api\V1\Model\MsisdnsschemaMsisdnsItem[]
      */
     public function getMsisdns()
     {
@@ -314,7 +314,7 @@ class MnpBatchCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets msisdns
      *
-     * @param \BSG\\Api\\V1\Model\MnpCreateRequestOneOf1MsisdnsInner[] $msisdns Array of phone numbers for MNP lookup
+     * @param \BSG\Api\V1\Model\MsisdnsschemaMsisdnsItem[] $msisdns Array of phone numbers for MNP lookup
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * CorePriceSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CorePriceSchema implements ModelInterface, ArrayAccess, \JsonSerializable
         'tariff' => 'int',
         'limitation_info' => 'string',
         'country_id' => 'string',
-        'operators' => '\BSG\\Api\\V2\Model\OperatorSchema[]'
+        'operators' => '\BSG\Api\V2\Model\OperatorSchema[]'
     ];
 
     /**
@@ -410,7 +410,7 @@ class CorePriceSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets operators
      *
-     * @return \BSG\\Api\\V2\Model\OperatorSchema[]|null
+     * @return \BSG\Api\V2\Model\OperatorSchema[]|null
      */
     public function getOperators()
     {
@@ -420,7 +420,7 @@ class CorePriceSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets operators
      *
-     * @param \BSG\\Api\\V2\Model\OperatorSchema[]|null $operators operators
+     * @param \BSG\Api\V2\Model\OperatorSchema[]|null $operators operators
      *
      * @return self
      */

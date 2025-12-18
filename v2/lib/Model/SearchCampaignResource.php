@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SearchCampaignResource Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class SearchCampaignResource implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\CampaignSchema[]',
-        'meta' => '\BSG\\Api\\V2\Model\SearchCampaignResourceMeta'
+        'data' => '\BSG\Api\V2\Model\CampaignSchema[]',
+        'meta' => '\BSG\Api\V2\Model\SearchCampaignResourceMeta'
     ];
 
     /**
@@ -299,7 +299,7 @@ class SearchCampaignResource implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\CampaignSchema[]|null
+     * @return \BSG\Api\V2\Model\CampaignSchema[]|null
      */
     public function getData()
     {
@@ -309,7 +309,7 @@ class SearchCampaignResource implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\CampaignSchema[]|null $data list of campaigns
+     * @param \BSG\Api\V2\Model\CampaignSchema[]|null $data list of campaigns
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class SearchCampaignResource implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets meta
      *
-     * @return \BSG\\Api\\V2\Model\SearchCampaignResourceMeta|null
+     * @return \BSG\Api\V2\Model\SearchCampaignResourceMeta|null
      */
     public function getMeta()
     {
@@ -336,7 +336,7 @@ class SearchCampaignResource implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets meta
      *
-     * @param \BSG\\Api\\V2\Model\SearchCampaignResourceMeta|null $meta meta
+     * @param \BSG\Api\V2\Model\SearchCampaignResourceMeta|null $meta meta
      *
      * @return self
      */

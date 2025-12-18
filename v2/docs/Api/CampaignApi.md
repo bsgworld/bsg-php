@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\CampaignApi
+# BSG\Api\V2\CampaignApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `campaign()`
 
 ```php
-campaign($id): \BSG\\Api\\V2\Model\RcsSend200Response
+campaign($id): \BSG\Api\V2\Model\Campaign200Response
 ```
 
 Get campaign info
@@ -29,10 +29,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -56,7 +56,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\RcsSend200Response**](../Model/RcsSend200Response.md)
+[**\BSG\Api\V2\Model\Campaign200Response**](../Model/Campaign200Response.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ try {
 ## `campaignDetails()`
 
 ```php
-campaignDetails($id): \BSG\\Api\\V2\Model\CampaignDetails200Response
+campaignDetails($id): \BSG\Api\V2\Model\CampaignDetails200Response
 ```
 
 Get campaign details
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\CampaignDetails200Response**](../Model/CampaignDetails200Response.md)
+[**\BSG\Api\V2\Model\CampaignDetails200Response**](../Model/CampaignDetails200Response.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ try {
 ## `campaignPrice()`
 
 ```php
-campaignPrice($campaign_price_request): \BSG\\Api\\V2\Model\CampaignPrice200Response
+campaignPrice($campaign_price_request): \BSG\Api\V2\Model\CampaignPrice200Response
 ```
 
 Calculate campaign price
@@ -149,16 +149,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$campaign_price_request = {"sender":"Vet klinika","text":"hello!","messages":[{"phone":38267161234}]}; // \BSG\\Api\\V2\Model\CampaignPriceRequest
+$campaign_price_request = {"sender":"Vet klinika","text":"hello!","messages":[{"phone":38267161234}]}; // \BSG\Api\V2\Model\CampaignPriceRequest
 
 try {
     $result = $apiInstance->campaignPrice($campaign_price_request);
@@ -172,11 +172,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **campaign_price_request** | [**\BSG\\Api\\V2\Model\CampaignPriceRequest**](../Model/CampaignPriceRequest.md)|  | |
+| **campaign_price_request** | [**\BSG\Api\V2\Model\CampaignPriceRequest**](../Model/CampaignPriceRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\CampaignPrice200Response**](../Model/CampaignPrice200Response.md)
+[**\BSG\Api\V2\Model\CampaignPrice200Response**](../Model/CampaignPrice200Response.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ try {
 ## `campaignStop()`
 
 ```php
-campaignStop($id): \BSG\\Api\\V2\Model\RcsSend200Response
+campaignStop($id): \BSG\Api\V2\Model\CampaignStop200Response
 ```
 
 Cancel campaign
@@ -209,10 +209,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\RcsSend200Response**](../Model/RcsSend200Response.md)
+[**\BSG\Api\V2\Model\CampaignStop200Response**](../Model/CampaignStop200Response.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ try {
 ## `campaigns()`
 
 ```php
-campaigns($page_offset, $page_limit, $sort, $way, $filter_from, $filter_to, $filter_type, $search_field, $search_value): \BSG\\Api\\V2\Model\SearchCampaignResource
+campaigns($page_offset, $page_limit, $sort, $way, $filter_from, $filter_to, $filter_type, $search_field, $search_value): \BSG\Api\V2\Model\SearchCampaignResource
 ```
 
 List of campaigns
@@ -269,24 +269,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $page_offset = 0; // int
-$page_limit = 50; // int | The number of items in the response
-$sort = 'id'; // string | Sort items by
-$way = new \BSG\\Api\\V2\Model\\BSG\\Api\\V2\Model\SortWay(); // \BSG\\Api\\V2\Model\SortWay
-$filter_from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Include items from
-$filter_to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Include items to
-$filter_type = 'filter_type_example'; // string | Filter items by type type
-$search_field = 'search_field_example'; // string | Filter items by search[field]=search[value]
-$search_value = 'search_value_example'; // string | Filter items by search[field]=search[value]
+| $page_limit = 50; // int | The number of items in the response |
+| $sort = 'id'; // string | Sort items by |
+$way = new \BSG\Api\V2\Model\\BSG\Api\V2\Model\SortWay(); // \BSG\Api\V2\Model\SortWay
+| $filter_from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Include items from |
+| $filter_to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Include items to |
+| $filter_type = 'filter_type_example'; // string | Filter items by type type |
+| $search_field = 'search_field_example'; // string | Filter items by search[field]=search[value] |
+| $search_value = 'search_value_example'; // string | Filter items by search[field]=search[value] |
 
 try {
     $result = $apiInstance->campaigns($page_offset, $page_limit, $sort, $way, $filter_from, $filter_to, $filter_type, $search_field, $search_value);
@@ -303,7 +303,7 @@ try {
 | **page_offset** | **int**|  | [optional] [default to 0] |
 | **page_limit** | **int**| The number of items in the response | [optional] [default to 50] |
 | **sort** | **string**| Sort items by | [optional] [default to &#39;id&#39;] |
-| **way** | [**\BSG\\Api\\V2\Model\SortWay**](../Model/.md)|  | [optional] |
+| **way** | [**\BSG\Api\V2\Model\SortWay**](../Model/.md)|  | [optional] |
 | **filter_from** | **\DateTime**| Include items from | [optional] |
 | **filter_to** | **\DateTime**| Include items to | [optional] |
 | **filter_type** | **string**| Filter items by type type | [optional] |
@@ -312,7 +312,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\SearchCampaignResource**](../Model/SearchCampaignResource.md)
+[**\BSG\Api\V2\Model\SearchCampaignResource**](../Model/SearchCampaignResource.md)
 
 ### Authorization
 

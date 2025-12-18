@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TariffcodeTheTariffCodeMayNotBeGreaterThan9 Class Doc Comment
  *
  * @category Class
  * @description {tariff_code} - The tariff code may not be greater than 9
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TariffcodeTheTariffCodeMayNotBeGreaterThan9 implements ModelInterface, Arr
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\TariffcodeTheTariffCodeMayNotBeGreaterThan9Errors'
+        'errors' => '\BSG\Api\V2\Model\TariffcodeTheTariffCodeMayNotBeGreaterThan9Errors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class TariffcodeTheTariffCodeMayNotBeGreaterThan9 implements ModelInterface, Arr
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\TariffcodeTheTariffCodeMayNotBeGreaterThan9Errors|null
+     * @return \BSG\Api\V2\Model\TariffcodeTheTariffCodeMayNotBeGreaterThan9Errors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class TariffcodeTheTariffCodeMayNotBeGreaterThan9 implements ModelInterface, Arr
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\TariffcodeTheTariffCodeMayNotBeGreaterThan9Errors|null $errors errors
+     * @param \BSG\Api\V2\Model\TariffcodeTheTariffCodeMayNotBeGreaterThan9Errors|null $errors errors
      *
      * @return self
      */

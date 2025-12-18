@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactsThisCollectionShouldContain1ElementOrMore Class Doc Comment
  *
  * @category Class
  * @description {contacts} - This collection should contain 1 element or more.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ContactsThisCollectionShouldContain1ElementOrMore implements ModelInterfac
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\ContactsThisCollectionShouldContain1ElementOrMoreErrors'
+        'errors' => '\BSG\Api\V2\Model\ContactsThisCollectionShouldContain1ElementOrMoreErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class ContactsThisCollectionShouldContain1ElementOrMore implements ModelInterfac
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\ContactsThisCollectionShouldContain1ElementOrMoreErrors|null
+     * @return \BSG\Api\V2\Model\ContactsThisCollectionShouldContain1ElementOrMoreErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class ContactsThisCollectionShouldContain1ElementOrMore implements ModelInterfac
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\ContactsThisCollectionShouldContain1ElementOrMoreErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\ContactsThisCollectionShouldContain1ElementOrMoreErrors|null $errors errors
      *
      * @return self
      */

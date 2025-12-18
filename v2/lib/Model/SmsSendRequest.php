@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SmsSendRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'sms_send_request';
+    protected static $openAPIModelName = 'SmsSendRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,13 +57,13 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'phones' => '\BSG\\Api\\V2\Model\SmsSendRequestPhonesInner[]',
+        'phones' => '\BSG\Api\V2\Model\SmsSendRequestPhonesItem[]',
         'sender' => 'string',
         'tariff_code' => 'int',
         'text' => 'string',
         'validity' => 'int',
         'start_at' => '\DateTime',
-        'short_links' => '\BSG\\Api\\V2\Model\ShortLink[]',
+        'short_links' => '\BSG\Api\V2\Model\ShortLink[]',
         'transliterate' => 'bool'
     ];
 
@@ -96,8 +96,8 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'tariff_code' => false,
         'text' => false,
         'validity' => false,
-        'start_at' => false,
-        'short_links' => false,
+        'start_at' => true,
+        'short_links' => true,
         'transliterate' => false
     ];
 
@@ -326,6 +326,14 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['phones'] === null) {
             $invalidProperties[] = "'phones' can't be null";
         }
+        if ((count($this->container['phones']) > 10000)) {
+            $invalidProperties[] = "invalid value for 'phones', number of items must be less than or equal to 10000.";
+        }
+
+        if ((count($this->container['phones']) < 1)) {
+            $invalidProperties[] = "invalid value for 'phones', number of items must be greater than or equal to 1.";
+        }
+
         if ($this->container['sender'] === null) {
             $invalidProperties[] = "'sender' can't be null";
         }
@@ -362,7 +370,7 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phones
      *
-     * @return \BSG\\Api\\V2\Model\SmsSendRequestPhonesInner[]
+     * @return \BSG\Api\V2\Model\SmsSendRequestPhonesItem[]
      */
     public function getPhones()
     {
@@ -372,7 +380,7 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phones
      *
-     * @param \BSG\\Api\\V2\Model\SmsSendRequestPhonesInner[] $phones phones
+     * @param \BSG\Api\V2\Model\SmsSendRequestPhonesItem[] $phones phones
      *
      * @return self
      */
@@ -382,7 +390,12 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable phones cannot be null');
         }
 
-
+        if ((count($phones) > 10000)) {
+            throw new \InvalidArgumentException('invalid value for $phones when calling SmsSendRequest., number of items must be less than or equal to 10000.');
+        }
+        if ((count($phones) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $phones when calling SmsSendRequest., number of items must be greater than or equal to 1.');
+        }
         $this->container['phones'] = $phones;
 
         return $this;
@@ -528,7 +541,14 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setStartAt($start_at)
     {
         if (is_null($start_at)) {
-            throw new \InvalidArgumentException('non-nullable start_at cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'start_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('start_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['start_at'] = $start_at;
 
@@ -538,7 +558,7 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets short_links
      *
-     * @return \BSG\\Api\\V2\Model\ShortLink[]|null
+     * @return \BSG\Api\V2\Model\ShortLink[]|null
      */
     public function getShortLinks()
     {
@@ -548,14 +568,21 @@ class SmsSendRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets short_links
      *
-     * @param \BSG\\Api\\V2\Model\ShortLink[]|null $short_links short_links
+     * @param \BSG\Api\V2\Model\ShortLink[]|null $short_links short_links
      *
      * @return self
      */
     public function setShortLinks($short_links)
     {
         if (is_null($short_links)) {
-            throw new \InvalidArgumentException('non-nullable short_links cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'short_links');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('short_links', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['short_links'] = $short_links;
 

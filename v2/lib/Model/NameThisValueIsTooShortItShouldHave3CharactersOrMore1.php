@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * NameThisValueIsTooShortItShouldHave3CharactersOrMore1 Class Doc Comment
  *
  * @category Class
  * @description {name} - This value is too short. It should have 3 characters or more
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class NameThisValueIsTooShortItShouldHave3CharactersOrMore1 implements ModelInte
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\NameThisValueIsTooShortItShouldHave3CharactersOrMoreErrors'
+        'errors' => '\BSG\Api\V2\Model\NameThisValueIsTooShortItShouldHave3CharactersOrMore1Errors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class NameThisValueIsTooShortItShouldHave3CharactersOrMore1 implements ModelInte
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\NameThisValueIsTooShortItShouldHave3CharactersOrMoreErrors|null
+     * @return \BSG\Api\V2\Model\NameThisValueIsTooShortItShouldHave3CharactersOrMore1Errors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class NameThisValueIsTooShortItShouldHave3CharactersOrMore1 implements ModelInte
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\NameThisValueIsTooShortItShouldHave3CharactersOrMoreErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\NameThisValueIsTooShortItShouldHave3CharactersOrMore1Errors|null $errors errors
      *
      * @return self
      */

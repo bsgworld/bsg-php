@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * Components Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class Components implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'type' => 'string',
         'sub_type' => 'string',
-        'index' => 'string',
-        'parameters' => '\BSG\\Api\\V2\Model\Parameter[]'
+        'index' => 'int',
+        'parameters' => '\BSG\Api\V2\Model\Parameter[]'
     ];
 
     /**
@@ -350,6 +350,14 @@ class Components implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
 
+        if (!is_null($this->container['index']) && ($this->container['index'] > 9)) {
+            $invalidProperties[] = "invalid value for 'index', must be smaller than or equal to 9.";
+        }
+
+        if (!is_null($this->container['index']) && ($this->container['index'] < 0)) {
+            $invalidProperties[] = "invalid value for 'index', must be bigger than or equal to 0.";
+        }
+
         return $invalidProperties;
     }
 
@@ -449,7 +457,7 @@ class Components implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets index
      *
-     * @return string|null
+     * @return int|null
      */
     public function getIndex()
     {
@@ -459,7 +467,7 @@ class Components implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets index
      *
-     * @param string|null $index index
+     * @param int|null $index index
      *
      * @return self
      */
@@ -476,6 +484,12 @@ class Components implements ModelInterface, ArrayAccess, \JsonSerializable
             }
         }
 
+        if (!is_null($index) && ($index > 9)) {
+            throw new \InvalidArgumentException('invalid value for $index when calling Components., must be smaller than or equal to 9.');
+        }
+        if (!is_null($index) && ($index < 0)) {
+            throw new \InvalidArgumentException('invalid value for $index when calling Components., must be bigger than or equal to 0.');
+        }
 
         $this->container['index'] = $index;
 
@@ -485,7 +499,7 @@ class Components implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets parameters
      *
-     * @return \BSG\\Api\\V2\Model\Parameter[]|null
+     * @return \BSG\Api\V2\Model\Parameter[]|null
      */
     public function getParameters()
     {
@@ -495,7 +509,7 @@ class Components implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets parameters
      *
-     * @param \BSG\\Api\\V2\Model\Parameter[]|null $parameters parameters
+     * @param \BSG\Api\V2\Model\Parameter[]|null $parameters parameters
      *
      * @return self
      */

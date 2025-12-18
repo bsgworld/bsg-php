@@ -1,16 +1,16 @@
-# BSG\\Api\\V2\Internal2FAApi
+# BSG\Api\V2\Internal2FAApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**call9875ce37ddb2f995643cef7aa2439fb9()**](Internal2FAApi.md#call9875ce37ddb2f995643cef7aa2439fb9) | **GET** /api/internal/2fa/authentications/full-price | Show 2FA authentication full price |
+| [**internalTwofaPrice()**](Internal2FAApi.md#internalTwofaPrice) | **GET** /api/internal/2fa/authentications/full-price | Show 2FA authentication full price |
 
 
-## `call9875ce37ddb2f995643cef7aa2439fb9()`
+## `internalTwofaPrice()`
 
 ```php
-call9875ce37ddb2f995643cef7aa2439fb9($channel_type, $currency, $tariff_code, $country_code, $operator_id): \BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response
+internalTwofaPrice($channel_type, $currency, $tariff_code, $country_code, $operator_id): \BSG\Api\V2\Model\InternalTwofaPrice200Response
 ```
 
 Show 2FA authentication full price
@@ -23,10 +23,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\Internal2FAApi(
+$apiInstance = new BSG\Api\V2\Api\Internal2FAApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -39,10 +39,10 @@ $country_code = UA; // string
 $operator_id = 1; // int
 
 try {
-    $result = $apiInstance->call9875ce37ddb2f995643cef7aa2439fb9($channel_type, $currency, $tariff_code, $country_code, $operator_id);
+    $result = $apiInstance->internalTwofaPrice($channel_type, $currency, $tariff_code, $country_code, $operator_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling Internal2FAApi->call9875ce37ddb2f995643cef7aa2439fb9: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling Internal2FAApi->internalTwofaPrice: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response**](../Model/9875ce37ddb2f995643cef7aa2439fb9200Response.md)
+[**\BSG\Api\V2\Model\InternalTwofaPrice200Response**](../Model/InternalTwofaPrice200Response.md)
 
 ### Authorization
 

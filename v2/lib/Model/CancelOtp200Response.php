@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * CancelOtp200Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class CancelOtp200Response implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'cancel_otp_200_response';
+    protected static $openAPIModelName = 'CancelOtp200Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class CancelOtp200Response implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\TwoFactorAuthenticationSchema'
+        'data' => '\BSG\Api\V2\Model\TwoFactorAuthenticationSchema'
     ];
 
     /**
@@ -295,7 +295,7 @@ class CancelOtp200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\TwoFactorAuthenticationSchema
+     * @return \BSG\Api\V2\Model\TwoFactorAuthenticationSchema
      */
     public function getData()
     {
@@ -305,7 +305,7 @@ class CancelOtp200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\TwoFactorAuthenticationSchema $data data
+     * @param \BSG\Api\V2\Model\TwoFactorAuthenticationSchema $data data
      *
      * @return self
      */

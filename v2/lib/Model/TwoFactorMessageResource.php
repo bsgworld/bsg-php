@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TwoFactorMessageResource Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TwoFactorMessageResource implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPITypes = [
         'id' => 'int',
         'recipient' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\OtpMessageStatus',
-        'channel' => '\BSG\\Api\\V2\Model\OtpChannel',
+        'status' => '\BSG\Api\V2\Model\OtpMessageStatus',
+        'channel' => '\BSG\Api\V2\Model\OtpChannel',
         'sender' => 'string',
         'price' => 'float',
         'currency' => 'string',
@@ -402,7 +402,7 @@ class TwoFactorMessageResource implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\OtpMessageStatus|null
+     * @return \BSG\Api\V2\Model\OtpMessageStatus|null
      */
     public function getStatus()
     {
@@ -412,7 +412,7 @@ class TwoFactorMessageResource implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\OtpMessageStatus|null $status status
+     * @param \BSG\Api\V2\Model\OtpMessageStatus|null $status status
      *
      * @return self
      */
@@ -429,7 +429,7 @@ class TwoFactorMessageResource implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets channel
      *
-     * @return \BSG\\Api\\V2\Model\OtpChannel|null
+     * @return \BSG\Api\V2\Model\OtpChannel|null
      */
     public function getChannel()
     {
@@ -439,7 +439,7 @@ class TwoFactorMessageResource implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets channel
      *
-     * @param \BSG\\Api\\V2\Model\OtpChannel|null $channel channel
+     * @param \BSG\Api\V2\Model\OtpChannel|null $channel channel
      *
      * @return self
      */

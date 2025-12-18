@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * InternalCorePriceApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -71,10 +71,10 @@ class InternalCorePriceApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'd6429e9d3846f9ae5efa4c9d4d7bda10' => [
+        'internalCorePricesByCountry' => [
             'application/json',
         ],
-        'ef361cc4d966acb533399907bc7084c2' => [
+        'internalCorePricesList' => [
             'application/json',
         ],
     ];
@@ -126,40 +126,40 @@ class InternalCorePriceApi
     }
 
     /**
-     * Operation d6429e9d3846f9ae5efa4c9d4d7bda10
+     * Operation internalCorePricesByCountry
      *
      * Get prices for country
      *
      * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesByCountry'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response
+     * @return \BSG\Api\V2\Model\InternalCorePricesByCountry200Response
      */
-    public function d6429e9d3846f9ae5efa4c9d4d7bda10($country_code, $product, string $contentType = self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'][0])
+    public function internalCorePricesByCountry($country_code, $product, string $contentType = self::contentTypes['internalCorePricesByCountry'][0])
     {
-        list($response) = $this->d6429e9d3846f9ae5efa4c9d4d7bda10WithHttpInfo($country_code, $product, $contentType);
+        list($response) = $this->internalCorePricesByCountryWithHttpInfo($country_code, $product, $contentType);
         return $response;
     }
 
     /**
-     * Operation d6429e9d3846f9ae5efa4c9d4d7bda10WithHttpInfo
+     * Operation internalCorePricesByCountryWithHttpInfo
      *
      * Get prices for country
      *
      * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesByCountry'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\InternalCorePricesByCountry200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function d6429e9d3846f9ae5efa4c9d4d7bda10WithHttpInfo($country_code, $product, string $contentType = self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'][0])
+    public function internalCorePricesByCountryWithHttpInfo($country_code, $product, string $contentType = self::contentTypes['internalCorePricesByCountry'][0])
     {
-        $request = $this->d6429e9d3846f9ae5efa4c9d4d7bda10Request($country_code, $product, $contentType);
+        $request = $this->internalCorePricesByCountryRequest($country_code, $product, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -186,11 +186,11 @@ class InternalCorePriceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\InternalCorePricesByCountry200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\InternalCorePricesByCountry200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -208,7 +208,7 @@ class InternalCorePriceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\InternalCorePricesByCountry200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -227,7 +227,7 @@ class InternalCorePriceApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response';
+            $returnType = '\BSG\Api\V2\Model\InternalCorePricesByCountry200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -260,7 +260,7 @@ class InternalCorePriceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response',
+                        '\BSG\Api\V2\Model\InternalCorePricesByCountry200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -271,20 +271,20 @@ class InternalCorePriceApi
     }
 
     /**
-     * Operation d6429e9d3846f9ae5efa4c9d4d7bda10Async
+     * Operation internalCorePricesByCountryAsync
      *
      * Get prices for country
      *
      * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesByCountry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d6429e9d3846f9ae5efa4c9d4d7bda10Async($country_code, $product, string $contentType = self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'][0])
+    public function internalCorePricesByCountryAsync($country_code, $product, string $contentType = self::contentTypes['internalCorePricesByCountry'][0])
     {
-        return $this->d6429e9d3846f9ae5efa4c9d4d7bda10AsyncWithHttpInfo($country_code, $product, $contentType)
+        return $this->internalCorePricesByCountryAsyncWithHttpInfo($country_code, $product, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -293,21 +293,21 @@ class InternalCorePriceApi
     }
 
     /**
-     * Operation d6429e9d3846f9ae5efa4c9d4d7bda10AsyncWithHttpInfo
+     * Operation internalCorePricesByCountryAsyncWithHttpInfo
      *
      * Get prices for country
      *
      * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesByCountry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d6429e9d3846f9ae5efa4c9d4d7bda10AsyncWithHttpInfo($country_code, $product, string $contentType = self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'][0])
+    public function internalCorePricesByCountryAsyncWithHttpInfo($country_code, $product, string $contentType = self::contentTypes['internalCorePricesByCountry'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\D6429e9d3846f9ae5efa4c9d4d7bda10200Response';
-        $request = $this->d6429e9d3846f9ae5efa4c9d4d7bda10Request($country_code, $product, $contentType);
+        $returnType = '\BSG\Api\V2\Model\InternalCorePricesByCountry200Response';
+        $request = $this->internalCorePricesByCountryRequest($country_code, $product, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -346,35 +346,35 @@ class InternalCorePriceApi
     }
 
     /**
-     * Create request for operation 'd6429e9d3846f9ae5efa4c9d4d7bda10'
+     * Create request for operation 'internalCorePricesByCountry'
      *
      * @param  string $country_code Country ISO Code (required)
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesByCountry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function d6429e9d3846f9ae5efa4c9d4d7bda10Request($country_code, $product, string $contentType = self::contentTypes['d6429e9d3846f9ae5efa4c9d4d7bda10'][0])
+    public function internalCorePricesByCountryRequest($country_code, $product, string $contentType = self::contentTypes['internalCorePricesByCountry'][0])
     {
 
         // verify the required parameter 'country_code' is set
         if ($country_code === null || (is_array($country_code) && count($country_code) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $country_code when calling d6429e9d3846f9ae5efa4c9d4d7bda10'
+                'Missing the required parameter $country_code when calling internalCorePricesByCountry'
             );
         }
         if (strlen($country_code) > 2) {
-            throw new \InvalidArgumentException('invalid length for "$country_code" when calling InternalCorePriceApi.d6429e9d3846f9ae5efa4c9d4d7bda10, must be smaller than or equal to 2.');
+            throw new \InvalidArgumentException('invalid length for "$country_code" when calling InternalCorePriceApi.internalCorePricesByCountry, must be smaller than or equal to 2.');
         }
         if (strlen($country_code) < 2) {
-            throw new \InvalidArgumentException('invalid length for "$country_code" when calling InternalCorePriceApi.d6429e9d3846f9ae5efa4c9d4d7bda10, must be bigger than or equal to 2.');
+            throw new \InvalidArgumentException('invalid length for "$country_code" when calling InternalCorePriceApi.internalCorePricesByCountry, must be bigger than or equal to 2.');
         }
         
         // verify the required parameter 'product' is set
         if ($product === null || (is_array($product) && count($product) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $product when calling d6429e9d3846f9ae5efa4c9d4d7bda10'
+                'Missing the required parameter $product when calling internalCorePricesByCountry'
             );
         }
 
@@ -465,38 +465,38 @@ class InternalCorePriceApi
     }
 
     /**
-     * Operation ef361cc4d966acb533399907bc7084c2
+     * Operation internalCorePricesList
      *
      * Get price list for each country
      *
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ef361cc4d966acb533399907bc7084c2'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response
+     * @return \BSG\Api\V2\Model\InternalCorePricesList200Response
      */
-    public function ef361cc4d966acb533399907bc7084c2($product, string $contentType = self::contentTypes['ef361cc4d966acb533399907bc7084c2'][0])
+    public function internalCorePricesList($product, string $contentType = self::contentTypes['internalCorePricesList'][0])
     {
-        list($response) = $this->ef361cc4d966acb533399907bc7084c2WithHttpInfo($product, $contentType);
+        list($response) = $this->internalCorePricesListWithHttpInfo($product, $contentType);
         return $response;
     }
 
     /**
-     * Operation ef361cc4d966acb533399907bc7084c2WithHttpInfo
+     * Operation internalCorePricesListWithHttpInfo
      *
      * Get price list for each country
      *
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ef361cc4d966acb533399907bc7084c2'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\InternalCorePricesList200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function ef361cc4d966acb533399907bc7084c2WithHttpInfo($product, string $contentType = self::contentTypes['ef361cc4d966acb533399907bc7084c2'][0])
+    public function internalCorePricesListWithHttpInfo($product, string $contentType = self::contentTypes['internalCorePricesList'][0])
     {
-        $request = $this->ef361cc4d966acb533399907bc7084c2Request($product, $contentType);
+        $request = $this->internalCorePricesListRequest($product, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -523,11 +523,11 @@ class InternalCorePriceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\InternalCorePricesList200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\InternalCorePricesList200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -545,7 +545,7 @@ class InternalCorePriceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\InternalCorePricesList200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -564,7 +564,7 @@ class InternalCorePriceApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response';
+            $returnType = '\BSG\Api\V2\Model\InternalCorePricesList200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -597,7 +597,7 @@ class InternalCorePriceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response',
+                        '\BSG\Api\V2\Model\InternalCorePricesList200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -608,19 +608,19 @@ class InternalCorePriceApi
     }
 
     /**
-     * Operation ef361cc4d966acb533399907bc7084c2Async
+     * Operation internalCorePricesListAsync
      *
      * Get price list for each country
      *
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ef361cc4d966acb533399907bc7084c2'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ef361cc4d966acb533399907bc7084c2Async($product, string $contentType = self::contentTypes['ef361cc4d966acb533399907bc7084c2'][0])
+    public function internalCorePricesListAsync($product, string $contentType = self::contentTypes['internalCorePricesList'][0])
     {
-        return $this->ef361cc4d966acb533399907bc7084c2AsyncWithHttpInfo($product, $contentType)
+        return $this->internalCorePricesListAsyncWithHttpInfo($product, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -629,20 +629,20 @@ class InternalCorePriceApi
     }
 
     /**
-     * Operation ef361cc4d966acb533399907bc7084c2AsyncWithHttpInfo
+     * Operation internalCorePricesListAsyncWithHttpInfo
      *
      * Get price list for each country
      *
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ef361cc4d966acb533399907bc7084c2'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ef361cc4d966acb533399907bc7084c2AsyncWithHttpInfo($product, string $contentType = self::contentTypes['ef361cc4d966acb533399907bc7084c2'][0])
+    public function internalCorePricesListAsyncWithHttpInfo($product, string $contentType = self::contentTypes['internalCorePricesList'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\Ef361cc4d966acb533399907bc7084c2200Response';
-        $request = $this->ef361cc4d966acb533399907bc7084c2Request($product, $contentType);
+        $returnType = '\BSG\Api\V2\Model\InternalCorePricesList200Response';
+        $request = $this->internalCorePricesListRequest($product, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -681,21 +681,21 @@ class InternalCorePriceApi
     }
 
     /**
-     * Create request for operation 'ef361cc4d966acb533399907bc7084c2'
+     * Create request for operation 'internalCorePricesList'
      *
      * @param  string $product Product value (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ef361cc4d966acb533399907bc7084c2'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCorePricesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function ef361cc4d966acb533399907bc7084c2Request($product, string $contentType = self::contentTypes['ef361cc4d966acb533399907bc7084c2'][0])
+    public function internalCorePricesListRequest($product, string $contentType = self::contentTypes['internalCorePricesList'][0])
     {
 
         // verify the required parameter 'product' is set
         if ($product === null || (is_array($product) && count($product) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $product when calling ef361cc4d966acb533399907bc7084c2'
+                'Missing the required parameter $product when calling internalCorePricesList'
             );
         }
 

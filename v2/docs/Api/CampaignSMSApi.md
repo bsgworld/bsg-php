@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\CampaignSMSApi
+# BSG\Api\V2\CampaignSMSApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `smsSend()`
 
 ```php
-smsSend($sms_send_request): \BSG\\Api\\V2\Model\SmsSendGroups200Response
+smsSend($sms_send_request): \BSG\Api\V2\Model\SmsCampaignResponseSchema
 ```
 
 Send SMS campaign
@@ -27,16 +27,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignSMSApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignSMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sms_send_request = {"phones":[{"number":380661231231}],"sender":"Vet klinika","text":"test"}; // \BSG\\Api\\V2\Model\SmsSendRequest
+$sms_send_request = {"phones":[{"number":380661231231}],"sender":"Vet klinika","text":"test"}; // \BSG\Api\V2\Model\SmsSendRequest
 
 try {
     $result = $apiInstance->smsSend($sms_send_request);
@@ -50,11 +50,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_send_request** | [**\BSG\\Api\\V2\Model\SmsSendRequest**](../Model/SmsSendRequest.md)|  | |
+| **sms_send_request** | [**\BSG\Api\V2\Model\SmsSendRequest**](../Model/SmsSendRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\SmsSendGroups200Response**](../Model/SmsSendGroups200Response.md)
+[**\BSG\Api\V2\Model\SmsCampaignResponseSchema**](../Model/SmsCampaignResponseSchema.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ try {
 ## `smsSendGroups()`
 
 ```php
-smsSendGroups($sms_send_groups_request): \BSG\\Api\\V2\Model\SmsSendGroups200Response
+smsSendGroups($sms_send_groups_request): \BSG\Api\V2\Model\SmsCampaignResponseSchema
 ```
 
 Send SMS to contact list
@@ -87,16 +87,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignSMSApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignSMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sms_send_groups_request = {"groups":[1864275],"text":"hello!","sender":"Vet klinika"}; // \BSG\\Api\\V2\Model\SmsSendGroupsRequest
+$sms_send_groups_request = {"groups":[1864275],"text":"hello!","sender":"Vet klinika"}; // \BSG\Api\V2\Model\SmsSendGroupsRequest
 
 try {
     $result = $apiInstance->smsSendGroups($sms_send_groups_request);
@@ -110,11 +110,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_send_groups_request** | [**\BSG\\Api\\V2\Model\SmsSendGroupsRequest**](../Model/SmsSendGroupsRequest.md)|  | |
+| **sms_send_groups_request** | [**\BSG\Api\V2\Model\SmsSendGroupsRequest**](../Model/SmsSendGroupsRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\SmsSendGroups200Response**](../Model/SmsSendGroups200Response.md)
+[**\BSG\Api\V2\Model\SmsCampaignResponseSchema**](../Model/SmsCampaignResponseSchema.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ try {
 ## `smsSendIndividual()`
 
 ```php
-smsSendIndividual($sms_send_individual_request): \BSG\\Api\\V2\Model\SmsSendGroups200Response
+smsSendIndividual($sms_send_individual_request): \BSG\Api\V2\Model\SmsCampaignResponseSchema
 ```
 
 Send SMS with different text
@@ -147,16 +147,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\CampaignSMSApi(
+$apiInstance = new BSG\Api\V2\Api\CampaignSMSApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$sms_send_individual_request = {"messages":[{"phone":380661231231,"text":"hello Jack","sender":"Vet klinika"},{"phone":380661231232,"text":"hello Anna","sender":"Vet klinika"},{"phone":380661231233,"text":"Hi Hellen","sender":"Vet klinika"}]}; // \BSG\\Api\\V2\Model\SmsSendIndividualRequest
+$sms_send_individual_request = {"messages":[{"phone":380661231231,"text":"hello Jack","sender":"Vet klinika"},{"phone":380661231232,"text":"hello Anna","sender":"Vet klinika"},{"phone":380661231233,"text":"Hi Hellen","sender":"Vet klinika"}]}; // \BSG\Api\V2\Model\SmsSendIndividualRequest
 
 try {
     $result = $apiInstance->smsSendIndividual($sms_send_individual_request);
@@ -170,11 +170,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sms_send_individual_request** | [**\BSG\\Api\\V2\Model\SmsSendIndividualRequest**](../Model/SmsSendIndividualRequest.md)|  | |
+| **sms_send_individual_request** | [**\BSG\Api\V2\Model\SmsSendIndividualRequest**](../Model/SmsSendIndividualRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\SmsSendGroups200Response**](../Model/SmsSendGroups200Response.md)
+[**\BSG\Api\V2\Model\SmsCampaignResponseSchema**](../Model/SmsCampaignResponseSchema.md)
 
 ### Authorization
 

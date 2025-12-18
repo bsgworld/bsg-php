@@ -1,4 +1,4 @@
-# BSG\\Api\\V1\MNPApi
+# BSG\Api\V1\MNPApi
 
 All URIs are relative to https://api.sms-service.local, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.sms-service.local, except if the operation 
 ## `mnpCreateBatchMnp()`
 
 ```php
-mnpCreateBatchMnp($mnp_batch_create_request): \BSG\\Api\\V1\Model\MnpCreateResponse
+mnpCreateBatchMnp($mnp_batch_create_request): \BSG\Api\V1\Model\MnpCreateResponse
 ```
 
 MNP lookup for multiple numbers (JSON body)
@@ -29,18 +29,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\MNPApi(
+$apiInstance = new BSG\Api\V1\Api\MNPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$mnp_batch_create_request = {"msisdns":[{"msisdn":"380953227271","tariff":5,"reference":"mnp_ref_001"},{"msisdn":"380953227272","tariff":5,"reference":"mnp_ref_002"}],"reference":"batch_mnp_123"}; // \BSG\\Api\\V1\Model\MnpBatchCreateRequest
+$mnp_batch_create_request = {"msisdns":[{"msisdn":"380953227271","tariff":5,"reference":"mnp_ref_001"},{"msisdn":"380953227272","tariff":5,"reference":"mnp_ref_002"}],"reference":"batch_mnp_123"}; // \BSG\Api\V1\Model\MnpBatchCreateRequest
 
 try {
     $result = $apiInstance->mnpCreateBatchMnp($mnp_batch_create_request);
@@ -54,11 +54,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **mnp_batch_create_request** | [**\BSG\\Api\\V1\Model\MnpBatchCreateRequest**](../Model/MnpBatchCreateRequest.md)|  | |
+| **mnp_batch_create_request** | [**\BSG\Api\V1\Model\MnpBatchCreateRequest**](../Model/MnpBatchCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\MnpCreateResponse**](../Model/MnpCreateResponse.md)
+[**\BSG\Api\V1\Model\MnpCreateResponse**](../Model/MnpCreateResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `mnpCreateObjectsPut()`
 
 ```php
-mnpCreateObjectsPut($mnp_create_request): \BSG\\Api\\V1\Model\MnpCreateResponse
+mnpCreateObjectsPut($mnp_create_request): \BSG\Api\V1\Model\MnpCreateResponse
 ```
 
 Perform MNP lookup (PUT)
@@ -91,18 +91,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\MNPApi(
+$apiInstance = new BSG\Api\V1\Api\MNPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$mnp_create_request = new \BSG\\Api\\V1\Model\MnpCreateRequest(); // \BSG\\Api\\V1\Model\MnpCreateRequest
+$mnp_create_request = new \BSG\Api\V1\Model\MnpCreateRequest(); // \BSG\Api\V1\Model\MnpCreateRequest
 
 try {
     $result = $apiInstance->mnpCreateObjectsPut($mnp_create_request);
@@ -116,11 +116,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **mnp_create_request** | [**\BSG\\Api\\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)|  | |
+| **mnp_create_request** | [**\BSG\Api\V1\Model\MnpCreateRequest**](../Model/MnpCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\MnpCreateResponse**](../Model/MnpCreateResponse.md)
+[**\BSG\Api\V1\Model\MnpCreateResponse**](../Model/MnpCreateResponse.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ try {
 ## `mnpGetPrices()`
 
 ```php
-mnpGetPrices(): \BSG\\Api\\V1\Model\MnpPricesResponse
+mnpGetPrices(): \BSG\Api\V1\Model\MnpPricesResponse
 ```
 
 Get MNP pricing
@@ -153,12 +153,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\MNPApi(
+$apiInstance = new BSG\Api\V1\Api\MNPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +179,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\MnpPricesResponse**](../Model/MnpPricesResponse.md)
+[**\BSG\Api\V1\Model\MnpPricesResponse**](../Model/MnpPricesResponse.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ This endpoint does not need any parameter.
 ## `mnpGetStatusByExtId()`
 
 ```php
-mnpGetStatusByExtId($reference): \BSG\\Api\\V1\Model\MnpStatusResponse
+mnpGetStatusByExtId($reference): \BSG\Api\V1\Model\MnpStatusResponse
 ```
 
 Get MNP result by reference
@@ -212,18 +212,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\MNPApi(
+$apiInstance = new BSG\Api\V1\Api\MNPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$reference = unique_ref_123; // string | External reference ID
+| $reference = unique_ref_123; // string | External reference ID |
 
 try {
     $result = $apiInstance->mnpGetStatusByExtId($reference);
@@ -241,7 +241,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\MnpStatusResponse**](../Model/MnpStatusResponse.md)
+[**\BSG\Api\V1\Model\MnpStatusResponse**](../Model/MnpStatusResponse.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ try {
 ## `mnpGetStatusById()`
 
 ```php
-mnpGetStatusById($id): \BSG\\Api\\V1\Model\MnpStatusResponse
+mnpGetStatusById($id): \BSG\Api\V1\Model\MnpStatusResponse
 ```
 
 Get MNP result by ID
@@ -274,18 +274,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\MNPApi(
+$apiInstance = new BSG\Api\V1\Api\MNPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 123456; // string | Internal record ID from api_external_ids table
+| $id = 123456; // string | Internal record ID from api_external_ids table |
 
 try {
     $result = $apiInstance->mnpGetStatusById($id);
@@ -303,7 +303,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\MnpStatusResponse**](../Model/MnpStatusResponse.md)
+[**\BSG\Api\V1\Model\MnpStatusResponse**](../Model/MnpStatusResponse.md)
 
 ### Authorization
 

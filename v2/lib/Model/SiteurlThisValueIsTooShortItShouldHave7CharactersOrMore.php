@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SiteurlThisValueIsTooShortItShouldHave7CharactersOrMore Class Doc Comment
  *
  * @category Class
  * @description {site_url} - This value is too short. It should have 7 characters or more.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class SiteurlThisValueIsTooShortItShouldHave7CharactersOrMore implements ModelIn
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\SiteurlThisValueIsTooShortItShouldHave7CharactersOrMoreErrors'
+        'errors' => '\BSG\Api\V2\Model\SiteurlThisValueIsTooShortItShouldHave7CharactersOrMoreErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class SiteurlThisValueIsTooShortItShouldHave7CharactersOrMore implements ModelIn
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\SiteurlThisValueIsTooShortItShouldHave7CharactersOrMoreErrors|null
+     * @return \BSG\Api\V2\Model\SiteurlThisValueIsTooShortItShouldHave7CharactersOrMoreErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class SiteurlThisValueIsTooShortItShouldHave7CharactersOrMore implements ModelIn
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\SiteurlThisValueIsTooShortItShouldHave7CharactersOrMoreErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\SiteurlThisValueIsTooShortItShouldHave7CharactersOrMoreErrors|null $errors errors
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace BSG\\Api\\V2\Test\Model;
+namespace BSG\Api\V2\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description {ids} - This collection should contain 1 element or more. якщо в запиті 2 рази вказати один і той самий ID - повертається успішний респонс і поле не видаляється. Потрібно доопрацювати
- * @package     BSG\\Api\\V2
+ * @package     BSG\Api\V2
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

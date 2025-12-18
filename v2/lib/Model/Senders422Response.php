@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * Senders422Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class Senders422Response implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'senders_422_response';
+    protected static $openAPIModelName = 'Senders422Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class Senders422Response implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors'
+        'errors' => '\BSG\Api\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors'
     ];
 
     /**
@@ -326,7 +326,7 @@ class Senders422Response implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors|null
+     * @return \BSG\Api\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors|null
      */
     public function getErrors()
     {
@@ -336,7 +336,7 @@ class Senders422Response implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors|null $errors errors
      *
      * @return self
      */

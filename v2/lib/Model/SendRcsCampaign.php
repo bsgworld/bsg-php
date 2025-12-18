@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SendRcsCampaign Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'phones' => '\BSG\\Api\\V2\Model\Phone[]',
+        'phones' => '\BSG\Api\V2\Model\Phone[]',
         'sender' => 'string',
-        'options' => '\BSG\\Api\\V2\Model\Options',
-        'alternative_channel' => '\BSG\\Api\\V2\Model\AlternativeChannel',
+        'options' => '\BSG\Api\V2\Model\Options',
+        'alternative_channel' => '\BSG\Api\V2\Model\AlternativeChannel',
         'start_at' => '\DateTime',
         'tariff_code' => 'int',
         'validity_seconds' => 'int',
@@ -99,9 +99,9 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
         'sender' => false,
         'options' => false,
         'alternative_channel' => false,
-        'start_at' => false,
+        'start_at' => true,
         'tariff_code' => false,
-        'validity_seconds' => false,
+        'validity_seconds' => true,
         'validity' => false,
         'add_to_contact_book' => false,
         'check_stop_list' => false
@@ -396,7 +396,7 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phones
      *
-     * @return \BSG\\Api\\V2\Model\Phone[]
+     * @return \BSG\Api\V2\Model\Phone[]
      */
     public function getPhones()
     {
@@ -406,7 +406,7 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phones
      *
-     * @param \BSG\\Api\\V2\Model\Phone[] $phones The list of objects containing information about the mobile phone number (number) and (reference_id) to send a message to
+     * @param \BSG\Api\V2\Model\Phone[] $phones The list of objects containing information about the mobile phone number (number) and (reference_id) to send a message to
      *
      * @return self
      */
@@ -464,7 +464,7 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets options
      *
-     * @return \BSG\\Api\\V2\Model\Options
+     * @return \BSG\Api\V2\Model\Options
      */
     public function getOptions()
     {
@@ -474,7 +474,7 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets options
      *
-     * @param \BSG\\Api\\V2\Model\Options $options options
+     * @param \BSG\Api\V2\Model\Options $options options
      *
      * @return self
      */
@@ -491,7 +491,7 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets alternative_channel
      *
-     * @return \BSG\\Api\\V2\Model\AlternativeChannel|null
+     * @return \BSG\Api\V2\Model\AlternativeChannel|null
      */
     public function getAlternativeChannel()
     {
@@ -501,7 +501,7 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets alternative_channel
      *
-     * @param \BSG\\Api\\V2\Model\AlternativeChannel|null $alternative_channel alternative_channel
+     * @param \BSG\Api\V2\Model\AlternativeChannel|null $alternative_channel alternative_channel
      *
      * @return self
      */
@@ -535,7 +535,14 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setStartAt($start_at)
     {
         if (is_null($start_at)) {
-            throw new \InvalidArgumentException('non-nullable start_at cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'start_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('start_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['start_at'] = $start_at;
 
@@ -589,13 +596,20 @@ class SendRcsCampaign implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setValiditySeconds($validity_seconds)
     {
         if (is_null($validity_seconds)) {
-            throw new \InvalidArgumentException('non-nullable validity_seconds cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'validity_seconds');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('validity_seconds', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
 
-        if (($validity_seconds > 86400)) {
+        if (!is_null($validity_seconds) && ($validity_seconds > 86400)) {
             throw new \InvalidArgumentException('invalid value for $validity_seconds when calling SendRcsCampaign., must be smaller than or equal to 86400.');
         }
-        if (($validity_seconds < 30)) {
+        if (!is_null($validity_seconds) && ($validity_seconds < 30)) {
             throw new \InvalidArgumentException('invalid value for $validity_seconds when calling SendRcsCampaign., must be bigger than or equal to 30.');
         }
 

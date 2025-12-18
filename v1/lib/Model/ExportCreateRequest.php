@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * ExportCreateRequest Class Doc Comment
  *
  * @category Class
  * @description Request to create data export job
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class ExportCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
         'date_from' => '\DateTime',
         'date_to' => '\DateTime',
         'format' => 'string',
-        'filters' => '\BSG\\Api\\V1\Model\ExportCreateRequestFilters'
+        'filters' => '\BSG\Api\V1\Model\FiltersSchema'
     ];
 
     /**
@@ -515,7 +515,7 @@ class ExportCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets filters
      *
-     * @return \BSG\\Api\\V1\Model\ExportCreateRequestFilters|null
+     * @return \BSG\Api\V1\Model\FiltersSchema|null
      */
     public function getFilters()
     {
@@ -525,7 +525,7 @@ class ExportCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets filters
      *
-     * @param \BSG\\Api\\V1\Model\ExportCreateRequestFilters|null $filters filters
+     * @param \BSG\Api\V1\Model\FiltersSchema|null $filters filters
      *
      * @return self
      */

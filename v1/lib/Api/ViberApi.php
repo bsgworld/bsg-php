@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Api;
+namespace BSG\Api\V1\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V1\ApiException;
-use BSG\\Api\\V1\Configuration;
-use BSG\\Api\\V1\HeaderSelector;
-use BSG\\Api\\V1\ObjectSerializer;
+use BSG\Api\V1\ApiException;
+use BSG\Api\V1\Configuration;
+use BSG\Api\V1\HeaderSelector;
+use BSG\Api\V1\ObjectSerializer;
 
 /**
  * ViberApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -149,12 +149,12 @@ class ViberApi
      *
      * Check Viber message price
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPrice'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\ViberPriceCheckResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\ViberPriceCheckResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function viberCheckPrice($viber_price_check_request, string $contentType = self::contentTypes['viberCheckPrice'][0])
     {
@@ -167,12 +167,12 @@ class ViberApi
      *
      * Check Viber message price
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPrice'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\ViberPriceCheckResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\ViberPriceCheckResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function viberCheckPriceWithHttpInfo($viber_price_check_request, string $contentType = self::contentTypes['viberCheckPrice'][0])
     {
@@ -203,11 +203,11 @@ class ViberApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\ViberPriceCheckResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\ViberPriceCheckResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\ViberPriceCheckResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\ViberPriceCheckResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -225,16 +225,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\ViberPriceCheckResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\ViberPriceCheckResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -252,16 +252,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -279,16 +279,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -306,16 +306,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -333,16 +333,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -360,16 +360,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -387,16 +387,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -414,7 +414,7 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -433,7 +433,7 @@ class ViberApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\ViberPriceCheckResponse';
+            $returnType = '\BSG\Api\V1\Model\ViberPriceCheckResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -466,7 +466,7 @@ class ViberApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\ViberPriceCheckResponse',
+                        '\BSG\Api\V1\Model\ViberPriceCheckResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -474,7 +474,7 @@ class ViberApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -482,7 +482,7 @@ class ViberApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -490,7 +490,7 @@ class ViberApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class ViberApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -506,7 +506,7 @@ class ViberApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -514,7 +514,7 @@ class ViberApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -522,7 +522,7 @@ class ViberApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -537,7 +537,7 @@ class ViberApi
      *
      * Check Viber message price
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -558,7 +558,7 @@ class ViberApi
      *
      * Check Viber message price
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -566,7 +566,7 @@ class ViberApi
      */
     public function viberCheckPriceAsyncWithHttpInfo($viber_price_check_request, string $contentType = self::contentTypes['viberCheckPrice'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\ViberPriceCheckResponse';
+        $returnType = '\BSG\Api\V1\Model\ViberPriceCheckResponse';
         $request = $this->viberCheckPriceRequest($viber_price_check_request, $contentType);
 
         return $this->client
@@ -608,7 +608,7 @@ class ViberApi
     /**
      * Create request for operation 'viberCheckPrice'
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -706,12 +706,12 @@ class ViberApi
      *
      * Check Viber message price (PUT)
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPricePut'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\ViberPriceCheckResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\ViberPriceCheckResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function viberCheckPricePut($viber_price_check_request, string $contentType = self::contentTypes['viberCheckPricePut'][0])
     {
@@ -724,12 +724,12 @@ class ViberApi
      *
      * Check Viber message price (PUT)
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPricePut'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\ViberPriceCheckResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\ViberPriceCheckResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function viberCheckPricePutWithHttpInfo($viber_price_check_request, string $contentType = self::contentTypes['viberCheckPricePut'][0])
     {
@@ -760,11 +760,11 @@ class ViberApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\ViberPriceCheckResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\ViberPriceCheckResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\ViberPriceCheckResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\ViberPriceCheckResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -782,16 +782,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\ViberPriceCheckResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\ViberPriceCheckResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -809,16 +809,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -836,16 +836,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -863,16 +863,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -890,16 +890,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -917,16 +917,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -944,16 +944,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -971,7 +971,7 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -990,7 +990,7 @@ class ViberApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\ViberPriceCheckResponse';
+            $returnType = '\BSG\Api\V1\Model\ViberPriceCheckResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1023,7 +1023,7 @@ class ViberApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\ViberPriceCheckResponse',
+                        '\BSG\Api\V1\Model\ViberPriceCheckResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1031,7 +1031,7 @@ class ViberApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1039,7 +1039,7 @@ class ViberApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1047,7 +1047,7 @@ class ViberApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1055,7 +1055,7 @@ class ViberApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1063,7 +1063,7 @@ class ViberApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1071,7 +1071,7 @@ class ViberApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1079,7 +1079,7 @@ class ViberApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1094,7 +1094,7 @@ class ViberApi
      *
      * Check Viber message price (PUT)
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPricePut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1115,7 +1115,7 @@ class ViberApi
      *
      * Check Viber message price (PUT)
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPricePut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1123,7 +1123,7 @@ class ViberApi
      */
     public function viberCheckPricePutAsyncWithHttpInfo($viber_price_check_request, string $contentType = self::contentTypes['viberCheckPricePut'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\ViberPriceCheckResponse';
+        $returnType = '\BSG\Api\V1\Model\ViberPriceCheckResponse';
         $request = $this->viberCheckPricePutRequest($viber_price_check_request, $contentType);
 
         return $this->client
@@ -1165,7 +1165,7 @@ class ViberApi
     /**
      * Create request for operation 'viberCheckPricePut'
      *
-     * @param  \BSG\\Api\\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
+     * @param  \BSG\Api\V1\Model\ViberPriceCheckRequest $viber_price_check_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCheckPricePut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1263,12 +1263,12 @@ class ViberApi
      *
      * Send Viber message
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjects'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\ViberCreateResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\ViberCreateResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function viberCreateObjects($viber_create_request, string $contentType = self::contentTypes['viberCreateObjects'][0])
     {
@@ -1281,12 +1281,12 @@ class ViberApi
      *
      * Send Viber message
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjects'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\ViberCreateResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\ViberCreateResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function viberCreateObjectsWithHttpInfo($viber_create_request, string $contentType = self::contentTypes['viberCreateObjects'][0])
     {
@@ -1317,11 +1317,11 @@ class ViberApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\ViberCreateResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\ViberCreateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\ViberCreateResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\ViberCreateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1339,16 +1339,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\ViberCreateResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\ViberCreateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1366,16 +1366,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1393,16 +1393,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1420,16 +1420,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1447,16 +1447,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1474,16 +1474,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1501,16 +1501,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1528,7 +1528,7 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1547,7 +1547,7 @@ class ViberApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\ViberCreateResponse';
+            $returnType = '\BSG\Api\V1\Model\ViberCreateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1580,7 +1580,7 @@ class ViberApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\ViberCreateResponse',
+                        '\BSG\Api\V1\Model\ViberCreateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1588,7 +1588,7 @@ class ViberApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1596,7 +1596,7 @@ class ViberApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1604,7 +1604,7 @@ class ViberApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1612,7 +1612,7 @@ class ViberApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1620,7 +1620,7 @@ class ViberApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1628,7 +1628,7 @@ class ViberApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1636,7 +1636,7 @@ class ViberApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1651,7 +1651,7 @@ class ViberApi
      *
      * Send Viber message
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1672,7 +1672,7 @@ class ViberApi
      *
      * Send Viber message
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1680,7 +1680,7 @@ class ViberApi
      */
     public function viberCreateObjectsAsyncWithHttpInfo($viber_create_request, string $contentType = self::contentTypes['viberCreateObjects'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\ViberCreateResponse';
+        $returnType = '\BSG\Api\V1\Model\ViberCreateResponse';
         $request = $this->viberCreateObjectsRequest($viber_create_request, $contentType);
 
         return $this->client
@@ -1722,7 +1722,7 @@ class ViberApi
     /**
      * Create request for operation 'viberCreateObjects'
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1820,12 +1820,12 @@ class ViberApi
      *
      * Send Viber message (PUT)
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjectsPut'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\ViberCreateResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\ViberCreateResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function viberCreateObjectsPut($viber_create_request, string $contentType = self::contentTypes['viberCreateObjectsPut'][0])
     {
@@ -1838,12 +1838,12 @@ class ViberApi
      *
      * Send Viber message (PUT)
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjectsPut'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\ViberCreateResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\ViberCreateResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function viberCreateObjectsPutWithHttpInfo($viber_create_request, string $contentType = self::contentTypes['viberCreateObjectsPut'][0])
     {
@@ -1874,11 +1874,11 @@ class ViberApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\ViberCreateResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\ViberCreateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\ViberCreateResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\ViberCreateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1896,16 +1896,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\ViberCreateResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\ViberCreateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1923,16 +1923,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1950,16 +1950,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1977,16 +1977,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2004,16 +2004,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2031,16 +2031,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2058,16 +2058,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2085,7 +2085,7 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2104,7 +2104,7 @@ class ViberApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\ViberCreateResponse';
+            $returnType = '\BSG\Api\V1\Model\ViberCreateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2137,7 +2137,7 @@ class ViberApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\ViberCreateResponse',
+                        '\BSG\Api\V1\Model\ViberCreateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2145,7 +2145,7 @@ class ViberApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2153,7 +2153,7 @@ class ViberApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2161,7 +2161,7 @@ class ViberApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2169,7 +2169,7 @@ class ViberApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2177,7 +2177,7 @@ class ViberApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2185,7 +2185,7 @@ class ViberApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2193,7 +2193,7 @@ class ViberApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2208,7 +2208,7 @@ class ViberApi
      *
      * Send Viber message (PUT)
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjectsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2229,7 +2229,7 @@ class ViberApi
      *
      * Send Viber message (PUT)
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjectsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2237,7 +2237,7 @@ class ViberApi
      */
     public function viberCreateObjectsPutAsyncWithHttpInfo($viber_create_request, string $contentType = self::contentTypes['viberCreateObjectsPut'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\ViberCreateResponse';
+        $returnType = '\BSG\Api\V1\Model\ViberCreateResponse';
         $request = $this->viberCreateObjectsPutRequest($viber_create_request, $contentType);
 
         return $this->client
@@ -2279,7 +2279,7 @@ class ViberApi
     /**
      * Create request for operation 'viberCreateObjectsPut'
      *
-     * @param  \BSG\\Api\\V1\Model\ViberCreateRequest $viber_create_request (required)
+     * @param  \BSG\Api\V1\Model\ViberCreateRequest $viber_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberCreateObjectsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2379,9 +2379,9 @@ class ViberApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberGetBalance'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function viberGetBalance(string $contentType = self::contentTypes['viberGetBalance'][0])
     {
@@ -2396,9 +2396,9 @@ class ViberApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberGetBalance'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function viberGetBalanceWithHttpInfo(string $contentType = self::contentTypes['viberGetBalance'][0])
     {
@@ -2429,11 +2429,11 @@ class ViberApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\BalanceResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\BalanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\BalanceResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\BalanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2451,16 +2451,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\BalanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\BalanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2478,16 +2478,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2505,16 +2505,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2532,16 +2532,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2559,16 +2559,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2586,16 +2586,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2613,16 +2613,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2640,7 +2640,7 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2659,7 +2659,7 @@ class ViberApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+            $returnType = '\BSG\Api\V1\Model\BalanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2692,7 +2692,7 @@ class ViberApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\BalanceResponse',
+                        '\BSG\Api\V1\Model\BalanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2700,7 +2700,7 @@ class ViberApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2708,7 +2708,7 @@ class ViberApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2716,7 +2716,7 @@ class ViberApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2724,7 +2724,7 @@ class ViberApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2732,7 +2732,7 @@ class ViberApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2740,7 +2740,7 @@ class ViberApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2748,7 +2748,7 @@ class ViberApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2790,7 +2790,7 @@ class ViberApi
      */
     public function viberGetBalanceAsyncWithHttpInfo(string $contentType = self::contentTypes['viberGetBalance'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+        $returnType = '\BSG\Api\V1\Model\BalanceResponse';
         $request = $this->viberGetBalanceRequest($contentType);
 
         return $this->client
@@ -2917,9 +2917,9 @@ class ViberApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberGetBalancePost'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function viberGetBalancePost(string $contentType = self::contentTypes['viberGetBalancePost'][0])
     {
@@ -2934,9 +2934,9 @@ class ViberApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberGetBalancePost'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\BalanceResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\BalanceResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function viberGetBalancePostWithHttpInfo(string $contentType = self::contentTypes['viberGetBalancePost'][0])
     {
@@ -2967,11 +2967,11 @@ class ViberApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\BalanceResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\BalanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\BalanceResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\BalanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2989,16 +2989,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\BalanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\BalanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3016,16 +3016,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3043,16 +3043,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3070,16 +3070,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3097,16 +3097,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3124,16 +3124,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3151,16 +3151,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3178,7 +3178,7 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3197,7 +3197,7 @@ class ViberApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+            $returnType = '\BSG\Api\V1\Model\BalanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3230,7 +3230,7 @@ class ViberApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\BalanceResponse',
+                        '\BSG\Api\V1\Model\BalanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3238,7 +3238,7 @@ class ViberApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3246,7 +3246,7 @@ class ViberApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3254,7 +3254,7 @@ class ViberApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3262,7 +3262,7 @@ class ViberApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3270,7 +3270,7 @@ class ViberApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3278,7 +3278,7 @@ class ViberApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3286,7 +3286,7 @@ class ViberApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3328,7 +3328,7 @@ class ViberApi
      */
     public function viberGetBalancePostAsyncWithHttpInfo(string $contentType = self::contentTypes['viberGetBalancePost'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\BalanceResponse';
+        $returnType = '\BSG\Api\V1\Model\BalanceResponse';
         $request = $this->viberGetBalancePostRequest($contentType);
 
         return $this->client
@@ -3455,9 +3455,9 @@ class ViberApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberGetPrices'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\ViberPricesResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\ViberPricesResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function viberGetPrices(string $contentType = self::contentTypes['viberGetPrices'][0])
     {
@@ -3472,9 +3472,9 @@ class ViberApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberGetPrices'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\ViberPricesResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\ViberPricesResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function viberGetPricesWithHttpInfo(string $contentType = self::contentTypes['viberGetPrices'][0])
     {
@@ -3505,11 +3505,11 @@ class ViberApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\ViberPricesResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\ViberPricesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\ViberPricesResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\ViberPricesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3527,16 +3527,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\ViberPricesResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\ViberPricesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3554,16 +3554,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3581,16 +3581,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3608,16 +3608,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3635,16 +3635,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3662,16 +3662,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3689,16 +3689,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3716,7 +3716,7 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3735,7 +3735,7 @@ class ViberApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\ViberPricesResponse';
+            $returnType = '\BSG\Api\V1\Model\ViberPricesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3768,7 +3768,7 @@ class ViberApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\ViberPricesResponse',
+                        '\BSG\Api\V1\Model\ViberPricesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3776,7 +3776,7 @@ class ViberApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3784,7 +3784,7 @@ class ViberApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3792,7 +3792,7 @@ class ViberApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3800,7 +3800,7 @@ class ViberApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3808,7 +3808,7 @@ class ViberApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3816,7 +3816,7 @@ class ViberApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3824,7 +3824,7 @@ class ViberApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3866,7 +3866,7 @@ class ViberApi
      */
     public function viberGetPricesAsyncWithHttpInfo(string $contentType = self::contentTypes['viberGetPrices'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\ViberPricesResponse';
+        $returnType = '\BSG\Api\V1\Model\ViberPricesResponse';
         $request = $this->viberGetPricesRequest($contentType);
 
         return $this->client
@@ -3994,9 +3994,9 @@ class ViberApi
      * @param  string $reference External reference ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberGetStatusByExtId'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\ViberStatusResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\ViberStatusResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function viberGetStatusByExtId($reference, string $contentType = self::contentTypes['viberGetStatusByExtId'][0])
     {
@@ -4012,9 +4012,9 @@ class ViberApi
      * @param  string $reference External reference ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['viberGetStatusByExtId'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\ViberStatusResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\ViberStatusResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function viberGetStatusByExtIdWithHttpInfo($reference, string $contentType = self::contentTypes['viberGetStatusByExtId'][0])
     {
@@ -4045,11 +4045,11 @@ class ViberApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\ViberStatusResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\ViberStatusResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\ViberStatusResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\ViberStatusResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4067,16 +4067,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\ViberStatusResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\ViberStatusResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4094,16 +4094,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4121,16 +4121,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4148,16 +4148,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4175,16 +4175,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4202,16 +4202,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4229,16 +4229,16 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4256,7 +4256,7 @@ class ViberApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4275,7 +4275,7 @@ class ViberApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\ViberStatusResponse';
+            $returnType = '\BSG\Api\V1\Model\ViberStatusResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4308,7 +4308,7 @@ class ViberApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\ViberStatusResponse',
+                        '\BSG\Api\V1\Model\ViberStatusResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4316,7 +4316,7 @@ class ViberApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4324,7 +4324,7 @@ class ViberApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4332,7 +4332,7 @@ class ViberApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4340,7 +4340,7 @@ class ViberApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4348,7 +4348,7 @@ class ViberApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4356,7 +4356,7 @@ class ViberApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4364,7 +4364,7 @@ class ViberApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4408,7 +4408,7 @@ class ViberApi
      */
     public function viberGetStatusByExtIdAsyncWithHttpInfo($reference, string $contentType = self::contentTypes['viberGetStatusByExtId'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\ViberStatusResponse';
+        $returnType = '\BSG\Api\V1\Model\ViberStatusResponse';
         $request = $this->viberGetStatusByExtIdRequest($reference, $contentType);
 
         return $this->client

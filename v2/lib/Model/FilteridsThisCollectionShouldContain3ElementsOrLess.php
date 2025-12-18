@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * FilteridsThisCollectionShouldContain3ElementsOrLess Class Doc Comment
  *
  * @category Class
  * @description {filter.ids} - This collection should contain 3 elements or less
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class FilteridsThisCollectionShouldContain3ElementsOrLess implements ModelInterf
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\FilteridsThisCollectionShouldContain3ElementsOrLessErrors'
+        'errors' => '\BSG\Api\V2\Model\FilteridsThisCollectionShouldContain3ElementsOrLessErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class FilteridsThisCollectionShouldContain3ElementsOrLess implements ModelInterf
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\FilteridsThisCollectionShouldContain3ElementsOrLessErrors|null
+     * @return \BSG\Api\V2\Model\FilteridsThisCollectionShouldContain3ElementsOrLessErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class FilteridsThisCollectionShouldContain3ElementsOrLess implements ModelInterf
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\FilteridsThisCollectionShouldContain3ElementsOrLessErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\FilteridsThisCollectionShouldContain3ElementsOrLessErrors|null $errors errors
      *
      * @return self
      */

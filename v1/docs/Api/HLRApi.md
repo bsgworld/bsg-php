@@ -1,4 +1,4 @@
-# BSG\\Api\\V1\HLRApi
+# BSG\Api\V1\HLRApi
 
 All URIs are relative to https://api.sms-service.local, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to https://api.sms-service.local, except if the operation 
 ## `hlrCreateObjects()`
 
 ```php
-hlrCreateObjects($hlr_create_request): \BSG\\Api\\V1\Model\HlrCreateResponse
+hlrCreateObjects($hlr_create_request): \BSG\Api\V1\Model\HlrCreateResponse
 ```
 
 Perform HLR lookup
@@ -32,18 +32,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\HLRApi(
+$apiInstance = new BSG\Api\V1\Api\HLRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$hlr_create_request = new \BSG\\Api\\V1\Model\HlrCreateRequest(); // \BSG\\Api\\V1\Model\HlrCreateRequest
+$hlr_create_request = new \BSG\Api\V1\Model\HlrCreateRequest(); // \BSG\Api\V1\Model\HlrCreateRequest
 
 try {
     $result = $apiInstance->hlrCreateObjects($hlr_create_request);
@@ -57,11 +57,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hlr_create_request** | [**\BSG\\Api\\V1\Model\HlrCreateRequest**](../Model/HlrCreateRequest.md)|  | |
+| **hlr_create_request** | [**\BSG\Api\V1\Model\HlrCreateRequest**](../Model/HlrCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\HlrCreateResponse**](../Model/HlrCreateResponse.md)
+[**\BSG\Api\V1\Model\HlrCreateResponse**](../Model/HlrCreateResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ try {
 ## `hlrCreateObjectsPut()`
 
 ```php
-hlrCreateObjectsPut($hlr_create_request): \BSG\\Api\\V1\Model\HlrCreateResponse
+hlrCreateObjectsPut($hlr_create_request): \BSG\Api\V1\Model\HlrCreateResponse
 ```
 
 Perform HLR lookup (PUT)
@@ -94,18 +94,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\HLRApi(
+$apiInstance = new BSG\Api\V1\Api\HLRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$hlr_create_request = new \BSG\\Api\\V1\Model\HlrCreateRequest(); // \BSG\\Api\\V1\Model\HlrCreateRequest
+$hlr_create_request = new \BSG\Api\V1\Model\HlrCreateRequest(); // \BSG\Api\V1\Model\HlrCreateRequest
 
 try {
     $result = $apiInstance->hlrCreateObjectsPut($hlr_create_request);
@@ -119,11 +119,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hlr_create_request** | [**\BSG\\Api\\V1\Model\HlrCreateRequest**](../Model/HlrCreateRequest.md)|  | |
+| **hlr_create_request** | [**\BSG\Api\V1\Model\HlrCreateRequest**](../Model/HlrCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\HlrCreateResponse**](../Model/HlrCreateResponse.md)
+[**\BSG\Api\V1\Model\HlrCreateResponse**](../Model/HlrCreateResponse.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ try {
 ## `hlrCreateObjectsSync()`
 
 ```php
-hlrCreateObjectsSync($hlr_sync_request): \BSG\\Api\\V1\Model\HlrSyncResponse
+hlrCreateObjectsSync($hlr_sync_request): \BSG\Api\V1\Model\HlrSyncResponse
 ```
 
 Perform synchronous HLR lookup
@@ -156,18 +156,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\HLRApi(
+$apiInstance = new BSG\Api\V1\Api\HLRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$hlr_sync_request = new \BSG\\Api\\V1\Model\HlrSyncRequest(); // \BSG\\Api\\V1\Model\HlrSyncRequest
+$hlr_sync_request = new \BSG\Api\V1\Model\HlrSyncRequest(); // \BSG\Api\V1\Model\HlrSyncRequest
 
 try {
     $result = $apiInstance->hlrCreateObjectsSync($hlr_sync_request);
@@ -181,11 +181,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hlr_sync_request** | [**\BSG\\Api\\V1\Model\HlrSyncRequest**](../Model/HlrSyncRequest.md)|  | |
+| **hlr_sync_request** | [**\BSG\Api\V1\Model\HlrSyncRequest**](../Model/HlrSyncRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\HlrSyncResponse**](../Model/HlrSyncResponse.md)
+[**\BSG\Api\V1\Model\HlrSyncResponse**](../Model/HlrSyncResponse.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ try {
 ## `hlrCreateObjectsSyncPut()`
 
 ```php
-hlrCreateObjectsSyncPut($hlr_sync_request): \BSG\\Api\\V1\Model\HlrSyncResponse
+hlrCreateObjectsSyncPut($hlr_sync_request): \BSG\Api\V1\Model\HlrSyncResponse
 ```
 
 Perform synchronous HLR lookup (PUT)
@@ -218,18 +218,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\HLRApi(
+$apiInstance = new BSG\Api\V1\Api\HLRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$hlr_sync_request = new \BSG\\Api\\V1\Model\HlrSyncRequest(); // \BSG\\Api\\V1\Model\HlrSyncRequest
+$hlr_sync_request = new \BSG\Api\V1\Model\HlrSyncRequest(); // \BSG\Api\V1\Model\HlrSyncRequest
 
 try {
     $result = $apiInstance->hlrCreateObjectsSyncPut($hlr_sync_request);
@@ -243,11 +243,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **hlr_sync_request** | [**\BSG\\Api\\V1\Model\HlrSyncRequest**](../Model/HlrSyncRequest.md)|  | |
+| **hlr_sync_request** | [**\BSG\Api\V1\Model\HlrSyncRequest**](../Model/HlrSyncRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\HlrSyncResponse**](../Model/HlrSyncResponse.md)
+[**\BSG\Api\V1\Model\HlrSyncResponse**](../Model/HlrSyncResponse.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ try {
 ## `hlrGetBalance()`
 
 ```php
-hlrGetBalance(): \BSG\\Api\\V1\Model\BalanceResponse
+hlrGetBalance(): \BSG\Api\V1\Model\BalanceResponse
 ```
 
 Get account balance
@@ -280,12 +280,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\HLRApi(
+$apiInstance = new BSG\Api\V1\Api\HLRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -306,7 +306,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\BSG\Api\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ This endpoint does not need any parameter.
 ## `hlrGetBalancePost()`
 
 ```php
-hlrGetBalancePost(): \BSG\\Api\\V1\Model\BalanceResponse
+hlrGetBalancePost(): \BSG\Api\V1\Model\BalanceResponse
 ```
 
 Get account balance
@@ -339,12 +339,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\HLRApi(
+$apiInstance = new BSG\Api\V1\Api\HLRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -365,7 +365,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\BSG\Api\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ This endpoint does not need any parameter.
 ## `hlrGetPrices()`
 
 ```php
-hlrGetPrices(): \BSG\\Api\\V1\Model\HlrPricesResponse
+hlrGetPrices(): \BSG\Api\V1\Model\HlrPricesResponse
 ```
 
 Get HLR pricing
@@ -398,12 +398,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\HLRApi(
+$apiInstance = new BSG\Api\V1\Api\HLRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -424,7 +424,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\HlrPricesResponse**](../Model/HlrPricesResponse.md)
+[**\BSG\Api\V1\Model\HlrPricesResponse**](../Model/HlrPricesResponse.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ This endpoint does not need any parameter.
 ## `hlrGetStatusByExtId()`
 
 ```php
-hlrGetStatusByExtId($reference): \BSG\\Api\\V1\Model\HlrStatusResponse
+hlrGetStatusByExtId($reference): \BSG\Api\V1\Model\HlrStatusResponse
 ```
 
 Get HLR result by reference
@@ -457,18 +457,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\HLRApi(
+$apiInstance = new BSG\Api\V1\Api\HLRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$reference = unique_ref_123; // string | External reference ID
+| $reference = unique_ref_123; // string | External reference ID |
 
 try {
     $result = $apiInstance->hlrGetStatusByExtId($reference);
@@ -486,7 +486,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\HlrStatusResponse**](../Model/HlrStatusResponse.md)
+[**\BSG\Api\V1\Model\HlrStatusResponse**](../Model/HlrStatusResponse.md)
 
 ### Authorization
 

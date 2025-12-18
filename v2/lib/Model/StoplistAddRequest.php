@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * StoplistAddRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class StoplistAddRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'stoplist_add_request';
+    protected static $openAPIModelName = 'StoplistAddRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -303,6 +303,10 @@ class StoplistAddRequest implements ModelInterface, ArrayAccess, \JsonSerializab
         if ($this->container['phones'] === null) {
             $invalidProperties[] = "'phones' can't be null";
         }
+        if ((count($this->container['phones']) > 1000)) {
+            $invalidProperties[] = "invalid value for 'phones', number of items must be less than or equal to 1000.";
+        }
+
         if ($this->container['types'] === null) {
             $invalidProperties[] = "'types' can't be null";
         }
@@ -344,7 +348,9 @@ class StoplistAddRequest implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable phones cannot be null');
         }
 
-
+        if ((count($phones) > 1000)) {
+            throw new \InvalidArgumentException('invalid value for $phones when calling StoplistAddRequest., number of items must be less than or equal to 1000.');
+        }
         $this->container['phones'] = $phones;
 
         return $this;

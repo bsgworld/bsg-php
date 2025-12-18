@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * AccountBalance200Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class AccountBalance200Response implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'account_balance_200_response';
+    protected static $openAPIModelName = 'AccountBalance200Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class AccountBalance200Response implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\BalanceSchema'
+        'data' => '\BSG\Api\V2\Model\BalanceSchema'
     ];
 
     /**
@@ -292,7 +292,7 @@ class AccountBalance200Response implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\BalanceSchema|null
+     * @return \BSG\Api\V2\Model\BalanceSchema|null
      */
     public function getData()
     {
@@ -302,7 +302,7 @@ class AccountBalance200Response implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\BalanceSchema|null $data data
+     * @param \BSG\Api\V2\Model\BalanceSchema|null $data data
      *
      * @return self
      */

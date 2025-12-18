@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,15 +26,15 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
-use \BSG\\Api\\V2\ObjectSerializer;
+namespace BSG\Api\V2\Model;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * OtpStatus Class Doc Comment
  *
  * @category Class
  * @description Authentication status. Possible values: pending (authentication session successfully created and pending)
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

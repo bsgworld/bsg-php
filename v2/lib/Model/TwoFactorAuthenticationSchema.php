@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TwoFactorAuthenticationSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TwoFactorAuthenticationSchema implements ModelInterface, ArrayAccess, \Jso
     protected static $openAPITypes = [
         'id' => 'string',
         'recipient' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\OtpStatus',
-        'channel' => '\BSG\\Api\\V2\Model\OtpChannel',
+        'status' => '\BSG\Api\V2\Model\OtpStatus',
+        'channel' => '\BSG\Api\V2\Model\OtpChannel',
         'sender' => 'string',
         'sender_alt' => 'string',
         'message_text' => 'string',
@@ -451,7 +451,7 @@ class TwoFactorAuthenticationSchema implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\OtpStatus|null
+     * @return \BSG\Api\V2\Model\OtpStatus|null
      */
     public function getStatus()
     {
@@ -461,7 +461,7 @@ class TwoFactorAuthenticationSchema implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\OtpStatus|null $status status
+     * @param \BSG\Api\V2\Model\OtpStatus|null $status status
      *
      * @return self
      */
@@ -478,7 +478,7 @@ class TwoFactorAuthenticationSchema implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets channel
      *
-     * @return \BSG\\Api\\V2\Model\OtpChannel|null
+     * @return \BSG\Api\V2\Model\OtpChannel|null
      */
     public function getChannel()
     {
@@ -488,7 +488,7 @@ class TwoFactorAuthenticationSchema implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets channel
      *
-     * @param \BSG\\Api\\V2\Model\OtpChannel|null $channel channel
+     * @param \BSG\Api\V2\Model\OtpChannel|null $channel channel
      *
      * @return self
      */

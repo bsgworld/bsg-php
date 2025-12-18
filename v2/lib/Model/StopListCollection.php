@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * StopListCollection Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class StopListCollection implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'phone' => 'int',
+        'phone' => 'string',
         'created_at' => '\DateTime',
         'sms_stoplist' => 'bool',
         'viber_stoplist' => 'bool',
@@ -313,6 +313,14 @@ class StopListCollection implements ModelInterface, ArrayAccess, \JsonSerializab
             $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 1.";
         }
 
+        if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) > 15)) {
+            $invalidProperties[] = "invalid value for 'phone', the character length must be smaller than or equal to 15.";
+        }
+
+        if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) < 9)) {
+            $invalidProperties[] = "invalid value for 'phone', the character length must be bigger than or equal to 9.";
+        }
+
         return $invalidProperties;
     }
 
@@ -363,7 +371,7 @@ class StopListCollection implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets phone
      *
-     * @return int|null
+     * @return string|null
      */
     public function getPhone()
     {
@@ -373,7 +381,7 @@ class StopListCollection implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets phone
      *
-     * @param int|null $phone phone
+     * @param string|null $phone phone
      *
      * @return self
      */
@@ -382,7 +390,12 @@ class StopListCollection implements ModelInterface, ArrayAccess, \JsonSerializab
         if (is_null($phone)) {
             throw new \InvalidArgumentException('non-nullable phone cannot be null');
         }
-
+        if ((mb_strlen($phone) > 15)) {
+            throw new \InvalidArgumentException('invalid length for $phone when calling StopListCollection., must be smaller than or equal to 15.');
+        }
+        if ((mb_strlen($phone) < 9)) {
+            throw new \InvalidArgumentException('invalid length for $phone when calling StopListCollection., must be bigger than or equal to 9.');
+        }
 
         $this->container['phone'] = $phone;
 

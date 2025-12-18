@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TypeTheValueYouSelectedIsNotAValidChoice1 Class Doc Comment
  *
  * @category Class
  * @description {type} - The value you selected is not a valid choice
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TypeTheValueYouSelectedIsNotAValidChoice1 implements ModelInterface, Array
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'any_field' => '\BSG\\Api\\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors'
+        'any_field' => '\BSG\Api\V2\Model\TypeTheValueYouSelectedIsNotAValidChoice1AnyField'
     ];
 
     /**
@@ -327,7 +327,7 @@ class TypeTheValueYouSelectedIsNotAValidChoice1 implements ModelInterface, Array
     /**
      * Gets any_field
      *
-     * @return \BSG\\Api\\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors|null
+     * @return \BSG\Api\V2\Model\TypeTheValueYouSelectedIsNotAValidChoice1AnyField|null
      */
     public function getAnyField()
     {
@@ -337,7 +337,7 @@ class TypeTheValueYouSelectedIsNotAValidChoice1 implements ModelInterface, Array
     /**
      * Sets any_field
      *
-     * @param \BSG\\Api\\V2\Model\TypeTheValueYouSelectedIsNotAValidChoiceErrors|null $any_field any_field
+     * @param \BSG\Api\V2\Model\TypeTheValueYouSelectedIsNotAValidChoice1AnyField|null $any_field any_field
      *
      * @return self
      */

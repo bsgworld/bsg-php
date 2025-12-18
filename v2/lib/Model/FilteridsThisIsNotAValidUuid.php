@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * FilteridsThisIsNotAValidUuid Class Doc Comment
  *
  * @category Class
  * @description {filter.ids} - This is not a valid UUID
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class FilteridsThisIsNotAValidUuid implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\FilteridsThisIsNotAValidUuidErrors'
+        'errors' => '\BSG\Api\V2\Model\FilteridsThisIsNotAValidUuidErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class FilteridsThisIsNotAValidUuid implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\FilteridsThisIsNotAValidUuidErrors|null
+     * @return \BSG\Api\V2\Model\FilteridsThisIsNotAValidUuidErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class FilteridsThisIsNotAValidUuid implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\FilteridsThisIsNotAValidUuidErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\FilteridsThisIsNotAValidUuidErrors|null $errors errors
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * SmsMassStatusResponse Class Doc Comment
  *
  * @category Class
  * @description Response with status information for multiple SMS messages
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class SmsMassStatusResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'result' => '\BSG\\Api\\V1\Model\SmsMassStatusResponseResultInner[]'
+        'result' => '\BSG\Api\V1\Model\ResultschemaResultItem2[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class SmsMassStatusResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets result
      *
-     * @return \BSG\\Api\\V1\Model\SmsMassStatusResponseResultInner[]
+     * @return \BSG\Api\V1\Model\ResultschemaResultItem2[]
      */
     public function getResult()
     {
@@ -307,7 +307,7 @@ class SmsMassStatusResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets result
      *
-     * @param \BSG\\Api\\V1\Model\SmsMassStatusResponseResultInner[] $result Array of message status objects
+     * @param \BSG\Api\V1\Model\ResultschemaResultItem2[] $result Array of message status objects
      *
      * @return self
      */

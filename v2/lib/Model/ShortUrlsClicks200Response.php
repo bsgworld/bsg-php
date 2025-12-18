@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ShortUrlsClicks200Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class ShortUrlsClicks200Response implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'short_urls_clicks_200_response';
+    protected static $openAPIModelName = 'ShortUrlsClicks200Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class ShortUrlsClicks200Response implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\ClickResource[]',
+        'data' => '\BSG\Api\V2\Model\ClickResource[]',
         'total' => 'int'
     ];
 
@@ -299,7 +299,7 @@ class ShortUrlsClicks200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\ClickResource[]|null
+     * @return \BSG\Api\V2\Model\ClickResource[]|null
      */
     public function getData()
     {
@@ -309,7 +309,7 @@ class ShortUrlsClicks200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\ClickResource[]|null $data data
+     * @param \BSG\Api\V2\Model\ClickResource[]|null $data data
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\EmailApi
+# BSG\Api\V2\EmailApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `emailSend()`
 
 ```php
-emailSend($send_email): \BSG\\Api\\V2\Model\EmailResponse
+emailSend($send_email): \BSG\Api\V2\Model\EmailResponse
 ```
 
 Send Email
@@ -26,16 +26,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\EmailApi(
+$apiInstance = new BSG\Api\V2\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$send_email = {"to":["user@test.com"],"from":"Test.email 11_22 <user@test1.email.bsg.world>","subject":"test1","htmlbody":"<html><head><title>link to Symbl.cc</title></head><body><h1>Visit site</h1>Visit site <a href=\"https://symbl.cc\">Symbl.cc</a> for additional information.</body></html>"}; // \BSG\\Api\\V2\Model\SendEmail
+$send_email = {"to":["user@test.com"],"from":"Test.email 11_22 <user@test1.email.bsg.world>","subject":"test1","htmlbody":"<html><head><title>link to Symbl.cc</title></head><body><h1>Visit site</h1>Visit site <a href=\"https://symbl.cc\">Symbl.cc</a> for additional information.</body></html>"}; // \BSG\Api\V2\Model\SendEmail
 
 try {
     $result = $apiInstance->emailSend($send_email);
@@ -49,11 +49,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_email** | [**\BSG\\Api\\V2\Model\SendEmail**](../Model/SendEmail.md)|  | |
+| **send_email** | [**\BSG\Api\V2\Model\SendEmail**](../Model/SendEmail.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\EmailResponse**](../Model/EmailResponse.md)
+[**\BSG\Api\V2\Model\EmailResponse**](../Model/EmailResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ try {
 ## `emailTemplateSend()`
 
 ```php
-emailTemplateSend($send_template_email): \BSG\\Api\\V2\Model\EmailResponse
+emailTemplateSend($send_template_email): \BSG\Api\V2\Model\EmailResponse
 ```
 
 Send Email template
@@ -86,16 +86,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\EmailApi(
+$apiInstance = new BSG\Api\V2\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$send_template_email = {"to":["user@test.com"],"from":"Test.email 11_22 <user@test1.email.bsg.world>","subject":"test1","template_id":19,"template_content":{"recipients_name":"Test User","company_name":"Company Name"}}; // \BSG\\Api\\V2\Model\SendTemplateEmail
+$send_template_email = {"to":["user@test.com"],"from":"Test.email 11_22 <user@test1.email.bsg.world>","subject":"test1","template_id":19,"template_content":{"recipients_name":"Test User","company_name":"Company Name"}}; // \BSG\Api\V2\Model\SendTemplateEmail
 
 try {
     $result = $apiInstance->emailTemplateSend($send_template_email);
@@ -109,11 +109,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **send_template_email** | [**\BSG\\Api\\V2\Model\SendTemplateEmail**](../Model/SendTemplateEmail.md)|  | |
+| **send_template_email** | [**\BSG\Api\V2\Model\SendTemplateEmail**](../Model/SendTemplateEmail.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\EmailResponse**](../Model/EmailResponse.md)
+[**\BSG\Api\V2\Model\EmailResponse**](../Model/EmailResponse.md)
 
 ### Authorization
 

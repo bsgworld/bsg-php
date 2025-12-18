@@ -1,4 +1,4 @@
-# BSG\\Api\\V1\CommonApi
+# BSG\Api\V1\CommonApi
 
 All URIs are relative to https://api.sms-service.local, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to https://api.sms-service.local, except if the operation 
 ## `commonGetBalanceBase()`
 
 ```php
-commonGetBalanceBase(): \BSG\\Api\\V1\Model\BalanceResponse
+commonGetBalanceBase(): \BSG\Api\V1\Model\BalanceResponse
 ```
 
 Get account balance (basic)
@@ -32,12 +32,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\CommonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\BSG\Api\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 ## `commonGetBalanceBasePost()`
 
 ```php
-commonGetBalanceBasePost(): \BSG\\Api\\V1\Model\BalanceResponse
+commonGetBalanceBasePost(): \BSG\Api\V1\Model\BalanceResponse
 ```
 
 Get account balance (basic) (POST)
@@ -91,12 +91,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\CommonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\BSG\Api\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ This endpoint does not need any parameter.
 ## `commonGetBalanceV2()`
 
 ```php
-commonGetBalanceV2(): \BSG\\Api\\V1\Model\BalanceResponse
+commonGetBalanceV2(): \BSG\Api\V1\Model\BalanceResponse
 ```
 
 Get account balance (extended)
@@ -150,12 +150,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\CommonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -176,7 +176,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\BSG\Api\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ This endpoint does not need any parameter.
 ## `commonGetBalanceV2Post()`
 
 ```php
-commonGetBalanceV2Post(): \BSG\\Api\\V1\Model\BalanceResponse
+commonGetBalanceV2Post(): \BSG\Api\V1\Model\BalanceResponse
 ```
 
 Get account balance (extended) (POST)
@@ -209,12 +209,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\CommonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -235,7 +235,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\BSG\Api\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ This endpoint does not need any parameter.
 ## `commonGetPrice()`
 
 ```php
-commonGetPrice($mcc, $mnc, $product, $tariff_code): \BSG\\Api\\V1\Model\CommonPriceResponse
+commonGetPrice($mcc, $mnc, $product, $tariff_code): \BSG\Api\V1\Model\CommonPriceResponse
 ```
 
 Get SMS price
@@ -268,21 +268,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\CommonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$mcc = 255; // string | Mobile Country Code
-$mnc = 01; // string | Mobile Network Code
-$product = sms; // string | Service type
-$tariff_code = 9; // string | Tariff code
+| $mcc = 255; // string | Mobile Country Code |
+| $mnc = 01; // string | Mobile Network Code |
+| $product = sms; // string | Service type |
+| $tariff_code = 9; // string | Tariff code |
 
 try {
     $result = $apiInstance->commonGetPrice($mcc, $mnc, $product, $tariff_code);
@@ -303,7 +303,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\CommonPriceResponse**](../Model/CommonPriceResponse.md)
+[**\BSG\Api\V1\Model\CommonPriceResponse**](../Model/CommonPriceResponse.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ try {
 ## `commonGetPricePost()`
 
 ```php
-commonGetPricePost($common_price_request): \BSG\\Api\\V1\Model\CommonPriceResponse
+commonGetPricePost($common_price_request): \BSG\Api\V1\Model\CommonPriceResponse
 ```
 
 Get SMS price (POST)
@@ -336,18 +336,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\CommonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$common_price_request = {"mcc":"255","mnc":"01","product":"sms","tariff_code":"9"}; // \BSG\\Api\\V1\Model\CommonPriceRequest
+$common_price_request = {"mcc":"255","mnc":"01","product":"sms","tariff_code":"9"}; // \BSG\Api\V1\Model\CommonPriceRequest
 
 try {
     $result = $apiInstance->commonGetPricePost($common_price_request);
@@ -361,11 +361,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **common_price_request** | [**\BSG\\Api\\V1\Model\CommonPriceRequest**](../Model/CommonPriceRequest.md)|  | |
+| **common_price_request** | [**\BSG\Api\V1\Model\CommonPriceRequest**](../Model/CommonPriceRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\CommonPriceResponse**](../Model/CommonPriceResponse.md)
+[**\BSG\Api\V1\Model\CommonPriceResponse**](../Model/CommonPriceResponse.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ try {
 ## `commonGetTariff()`
 
 ```php
-commonGetTariff(): \BSG\\Api\\V1\Model\CommonTariffResponse
+commonGetTariff(): \BSG\Api\V1\Model\CommonTariffResponse
 ```
 
 Get tariff information
@@ -398,12 +398,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\CommonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -424,7 +424,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\CommonTariffResponse**](../Model/CommonTariffResponse.md)
+[**\BSG\Api\V1\Model\CommonTariffResponse**](../Model/CommonTariffResponse.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ This endpoint does not need any parameter.
 ## `commonGetTariffPost()`
 
 ```php
-commonGetTariffPost(): \BSG\\Api\\V1\Model\CommonTariffResponse
+commonGetTariffPost(): \BSG\Api\V1\Model\CommonTariffResponse
 ```
 
 Get tariff information (POST)
@@ -457,12 +457,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\CommonApi(
+$apiInstance = new BSG\Api\V1\Api\CommonApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -483,7 +483,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\CommonTariffResponse**](../Model/CommonTariffResponse.md)
+[**\BSG\Api\V1\Model\CommonTariffResponse**](../Model/CommonTariffResponse.md)
 
 ### Authorization
 

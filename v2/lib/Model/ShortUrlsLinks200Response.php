@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ShortUrlsLinks200Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class ShortUrlsLinks200Response implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'short_urls_links_200_response';
+    protected static $openAPIModelName = 'ShortUrlsLinks200Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class ShortUrlsLinks200Response implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\ShortUrlLinkSchema[]',
+        'data' => '\BSG\Api\V2\Model\ShortUrlLinkSchema[]',
         'total' => 'int'
     ];
 
@@ -281,6 +281,10 @@ class ShortUrlsLinks200Response implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
+        if (!is_null($this->container['data']) && (count($this->container['data']) < 0)) {
+            $invalidProperties[] = "invalid value for 'data', number of items must be greater than or equal to 0.";
+        }
+
         return $invalidProperties;
     }
 
@@ -299,7 +303,7 @@ class ShortUrlsLinks200Response implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\ShortUrlLinkSchema[]|null
+     * @return \BSG\Api\V2\Model\ShortUrlLinkSchema[]|null
      */
     public function getData()
     {
@@ -309,7 +313,7 @@ class ShortUrlsLinks200Response implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\ShortUrlLinkSchema[]|null $data data
+     * @param \BSG\Api\V2\Model\ShortUrlLinkSchema[]|null $data data
      *
      * @return self
      */
@@ -320,6 +324,9 @@ class ShortUrlsLinks200Response implements ModelInterface, ArrayAccess, \JsonSer
         }
 
 
+        if ((count($data) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $data when calling ShortUrlsLinks200Response., number of items must be greater than or equal to 0.');
+        }
         $this->container['data'] = $data;
 
         return $this;

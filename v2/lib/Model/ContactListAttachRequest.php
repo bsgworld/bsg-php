@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactListAttachRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class ContactListAttachRequest implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact_list_attach_request';
+    protected static $openAPIModelName = 'ContactListAttachRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -284,9 +284,25 @@ class ContactListAttachRequest implements ModelInterface, ArrayAccess, \JsonSeri
         if ($this->container['contacts'] === null) {
             $invalidProperties[] = "'contacts' can't be null";
         }
+        if ((count($this->container['contacts']) > 200)) {
+            $invalidProperties[] = "invalid value for 'contacts', number of items must be less than or equal to 200.";
+        }
+
+        if ((count($this->container['contacts']) < 1)) {
+            $invalidProperties[] = "invalid value for 'contacts', number of items must be greater than or equal to 1.";
+        }
+
         if ($this->container['groups'] === null) {
             $invalidProperties[] = "'groups' can't be null";
         }
+        if ((count($this->container['groups']) > 100)) {
+            $invalidProperties[] = "invalid value for 'groups', number of items must be less than or equal to 100.";
+        }
+
+        if ((count($this->container['groups']) < 1)) {
+            $invalidProperties[] = "invalid value for 'groups', number of items must be greater than or equal to 1.";
+        }
+
         return $invalidProperties;
     }
 
@@ -325,7 +341,12 @@ class ContactListAttachRequest implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable contacts cannot be null');
         }
 
-
+        if ((count($contacts) > 200)) {
+            throw new \InvalidArgumentException('invalid value for $contacts when calling ContactListAttachRequest., number of items must be less than or equal to 200.');
+        }
+        if ((count($contacts) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $contacts when calling ContactListAttachRequest., number of items must be greater than or equal to 1.');
+        }
         $this->container['contacts'] = $contacts;
 
         return $this;
@@ -354,7 +375,12 @@ class ContactListAttachRequest implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable groups cannot be null');
         }
 
-
+        if ((count($groups) > 100)) {
+            throw new \InvalidArgumentException('invalid value for $groups when calling ContactListAttachRequest., number of items must be less than or equal to 100.');
+        }
+        if ((count($groups) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $groups when calling ContactListAttachRequest., number of items must be greater than or equal to 1.');
+        }
         $this->container['groups'] = $groups;
 
         return $this;

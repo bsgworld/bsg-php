@@ -1,4 +1,4 @@
-# BSG\\Api\\V2\ShortLinksApi
+# BSG\Api\V2\ShortLinksApi
 
 All URIs are relative to https://one-api.bsg.world, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://one-api.bsg.world, except if the operation defi
 ## `shortUrlsClicks()`
 
 ```php
-shortUrlsClicks($from, $to, $page, $per_page, $campaign): \BSG\\Api\\V2\Model\ShortUrlsClicks200Response
+shortUrlsClicks($from, $to, $page, $per_page, $campaign): \BSG\Api\V2\Model\ShortUrlsClicks200Response
 ```
 
 List of clicks
@@ -30,20 +30,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ShortLinksApi(
+$apiInstance = new BSG\Api\V2\Api\ShortLinksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$from = 2022-04-28; // string | From date
-$to = 2022-04-28; // string | To date
-$page = 1; // int | Get items starting from this page.
-$per_page = 20; // int | The number of items in the page. Possible values are from 10 to 500.
-$campaign = 56; // int | Campaign id to get only clicks on short link sent as part on [sms campaign](#tag/Campaign-SMS)
+| $from = 2022-04-28; // string | From date |
+| $to = 2022-04-28; // string | To date |
+| $page = 1; // int | Get items starting from this page. |
+| $per_page = 20; // int | The number of items in the page. Possible values are from 10 to 500. |
+| $campaign = 56; // int | Campaign id to get only clicks on short link sent as part on [sms campaign](#tag/Campaign-SMS) |
 
 try {
     $result = $apiInstance->shortUrlsClicks($from, $to, $page, $per_page, $campaign);
@@ -65,7 +65,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ShortUrlsClicks200Response**](../Model/ShortUrlsClicks200Response.md)
+[**\BSG\Api\V2\Model\ShortUrlsClicks200Response**](../Model/ShortUrlsClicks200Response.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ try {
 ## `shortUrlsLink()`
 
 ```php
-shortUrlsLink($uuid): \BSG\\Api\\V2\Model\ShortUrlsLink200Response
+shortUrlsLink($uuid): \BSG\Api\V2\Model\ShortUrlsLink200Response
 ```
 
 Get short link statistic
@@ -96,16 +96,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ShortLinksApi(
+$apiInstance = new BSG\Api\V2\Api\ShortLinksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string | Uuid of entity
+| $uuid = 'uuid_example'; // string | Uuid of entity |
 
 try {
     $result = $apiInstance->shortUrlsLink($uuid);
@@ -123,7 +123,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ShortUrlsLink200Response**](../Model/ShortUrlsLink200Response.md)
+[**\BSG\Api\V2\Model\ShortUrlsLink200Response**](../Model/ShortUrlsLink200Response.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ try {
 ## `shortUrlsLinkCreate()`
 
 ```php
-shortUrlsLinkCreate($link_store_request): \BSG\\Api\\V2\Model\ShortUrlsLinkUpdate200Response
+shortUrlsLinkCreate($link_store_request): \BSG\Api\V2\Model\ShortUrlsLinkCreate201Response
 ```
 
 Create short link
@@ -156,16 +156,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ShortLinksApi(
+$apiInstance = new BSG\Api\V2\Api\ShortLinksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$link_store_request = new \BSG\\Api\\V2\Model\LinkStoreRequest(); // \BSG\\Api\\V2\Model\LinkStoreRequest
+$link_store_request = new \BSG\Api\V2\Model\LinkStoreRequest(); // \BSG\Api\V2\Model\LinkStoreRequest
 
 try {
     $result = $apiInstance->shortUrlsLinkCreate($link_store_request);
@@ -179,11 +179,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **link_store_request** | [**\BSG\\Api\\V2\Model\LinkStoreRequest**](../Model/LinkStoreRequest.md)|  | |
+| **link_store_request** | [**\BSG\Api\V2\Model\LinkStoreRequest**](../Model/LinkStoreRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ShortUrlsLinkUpdate200Response**](../Model/ShortUrlsLinkUpdate200Response.md)
+[**\BSG\Api\V2\Model\ShortUrlsLinkCreate201Response**](../Model/ShortUrlsLinkCreate201Response.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ try {
 ## `shortUrlsLinkDelete()`
 
 ```php
-shortUrlsLinkDelete($uuid)
+shortUrlsLinkDelete($uuid): object
 ```
 
 Remove short link
@@ -216,19 +216,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ShortLinksApi(
+$apiInstance = new BSG\Api\V2\Api\ShortLinksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string | Uuid of entity
+| $uuid = 'uuid_example'; // string | Uuid of entity |
 
 try {
-    $apiInstance->shortUrlsLinkDelete($uuid);
+    $result = $apiInstance->shortUrlsLinkDelete($uuid);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShortLinksApi->shortUrlsLinkDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -242,7 +243,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -260,7 +261,7 @@ void (empty response body)
 ## `shortUrlsLinkUpdate()`
 
 ```php
-shortUrlsLinkUpdate($uuid, $link_update_request): \BSG\\Api\\V2\Model\ShortUrlsLinkUpdate200Response
+shortUrlsLinkUpdate($uuid, $link_update_request): \BSG\Api\V2\Model\ShortUrlsLinkUpdate200Response
 ```
 
 Update short link
@@ -275,17 +276,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ShortLinksApi(
+$apiInstance = new BSG\Api\V2\Api\ShortLinksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string | Uuid of entity
-$link_update_request = {"name":"New name"}; // \BSG\\Api\\V2\Model\LinkUpdateRequest
+| $uuid = 'uuid_example'; // string | Uuid of entity |
+$link_update_request = {"name":"New name"}; // \BSG\Api\V2\Model\LinkUpdateRequest
 
 try {
     $result = $apiInstance->shortUrlsLinkUpdate($uuid, $link_update_request);
@@ -300,11 +301,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **uuid** | **string**| Uuid of entity | |
-| **link_update_request** | [**\BSG\\Api\\V2\Model\LinkUpdateRequest**](../Model/LinkUpdateRequest.md)|  | |
+| **link_update_request** | [**\BSG\Api\V2\Model\LinkUpdateRequest**](../Model/LinkUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ShortUrlsLinkUpdate200Response**](../Model/ShortUrlsLinkUpdate200Response.md)
+[**\BSG\Api\V2\Model\ShortUrlsLinkUpdate200Response**](../Model/ShortUrlsLinkUpdate200Response.md)
 
 ### Authorization
 
@@ -322,7 +323,7 @@ try {
 ## `shortUrlsLinks()`
 
 ```php
-shortUrlsLinks($from, $to, $page, $per_page): \BSG\\Api\\V2\Model\ShortUrlsLinks200Response
+shortUrlsLinks($from, $to, $page, $per_page): \BSG\Api\V2\Model\ShortUrlsLinks200Response
 ```
 
 List of short links
@@ -337,19 +338,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: ExternalAuth
-$config = BSG\\Api\\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = BSG\Api\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new BSG\\Api\\V2\Api\ShortLinksApi(
+$apiInstance = new BSG\Api\V2\Api\ShortLinksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$from = 2022-04-28; // string | From date
-$to = 2022-04-28; // string | To date
-$page = 1; // int | Get items starting from this page.
-$per_page = 20; // int | The number of items in the page. Possible values are from 10 to 500.
+| $from = 2022-04-28; // string | From date |
+| $to = 2022-04-28; // string | To date |
+| $page = 1; // int | Get items starting from this page. |
+| $per_page = 20; // int | The number of items in the page. Possible values are from 10 to 500. |
 
 try {
     $result = $apiInstance->shortUrlsLinks($from, $to, $page, $per_page);
@@ -370,7 +371,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V2\Model\ShortUrlsLinks200Response**](../Model/ShortUrlsLinks200Response.md)
+[**\BSG\Api\V2\Model\ShortUrlsLinks200Response**](../Model/ShortUrlsLinks200Response.md)
 
 ### Authorization
 

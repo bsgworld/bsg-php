@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * RcsMessage Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,11 +57,11 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'phone' => '\BSG\\Api\\V2\Model\Phone',
+        'phone' => '\BSG\Api\V2\Model\Phone',
         'sender' => 'string',
-        'options' => '\BSG\\Api\\V2\Model\Options',
-        'alternative_channel' => '\BSG\\Api\\V2\Model\AlternativeChannel',
-        'callback_url' => 'mixed',
+        'options' => '\BSG\Api\V2\Model\Options',
+        'alternative_channel' => '\BSG\Api\V2\Model\AlternativeChannel',
+        'callback_url' => 'string',
         'tariff_code' => 'int',
         'validity_seconds' => 'int',
         'validity' => 'int',
@@ -99,7 +99,7 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'sender' => false,
         'options' => false,
         'alternative_channel' => false,
-        'callback_url' => true,
+        'callback_url' => false,
         'tariff_code' => true,
         'validity_seconds' => true,
         'validity' => true,
@@ -396,7 +396,7 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phone
      *
-     * @return \BSG\\Api\\V2\Model\Phone
+     * @return \BSG\Api\V2\Model\Phone
      */
     public function getPhone()
     {
@@ -406,7 +406,7 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phone
      *
-     * @param \BSG\\Api\\V2\Model\Phone $phone phone
+     * @param \BSG\Api\V2\Model\Phone $phone phone
      *
      * @return self
      */
@@ -457,7 +457,7 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets options
      *
-     * @return \BSG\\Api\\V2\Model\Options
+     * @return \BSG\Api\V2\Model\Options
      */
     public function getOptions()
     {
@@ -467,7 +467,7 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets options
      *
-     * @param \BSG\\Api\\V2\Model\Options $options options
+     * @param \BSG\Api\V2\Model\Options $options options
      *
      * @return self
      */
@@ -484,7 +484,7 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets alternative_channel
      *
-     * @return \BSG\\Api\\V2\Model\AlternativeChannel|null
+     * @return \BSG\Api\V2\Model\AlternativeChannel|null
      */
     public function getAlternativeChannel()
     {
@@ -494,7 +494,7 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets alternative_channel
      *
-     * @param \BSG\\Api\\V2\Model\AlternativeChannel|null $alternative_channel alternative_channel
+     * @param \BSG\Api\V2\Model\AlternativeChannel|null $alternative_channel alternative_channel
      *
      * @return self
      */
@@ -511,7 +511,7 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets callback_url
      *
-     * @return mixed|null
+     * @return string|null
      */
     public function getCallbackUrl()
     {
@@ -521,23 +521,16 @@ class RcsMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets callback_url
      *
-     * @param mixed|null $callback_url Link to get the delivery status of messages. If this parameter is specified in the method, it will take precedence over the value specified in the “Callback URL” field in the Personal Area.
+     * @param string|null $callback_url Link to get the delivery status of messages. If this parameter is specified in the method, it will take precedence over the value specified in the “Callback URL” field in the Personal Area.
      *
      * @return self
      */
     public function setCallbackUrl($callback_url)
     {
         if (is_null($callback_url)) {
-            array_push($this->openAPINullablesSetToNull, 'callback_url');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('callback_url', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable callback_url cannot be null');
         }
-        if (!is_null($callback_url) && (mb_strlen($callback_url) > 100)) {
+        if ((mb_strlen($callback_url) > 100)) {
             throw new \InvalidArgumentException('invalid length for $callback_url when calling RcsMessage., must be smaller than or equal to 100.');
         }
 

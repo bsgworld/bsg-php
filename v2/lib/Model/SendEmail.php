@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SendEmail Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,12 +57,12 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'to' => 'string[]',
+        'to' => '\BSG\Api\V2\Model\EmailTo',
         'from' => 'string',
         'subject' => 'string',
         'body' => 'string',
         'htmlbody' => 'string',
-        'inlines' => '\BSG\\Api\\V2\Model\Inline[]'
+        'inlines' => '\BSG\Api\V2\Model\EmailInlines'
     ];
 
     /**
@@ -73,7 +73,7 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'to' => 'email',
+        'to' => null,
         'from' => 'email',
         'subject' => null,
         'body' => null,
@@ -312,14 +312,6 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['to'] === null) {
             $invalidProperties[] = "'to' can't be null";
         }
-        if ((count($this->container['to']) > 50)) {
-            $invalidProperties[] = "invalid value for 'to', number of items must be less than or equal to 50.";
-        }
-
-        if ((count($this->container['to']) < 1)) {
-            $invalidProperties[] = "invalid value for 'to', number of items must be greater than or equal to 1.";
-        }
-
         if ($this->container['from'] === null) {
             $invalidProperties[] = "'from' can't be null";
         }
@@ -349,10 +341,6 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'htmlbody', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['inlines']) && (count($this->container['inlines']) > 100)) {
-            $invalidProperties[] = "invalid value for 'inlines', number of items must be less than or equal to 100.";
-        }
-
         return $invalidProperties;
     }
 
@@ -371,7 +359,7 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets to
      *
-     * @return string[]
+     * @return \BSG\Api\V2\Model\EmailTo
      */
     public function getTo()
     {
@@ -381,7 +369,7 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets to
      *
-     * @param string[] $to List of email addresses to send the email to
+     * @param \BSG\Api\V2\Model\EmailTo $to to
      *
      * @return self
      */
@@ -389,13 +377,6 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         if (is_null($to)) {
             throw new \InvalidArgumentException('non-nullable to cannot be null');
-        }
-
-        if ((count($to) > 50)) {
-            throw new \InvalidArgumentException('invalid value for $to when calling SendEmail., number of items must be less than or equal to 50.');
-        }
-        if ((count($to) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $to when calling SendEmail., number of items must be greater than or equal to 1.');
         }
         $this->container['to'] = $to;
 
@@ -545,7 +526,7 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets inlines
      *
-     * @return \BSG\\Api\\V2\Model\Inline[]|null
+     * @return \BSG\Api\V2\Model\EmailInlines|null
      */
     public function getInlines()
     {
@@ -555,7 +536,7 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets inlines
      *
-     * @param \BSG\\Api\\V2\Model\Inline[]|null $inlines A list of inline attachments
+     * @param \BSG\Api\V2\Model\EmailInlines|null $inlines inlines
      *
      * @return self
      */
@@ -563,10 +544,6 @@ class SendEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         if (is_null($inlines)) {
             throw new \InvalidArgumentException('non-nullable inlines cannot be null');
-        }
-
-        if ((count($inlines) > 100)) {
-            throw new \InvalidArgumentException('invalid value for $inlines when calling SendEmail., number of items must be less than or equal to 100.');
         }
         $this->container['inlines'] = $inlines;
 

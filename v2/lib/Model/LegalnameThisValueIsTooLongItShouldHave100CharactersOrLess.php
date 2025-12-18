@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * LegalnameThisValueIsTooLongItShouldHave100CharactersOrLess Class Doc Comment
  *
  * @category Class
  * @description {legal_name} - This value is too long. It should have 100 characters or less.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class LegalnameThisValueIsTooLongItShouldHave100CharactersOrLess implements Mode
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\LegalnameThisValueIsTooLongItShouldHave100CharactersOrLessErrors'
+        'errors' => '\BSG\Api\V2\Model\LegalnameThisValueIsTooLongItShouldHave100CharactersOrLessErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class LegalnameThisValueIsTooLongItShouldHave100CharactersOrLess implements Mode
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\LegalnameThisValueIsTooLongItShouldHave100CharactersOrLessErrors|null
+     * @return \BSG\Api\V2\Model\LegalnameThisValueIsTooLongItShouldHave100CharactersOrLessErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class LegalnameThisValueIsTooLongItShouldHave100CharactersOrLess implements Mode
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\LegalnameThisValueIsTooLongItShouldHave100CharactersOrLessErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\LegalnameThisValueIsTooLongItShouldHave100CharactersOrLessErrors|null $errors errors
      *
      * @return self
      */

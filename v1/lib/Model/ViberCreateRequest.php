@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * ViberCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ViberCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'messages' => '\BSG\\Api\\V1\Model\ViberCreateRequestMessagesInner[]',
+        'messages' => '\BSG\Api\V1\Model\MessagesschemaMessagesItem[]',
         'tariff' => 'int',
         'validity' => 'int'
     ];
@@ -326,7 +326,7 @@ class ViberCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets messages
      *
-     * @return \BSG\\Api\\V1\Model\ViberCreateRequestMessagesInner[]
+     * @return \BSG\Api\V1\Model\MessagesschemaMessagesItem[]
      */
     public function getMessages()
     {
@@ -336,7 +336,7 @@ class ViberCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets messages
      *
-     * @param \BSG\\Api\\V1\Model\ViberCreateRequestMessagesInner[] $messages Array of Viber messages
+     * @param \BSG\Api\V1\Model\MessagesschemaMessagesItem[] $messages Array of Viber messages
      *
      * @return self
      */

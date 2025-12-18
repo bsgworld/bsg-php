@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * Options Class Doc Comment
  *
  * @category Class
  * @description The object contains information about the message content.      Either cards or text must be provided
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class Options implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cards' => '\BSG\\Api\\V2\Model\Card[]',
+        'cards' => '\BSG\Api\V2\Model\Card[]',
         'text' => 'string'
     ];
 
@@ -322,7 +322,7 @@ class Options implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets cards
      *
-     * @return \BSG\\Api\\V2\Model\Card[]
+     * @return \BSG\Api\V2\Model\Card[]
      */
     public function getCards()
     {
@@ -332,7 +332,7 @@ class Options implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cards
      *
-     * @param \BSG\\Api\\V2\Model\Card[] $cards The array contains information about the card. The maximum number of cards is 5. Messages with one card are called “Single card”, messages with 2 or more cards are called “Carousel”. Depending on the chosen tariff, the number of cards may be limited (for example, you can send only Single cards).  Details will be provided by manager.
+     * @param \BSG\Api\V2\Model\Card[] $cards The array contains information about the card. The maximum number of cards is 5. Messages with one card are called “Single card”, messages with 2 or more cards are called “Carousel”. Depending on the chosen tariff, the number of cards may be limited (for example, you can send only Single cards).  Details will be provided by manager.
      *
      * @return self
      */

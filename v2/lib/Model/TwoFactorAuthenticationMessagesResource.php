@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TwoFactorAuthenticationMessagesResource Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class TwoFactorAuthenticationMessagesResource implements ModelInterface, ArrayAc
     protected static $openAPITypes = [
         'id' => 'string',
         'recipient' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\OtpStatus',
-        'channel' => '\BSG\\Api\\V2\Model\OtpChannel',
+        'status' => '\BSG\Api\V2\Model\OtpStatus',
+        'channel' => '\BSG\Api\V2\Model\OtpChannel',
         'sender' => 'string',
         'sender_alt' => 'string',
         'message_text' => 'string',
@@ -73,7 +73,7 @@ class TwoFactorAuthenticationMessagesResource implements ModelInterface, ArrayAc
         'expired_at' => '\DateTime',
         'created_at' => '\DateTime',
         'finished_at' => '\DateTime',
-        'messages' => '\BSG\\Api\\V2\Model\TwoFactorMessageResource[]'
+        'messages' => '\BSG\Api\V2\Model\TwoFactorMessageResource[]'
     ];
 
     /**
@@ -458,7 +458,7 @@ class TwoFactorAuthenticationMessagesResource implements ModelInterface, ArrayAc
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\OtpStatus|null
+     * @return \BSG\Api\V2\Model\OtpStatus|null
      */
     public function getStatus()
     {
@@ -468,7 +468,7 @@ class TwoFactorAuthenticationMessagesResource implements ModelInterface, ArrayAc
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\OtpStatus|null $status status
+     * @param \BSG\Api\V2\Model\OtpStatus|null $status status
      *
      * @return self
      */
@@ -485,7 +485,7 @@ class TwoFactorAuthenticationMessagesResource implements ModelInterface, ArrayAc
     /**
      * Gets channel
      *
-     * @return \BSG\\Api\\V2\Model\OtpChannel|null
+     * @return \BSG\Api\V2\Model\OtpChannel|null
      */
     public function getChannel()
     {
@@ -495,7 +495,7 @@ class TwoFactorAuthenticationMessagesResource implements ModelInterface, ArrayAc
     /**
      * Sets channel
      *
-     * @param \BSG\\Api\\V2\Model\OtpChannel|null $channel channel
+     * @param \BSG\Api\V2\Model\OtpChannel|null $channel channel
      *
      * @return self
      */
@@ -843,7 +843,7 @@ class TwoFactorAuthenticationMessagesResource implements ModelInterface, ArrayAc
     /**
      * Gets messages
      *
-     * @return \BSG\\Api\\V2\Model\TwoFactorMessageResource[]|null
+     * @return \BSG\Api\V2\Model\TwoFactorMessageResource[]|null
      */
     public function getMessages()
     {
@@ -853,7 +853,7 @@ class TwoFactorAuthenticationMessagesResource implements ModelInterface, ArrayAc
     /**
      * Sets messages
      *
-     * @param \BSG\\Api\\V2\Model\TwoFactorMessageResource[]|null $messages messages
+     * @param \BSG\Api\V2\Model\TwoFactorMessageResource[]|null $messages messages
      *
      * @return self
      */

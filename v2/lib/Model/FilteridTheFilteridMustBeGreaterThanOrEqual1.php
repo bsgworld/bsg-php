@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * FilteridTheFilteridMustBeGreaterThanOrEqual1 Class Doc Comment
  *
  * @category Class
  * @description {filter.id} - The filter.id must be greater than or equal 1
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class FilteridTheFilteridMustBeGreaterThanOrEqual1 implements ModelInterface, Ar
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\FilteridTheFilteridMustBeGreaterThanOrEqual1Errors'
+        'errors' => '\BSG\Api\V2\Model\FilteridTheFilteridMustBeGreaterThanOrEqual1Errors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class FilteridTheFilteridMustBeGreaterThanOrEqual1 implements ModelInterface, Ar
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\FilteridTheFilteridMustBeGreaterThanOrEqual1Errors|null
+     * @return \BSG\Api\V2\Model\FilteridTheFilteridMustBeGreaterThanOrEqual1Errors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class FilteridTheFilteridMustBeGreaterThanOrEqual1 implements ModelInterface, Ar
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\FilteridTheFilteridMustBeGreaterThanOrEqual1Errors|null $errors errors
+     * @param \BSG\Api\V2\Model\FilteridTheFilteridMustBeGreaterThanOrEqual1Errors|null $errors errors
      *
      * @return self
      */

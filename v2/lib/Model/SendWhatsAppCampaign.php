@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SendWhatsAppCampaign Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,11 +57,11 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'phones' => '\BSG\\Api\\V2\Model\Phone[]',
+        'phones' => '\BSG\Api\V2\Model\Phone[]',
         'sender' => 'string',
         'type' => 'string',
-        'template' => '\BSG\\Api\\V2\Model\Template',
-        'alternative_channel' => '\BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel',
+        'template' => '\BSG\Api\V2\Model\Template',
+        'alternative_channel' => '\BSG\Api\V2\Model\SendWhatsAppCampaignAlternativeChannel',
         'start_at' => '\DateTime',
         'add_to_contact_book' => 'bool',
         'check_stop_list' => 'bool'
@@ -96,7 +96,7 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
         'type' => false,
         'template' => false,
         'alternative_channel' => true,
-        'start_at' => false,
+        'start_at' => true,
         'add_to_contact_book' => false,
         'check_stop_list' => false
     ];
@@ -388,7 +388,7 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets phones
      *
-     * @return \BSG\\Api\\V2\Model\Phone[]
+     * @return \BSG\Api\V2\Model\Phone[]
      */
     public function getPhones()
     {
@@ -398,7 +398,7 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets phones
      *
-     * @param \BSG\\Api\\V2\Model\Phone[] $phones $phones
+     * @param \BSG\Api\V2\Model\Phone[] $phones $phones
      *
      * @return self
      */
@@ -493,7 +493,7 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets template
      *
-     * @return \BSG\\Api\\V2\Model\Template|null
+     * @return \BSG\Api\V2\Model\Template|null
      */
     public function getTemplate()
     {
@@ -503,7 +503,7 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets template
      *
-     * @param \BSG\\Api\\V2\Model\Template|null $template template
+     * @param \BSG\Api\V2\Model\Template|null $template template
      *
      * @return self
      */
@@ -520,7 +520,7 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets alternative_channel
      *
-     * @return \BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel|null
+     * @return \BSG\Api\V2\Model\SendWhatsAppCampaignAlternativeChannel|null
      */
     public function getAlternativeChannel()
     {
@@ -530,7 +530,7 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets alternative_channel
      *
-     * @param \BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel|null $alternative_channel alternative_channel
+     * @param \BSG\Api\V2\Model\SendWhatsAppCampaignAlternativeChannel|null $alternative_channel alternative_channel
      *
      * @return self
      */
@@ -571,7 +571,14 @@ class SendWhatsAppCampaign implements ModelInterface, ArrayAccess, \JsonSerializ
     public function setStartAt($start_at)
     {
         if (is_null($start_at)) {
-            throw new \InvalidArgumentException('non-nullable start_at cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'start_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('start_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['start_at'] = $start_at;
 

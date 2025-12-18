@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactsThisValueShouldBeOfTypeInteger Class Doc Comment
  *
  * @category Class
  * @description {contacts} - This value should be of type integer.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ContactsThisValueShouldBeOfTypeInteger implements ModelInterface, ArrayAcc
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\ContactsThisValueShouldBeOfTypeIntegerErrors'
+        'errors' => '\BSG\Api\V2\Model\ContactsIntValidationErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class ContactsThisValueShouldBeOfTypeInteger implements ModelInterface, ArrayAcc
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\ContactsThisValueShouldBeOfTypeIntegerErrors|null
+     * @return \BSG\Api\V2\Model\ContactsIntValidationErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class ContactsThisValueShouldBeOfTypeInteger implements ModelInterface, ArrayAcc
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\ContactsThisValueShouldBeOfTypeIntegerErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\ContactsIntValidationErrors|null $errors errors
      *
      * @return self
      */

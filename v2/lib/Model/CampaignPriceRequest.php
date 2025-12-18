@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * CampaignPriceRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class CampaignPriceRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'campaign_price_request';
+    protected static $openAPIModelName = 'CampaignPriceRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,7 +61,7 @@ class CampaignPriceRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'text' => 'string',
         'tariff_code' => 'int',
         'groups' => 'int[]',
-        'messages' => '\BSG\\Api\\V2\Model\CampaignPriceRequestMessagesInner[]'
+        'messages' => '\BSG\Api\V2\Model\CampaignPriceRequestMessagesItem[]'
     ];
 
     /**
@@ -436,7 +436,7 @@ class CampaignPriceRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets messages
      *
-     * @return \BSG\\Api\\V2\Model\CampaignPriceRequestMessagesInner[]|null
+     * @return \BSG\Api\V2\Model\CampaignPriceRequestMessagesItem[]|null
      */
     public function getMessages()
     {
@@ -446,7 +446,7 @@ class CampaignPriceRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets messages
      *
-     * @param \BSG\\Api\\V2\Model\CampaignPriceRequestMessagesInner[]|null $messages messages
+     * @param \BSG\Api\V2\Model\CampaignPriceRequestMessagesItem[]|null $messages messages
      *
      * @return self
      */

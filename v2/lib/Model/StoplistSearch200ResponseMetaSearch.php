@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * StoplistSearch200ResponseMetaSearch Class Doc Comment
  *
  * @category Class
  * @description Search criteria
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -50,7 +50,7 @@ class StoplistSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'stoplist_search_200_response_meta_search';
+    protected static $openAPIModelName = 'StoplistSearch200ResponseMetaSearch';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,8 @@ class StoplistSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'field' => '\BSG\\Api\\V2\Model\StoplistSearchField',
-        'operator' => '\BSG\\Api\\V2\Model\SearchOperator',
+        'field' => '\BSG\Api\V2\Model\StoplistSearchField',
+        'operator' => '\BSG\Api\V2\Model\SearchOperator',
         'value' => 'string'
     ];
 
@@ -307,7 +307,7 @@ class StoplistSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
     /**
      * Gets field
      *
-     * @return \BSG\\Api\\V2\Model\StoplistSearchField|null
+     * @return \BSG\Api\V2\Model\StoplistSearchField|null
      */
     public function getField()
     {
@@ -317,7 +317,7 @@ class StoplistSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
     /**
      * Sets field
      *
-     * @param \BSG\\Api\\V2\Model\StoplistSearchField|null $field field
+     * @param \BSG\Api\V2\Model\StoplistSearchField|null $field field
      *
      * @return self
      */
@@ -334,7 +334,7 @@ class StoplistSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
     /**
      * Gets operator
      *
-     * @return \BSG\\Api\\V2\Model\SearchOperator|null
+     * @return \BSG\Api\V2\Model\SearchOperator|null
      */
     public function getOperator()
     {
@@ -344,7 +344,7 @@ class StoplistSearch200ResponseMetaSearch implements ModelInterface, ArrayAccess
     /**
      * Sets operator
      *
-     * @param \BSG\\Api\\V2\Model\SearchOperator|null $operator operator
+     * @param \BSG\Api\V2\Model\SearchOperator|null $operator operator
      *
      * @return self
      */

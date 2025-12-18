@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0 Class Doc Comment
  *
  * @category Class
  * @description The search.value must be an integer The search.value must be greater than 0
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0 implements M
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0Errors'
+        'errors' => '\BSG\Api\V2\Model\TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0Errors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0 implements M
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0Errors|null
+     * @return \BSG\Api\V2\Model\TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0Errors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0 implements M
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0Errors|null $errors errors
+     * @param \BSG\Api\V2\Model\TheSearchvalueMustBeAnIntegerTheSearchvalueMustBeGreaterThan0Errors|null $errors errors
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactListSearch200ResponseMeta Class Doc Comment
  *
  * @category Class
  * @description Information about search criteria and total results count
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -50,7 +50,7 @@ class ContactListSearch200ResponseMeta implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact_list_search_200_response_meta';
+    protected static $openAPIModelName = 'ContactListSearch200ResponseMeta';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,8 @@ class ContactListSearch200ResponseMeta implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'page' => '\BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage',
-        'search' => '\BSG\\Api\\V2\Model\ContactListSearch200ResponseMetaSearch'
+        'page' => '\BSG\Api\V2\Model\ContactListSearch200ResponseMetaPage',
+        'search' => '\BSG\Api\V2\Model\ContactListSearch200ResponseMetaSearch'
     ];
 
     /**
@@ -300,7 +300,7 @@ class ContactListSearch200ResponseMeta implements ModelInterface, ArrayAccess, \
     /**
      * Gets page
      *
-     * @return \BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage|null
+     * @return \BSG\Api\V2\Model\ContactListSearch200ResponseMetaPage|null
      */
     public function getPage()
     {
@@ -310,7 +310,7 @@ class ContactListSearch200ResponseMeta implements ModelInterface, ArrayAccess, \
     /**
      * Sets page
      *
-     * @param \BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage|null $page page
+     * @param \BSG\Api\V2\Model\ContactListSearch200ResponseMetaPage|null $page page
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class ContactListSearch200ResponseMeta implements ModelInterface, ArrayAccess, \
     /**
      * Gets search
      *
-     * @return \BSG\\Api\\V2\Model\ContactListSearch200ResponseMetaSearch|null
+     * @return \BSG\Api\V2\Model\ContactListSearch200ResponseMetaSearch|null
      */
     public function getSearch()
     {
@@ -337,7 +337,7 @@ class ContactListSearch200ResponseMeta implements ModelInterface, ArrayAccess, \
     /**
      * Sets search
      *
-     * @param \BSG\\Api\\V2\Model\ContactListSearch200ResponseMetaSearch|null $search search
+     * @param \BSG\Api\V2\Model\ContactListSearch200ResponseMetaSearch|null $search search
      *
      * @return self
      */

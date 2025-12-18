@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SenderRequests200ResponseMeta Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class SenderRequests200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'sender_requests_200_response_meta';
+    protected static $openAPIModelName = 'SenderRequests200ResponseMeta';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class SenderRequests200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'page' => '\BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage'
+        'page' => '\BSG\Api\V2\Model\SenderRequests200ResponseMetaPage'
     ];
 
     /**
@@ -292,7 +292,7 @@ class SenderRequests200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets page
      *
-     * @return \BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage|null
+     * @return \BSG\Api\V2\Model\SenderRequests200ResponseMetaPage|null
      */
     public function getPage()
     {
@@ -302,7 +302,7 @@ class SenderRequests200ResponseMeta implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets page
      *
-     * @param \BSG\\Api\\V2\Model\ContactsSearch200ResponseMetaPage|null $page page
+     * @param \BSG\Api\V2\Model\SenderRequests200ResponseMetaPage|null $page page
      *
      * @return self
      */

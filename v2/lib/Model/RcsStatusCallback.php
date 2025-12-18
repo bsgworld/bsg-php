@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * RcsStatusCallback Class Doc Comment
  *
  * @category Class
  * @description RCS status callback object
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,7 +66,7 @@ class RcsStatusCallback implements ModelInterface, ArrayAccess, \JsonSerializabl
         'time_in' => '\DateTime',
         'time_sent' => '\DateTime',
         'time_dr' => '\DateTime',
-        'status' => '\BSG\\Api\\V2\Model\MessageStatus',
+        'status' => '\BSG\Api\V2\Model\MessageStatus',
         'price' => 'float',
         'currency' => 'string'
     ];
@@ -617,7 +617,7 @@ class RcsStatusCallback implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\MessageStatus|null
+     * @return \BSG\Api\V2\Model\MessageStatus|null
      */
     public function getStatus()
     {
@@ -627,7 +627,7 @@ class RcsStatusCallback implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\MessageStatus|null $status status
+     * @param \BSG\Api\V2\Model\MessageStatus|null $status status
      *
      * @return self
      */

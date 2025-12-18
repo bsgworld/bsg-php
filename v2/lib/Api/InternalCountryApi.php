@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * InternalCountryApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -71,7 +71,7 @@ class InternalCountryApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'c065d8cee4013124d36c455d76c5e2a8' => [
+        'internalCountriesList' => [
             'application/json',
         ],
     ];
@@ -123,38 +123,38 @@ class InternalCountryApi
     }
 
     /**
-     * Operation c065d8cee4013124d36c455d76c5e2a8
+     * Operation internalCountriesList
      *
      * Get countries list
      *
      * @param  string|null $service service (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCountriesList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\C065d8cee4013124d36c455d76c5e2a8200Response
+     * @return \BSG\Api\V2\Model\InternalCountriesList200Response
      */
-    public function c065d8cee4013124d36c455d76c5e2a8($service = null, string $contentType = self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'][0])
+    public function internalCountriesList($service = null, string $contentType = self::contentTypes['internalCountriesList'][0])
     {
-        list($response) = $this->c065d8cee4013124d36c455d76c5e2a8WithHttpInfo($service, $contentType);
+        list($response) = $this->internalCountriesListWithHttpInfo($service, $contentType);
         return $response;
     }
 
     /**
-     * Operation c065d8cee4013124d36c455d76c5e2a8WithHttpInfo
+     * Operation internalCountriesListWithHttpInfo
      *
      * Get countries list
      *
      * @param  string|null $service (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCountriesList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\C065d8cee4013124d36c455d76c5e2a8200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\InternalCountriesList200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function c065d8cee4013124d36c455d76c5e2a8WithHttpInfo($service = null, string $contentType = self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'][0])
+    public function internalCountriesListWithHttpInfo($service = null, string $contentType = self::contentTypes['internalCountriesList'][0])
     {
-        $request = $this->c065d8cee4013124d36c455d76c5e2a8Request($service, $contentType);
+        $request = $this->internalCountriesListRequest($service, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -181,11 +181,11 @@ class InternalCountryApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\C065d8cee4013124d36c455d76c5e2a8200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\InternalCountriesList200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\C065d8cee4013124d36c455d76c5e2a8200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\InternalCountriesList200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -203,7 +203,7 @@ class InternalCountryApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\C065d8cee4013124d36c455d76c5e2a8200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\InternalCountriesList200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -222,7 +222,7 @@ class InternalCountryApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\C065d8cee4013124d36c455d76c5e2a8200Response';
+            $returnType = '\BSG\Api\V2\Model\InternalCountriesList200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -255,7 +255,7 @@ class InternalCountryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\C065d8cee4013124d36c455d76c5e2a8200Response',
+                        '\BSG\Api\V2\Model\InternalCountriesList200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -266,19 +266,19 @@ class InternalCountryApi
     }
 
     /**
-     * Operation c065d8cee4013124d36c455d76c5e2a8Async
+     * Operation internalCountriesListAsync
      *
      * Get countries list
      *
      * @param  string|null $service (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCountriesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function c065d8cee4013124d36c455d76c5e2a8Async($service = null, string $contentType = self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'][0])
+    public function internalCountriesListAsync($service = null, string $contentType = self::contentTypes['internalCountriesList'][0])
     {
-        return $this->c065d8cee4013124d36c455d76c5e2a8AsyncWithHttpInfo($service, $contentType)
+        return $this->internalCountriesListAsyncWithHttpInfo($service, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -287,20 +287,20 @@ class InternalCountryApi
     }
 
     /**
-     * Operation c065d8cee4013124d36c455d76c5e2a8AsyncWithHttpInfo
+     * Operation internalCountriesListAsyncWithHttpInfo
      *
      * Get countries list
      *
      * @param  string|null $service (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCountriesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function c065d8cee4013124d36c455d76c5e2a8AsyncWithHttpInfo($service = null, string $contentType = self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'][0])
+    public function internalCountriesListAsyncWithHttpInfo($service = null, string $contentType = self::contentTypes['internalCountriesList'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\C065d8cee4013124d36c455d76c5e2a8200Response';
-        $request = $this->c065d8cee4013124d36c455d76c5e2a8Request($service, $contentType);
+        $returnType = '\BSG\Api\V2\Model\InternalCountriesList200Response';
+        $request = $this->internalCountriesListRequest($service, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -339,15 +339,15 @@ class InternalCountryApi
     }
 
     /**
-     * Create request for operation 'c065d8cee4013124d36c455d76c5e2a8'
+     * Create request for operation 'internalCountriesList'
      *
      * @param  string|null $service (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalCountriesList'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function c065d8cee4013124d36c455d76c5e2a8Request($service = null, string $contentType = self::contentTypes['c065d8cee4013124d36c455d76c5e2a8'][0])
+    public function internalCountriesListRequest($service = null, string $contentType = self::contentTypes['internalCountriesList'][0])
     {
 
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * MnpPricesResponse Class Doc Comment
  *
  * @category Class
  * @description MNP pricing information for available destinations
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class MnpPricesResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'error' => 'int',
         'error_description' => 'string',
-        'prices' => '\BSG\\Api\\V1\Model\MnpPricesResponsePricesInner[]'
+        'prices' => '\BSG\Api\V1\Model\PricesschemaPricesItem2[]'
     ];
 
     /**
@@ -371,7 +371,7 @@ class MnpPricesResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets prices
      *
-     * @return \BSG\\Api\\V1\Model\MnpPricesResponsePricesInner[]
+     * @return \BSG\Api\V1\Model\PricesschemaPricesItem2[]
      */
     public function getPrices()
     {
@@ -381,7 +381,7 @@ class MnpPricesResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets prices
      *
-     * @param \BSG\\Api\\V1\Model\MnpPricesResponsePricesInner[] $prices List of available MNP destinations with pricing
+     * @param \BSG\Api\V1\Model\PricesschemaPricesItem2[] $prices List of available MNP destinations with pricing
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ShortUrlsDomains200Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class ShortUrlsDomains200Response implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'short_urls_domains_200_response';
+    protected static $openAPIModelName = 'ShortUrlsDomains200Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class ShortUrlsDomains200Response implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\ShortUrlDomainListSchema[]',
+        'data' => '\BSG\Api\V2\Model\ShortUrlDomainListSchema[]',
         'total' => 'int'
     ];
 
@@ -281,6 +281,10 @@ class ShortUrlsDomains200Response implements ModelInterface, ArrayAccess, \JsonS
     {
         $invalidProperties = [];
 
+        if (!is_null($this->container['data']) && (count($this->container['data']) < 0)) {
+            $invalidProperties[] = "invalid value for 'data', number of items must be greater than or equal to 0.";
+        }
+
         return $invalidProperties;
     }
 
@@ -299,7 +303,7 @@ class ShortUrlsDomains200Response implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\ShortUrlDomainListSchema[]|null
+     * @return \BSG\Api\V2\Model\ShortUrlDomainListSchema[]|null
      */
     public function getData()
     {
@@ -309,7 +313,7 @@ class ShortUrlsDomains200Response implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\ShortUrlDomainListSchema[]|null $data data
+     * @param \BSG\Api\V2\Model\ShortUrlDomainListSchema[]|null $data data
      *
      * @return self
      */
@@ -320,6 +324,9 @@ class ShortUrlsDomains200Response implements ModelInterface, ArrayAccess, \JsonS
         }
 
 
+        if ((count($data) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $data when calling ShortUrlsDomains200Response., number of items must be greater than or equal to 0.');
+        }
         $this->container['data'] = $data;
 
         return $this;

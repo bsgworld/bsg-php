@@ -1,4 +1,4 @@
-# BSG\\Api\\V1\ViberApi
+# BSG\Api\V1\ViberApi
 
 All URIs are relative to https://api.sms-service.local, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to https://api.sms-service.local, except if the operation 
 ## `viberCheckPrice()`
 
 ```php
-viberCheckPrice($viber_price_check_request): \BSG\\Api\\V1\Model\ViberPriceCheckResponse
+viberCheckPrice($viber_price_check_request): \BSG\Api\V1\Model\ViberPriceCheckResponse
 ```
 
 Check Viber message price
@@ -32,18 +32,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ViberApi(
+$apiInstance = new BSG\Api\V1\Api\ViberApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$viber_price_check_request = {"to":[{"msisdn":"380953227271"}],"message":"Hello from Viber! This is a price check test.","originator":"BSG","validity":72}; // \BSG\\Api\\V1\Model\ViberPriceCheckRequest
+$viber_price_check_request = {"to":[{"msisdn":"380953227271"}],"message":"Hello from Viber! This is a price check test.","originator":"BSG","validity":72}; // \BSG\Api\V1\Model\ViberPriceCheckRequest
 
 try {
     $result = $apiInstance->viberCheckPrice($viber_price_check_request);
@@ -57,11 +57,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **viber_price_check_request** | [**\BSG\\Api\\V1\Model\ViberPriceCheckRequest**](../Model/ViberPriceCheckRequest.md)|  | |
+| **viber_price_check_request** | [**\BSG\Api\V1\Model\ViberPriceCheckRequest**](../Model/ViberPriceCheckRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ViberPriceCheckResponse**](../Model/ViberPriceCheckResponse.md)
+[**\BSG\Api\V1\Model\ViberPriceCheckResponse**](../Model/ViberPriceCheckResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ try {
 ## `viberCheckPricePut()`
 
 ```php
-viberCheckPricePut($viber_price_check_request): \BSG\\Api\\V1\Model\ViberPriceCheckResponse
+viberCheckPricePut($viber_price_check_request): \BSG\Api\V1\Model\ViberPriceCheckResponse
 ```
 
 Check Viber message price (PUT)
@@ -94,18 +94,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ViberApi(
+$apiInstance = new BSG\Api\V1\Api\ViberApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$viber_price_check_request = {"to":[{"msisdn":"380953227271"}],"message":"Hello from Viber! This is a price check test.","originator":"BSG","validity":72}; // \BSG\\Api\\V1\Model\ViberPriceCheckRequest
+$viber_price_check_request = {"to":[{"msisdn":"380953227271"}],"message":"Hello from Viber! This is a price check test.","originator":"BSG","validity":72}; // \BSG\Api\V1\Model\ViberPriceCheckRequest
 
 try {
     $result = $apiInstance->viberCheckPricePut($viber_price_check_request);
@@ -119,11 +119,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **viber_price_check_request** | [**\BSG\\Api\\V1\Model\ViberPriceCheckRequest**](../Model/ViberPriceCheckRequest.md)|  | |
+| **viber_price_check_request** | [**\BSG\Api\V1\Model\ViberPriceCheckRequest**](../Model/ViberPriceCheckRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ViberPriceCheckResponse**](../Model/ViberPriceCheckResponse.md)
+[**\BSG\Api\V1\Model\ViberPriceCheckResponse**](../Model/ViberPriceCheckResponse.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ try {
 ## `viberCreateObjects()`
 
 ```php
-viberCreateObjects($viber_create_request): \BSG\\Api\\V1\Model\ViberCreateResponse
+viberCreateObjects($viber_create_request): \BSG\Api\V1\Model\ViberCreateResponse
 ```
 
 Send Viber message
@@ -156,18 +156,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ViberApi(
+$apiInstance = new BSG\Api\V1\Api\ViberApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$viber_create_request = {"to":[{"msisdn":"380953227271","reference":"viber_text_001"}],"message":"Hello from Viber! This is a test message.","originator":"BSG","callback_url":"https://webhook.site/viber-callback","validity":72,"resend_on_undelivery":false,"sms_text":"Hello from BSG! This is SMS fallback.","sms_originator":"BSG"}; // \BSG\\Api\\V1\Model\ViberCreateRequest
+$viber_create_request = {"to":[{"msisdn":"380953227271","reference":"viber_text_001"}],"message":"Hello from Viber! This is a test message.","originator":"BSG","callback_url":"https://webhook.site/viber-callback","validity":72,"resend_on_undelivery":false,"sms_text":"Hello from BSG! This is SMS fallback.","sms_originator":"BSG"}; // \BSG\Api\V1\Model\ViberCreateRequest
 
 try {
     $result = $apiInstance->viberCreateObjects($viber_create_request);
@@ -181,11 +181,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **viber_create_request** | [**\BSG\\Api\\V1\Model\ViberCreateRequest**](../Model/ViberCreateRequest.md)|  | |
+| **viber_create_request** | [**\BSG\Api\V1\Model\ViberCreateRequest**](../Model/ViberCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ViberCreateResponse**](../Model/ViberCreateResponse.md)
+[**\BSG\Api\V1\Model\ViberCreateResponse**](../Model/ViberCreateResponse.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ try {
 ## `viberCreateObjectsPut()`
 
 ```php
-viberCreateObjectsPut($viber_create_request): \BSG\\Api\\V1\Model\ViberCreateResponse
+viberCreateObjectsPut($viber_create_request): \BSG\Api\V1\Model\ViberCreateResponse
 ```
 
 Send Viber message (PUT)
@@ -218,18 +218,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ViberApi(
+$apiInstance = new BSG\Api\V1\Api\ViberApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$viber_create_request = {"to":[{"msisdn":"380953227271","reference":"viber_text_001"}],"message":"Hello from Viber! This is a test message.","originator":"BSG","callback_url":"https://webhook.site/viber-callback","validity":72,"resend_on_undelivery":false,"sms_text":"Hello from BSG! This is SMS fallback.","sms_originator":"BSG"}; // \BSG\\Api\\V1\Model\ViberCreateRequest
+$viber_create_request = {"to":[{"msisdn":"380953227271","reference":"viber_text_001"}],"message":"Hello from Viber! This is a test message.","originator":"BSG","callback_url":"https://webhook.site/viber-callback","validity":72,"resend_on_undelivery":false,"sms_text":"Hello from BSG! This is SMS fallback.","sms_originator":"BSG"}; // \BSG\Api\V1\Model\ViberCreateRequest
 
 try {
     $result = $apiInstance->viberCreateObjectsPut($viber_create_request);
@@ -243,11 +243,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **viber_create_request** | [**\BSG\\Api\\V1\Model\ViberCreateRequest**](../Model/ViberCreateRequest.md)|  | |
+| **viber_create_request** | [**\BSG\Api\V1\Model\ViberCreateRequest**](../Model/ViberCreateRequest.md)|  | |
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ViberCreateResponse**](../Model/ViberCreateResponse.md)
+[**\BSG\Api\V1\Model\ViberCreateResponse**](../Model/ViberCreateResponse.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ try {
 ## `viberGetBalance()`
 
 ```php
-viberGetBalance(): \BSG\\Api\\V1\Model\BalanceResponse
+viberGetBalance(): \BSG\Api\V1\Model\BalanceResponse
 ```
 
 Get account balance
@@ -280,12 +280,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ViberApi(
+$apiInstance = new BSG\Api\V1\Api\ViberApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -306,7 +306,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\BSG\Api\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ This endpoint does not need any parameter.
 ## `viberGetBalancePost()`
 
 ```php
-viberGetBalancePost(): \BSG\\Api\\V1\Model\BalanceResponse
+viberGetBalancePost(): \BSG\Api\V1\Model\BalanceResponse
 ```
 
 Get account balance
@@ -339,12 +339,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ViberApi(
+$apiInstance = new BSG\Api\V1\Api\ViberApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -365,7 +365,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\BSG\Api\V1\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ This endpoint does not need any parameter.
 ## `viberGetPrices()`
 
 ```php
-viberGetPrices(): \BSG\\Api\\V1\Model\ViberPricesResponse
+viberGetPrices(): \BSG\Api\V1\Model\ViberPricesResponse
 ```
 
 Get Viber pricing
@@ -398,12 +398,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ViberApi(
+$apiInstance = new BSG\Api\V1\Api\ViberApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -424,7 +424,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ViberPricesResponse**](../Model/ViberPricesResponse.md)
+[**\BSG\Api\V1\Model\ViberPricesResponse**](../Model/ViberPricesResponse.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ This endpoint does not need any parameter.
 ## `viberGetStatusByExtId()`
 
 ```php
-viberGetStatusByExtId($reference): \BSG\\Api\\V1\Model\ViberStatusResponse
+viberGetStatusByExtId($reference): \BSG\Api\V1\Model\ViberStatusResponse
 ```
 
 Get Viber status by reference
@@ -457,18 +457,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+$config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BSG\\Api\\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+// $config = BSG\Api\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 
-$apiInstance = new BSG\\Api\\V1\Api\ViberApi(
+$apiInstance = new BSG\Api\V1\Api\ViberApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$reference = unique_ref_123; // string | External reference ID
+| $reference = unique_ref_123; // string | External reference ID |
 
 try {
     $result = $apiInstance->viberGetStatusByExtId($reference);
@@ -486,7 +486,7 @@ try {
 
 ### Return type
 
-[**\BSG\\Api\\V1\Model\ViberStatusResponse**](../Model/ViberStatusResponse.md)
+[**\BSG\Api\V1\Model\ViberStatusResponse**](../Model/ViberStatusResponse.md)
 
 ### Authorization
 

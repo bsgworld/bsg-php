@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * CommonTariffResponse Class Doc Comment
  *
  * @category Class
  * @description Tariff plan information with available services
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class CommonTariffResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'error_description' => 'string',
         'tariff_name' => 'string',
         'tariff_code' => 'string',
-        'services' => '\BSG\\Api\\V1\Model\CommonTariffResponseServicesInner[]'
+        'services' => '\BSG\Api\V1\Model\ServicesschemaServicesItem[]'
     ];
 
     /**
@@ -436,7 +436,7 @@ class CommonTariffResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets services
      *
-     * @return \BSG\\Api\\V1\Model\CommonTariffResponseServicesInner[]|null
+     * @return \BSG\Api\V1\Model\ServicesschemaServicesItem[]|null
      */
     public function getServices()
     {
@@ -446,7 +446,7 @@ class CommonTariffResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets services
      *
-     * @param \BSG\\Api\\V1\Model\CommonTariffResponseServicesInner[]|null $services List of services available under this tariff
+     * @param \BSG\Api\V1\Model\ServicesschemaServicesItem[]|null $services List of services available under this tariff
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace BSG\\Api\\V1\Test\Api;
+namespace BSG\Api\V1\Test\Api;
 
-use \BSG\\Api\\V1\Configuration;
-use \BSG\\Api\\V1\ApiException;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\Configuration;
+use \BSG\Api\V1\ApiException;
+use \BSG\Api\V1\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * ExportsApiTest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

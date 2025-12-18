@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TheSelectedSearchoperatorIsInvalidUnknownErrorTheGivenDataWasInvalid Class Doc Comment
  *
  * @category Class
  * @description The selected search.operator is invalid Unknown error бажано замінити на The given data was invalid.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TheSelectedSearchoperatorIsInvalidUnknownErrorTheGivenDataWasInvalid imple
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\TheSelectedSearchoperatorIsInvalidErrors'
+        'errors' => '\BSG\Api\V2\Model\TheSelectedSearchoperatorIsInvalidUnknownErrorTheGivenDataWasInvalidErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class TheSelectedSearchoperatorIsInvalidUnknownErrorTheGivenDataWasInvalid imple
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\TheSelectedSearchoperatorIsInvalidErrors|null
+     * @return \BSG\Api\V2\Model\TheSelectedSearchoperatorIsInvalidUnknownErrorTheGivenDataWasInvalidErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class TheSelectedSearchoperatorIsInvalidUnknownErrorTheGivenDataWasInvalid imple
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\TheSelectedSearchoperatorIsInvalidErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\TheSelectedSearchoperatorIsInvalidUnknownErrorTheGivenDataWasInvalidErrors|null $errors errors
      *
      * @return self
      */

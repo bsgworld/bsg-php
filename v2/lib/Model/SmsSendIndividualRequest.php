@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SmsSendIndividualRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class SmsSendIndividualRequest implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'sms_send_individual_request';
+    protected static $openAPIModelName = 'SmsSendIndividualRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class SmsSendIndividualRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'messages' => '\BSG\\Api\\V2\Model\IndividualMessageData[]',
+        'messages' => '\BSG\Api\V2\Model\IndividualMessageData[]',
         'tariff_code' => 'int',
         'validity' => 'int',
         'start_at' => 'int'
@@ -298,6 +298,10 @@ class SmsSendIndividualRequest implements ModelInterface, ArrayAccess, \JsonSeri
         if ($this->container['messages'] === null) {
             $invalidProperties[] = "'messages' can't be null";
         }
+        if ((count($this->container['messages']) < 1)) {
+            $invalidProperties[] = "invalid value for 'messages', number of items must be greater than or equal to 1.";
+        }
+
         if (!is_null($this->container['validity']) && ($this->container['validity'] > 72)) {
             $invalidProperties[] = "invalid value for 'validity', must be smaller than or equal to 72.";
         }
@@ -332,7 +336,7 @@ class SmsSendIndividualRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets messages
      *
-     * @return \BSG\\Api\\V2\Model\IndividualMessageData[]
+     * @return \BSG\Api\V2\Model\IndividualMessageData[]
      */
     public function getMessages()
     {
@@ -342,7 +346,7 @@ class SmsSendIndividualRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets messages
      *
-     * @param \BSG\\Api\\V2\Model\IndividualMessageData[] $messages messages
+     * @param \BSG\Api\V2\Model\IndividualMessageData[] $messages messages
      *
      * @return self
      */
@@ -353,6 +357,9 @@ class SmsSendIndividualRequest implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
 
+        if ((count($messages) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $messages when calling SmsSendIndividualRequest., number of items must be greater than or equal to 1.');
+        }
         $this->container['messages'] = $messages;
 
         return $this;

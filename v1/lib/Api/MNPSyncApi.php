@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Api;
+namespace BSG\Api\V1\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V1\ApiException;
-use BSG\\Api\\V1\Configuration;
-use BSG\\Api\\V1\HeaderSelector;
-use BSG\\Api\\V1\ObjectSerializer;
+use BSG\Api\V1\ApiException;
+use BSG\Api\V1\Configuration;
+use BSG\Api\V1\HeaderSelector;
+use BSG\Api\V1\ObjectSerializer;
 
 /**
  * MNPSyncApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjects'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\MnpCreateResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\MnpCreateResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function mnpSyncCreateObjects($msisdn = null, $tariff = null, $mnp_create_request = null, string $contentType = self::contentTypes['mnpSyncCreateObjects'][0])
     {
@@ -156,12 +156,12 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjects'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\MnpCreateResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\MnpCreateResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function mnpSyncCreateObjectsWithHttpInfo($msisdn = null, $tariff = null, $mnp_create_request = null, string $contentType = self::contentTypes['mnpSyncCreateObjects'][0])
     {
@@ -192,11 +192,11 @@ class MNPSyncApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\MnpCreateResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\MnpCreateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\MnpCreateResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\MnpCreateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -214,16 +214,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\MnpCreateResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\MnpCreateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -241,16 +241,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -268,16 +268,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -295,16 +295,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -322,16 +322,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -349,16 +349,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -376,16 +376,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -403,7 +403,7 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -422,7 +422,7 @@ class MNPSyncApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\MnpCreateResponse';
+            $returnType = '\BSG\Api\V1\Model\MnpCreateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -455,7 +455,7 @@ class MNPSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\MnpCreateResponse',
+                        '\BSG\Api\V1\Model\MnpCreateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -463,7 +463,7 @@ class MNPSyncApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -471,7 +471,7 @@ class MNPSyncApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -479,7 +479,7 @@ class MNPSyncApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -487,7 +487,7 @@ class MNPSyncApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -495,7 +495,7 @@ class MNPSyncApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -503,7 +503,7 @@ class MNPSyncApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -511,7 +511,7 @@ class MNPSyncApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +528,7 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -551,7 +551,7 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -559,7 +559,7 @@ class MNPSyncApi
      */
     public function mnpSyncCreateObjectsAsyncWithHttpInfo($msisdn = null, $tariff = null, $mnp_create_request = null, string $contentType = self::contentTypes['mnpSyncCreateObjects'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\MnpCreateResponse';
+        $returnType = '\BSG\Api\V1\Model\MnpCreateResponse';
         $request = $this->mnpSyncCreateObjectsRequest($msisdn, $tariff, $mnp_create_request, $contentType);
 
         return $this->client
@@ -603,7 +603,7 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -717,12 +717,12 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjectsPut'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\MnpCreateResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\MnpCreateResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function mnpSyncCreateObjectsPut($msisdn = null, $tariff = null, $mnp_create_request = null, string $contentType = self::contentTypes['mnpSyncCreateObjectsPut'][0])
     {
@@ -737,12 +737,12 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjectsPut'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\MnpCreateResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\MnpCreateResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function mnpSyncCreateObjectsPutWithHttpInfo($msisdn = null, $tariff = null, $mnp_create_request = null, string $contentType = self::contentTypes['mnpSyncCreateObjectsPut'][0])
     {
@@ -773,11 +773,11 @@ class MNPSyncApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\MnpCreateResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\MnpCreateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\MnpCreateResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\MnpCreateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -795,16 +795,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\MnpCreateResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\MnpCreateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -822,16 +822,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -849,16 +849,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -876,16 +876,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -903,16 +903,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -930,16 +930,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -957,16 +957,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -984,7 +984,7 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1003,7 +1003,7 @@ class MNPSyncApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\MnpCreateResponse';
+            $returnType = '\BSG\Api\V1\Model\MnpCreateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1036,7 +1036,7 @@ class MNPSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\MnpCreateResponse',
+                        '\BSG\Api\V1\Model\MnpCreateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1044,7 +1044,7 @@ class MNPSyncApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1052,7 +1052,7 @@ class MNPSyncApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1060,7 +1060,7 @@ class MNPSyncApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1068,7 +1068,7 @@ class MNPSyncApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1076,7 +1076,7 @@ class MNPSyncApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1084,7 +1084,7 @@ class MNPSyncApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1092,7 +1092,7 @@ class MNPSyncApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1109,7 +1109,7 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjectsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1132,7 +1132,7 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjectsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1140,7 +1140,7 @@ class MNPSyncApi
      */
     public function mnpSyncCreateObjectsPutAsyncWithHttpInfo($msisdn = null, $tariff = null, $mnp_create_request = null, string $contentType = self::contentTypes['mnpSyncCreateObjectsPut'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\MnpCreateResponse';
+        $returnType = '\BSG\Api\V1\Model\MnpCreateResponse';
         $request = $this->mnpSyncCreateObjectsPutRequest($msisdn, $tariff, $mnp_create_request, $contentType);
 
         return $this->client
@@ -1184,7 +1184,7 @@ class MNPSyncApi
      *
      * @param  string|null $msisdn Phone number in international format (alternative to JSON body) (optional)
      * @param  int|null $tariff Tariff code (optional, uses default if not provided) (optional)
-     * @param  \BSG\\Api\\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
+     * @param  \BSG\Api\V1\Model\MnpCreateRequest|null $mnp_create_request JSON payload for batch requests or alternative to query parameters (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncCreateObjectsPut'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1298,9 +1298,9 @@ class MNPSyncApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncGetPrices'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V1\Model\MnpPricesResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response
+     * @return \BSG\Api\V1\Model\MnpPricesResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response
      */
     public function mnpSyncGetPrices(string $contentType = self::contentTypes['mnpSyncGetPrices'][0])
     {
@@ -1315,9 +1315,9 @@ class MNPSyncApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['mnpSyncGetPrices'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V1\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V1\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V1\Model\MnpPricesResponse|\BSG\\Api\\V1\Model\HttpError400Response|\BSG\\Api\\V1\Model\HttpError401Response|\BSG\\Api\\V1\Model\HttpError403Response|\BSG\\Api\\V1\Model\HttpError404Response|\BSG\\Api\\V1\Model\HttpError422Response|\BSG\\Api\\V1\Model\HttpError429Response|\BSG\\Api\\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V1\Model\MnpPricesResponse|\BSG\Api\V1\Model\HttpError400Response|\BSG\Api\V1\Model\HttpError401Response|\BSG\Api\V1\Model\HttpError403Response|\BSG\Api\V1\Model\HttpError404Response|\BSG\Api\V1\Model\HttpError422Response|\BSG\Api\V1\Model\HttpError429Response|\BSG\Api\V1\Model\HttpError500Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function mnpSyncGetPricesWithHttpInfo(string $contentType = self::contentTypes['mnpSyncGetPrices'][0])
     {
@@ -1348,11 +1348,11 @@ class MNPSyncApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V1\Model\MnpPricesResponse' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\MnpPricesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\MnpPricesResponse' !== 'string') {
+                        if ('\BSG\Api\V1\Model\MnpPricesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1370,16 +1370,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\MnpPricesResponse', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\MnpPricesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V1\Model\HttpError400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError400Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1397,16 +1397,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V1\Model\HttpError401Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError401Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError401Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError401Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1424,16 +1424,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError401Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError401Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V1\Model\HttpError403Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError403Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError403Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1451,16 +1451,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError403Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V1\Model\HttpError404Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError404Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError404Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError404Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1478,16 +1478,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError404Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError404Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V1\Model\HttpError422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError422Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1505,16 +1505,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V1\Model\HttpError429Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError429Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError429Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError429Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1532,16 +1532,16 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError429Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError429Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\BSG\\Api\\V1\Model\HttpError500Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V1\Model\HttpError500Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V1\Model\HttpError500Response' !== 'string') {
+                        if ('\BSG\Api\V1\Model\HttpError500Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1559,7 +1559,7 @@ class MNPSyncApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V1\Model\HttpError500Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V1\Model\HttpError500Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1578,7 +1578,7 @@ class MNPSyncApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V1\Model\MnpPricesResponse';
+            $returnType = '\BSG\Api\V1\Model\MnpPricesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1611,7 +1611,7 @@ class MNPSyncApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\MnpPricesResponse',
+                        '\BSG\Api\V1\Model\MnpPricesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1619,7 +1619,7 @@ class MNPSyncApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError400Response',
+                        '\BSG\Api\V1\Model\HttpError400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1627,7 +1627,7 @@ class MNPSyncApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError401Response',
+                        '\BSG\Api\V1\Model\HttpError401Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1635,7 +1635,7 @@ class MNPSyncApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError403Response',
+                        '\BSG\Api\V1\Model\HttpError403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1643,7 +1643,7 @@ class MNPSyncApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError404Response',
+                        '\BSG\Api\V1\Model\HttpError404Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1651,7 +1651,7 @@ class MNPSyncApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError422Response',
+                        '\BSG\Api\V1\Model\HttpError422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1659,7 +1659,7 @@ class MNPSyncApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError429Response',
+                        '\BSG\Api\V1\Model\HttpError429Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1667,7 +1667,7 @@ class MNPSyncApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V1\Model\HttpError500Response',
+                        '\BSG\Api\V1\Model\HttpError500Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1709,7 +1709,7 @@ class MNPSyncApi
      */
     public function mnpSyncGetPricesAsyncWithHttpInfo(string $contentType = self::contentTypes['mnpSyncGetPrices'][0])
     {
-        $returnType = '\BSG\\Api\\V1\Model\MnpPricesResponse';
+        $returnType = '\BSG\Api\V1\Model\MnpPricesResponse';
         $request = $this->mnpSyncGetPricesRequest($contentType);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SenderRequestSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,14 +59,14 @@ class SenderRequestSchema implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'id' => 'int',
         'sender' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\SenderRequestStatus',
+        'status' => '\BSG\Api\V2\Model\SenderRequestStatus',
         'created_at' => '\DateTime',
         'registered_at' => '\DateTime',
         'status_changed_at' => '\DateTime',
         'country_code' => 'string',
         'code_of_company' => 'string',
         'tax_number' => 'string',
-        'type' => '\BSG\\Api\\V2\Model\SenderRequestType',
+        'type' => '\BSG\Api\V2\Model\SenderRequestType',
         'site_url' => 'string',
         'name' => 'string',
         'legal_name' => 'string',
@@ -541,7 +541,7 @@ class SenderRequestSchema implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\SenderRequestStatus|null
+     * @return \BSG\Api\V2\Model\SenderRequestStatus|null
      */
     public function getStatus()
     {
@@ -551,7 +551,7 @@ class SenderRequestSchema implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\SenderRequestStatus|null $status status
+     * @param \BSG\Api\V2\Model\SenderRequestStatus|null $status status
      *
      * @return self
      */
@@ -758,7 +758,7 @@ class SenderRequestSchema implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\SenderRequestType|null
+     * @return \BSG\Api\V2\Model\SenderRequestType|null
      */
     public function getType()
     {
@@ -768,7 +768,7 @@ class SenderRequestSchema implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\SenderRequestType|null $type type
+     * @param \BSG\Api\V2\Model\SenderRequestType|null $type type
      *
      * @return self
      */

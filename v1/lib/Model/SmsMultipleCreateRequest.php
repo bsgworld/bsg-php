@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * SmsMultipleCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class SmsMultipleCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'destination' => 'string',
-        'phones' => '\BSG\\Api\\V1\Model\PhoneNumbersInner[]',
+        'phones' => '\BSG\Api\V1\Model\PhonenumbersPhonesItem[]',
         'reference' => 'string',
         'originator' => 'string',
         'body' => 'string',
@@ -442,7 +442,7 @@ class SmsMultipleCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets phones
      *
-     * @return \BSG\\Api\\V1\Model\PhoneNumbersInner[]
+     * @return \BSG\Api\V1\Model\PhonenumbersPhonesItem[]
      */
     public function getPhones()
     {
@@ -452,7 +452,7 @@ class SmsMultipleCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets phones
      *
-     * @param \BSG\\Api\\V1\Model\PhoneNumbersInner[] $phones Array of phone objects (required for destination=phones). Maximum 1000 recipients per request
+     * @param \BSG\Api\V1\Model\PhonenumbersPhonesItem[] $phones Array of phone objects (required for destination=phones). Maximum 1000 recipients per request
      *
      * @return self
      */

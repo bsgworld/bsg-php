@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMore Class Doc Comment
  *
  * @category Class
  * @description {informing_purpose} - This value is too short. It should have 1 character or more.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMore implements
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMoreErrors'
+        'errors' => '\BSG\Api\V2\Model\InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMoreErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMore implements
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMoreErrors|null
+     * @return \BSG\Api\V2\Model\InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMoreErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMore implements
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMoreErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\InformingpurposeThisValueIsTooShortItShouldHave1CharacterOrMoreErrors|null $errors errors
      *
      * @return self
      */

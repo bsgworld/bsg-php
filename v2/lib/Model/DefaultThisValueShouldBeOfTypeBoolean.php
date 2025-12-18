@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * DefaultThisValueShouldBeOfTypeBoolean Class Doc Comment
  *
  * @category Class
  * @description {default} - This value should be of type boolean.
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class DefaultThisValueShouldBeOfTypeBoolean implements ModelInterface, ArrayAcce
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\DefaultThisValueShouldBeOfTypeBooleanErrors'
+        'errors' => '\BSG\Api\V2\Model\DefaultBoolValidationErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class DefaultThisValueShouldBeOfTypeBoolean implements ModelInterface, ArrayAcce
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\DefaultThisValueShouldBeOfTypeBooleanErrors|null
+     * @return \BSG\Api\V2\Model\DefaultBoolValidationErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class DefaultThisValueShouldBeOfTypeBoolean implements ModelInterface, ArrayAcce
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\DefaultThisValueShouldBeOfTypeBooleanErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\DefaultBoolValidationErrors|null $errors errors
      *
      * @return self
      */

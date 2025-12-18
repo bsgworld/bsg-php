@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * DomainUpdateRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class DomainUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'not_found_page' => 'string',
-        'slug_type' => '\BSG\\Api\\V2\Model\ShortDomainSlugType',
+        'slug_type' => '\BSG\Api\V2\Model\ShortDomainSlugType',
         'is_default' => 'bool'
     ];
 
@@ -333,7 +333,7 @@ class DomainUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets slug_type
      *
-     * @return \BSG\\Api\\V2\Model\ShortDomainSlugType|null
+     * @return \BSG\Api\V2\Model\ShortDomainSlugType|null
      */
     public function getSlugType()
     {
@@ -343,7 +343,7 @@ class DomainUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets slug_type
      *
-     * @param \BSG\\Api\\V2\Model\ShortDomainSlugType|null $slug_type slug_type
+     * @param \BSG\Api\V2\Model\ShortDomainSlugType|null $slug_type slug_type
      *
      * @return self
      */

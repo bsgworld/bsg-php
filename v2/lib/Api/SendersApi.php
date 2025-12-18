@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * SendersApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class SendersApi
      *
      * Sender registration by a legal entity
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestLegalRequest $sender_request_legal_request sender_request_legal_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestLegalRequest $sender_request_legal_request sender_request_legal_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestLegal'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\SenderRequestLegal201Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SenderRequestLegal422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\SenderRequestLegal201Response|\BSG\Api\V2\Model\SenderRequestLegal400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SenderRequestLegal422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function senderRequestLegal($sender_request_legal_request, string $contentType = self::contentTypes['senderRequestLegal'][0])
     {
@@ -154,12 +154,12 @@ class SendersApi
      *
      * Sender registration by a legal entity
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestLegalRequest $sender_request_legal_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestLegalRequest $sender_request_legal_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestLegal'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\SenderRequestLegal201Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SenderRequestLegal422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\SenderRequestLegal201Response|\BSG\Api\V2\Model\SenderRequestLegal400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SenderRequestLegal422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function senderRequestLegalWithHttpInfo($sender_request_legal_request, string $contentType = self::contentTypes['senderRequestLegal'][0])
     {
@@ -190,11 +190,11 @@ class SendersApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\BSG\\Api\\V2\Model\SenderRequestLegal201Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequestLegal201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SenderRequestLegal201Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequestLegal201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -212,16 +212,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SenderRequestLegal201Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequestLegal201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequestLegal400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequestLegal400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -239,16 +239,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequestLegal400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -266,16 +266,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -293,16 +293,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -320,16 +320,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\SenderRequestLegal422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequestLegal422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SenderRequestLegal422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequestLegal422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -347,16 +347,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SenderRequestLegal422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequestLegal422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -374,7 +374,7 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -393,7 +393,7 @@ class SendersApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\SenderRequestLegal201Response';
+            $returnType = '\BSG\Api\V2\Model\SenderRequestLegal201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -426,7 +426,7 @@ class SendersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SenderRequestLegal201Response',
+                        '\BSG\Api\V2\Model\SenderRequestLegal201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -434,7 +434,7 @@ class SendersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\SenderRequestLegal400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -442,7 +442,7 @@ class SendersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -450,7 +450,7 @@ class SendersApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode',
+                        '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -458,7 +458,7 @@ class SendersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -466,7 +466,7 @@ class SendersApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SenderRequestLegal422Response',
+                        '\BSG\Api\V2\Model\SenderRequestLegal422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -474,7 +474,7 @@ class SendersApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -489,7 +489,7 @@ class SendersApi
      *
      * Sender registration by a legal entity
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestLegalRequest $sender_request_legal_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestLegalRequest $sender_request_legal_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestLegal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -510,7 +510,7 @@ class SendersApi
      *
      * Sender registration by a legal entity
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestLegalRequest $sender_request_legal_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestLegalRequest $sender_request_legal_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestLegal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -518,7 +518,7 @@ class SendersApi
      */
     public function senderRequestLegalAsyncWithHttpInfo($sender_request_legal_request, string $contentType = self::contentTypes['senderRequestLegal'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\SenderRequestLegal201Response';
+        $returnType = '\BSG\Api\V2\Model\SenderRequestLegal201Response';
         $request = $this->senderRequestLegalRequest($sender_request_legal_request, $contentType);
 
         return $this->client
@@ -560,7 +560,7 @@ class SendersApi
     /**
      * Create request for operation 'senderRequestLegal'
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestLegalRequest $sender_request_legal_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestLegalRequest $sender_request_legal_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestLegal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -657,12 +657,12 @@ class SendersApi
      *
      * Sender registration by an individual
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request sender_request_natural_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request sender_request_natural_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestNatural'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\SenderRequestNatural201Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SenderRequestNatural422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\SenderRequestNatural201Response|\BSG\Api\V2\Model\SenderRequestNatural400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SenderRequestNatural422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function senderRequestNatural($sender_request_natural_request, string $contentType = self::contentTypes['senderRequestNatural'][0])
     {
@@ -675,12 +675,12 @@ class SendersApi
      *
      * Sender registration by an individual
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestNatural'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\SenderRequestNatural201Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SenderRequestNatural422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\SenderRequestNatural201Response|\BSG\Api\V2\Model\SenderRequestNatural400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SenderRequestNatural422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function senderRequestNaturalWithHttpInfo($sender_request_natural_request, string $contentType = self::contentTypes['senderRequestNatural'][0])
     {
@@ -711,11 +711,11 @@ class SendersApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\BSG\\Api\\V2\Model\SenderRequestNatural201Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequestNatural201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SenderRequestNatural201Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequestNatural201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -733,16 +733,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SenderRequestNatural201Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequestNatural201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequestNatural400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequestNatural400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -760,16 +760,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequestNatural400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -787,16 +787,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -814,16 +814,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -841,16 +841,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\SenderRequestNatural422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequestNatural422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SenderRequestNatural422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequestNatural422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -868,16 +868,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SenderRequestNatural422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequestNatural422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -895,7 +895,7 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -914,7 +914,7 @@ class SendersApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\SenderRequestNatural201Response';
+            $returnType = '\BSG\Api\V2\Model\SenderRequestNatural201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -947,7 +947,7 @@ class SendersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SenderRequestNatural201Response',
+                        '\BSG\Api\V2\Model\SenderRequestNatural201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class SendersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\SenderRequestNatural400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -963,7 +963,7 @@ class SendersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -971,7 +971,7 @@ class SendersApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ThisActionIsUnauthorizedForYourMode',
+                        '\BSG\Api\V2\Model\ThisActionIsUnauthorizedForYourMode',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -979,7 +979,7 @@ class SendersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -987,7 +987,7 @@ class SendersApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SenderRequestNatural422Response',
+                        '\BSG\Api\V2\Model\SenderRequestNatural422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -995,7 +995,7 @@ class SendersApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1010,7 +1010,7 @@ class SendersApi
      *
      * Sender registration by an individual
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestNatural'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1031,7 +1031,7 @@ class SendersApi
      *
      * Sender registration by an individual
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestNatural'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1039,7 +1039,7 @@ class SendersApi
      */
     public function senderRequestNaturalAsyncWithHttpInfo($sender_request_natural_request, string $contentType = self::contentTypes['senderRequestNatural'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\SenderRequestNatural201Response';
+        $returnType = '\BSG\Api\V2\Model\SenderRequestNatural201Response';
         $request = $this->senderRequestNaturalRequest($sender_request_natural_request, $contentType);
 
         return $this->client
@@ -1081,7 +1081,7 @@ class SendersApi
     /**
      * Create request for operation 'senderRequestNatural'
      *
-     * @param  \BSG\\Api\\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request (required)
+     * @param  \BSG\Api\V2\Model\SenderRequestNaturalRequest $sender_request_natural_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequestNatural'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1181,17 +1181,17 @@ class SendersApi
      * @param  int|null $page_limit page_limit (optional, default to 50)
      * @param  int|null $page_offset page_offset (optional, default to 0)
      * @param  string|null $sort sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way way (optional)
-     * @param  \BSG\\Api\\V2\Model\SenderRequestStatus|null $filter_status filter_status (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way way (optional)
+     * @param  \BSG\Api\V2\Model\SenderRequestStatus|null $filter_status filter_status (optional)
      * @param  int|null $filter_id filter_id (optional)
      * @param  string|null $filter_country_code filter_country_code (optional)
      * @param  string|null $filter_sender filter_sender (optional)
      * @param  \DateTime|null $filter_created_at filter_created_at (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequests'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\SenderRequests200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SenderRequests422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\SenderRequests200Response|\BSG\Api\V2\Model\SenderRequests400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SenderRequests422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function senderRequests($page_limit = 50, $page_offset = 0, $sort = 'id', $way = null, $filter_status = null, $filter_id = null, $filter_country_code = null, $filter_sender = null, $filter_created_at = null, string $contentType = self::contentTypes['senderRequests'][0])
     {
@@ -1207,17 +1207,17 @@ class SendersApi
      * @param  int|null $page_limit (optional, default to 50)
      * @param  int|null $page_offset (optional, default to 0)
      * @param  string|null $sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
-     * @param  \BSG\\Api\\V2\Model\SenderRequestStatus|null $filter_status (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SenderRequestStatus|null $filter_status (optional)
      * @param  int|null $filter_id (optional)
      * @param  string|null $filter_country_code (optional)
      * @param  string|null $filter_sender (optional)
      * @param  \DateTime|null $filter_created_at (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senderRequests'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\SenderRequests200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\SenderRequests422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\SenderRequests200Response|\BSG\Api\V2\Model\SenderRequests400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\SenderRequests422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function senderRequestsWithHttpInfo($page_limit = 50, $page_offset = 0, $sort = 'id', $way = null, $filter_status = null, $filter_id = null, $filter_country_code = null, $filter_sender = null, $filter_created_at = null, string $contentType = self::contentTypes['senderRequests'][0])
     {
@@ -1248,11 +1248,11 @@ class SendersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\SenderRequests200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequests200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SenderRequests200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequests200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1270,16 +1270,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SenderRequests200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequests200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequests400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequests400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1297,16 +1297,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequests400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1324,16 +1324,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1351,16 +1351,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\SenderRequests422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SenderRequests422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\SenderRequests422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SenderRequests422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1378,16 +1378,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\SenderRequests422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SenderRequests422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1405,7 +1405,7 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1424,7 +1424,7 @@ class SendersApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\SenderRequests200Response';
+            $returnType = '\BSG\Api\V2\Model\SenderRequests200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1457,7 +1457,7 @@ class SendersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SenderRequests200Response',
+                        '\BSG\Api\V2\Model\SenderRequests200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1465,7 +1465,7 @@ class SendersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\SenderRequests400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1473,7 +1473,7 @@ class SendersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1481,7 +1481,7 @@ class SendersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1489,7 +1489,7 @@ class SendersApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\SenderRequests422Response',
+                        '\BSG\Api\V2\Model\SenderRequests422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1497,7 +1497,7 @@ class SendersApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1515,8 +1515,8 @@ class SendersApi
      * @param  int|null $page_limit (optional, default to 50)
      * @param  int|null $page_offset (optional, default to 0)
      * @param  string|null $sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
-     * @param  \BSG\\Api\\V2\Model\SenderRequestStatus|null $filter_status (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SenderRequestStatus|null $filter_status (optional)
      * @param  int|null $filter_id (optional)
      * @param  string|null $filter_country_code (optional)
      * @param  string|null $filter_sender (optional)
@@ -1544,8 +1544,8 @@ class SendersApi
      * @param  int|null $page_limit (optional, default to 50)
      * @param  int|null $page_offset (optional, default to 0)
      * @param  string|null $sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
-     * @param  \BSG\\Api\\V2\Model\SenderRequestStatus|null $filter_status (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SenderRequestStatus|null $filter_status (optional)
      * @param  int|null $filter_id (optional)
      * @param  string|null $filter_country_code (optional)
      * @param  string|null $filter_sender (optional)
@@ -1557,7 +1557,7 @@ class SendersApi
      */
     public function senderRequestsAsyncWithHttpInfo($page_limit = 50, $page_offset = 0, $sort = 'id', $way = null, $filter_status = null, $filter_id = null, $filter_country_code = null, $filter_sender = null, $filter_created_at = null, string $contentType = self::contentTypes['senderRequests'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\SenderRequests200Response';
+        $returnType = '\BSG\Api\V2\Model\SenderRequests200Response';
         $request = $this->senderRequestsRequest($page_limit, $page_offset, $sort, $way, $filter_status, $filter_id, $filter_country_code, $filter_sender, $filter_created_at, $contentType);
 
         return $this->client
@@ -1602,8 +1602,8 @@ class SendersApi
      * @param  int|null $page_limit (optional, default to 50)
      * @param  int|null $page_offset (optional, default to 0)
      * @param  string|null $sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
-     * @param  \BSG\\Api\\V2\Model\SenderRequestStatus|null $filter_status (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SenderRequestStatus|null $filter_status (optional)
      * @param  int|null $filter_id (optional)
      * @param  string|null $filter_country_code (optional)
      * @param  string|null $filter_sender (optional)
@@ -1792,9 +1792,9 @@ class SendersApi
      * @param  string $type Sender type to list (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senders'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\Senders200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Senders422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\Senders200Response|\BSG\Api\V2\Model\Senders400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\Senders422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function senders($type, string $contentType = self::contentTypes['senders'][0])
     {
@@ -1810,9 +1810,9 @@ class SendersApi
      * @param  string $type Sender type to list (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['senders'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\Senders200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\Senders422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\Senders200Response|\BSG\Api\V2\Model\Senders400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\Senders422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendersWithHttpInfo($type, string $contentType = self::contentTypes['senders'][0])
     {
@@ -1843,11 +1843,11 @@ class SendersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\Senders200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Senders200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Senders200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Senders200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1865,16 +1865,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Senders200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Senders200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Senders400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Senders400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1892,16 +1892,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Senders400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1919,16 +1919,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1946,16 +1946,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\Senders422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\Senders422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Senders422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\Senders422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1973,16 +1973,16 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Senders422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\Senders422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2000,7 +2000,7 @@ class SendersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2019,7 +2019,7 @@ class SendersApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\Senders200Response';
+            $returnType = '\BSG\Api\V2\Model\Senders200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2052,7 +2052,7 @@ class SendersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Senders200Response',
+                        '\BSG\Api\V2\Model\Senders200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2060,7 +2060,7 @@ class SendersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\Senders400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2068,7 +2068,7 @@ class SendersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2076,7 +2076,7 @@ class SendersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2084,7 +2084,7 @@ class SendersApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Senders422Response',
+                        '\BSG\Api\V2\Model\Senders422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2092,7 +2092,7 @@ class SendersApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2136,7 +2136,7 @@ class SendersApi
      */
     public function sendersAsyncWithHttpInfo($type, string $contentType = self::contentTypes['senders'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\Senders200Response';
+        $returnType = '\BSG\Api\V2\Model\Senders200Response';
         $request = $this->sendersRequest($type, $contentType);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * SmsCreateRequest Class Doc Comment
  *
  * @category Class
  * @description Request to send SMS message. Supports four types: single phone, multiple phones, individual customized messages, or OTP. Use destination field to specify type.
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -72,7 +72,7 @@ class SmsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'scheduled_datetime' => '\DateTime',
         'data_coding_ucs2' => 'bool',
         'validity' => 'int',
-        'phones' => '\BSG\\Api\\V1\Model\PhoneNumbersInner1[]'
+        'phones' => '\BSG\Api\V1\Model\PhonenumbersPhonesItem1[]'
     ];
 
     /**
@@ -918,7 +918,7 @@ class SmsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phones
      *
-     * @return \BSG\\Api\\V1\Model\PhoneNumbersInner1[]
+     * @return \BSG\Api\V1\Model\PhonenumbersPhonesItem1[]
      */
     public function getPhones()
     {
@@ -928,7 +928,7 @@ class SmsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phones
      *
-     * @param \BSG\\Api\\V1\Model\PhoneNumbersInner1[] $phones Array of phone objects with individual message content. Each phone has its own originator and message text
+     * @param \BSG\Api\V1\Model\PhonenumbersPhonesItem1[] $phones Array of phone objects with individual message content. Each phone has its own originator and message text
      *
      * @return self
      */

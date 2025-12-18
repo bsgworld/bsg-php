@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * SmsPriceCheckRequest Class Doc Comment
  *
  * @category Class
  * @description Request to calculate SMS price without sending the message. Supports same three types as SMS sending: single phone, multiple phones, or OTP.
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,7 +66,7 @@ class SmsPriceCheckRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         'transliterate' => 'bool',
         'data_coding_ucs2' => 'bool',
         'tariff' => 'int',
-        'phones' => '\BSG\\Api\\V1\Model\PhoneNumbersInner2[]'
+        'phones' => '\BSG\Api\V1\Model\PhonenumbersPhonesItem2[]'
     ];
 
     /**
@@ -658,7 +658,7 @@ class SmsPriceCheckRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets phones
      *
-     * @return \BSG\\Api\\V1\Model\PhoneNumbersInner2[]
+     * @return \BSG\Api\V1\Model\PhonenumbersPhonesItem2[]
      */
     public function getPhones()
     {
@@ -668,7 +668,7 @@ class SmsPriceCheckRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets phones
      *
-     * @param \BSG\\Api\\V1\Model\PhoneNumbersInner2[] $phones Array of phone objects for bulk price calculation
+     * @param \BSG\Api\V1\Model\PhonenumbersPhonesItem2[] $phones Array of phone objects for bulk price calculation
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * Internal2FAApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -71,7 +71,7 @@ class Internal2FAApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'call9875ce37ddb2f995643cef7aa2439fb9' => [
+        'internalTwofaPrice' => [
             'application/json',
         ],
     ];
@@ -123,7 +123,7 @@ class Internal2FAApi
     }
 
     /**
-     * Operation call9875ce37ddb2f995643cef7aa2439fb9
+     * Operation internalTwofaPrice
      *
      * Show 2FA authentication full price
      *
@@ -132,20 +132,20 @@ class Internal2FAApi
      * @param  int|null $tariff_code tariff_code (optional)
      * @param  string|null $country_code country_code (optional)
      * @param  int|null $operator_id operator_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalTwofaPrice'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response
+     * @return \BSG\Api\V2\Model\InternalTwofaPrice200Response
      */
-    public function call9875ce37ddb2f995643cef7aa2439fb9($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'][0])
+    public function internalTwofaPrice($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['internalTwofaPrice'][0])
     {
-        list($response) = $this->call9875ce37ddb2f995643cef7aa2439fb9WithHttpInfo($channel_type, $currency, $tariff_code, $country_code, $operator_id, $contentType);
+        list($response) = $this->internalTwofaPriceWithHttpInfo($channel_type, $currency, $tariff_code, $country_code, $operator_id, $contentType);
         return $response;
     }
 
     /**
-     * Operation call9875ce37ddb2f995643cef7aa2439fb9WithHttpInfo
+     * Operation internalTwofaPriceWithHttpInfo
      *
      * Show 2FA authentication full price
      *
@@ -154,15 +154,15 @@ class Internal2FAApi
      * @param  int|null $tariff_code (optional)
      * @param  string|null $country_code (optional)
      * @param  int|null $operator_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalTwofaPrice'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\InternalTwofaPrice200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call9875ce37ddb2f995643cef7aa2439fb9WithHttpInfo($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'][0])
+    public function internalTwofaPriceWithHttpInfo($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['internalTwofaPrice'][0])
     {
-        $request = $this->call9875ce37ddb2f995643cef7aa2439fb9Request($channel_type, $currency, $tariff_code, $country_code, $operator_id, $contentType);
+        $request = $this->internalTwofaPriceRequest($channel_type, $currency, $tariff_code, $country_code, $operator_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -189,11 +189,11 @@ class Internal2FAApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\InternalTwofaPrice200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\InternalTwofaPrice200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -211,7 +211,7 @@ class Internal2FAApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\InternalTwofaPrice200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -230,7 +230,7 @@ class Internal2FAApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response';
+            $returnType = '\BSG\Api\V2\Model\InternalTwofaPrice200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -263,7 +263,7 @@ class Internal2FAApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response',
+                        '\BSG\Api\V2\Model\InternalTwofaPrice200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -274,7 +274,7 @@ class Internal2FAApi
     }
 
     /**
-     * Operation call9875ce37ddb2f995643cef7aa2439fb9Async
+     * Operation internalTwofaPriceAsync
      *
      * Show 2FA authentication full price
      *
@@ -283,14 +283,14 @@ class Internal2FAApi
      * @param  int|null $tariff_code (optional)
      * @param  string|null $country_code (optional)
      * @param  int|null $operator_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalTwofaPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call9875ce37ddb2f995643cef7aa2439fb9Async($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'][0])
+    public function internalTwofaPriceAsync($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['internalTwofaPrice'][0])
     {
-        return $this->call9875ce37ddb2f995643cef7aa2439fb9AsyncWithHttpInfo($channel_type, $currency, $tariff_code, $country_code, $operator_id, $contentType)
+        return $this->internalTwofaPriceAsyncWithHttpInfo($channel_type, $currency, $tariff_code, $country_code, $operator_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -299,7 +299,7 @@ class Internal2FAApi
     }
 
     /**
-     * Operation call9875ce37ddb2f995643cef7aa2439fb9AsyncWithHttpInfo
+     * Operation internalTwofaPriceAsyncWithHttpInfo
      *
      * Show 2FA authentication full price
      *
@@ -308,15 +308,15 @@ class Internal2FAApi
      * @param  int|null $tariff_code (optional)
      * @param  string|null $country_code (optional)
      * @param  int|null $operator_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalTwofaPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call9875ce37ddb2f995643cef7aa2439fb9AsyncWithHttpInfo($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'][0])
+    public function internalTwofaPriceAsyncWithHttpInfo($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['internalTwofaPrice'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\Model9875ce37ddb2f995643cef7aa2439fb9200Response';
-        $request = $this->call9875ce37ddb2f995643cef7aa2439fb9Request($channel_type, $currency, $tariff_code, $country_code, $operator_id, $contentType);
+        $returnType = '\BSG\Api\V2\Model\InternalTwofaPrice200Response';
+        $request = $this->internalTwofaPriceRequest($channel_type, $currency, $tariff_code, $country_code, $operator_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -355,32 +355,32 @@ class Internal2FAApi
     }
 
     /**
-     * Create request for operation 'call9875ce37ddb2f995643cef7aa2439fb9'
+     * Create request for operation 'internalTwofaPrice'
      *
      * @param  string $channel_type (required)
      * @param  string $currency (required)
      * @param  int|null $tariff_code (optional)
      * @param  string|null $country_code (optional)
      * @param  int|null $operator_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['internalTwofaPrice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call9875ce37ddb2f995643cef7aa2439fb9Request($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['call9875ce37ddb2f995643cef7aa2439fb9'][0])
+    public function internalTwofaPriceRequest($channel_type, $currency, $tariff_code = null, $country_code = null, $operator_id = null, string $contentType = self::contentTypes['internalTwofaPrice'][0])
     {
 
         // verify the required parameter 'channel_type' is set
         if ($channel_type === null || (is_array($channel_type) && count($channel_type) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $channel_type when calling call9875ce37ddb2f995643cef7aa2439fb9'
+                'Missing the required parameter $channel_type when calling internalTwofaPrice'
             );
         }
 
         // verify the required parameter 'currency' is set
         if ($currency === null || (is_array($currency) && count($currency) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $currency when calling call9875ce37ddb2f995643cef7aa2439fb9'
+                'Missing the required parameter $currency when calling internalTwofaPrice'
             );
         }
 

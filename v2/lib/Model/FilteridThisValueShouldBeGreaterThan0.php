@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * FilteridThisValueShouldBeGreaterThan0 Class Doc Comment
  *
  * @category Class
  * @description {filterid} - This value should be greater than 0
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class FilteridThisValueShouldBeGreaterThan0 implements ModelInterface, ArrayAcce
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\FilteridThisValueShouldBeGreaterThan0Errors'
+        'errors' => '\BSG\Api\V2\Model\FilteridThisValueShouldBeGreaterThan0Errors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class FilteridThisValueShouldBeGreaterThan0 implements ModelInterface, ArrayAcce
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\FilteridThisValueShouldBeGreaterThan0Errors|null
+     * @return \BSG\Api\V2\Model\FilteridThisValueShouldBeGreaterThan0Errors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class FilteridThisValueShouldBeGreaterThan0 implements ModelInterface, ArrayAcce
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\FilteridThisValueShouldBeGreaterThan0Errors|null $errors errors
+     * @param \BSG\Api\V2\Model\FilteridThisValueShouldBeGreaterThan0Errors|null $errors errors
      *
      * @return self
      */

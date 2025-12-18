@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * TextGsm7bitTextMaxLengthIs1000YouHave1365 Class Doc Comment
  *
  * @category Class
  * @description {text} - GSM 7-bit text max length is 1000, you have: {1365 }
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TextGsm7bitTextMaxLengthIs1000YouHave1365 implements ModelInterface, Array
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\TextGsm7bitTextMaxLengthIs1000YouHave1365Errors'
+        'errors' => '\BSG\Api\V2\Model\TextGsm7bitTextMaxLengthIs1000YouHave1365Errors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class TextGsm7bitTextMaxLengthIs1000YouHave1365 implements ModelInterface, Array
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\TextGsm7bitTextMaxLengthIs1000YouHave1365Errors|null
+     * @return \BSG\Api\V2\Model\TextGsm7bitTextMaxLengthIs1000YouHave1365Errors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class TextGsm7bitTextMaxLengthIs1000YouHave1365 implements ModelInterface, Array
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\TextGsm7bitTextMaxLengthIs1000YouHave1365Errors|null $errors errors
+     * @param \BSG\Api\V2\Model\TextGsm7bitTextMaxLengthIs1000YouHave1365Errors|null $errors errors
      *
      * @return self
      */

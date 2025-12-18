@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SenderRequestLegalSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,8 +61,8 @@ class SenderRequestLegalSchema implements ModelInterface, ArrayAccess, \JsonSeri
         'sender' => 'string',
         'legal_name' => 'string',
         'address' => 'string',
-        'status' => '\BSG\\Api\\V2\Model\SenderRequestStatus',
-        'type' => '\BSG\\Api\\V2\Model\SenderRequestType',
+        'status' => '\BSG\Api\V2\Model\SenderRequestStatus',
+        'type' => '\BSG\Api\V2\Model\SenderRequestType',
         'created_at' => '\DateTime',
         'country_code' => 'string',
         'code_of_company' => 'string',
@@ -569,7 +569,7 @@ class SenderRequestLegalSchema implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\SenderRequestStatus|null
+     * @return \BSG\Api\V2\Model\SenderRequestStatus|null
      */
     public function getStatus()
     {
@@ -579,7 +579,7 @@ class SenderRequestLegalSchema implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\SenderRequestStatus|null $status status
+     * @param \BSG\Api\V2\Model\SenderRequestStatus|null $status status
      *
      * @return self
      */
@@ -596,7 +596,7 @@ class SenderRequestLegalSchema implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\SenderRequestType|null
+     * @return \BSG\Api\V2\Model\SenderRequestType|null
      */
     public function getType()
     {
@@ -606,7 +606,7 @@ class SenderRequestLegalSchema implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\SenderRequestType|null $type type
+     * @param \BSG\Api\V2\Model\SenderRequestType|null $type type
      *
      * @return self
      */

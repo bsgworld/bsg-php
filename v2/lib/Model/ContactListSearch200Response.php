@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactListSearch200Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class ContactListSearch200Response implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact_list_search_200_response';
+    protected static $openAPIModelName = 'ContactListSearch200Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,8 @@ class ContactListSearch200Response implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\ContactGroupSearchSchema[]',
-        'meta' => '\BSG\\Api\\V2\Model\ContactListSearch200ResponseMeta'
+        'data' => '\BSG\Api\V2\Model\ContactGroupSearchSchema[]',
+        'meta' => '\BSG\Api\V2\Model\ContactListSearch200ResponseMeta'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ContactListSearch200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\ContactGroupSearchSchema[]|null
+     * @return \BSG\Api\V2\Model\ContactGroupSearchSchema[]|null
      */
     public function getData()
     {
@@ -309,7 +309,7 @@ class ContactListSearch200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\ContactGroupSearchSchema[]|null $data data
+     * @param \BSG\Api\V2\Model\ContactGroupSearchSchema[]|null $data data
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ContactListSearch200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets meta
      *
-     * @return \BSG\\Api\\V2\Model\ContactListSearch200ResponseMeta|null
+     * @return \BSG\Api\V2\Model\ContactListSearch200ResponseMeta|null
      */
     public function getMeta()
     {
@@ -336,7 +336,7 @@ class ContactListSearch200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets meta
      *
-     * @param \BSG\\Api\\V2\Model\ContactListSearch200ResponseMeta|null $meta meta
+     * @param \BSG\Api\V2\Model\ContactListSearch200ResponseMeta|null $meta meta
      *
      * @return self
      */

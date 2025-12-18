@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * StopListApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class StopListApi
      *
      * Add contacts to stop list
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistAddRequest $stoplist_add_request stoplist_add_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistAddRequest $stoplist_add_request stoplist_add_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistAdd'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\StoplistAdd200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\StoplistAdd422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\StoplistAdd200Response|\BSG\Api\V2\Model\StoplistAdd400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\StoplistAdd422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function stoplistAdd($stoplist_add_request, string $contentType = self::contentTypes['stoplistAdd'][0])
     {
@@ -154,12 +154,12 @@ class StopListApi
      *
      * Add contacts to stop list
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistAddRequest $stoplist_add_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistAddRequest $stoplist_add_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistAdd'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\StoplistAdd200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\StoplistAdd422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\StoplistAdd200Response|\BSG\Api\V2\Model\StoplistAdd400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\StoplistAdd422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function stoplistAddWithHttpInfo($stoplist_add_request, string $contentType = self::contentTypes['stoplistAdd'][0])
     {
@@ -190,11 +190,11 @@ class StopListApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\StoplistAdd200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistAdd200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\StoplistAdd200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistAdd200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -212,16 +212,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\StoplistAdd200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistAdd200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistAdd400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistAdd400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -239,16 +239,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistAdd400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -266,16 +266,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -293,16 +293,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\StoplistAdd422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistAdd422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\StoplistAdd422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistAdd422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -320,16 +320,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\StoplistAdd422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistAdd422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -347,7 +347,7 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -366,7 +366,7 @@ class StopListApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\StoplistAdd200Response';
+            $returnType = '\BSG\Api\V2\Model\StoplistAdd200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -399,7 +399,7 @@ class StopListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\StoplistAdd200Response',
+                        '\BSG\Api\V2\Model\StoplistAdd200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -407,7 +407,7 @@ class StopListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\StoplistAdd400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -415,7 +415,7 @@ class StopListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -423,7 +423,7 @@ class StopListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -431,7 +431,7 @@ class StopListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\StoplistAdd422Response',
+                        '\BSG\Api\V2\Model\StoplistAdd422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -439,7 +439,7 @@ class StopListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -454,7 +454,7 @@ class StopListApi
      *
      * Add contacts to stop list
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistAddRequest $stoplist_add_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistAddRequest $stoplist_add_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistAdd'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -475,7 +475,7 @@ class StopListApi
      *
      * Add contacts to stop list
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistAddRequest $stoplist_add_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistAddRequest $stoplist_add_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistAdd'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -483,7 +483,7 @@ class StopListApi
      */
     public function stoplistAddAsyncWithHttpInfo($stoplist_add_request, string $contentType = self::contentTypes['stoplistAdd'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\StoplistAdd200Response';
+        $returnType = '\BSG\Api\V2\Model\StoplistAdd200Response';
         $request = $this->stoplistAddRequest($stoplist_add_request, $contentType);
 
         return $this->client
@@ -525,7 +525,7 @@ class StopListApi
     /**
      * Create request for operation 'stoplistAdd'
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistAddRequest $stoplist_add_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistAddRequest $stoplist_add_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistAdd'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -627,9 +627,9 @@ class StopListApi
      * @param  string|null $type Specify the type of the stop list for which we need to return the contact list. If the stop list type is not specified, the method will return data for all the stop list types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistItems'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\StoplistItems200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\StoplistItems422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\StoplistItems200Response|\BSG\Api\V2\Model\StoplistItems400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\StoplistItems422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function stoplistItems($page_offset = 0, $page_limit = 20, $type = null, string $contentType = self::contentTypes['stoplistItems'][0])
     {
@@ -647,9 +647,9 @@ class StopListApi
      * @param  string|null $type Specify the type of the stop list for which we need to return the contact list. If the stop list type is not specified, the method will return data for all the stop list types (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistItems'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\StoplistItems200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\StoplistItems422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\StoplistItems200Response|\BSG\Api\V2\Model\StoplistItems400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\StoplistItems422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function stoplistItemsWithHttpInfo($page_offset = 0, $page_limit = 20, $type = null, string $contentType = self::contentTypes['stoplistItems'][0])
     {
@@ -680,11 +680,11 @@ class StopListApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\StoplistItems200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistItems200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\StoplistItems200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistItems200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -702,16 +702,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\StoplistItems200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistItems200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistItems400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistItems400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -729,16 +729,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistItems400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -756,16 +756,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -783,16 +783,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\StoplistItems422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistItems422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\StoplistItems422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistItems422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -810,16 +810,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\StoplistItems422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistItems422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -837,7 +837,7 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -856,7 +856,7 @@ class StopListApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\StoplistItems200Response';
+            $returnType = '\BSG\Api\V2\Model\StoplistItems200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -889,7 +889,7 @@ class StopListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\StoplistItems200Response',
+                        '\BSG\Api\V2\Model\StoplistItems200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -897,7 +897,7 @@ class StopListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\StoplistItems400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -905,7 +905,7 @@ class StopListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -913,7 +913,7 @@ class StopListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -921,7 +921,7 @@ class StopListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\StoplistItems422Response',
+                        '\BSG\Api\V2\Model\StoplistItems422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -929,7 +929,7 @@ class StopListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -977,7 +977,7 @@ class StopListApi
      */
     public function stoplistItemsAsyncWithHttpInfo($page_offset = 0, $page_limit = 20, $type = null, string $contentType = self::contentTypes['stoplistItems'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\StoplistItems200Response';
+        $returnType = '\BSG\Api\V2\Model\StoplistItems200Response';
         $request = $this->stoplistItemsRequest($page_offset, $page_limit, $type, $contentType);
 
         return $this->client
@@ -1143,12 +1143,12 @@ class StopListApi
      *
      * Remove contacts from stop list
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistRemoveRequest $stoplist_remove_request stoplist_remove_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistRemoveRequest $stoplist_remove_request stoplist_remove_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistRemove'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\StoplistRemove422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return object|\BSG\Api\V2\Model\StoplistRemove400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\StoplistRemove422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function stoplistRemove($stoplist_remove_request, string $contentType = self::contentTypes['stoplistRemove'][0])
     {
@@ -1161,12 +1161,12 @@ class StopListApi
      *
      * Remove contacts from stop list
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistRemoveRequest $stoplist_remove_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistRemoveRequest $stoplist_remove_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistRemove'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\StoplistRemove422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\BSG\Api\V2\Model\StoplistRemove400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\StoplistRemove422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function stoplistRemoveWithHttpInfo($stoplist_remove_request, string $contentType = self::contentTypes['stoplistRemove'][0])
     {
@@ -1224,11 +1224,11 @@ class StopListApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistRemove400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistRemove400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1246,16 +1246,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistRemove400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1273,16 +1273,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1300,16 +1300,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\StoplistRemove422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistRemove422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\StoplistRemove422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistRemove422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1327,16 +1327,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\StoplistRemove422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistRemove422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1354,7 +1354,7 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1414,7 +1414,7 @@ class StopListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\StoplistRemove400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1422,7 +1422,7 @@ class StopListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1430,7 +1430,7 @@ class StopListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1438,7 +1438,7 @@ class StopListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\StoplistRemove422Response',
+                        '\BSG\Api\V2\Model\StoplistRemove422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1446,7 +1446,7 @@ class StopListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1461,7 +1461,7 @@ class StopListApi
      *
      * Remove contacts from stop list
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistRemoveRequest $stoplist_remove_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistRemoveRequest $stoplist_remove_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistRemove'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1482,7 +1482,7 @@ class StopListApi
      *
      * Remove contacts from stop list
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistRemoveRequest $stoplist_remove_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistRemoveRequest $stoplist_remove_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistRemove'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1532,7 +1532,7 @@ class StopListApi
     /**
      * Create request for operation 'stoplistRemove'
      *
-     * @param  \BSG\\Api\\V2\Model\StoplistRemoveRequest $stoplist_remove_request (required)
+     * @param  \BSG\Api\V2\Model\StoplistRemoveRequest $stoplist_remove_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistRemove'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1632,19 +1632,19 @@ class StopListApi
      * @param  int|null $page_offset page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort by conditions: id, phone (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way way (optional)
      * @param  int|null $contact_group_id Find only phone numbers in stop list that included into specified contact list (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_field search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator search_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_field search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator search_operator (optional)
      * @param  string|null $search_value search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_fields_0_field search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_fields_0_field search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistSearch'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\StoplistSearch200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\StoplistSearch422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\StoplistSearch200Response|\BSG\Api\V2\Model\StoplistSearch400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\StoplistSearch422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function stoplistSearch($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $contact_group_id = null, $search_field = null, $search_operator = null, $search_value = null, $search_fields_0_field = null, $search_fields_0_operator = null, $search_fields_0_value = null, string $contentType = self::contentTypes['stoplistSearch'][0])
     {
@@ -1660,19 +1660,19 @@ class StopListApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort by conditions: id, phone (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  int|null $contact_group_id Find only phone numbers in stop list that included into specified contact list (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator (optional)
      * @param  string|null $search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistSearch'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\StoplistSearch200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\StoplistSearch422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\StoplistSearch200Response|\BSG\Api\V2\Model\StoplistSearch400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\StoplistSearch422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function stoplistSearchWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $contact_group_id = null, $search_field = null, $search_operator = null, $search_value = null, $search_fields_0_field = null, $search_fields_0_operator = null, $search_fields_0_value = null, string $contentType = self::contentTypes['stoplistSearch'][0])
     {
@@ -1703,11 +1703,11 @@ class StopListApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\StoplistSearch200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistSearch200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\StoplistSearch200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistSearch200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1725,16 +1725,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\StoplistSearch200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistSearch200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistSearch400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistSearch400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1752,16 +1752,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistSearch400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1779,16 +1779,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1806,16 +1806,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\StoplistSearch422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\StoplistSearch422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\StoplistSearch422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\StoplistSearch422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1833,16 +1833,16 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\StoplistSearch422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\StoplistSearch422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1860,7 +1860,7 @@ class StopListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1879,7 +1879,7 @@ class StopListApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\StoplistSearch200Response';
+            $returnType = '\BSG\Api\V2\Model\StoplistSearch200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1912,7 +1912,7 @@ class StopListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\StoplistSearch200Response',
+                        '\BSG\Api\V2\Model\StoplistSearch200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1920,7 +1920,7 @@ class StopListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\StoplistSearch400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1928,7 +1928,7 @@ class StopListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1936,7 +1936,7 @@ class StopListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1944,7 +1944,7 @@ class StopListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\StoplistSearch422Response',
+                        '\BSG\Api\V2\Model\StoplistSearch422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1952,7 +1952,7 @@ class StopListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1970,13 +1970,13 @@ class StopListApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort by conditions: id, phone (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  int|null $contact_group_id Find only phone numbers in stop list that included into specified contact list (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator (optional)
      * @param  string|null $search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistSearch'] to see the possible values for this operation
      *
@@ -2001,13 +2001,13 @@ class StopListApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort by conditions: id, phone (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  int|null $contact_group_id Find only phone numbers in stop list that included into specified contact list (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator (optional)
      * @param  string|null $search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistSearch'] to see the possible values for this operation
      *
@@ -2016,7 +2016,7 @@ class StopListApi
      */
     public function stoplistSearchAsyncWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $contact_group_id = null, $search_field = null, $search_operator = null, $search_value = null, $search_fields_0_field = null, $search_fields_0_operator = null, $search_fields_0_value = null, string $contentType = self::contentTypes['stoplistSearch'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\StoplistSearch200Response';
+        $returnType = '\BSG\Api\V2\Model\StoplistSearch200Response';
         $request = $this->stoplistSearchRequest($page_offset, $page_limit, $sort, $way, $contact_group_id, $search_field, $search_operator, $search_value, $search_fields_0_field, $search_fields_0_operator, $search_fields_0_value, $contentType);
 
         return $this->client
@@ -2061,13 +2061,13 @@ class StopListApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Sort by conditions: id, phone (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  int|null $contact_group_id Find only phone numbers in stop list that included into specified contact list (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator (optional)
      * @param  string|null $search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\StoplistSearchField|null $search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\StoplistSearchField|null $search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['stoplistSearch'] to see the possible values for this operation
      *

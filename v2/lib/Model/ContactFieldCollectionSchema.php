@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactFieldCollectionSchema Class Doc Comment
  *
  * @category Class
  * @description Contact fields list
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ContactFieldCollectionSchema implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\BSG\\Api\\V2\Model\ContactFieldSchema[]'
+        'data' => '\BSG\Api\V2\Model\ContactFieldSchema[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ContactFieldCollectionSchema implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets data
      *
-     * @return \BSG\\Api\\V2\Model\ContactFieldSchema[]|null
+     * @return \BSG\Api\V2\Model\ContactFieldSchema[]|null
      */
     public function getData()
     {
@@ -303,7 +303,7 @@ class ContactFieldCollectionSchema implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets data
      *
-     * @param \BSG\\Api\\V2\Model\ContactFieldSchema[]|null $data List of contact fields
+     * @param \BSG\Api\V2\Model\ContactFieldSchema[]|null $data List of contact fields
      *
      * @return self
      */

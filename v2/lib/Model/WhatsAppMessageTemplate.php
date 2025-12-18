@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * WhatsAppMessageTemplate Class Doc Comment
  *
  * @category Class
  * @description Required for type \&quot;template\&quot;
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -50,7 +50,7 @@ class WhatsAppMessageTemplate implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'WhatsAppMessage_template';
+    protected static $openAPIModelName = 'WhatsAppMessageTemplate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,8 @@ class WhatsAppMessageTemplate implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'language' => '\BSG\\Api\\V2\Model\Language',
-        'components' => '\BSG\\Api\\V2\Model\Components[]'
+        'language' => '\BSG\Api\V2\Model\Language',
+        'components' => '\BSG\Api\V2\Model\Components[]'
     ];
 
     /**
@@ -343,7 +343,7 @@ class WhatsAppMessageTemplate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets language
      *
-     * @return \BSG\\Api\\V2\Model\Language
+     * @return \BSG\Api\V2\Model\Language
      */
     public function getLanguage()
     {
@@ -353,7 +353,7 @@ class WhatsAppMessageTemplate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets language
      *
-     * @param \BSG\\Api\\V2\Model\Language $language language
+     * @param \BSG\Api\V2\Model\Language $language language
      *
      * @return self
      */
@@ -370,7 +370,7 @@ class WhatsAppMessageTemplate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets components
      *
-     * @return \BSG\\Api\\V2\Model\Components[]
+     * @return \BSG\Api\V2\Model\Components[]
      */
     public function getComponents()
     {
@@ -380,7 +380,7 @@ class WhatsAppMessageTemplate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets components
      *
-     * @param \BSG\\Api\\V2\Model\Components[] $components components
+     * @param \BSG\Api\V2\Model\Components[] $components components
      *
      * @return self
      */

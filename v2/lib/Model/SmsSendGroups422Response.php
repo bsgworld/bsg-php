@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SmsSendGroups422Response Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class SmsSendGroups422Response implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'sms_send_groups_422_response';
+    protected static $openAPIModelName = 'SmsSendGroups422Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class SmsSendGroups422Response implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\TariffcodeThisValueShouldBeBetween0And9Errors'
+        'errors' => '\BSG\Api\V2\Model\TariffcodeThisValueShouldBeBetween0And9Errors'
     ];
 
     /**
@@ -326,7 +326,7 @@ class SmsSendGroups422Response implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\TariffcodeThisValueShouldBeBetween0And9Errors|null
+     * @return \BSG\Api\V2\Model\TariffcodeThisValueShouldBeBetween0And9Errors|null
      */
     public function getErrors()
     {
@@ -336,7 +336,7 @@ class SmsSendGroups422Response implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\TariffcodeThisValueShouldBeBetween0And9Errors|null $errors errors
+     * @param \BSG\Api\V2\Model\TariffcodeThisValueShouldBeBetween0And9Errors|null $errors errors
      *
      * @return self
      */

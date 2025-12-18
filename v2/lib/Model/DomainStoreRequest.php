@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * DomainStoreRequest Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class DomainStoreRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'name' => 'string',
         'not_found_page' => 'string',
-        'slug_type' => '\BSG\\Api\\V2\Model\ShortDomainSlugType'
+        'slug_type' => '\BSG\Api\V2\Model\ShortDomainSlugType'
     ];
 
     /**
@@ -381,7 +381,7 @@ class DomainStoreRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets slug_type
      *
-     * @return \BSG\\Api\\V2\Model\ShortDomainSlugType
+     * @return \BSG\Api\V2\Model\ShortDomainSlugType
      */
     public function getSlugType()
     {
@@ -391,7 +391,7 @@ class DomainStoreRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets slug_type
      *
-     * @param \BSG\\Api\\V2\Model\ShortDomainSlugType $slug_type slug_type
+     * @param \BSG\Api\V2\Model\ShortDomainSlugType $slug_type slug_type
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * MessagesSMSApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -71,7 +71,7 @@ class MessagesSMSApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'b696e239f742e868841bd2173294ef8e' => [
+        'smsMessagesFind' => [
             'application/json',
         ],
     ];
@@ -123,54 +123,54 @@ class MessagesSMSApi
     }
 
     /**
-     * Operation b696e239f742e868841bd2173294ef8e
+     * Operation smsMessagesFind
      *
      * Find messages
      *
      * @param  int|null $page_offset page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Field to sort the results (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way way (optional)
      * @param  int|null $filter_id filter_id (optional)
      * @param  int|null $filter_campaign_id Filter by campaign Id received when [send message](#operation/sms_send) (optional)
      * @param  string|null $filter_reference_id Filter by reference passed when [send message](#operation/sms_send) (optional)
      * @param  \DateTime|null $filter_from Filter message from this date. format ― Y-m-d H:i:s (optional)
      * @param  \DateTime|null $filter_to Filter message up to this date. format ― Y-m-d H:i:s (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['b696e239f742e868841bd2173294ef8e'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsMessagesFind'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\B696e239f742e868841bd2173294ef8e200Response
+     * @return \BSG\Api\V2\Model\SmsMessagesFind200Response
      */
-    public function b696e239f742e868841bd2173294ef8e($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['b696e239f742e868841bd2173294ef8e'][0])
+    public function smsMessagesFind($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['smsMessagesFind'][0])
     {
-        list($response) = $this->b696e239f742e868841bd2173294ef8eWithHttpInfo($page_offset, $page_limit, $sort, $way, $filter_id, $filter_campaign_id, $filter_reference_id, $filter_from, $filter_to, $contentType);
+        list($response) = $this->smsMessagesFindWithHttpInfo($page_offset, $page_limit, $sort, $way, $filter_id, $filter_campaign_id, $filter_reference_id, $filter_from, $filter_to, $contentType);
         return $response;
     }
 
     /**
-     * Operation b696e239f742e868841bd2173294ef8eWithHttpInfo
+     * Operation smsMessagesFindWithHttpInfo
      *
      * Find messages
      *
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Field to sort the results (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  int|null $filter_id (optional)
      * @param  int|null $filter_campaign_id Filter by campaign Id received when [send message](#operation/sms_send) (optional)
      * @param  string|null $filter_reference_id Filter by reference passed when [send message](#operation/sms_send) (optional)
      * @param  \DateTime|null $filter_from Filter message from this date. format ― Y-m-d H:i:s (optional)
      * @param  \DateTime|null $filter_to Filter message up to this date. format ― Y-m-d H:i:s (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['b696e239f742e868841bd2173294ef8e'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsMessagesFind'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\B696e239f742e868841bd2173294ef8e200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\SmsMessagesFind200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function b696e239f742e868841bd2173294ef8eWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['b696e239f742e868841bd2173294ef8e'][0])
+    public function smsMessagesFindWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['smsMessagesFind'][0])
     {
-        $request = $this->b696e239f742e868841bd2173294ef8eRequest($page_offset, $page_limit, $sort, $way, $filter_id, $filter_campaign_id, $filter_reference_id, $filter_from, $filter_to, $contentType);
+        $request = $this->smsMessagesFindRequest($page_offset, $page_limit, $sort, $way, $filter_id, $filter_campaign_id, $filter_reference_id, $filter_from, $filter_to, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -197,11 +197,11 @@ class MessagesSMSApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\B696e239f742e868841bd2173294ef8e200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\SmsMessagesFind200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\B696e239f742e868841bd2173294ef8e200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\SmsMessagesFind200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -219,7 +219,7 @@ class MessagesSMSApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\B696e239f742e868841bd2173294ef8e200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\SmsMessagesFind200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -238,7 +238,7 @@ class MessagesSMSApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\B696e239f742e868841bd2173294ef8e200Response';
+            $returnType = '\BSG\Api\V2\Model\SmsMessagesFind200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -271,7 +271,7 @@ class MessagesSMSApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\B696e239f742e868841bd2173294ef8e200Response',
+                        '\BSG\Api\V2\Model\SmsMessagesFind200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -282,27 +282,27 @@ class MessagesSMSApi
     }
 
     /**
-     * Operation b696e239f742e868841bd2173294ef8eAsync
+     * Operation smsMessagesFindAsync
      *
      * Find messages
      *
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Field to sort the results (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  int|null $filter_id (optional)
      * @param  int|null $filter_campaign_id Filter by campaign Id received when [send message](#operation/sms_send) (optional)
      * @param  string|null $filter_reference_id Filter by reference passed when [send message](#operation/sms_send) (optional)
      * @param  \DateTime|null $filter_from Filter message from this date. format ― Y-m-d H:i:s (optional)
      * @param  \DateTime|null $filter_to Filter message up to this date. format ― Y-m-d H:i:s (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['b696e239f742e868841bd2173294ef8e'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsMessagesFind'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function b696e239f742e868841bd2173294ef8eAsync($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['b696e239f742e868841bd2173294ef8e'][0])
+    public function smsMessagesFindAsync($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['smsMessagesFind'][0])
     {
-        return $this->b696e239f742e868841bd2173294ef8eAsyncWithHttpInfo($page_offset, $page_limit, $sort, $way, $filter_id, $filter_campaign_id, $filter_reference_id, $filter_from, $filter_to, $contentType)
+        return $this->smsMessagesFindAsyncWithHttpInfo($page_offset, $page_limit, $sort, $way, $filter_id, $filter_campaign_id, $filter_reference_id, $filter_from, $filter_to, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -311,28 +311,28 @@ class MessagesSMSApi
     }
 
     /**
-     * Operation b696e239f742e868841bd2173294ef8eAsyncWithHttpInfo
+     * Operation smsMessagesFindAsyncWithHttpInfo
      *
      * Find messages
      *
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Field to sort the results (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  int|null $filter_id (optional)
      * @param  int|null $filter_campaign_id Filter by campaign Id received when [send message](#operation/sms_send) (optional)
      * @param  string|null $filter_reference_id Filter by reference passed when [send message](#operation/sms_send) (optional)
      * @param  \DateTime|null $filter_from Filter message from this date. format ― Y-m-d H:i:s (optional)
      * @param  \DateTime|null $filter_to Filter message up to this date. format ― Y-m-d H:i:s (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['b696e239f742e868841bd2173294ef8e'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsMessagesFind'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function b696e239f742e868841bd2173294ef8eAsyncWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['b696e239f742e868841bd2173294ef8e'][0])
+    public function smsMessagesFindAsyncWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['smsMessagesFind'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\B696e239f742e868841bd2173294ef8e200Response';
-        $request = $this->b696e239f742e868841bd2173294ef8eRequest($page_offset, $page_limit, $sort, $way, $filter_id, $filter_campaign_id, $filter_reference_id, $filter_from, $filter_to, $contentType);
+        $returnType = '\BSG\Api\V2\Model\SmsMessagesFind200Response';
+        $request = $this->smsMessagesFindRequest($page_offset, $page_limit, $sort, $way, $filter_id, $filter_campaign_id, $filter_reference_id, $filter_from, $filter_to, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -371,40 +371,40 @@ class MessagesSMSApi
     }
 
     /**
-     * Create request for operation 'b696e239f742e868841bd2173294ef8e'
+     * Create request for operation 'smsMessagesFind'
      *
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort Field to sort the results (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
      * @param  int|null $filter_id (optional)
      * @param  int|null $filter_campaign_id Filter by campaign Id received when [send message](#operation/sms_send) (optional)
      * @param  string|null $filter_reference_id Filter by reference passed when [send message](#operation/sms_send) (optional)
      * @param  \DateTime|null $filter_from Filter message from this date. format ― Y-m-d H:i:s (optional)
      * @param  \DateTime|null $filter_to Filter message up to this date. format ― Y-m-d H:i:s (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['b696e239f742e868841bd2173294ef8e'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['smsMessagesFind'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function b696e239f742e868841bd2173294ef8eRequest($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['b696e239f742e868841bd2173294ef8e'][0])
+    public function smsMessagesFindRequest($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $filter_id = null, $filter_campaign_id = null, $filter_reference_id = null, $filter_from = null, $filter_to = null, string $contentType = self::contentTypes['smsMessagesFind'][0])
     {
 
         if ($page_offset !== null && $page_offset < 0) {
-            throw new \InvalidArgumentException('invalid value for "$page_offset" when calling MessagesSMSApi.b696e239f742e868841bd2173294ef8e, must be bigger than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for "$page_offset" when calling MessagesSMSApi.smsMessagesFind, must be bigger than or equal to 0.');
         }
         
         if ($page_limit !== null && $page_limit > 500) {
-            throw new \InvalidArgumentException('invalid value for "$page_limit" when calling MessagesSMSApi.b696e239f742e868841bd2173294ef8e, must be smaller than or equal to 500.');
+            throw new \InvalidArgumentException('invalid value for "$page_limit" when calling MessagesSMSApi.smsMessagesFind, must be smaller than or equal to 500.');
         }
         if ($page_limit !== null && $page_limit < 15) {
-            throw new \InvalidArgumentException('invalid value for "$page_limit" when calling MessagesSMSApi.b696e239f742e868841bd2173294ef8e, must be bigger than or equal to 15.');
+            throw new \InvalidArgumentException('invalid value for "$page_limit" when calling MessagesSMSApi.smsMessagesFind, must be bigger than or equal to 15.');
         }
         
 
 
         if ($filter_id !== null && $filter_id < 1) {
-            throw new \InvalidArgumentException('invalid value for "$filter_id" when calling MessagesSMSApi.b696e239f742e868841bd2173294ef8e, must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid value for "$filter_id" when calling MessagesSMSApi.smsMessagesFind, must be bigger than or equal to 1.');
         }
         
 

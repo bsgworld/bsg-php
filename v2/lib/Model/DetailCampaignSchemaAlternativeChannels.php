@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * DetailCampaignSchemaAlternativeChannels Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class DetailCampaignSchemaAlternativeChannels implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'DetailCampaignSchema_alternative_channels';
+    protected static $openAPIModelName = 'DetailCampaignSchemaAlternativeChannels';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class DetailCampaignSchemaAlternativeChannels implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sms' => '\BSG\\Api\\V2\Model\DetailCampaignSchemaAlternativeChannelsOneOfSms'
+        'sms' => '\BSG\Api\V2\Model\SmsAlternativeChannelDetailSms'
     ];
 
     /**
@@ -292,7 +292,7 @@ class DetailCampaignSchemaAlternativeChannels implements ModelInterface, ArrayAc
     /**
      * Gets sms
      *
-     * @return \BSG\\Api\\V2\Model\DetailCampaignSchemaAlternativeChannelsOneOfSms|null
+     * @return \BSG\Api\V2\Model\SmsAlternativeChannelDetailSms|null
      */
     public function getSms()
     {
@@ -302,7 +302,7 @@ class DetailCampaignSchemaAlternativeChannels implements ModelInterface, ArrayAc
     /**
      * Sets sms
      *
-     * @param \BSG\\Api\\V2\Model\DetailCampaignSchemaAlternativeChannelsOneOfSms|null $sms sms
+     * @param \BSG\Api\V2\Model\SmsAlternativeChannelDetailSms|null $sms sms
      *
      * @return self
      */

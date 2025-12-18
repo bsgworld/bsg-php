@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * MessageInfo Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,12 +59,12 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'reference_id' => 'string',
-        'source' => '\BSG\\Api\\V2\Model\MessageSource',
-        'type' => '\BSG\\Api\\V2\Model\MessageType',
+        'source' => '\BSG\Api\V2\Model\MessageSource',
+        'type' => '\BSG\Api\V2\Model\MessageType',
         'phone' => 'int',
-        'status' => '\BSG\\Api\\V2\Model\MessageStatus',
+        'status' => '\BSG\Api\V2\Model\MessageStatus',
         'validity' => 'int',
-        'amount' => '\BSG\\Api\\V2\Model\MessagePriceObject',
+        'amount' => '\BSG\Api\V2\Model\MessagePriceObject',
         'sender' => 'string',
         'created_at' => '\DateTime',
         'sent_at' => '\DateTime',
@@ -448,7 +448,7 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets source
      *
-     * @return \BSG\\Api\\V2\Model\MessageSource|null
+     * @return \BSG\Api\V2\Model\MessageSource|null
      */
     public function getSource()
     {
@@ -458,7 +458,7 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets source
      *
-     * @param \BSG\\Api\\V2\Model\MessageSource|null $source source
+     * @param \BSG\Api\V2\Model\MessageSource|null $source source
      *
      * @return self
      */
@@ -475,7 +475,7 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\MessageType|null
+     * @return \BSG\Api\V2\Model\MessageType|null
      */
     public function getType()
     {
@@ -485,7 +485,7 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\MessageType|null $type type
+     * @param \BSG\Api\V2\Model\MessageType|null $type type
      *
      * @return self
      */
@@ -537,7 +537,7 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\MessageStatus|null
+     * @return \BSG\Api\V2\Model\MessageStatus|null
      */
     public function getStatus()
     {
@@ -547,7 +547,7 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\MessageStatus|null $status status
+     * @param \BSG\Api\V2\Model\MessageStatus|null $status status
      *
      * @return self
      */
@@ -599,7 +599,7 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount
      *
-     * @return \BSG\\Api\\V2\Model\MessagePriceObject|null
+     * @return \BSG\Api\V2\Model\MessagePriceObject|null
      */
     public function getAmount()
     {
@@ -609,7 +609,7 @@ class MessageInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param \BSG\\Api\\V2\Model\MessagePriceObject|null $amount amount
+     * @param \BSG\Api\V2\Model\MessagePriceObject|null $amount amount
      *
      * @return self
      */

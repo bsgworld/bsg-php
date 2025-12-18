@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * MessageApiSchema Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,21 +60,21 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'campaign_id' => 'int',
         'reference_id' => 'string',
-        'type' => '\BSG\\Api\\V2\Model\MessageType',
-        'source' => '\BSG\\Api\\V2\Model\MessageSource',
+        'type' => '\BSG\Api\V2\Model\MessageType',
+        'source' => '\BSG\Api\V2\Model\MessageSource',
         'text' => 'string',
         'phone' => 'int',
         'validity' => 'int',
-        'status' => '\BSG\\Api\\V2\Model\MessageStatus',
-        'amount' => '\BSG\\Api\\V2\Model\MessagePriceObject',
+        'status' => '\BSG\Api\V2\Model\MessageStatus',
+        'amount' => '\BSG\Api\V2\Model\MessagePriceObject',
         'sender' => 'string',
         'created_at' => '\DateTime',
         'sent_at' => '\DateTime',
         'delivered_at' => '\DateTime',
         'country' => 'string',
         'parts' => 'int',
-        'rcs_options' => '\BSG\\Api\\V2\Model\Options',
-        'alternative_channels' => '\BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannels'
+        'rcs_options' => '\BSG\Api\V2\Model\Options',
+        'alternative_channels' => '\BSG\Api\V2\Model\MessageApiSchemaAlternativeChannels'
     ];
 
     /**
@@ -517,7 +517,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets type
      *
-     * @return \BSG\\Api\\V2\Model\MessageType|null
+     * @return \BSG\Api\V2\Model\MessageType|null
      */
     public function getType()
     {
@@ -527,7 +527,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param \BSG\\Api\\V2\Model\MessageType|null $type type
+     * @param \BSG\Api\V2\Model\MessageType|null $type type
      *
      * @return self
      */
@@ -544,7 +544,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets source
      *
-     * @return \BSG\\Api\\V2\Model\MessageSource|null
+     * @return \BSG\Api\V2\Model\MessageSource|null
      */
     public function getSource()
     {
@@ -554,7 +554,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets source
      *
-     * @param \BSG\\Api\\V2\Model\MessageSource|null $source source
+     * @param \BSG\Api\V2\Model\MessageSource|null $source source
      *
      * @return self
      */
@@ -668,7 +668,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets status
      *
-     * @return \BSG\\Api\\V2\Model\MessageStatus|null
+     * @return \BSG\Api\V2\Model\MessageStatus|null
      */
     public function getStatus()
     {
@@ -678,7 +678,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param \BSG\\Api\\V2\Model\MessageStatus|null $status status
+     * @param \BSG\Api\V2\Model\MessageStatus|null $status status
      *
      * @return self
      */
@@ -695,7 +695,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount
      *
-     * @return \BSG\\Api\\V2\Model\MessagePriceObject|null
+     * @return \BSG\Api\V2\Model\MessagePriceObject|null
      */
     public function getAmount()
     {
@@ -705,7 +705,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param \BSG\\Api\\V2\Model\MessagePriceObject|null $amount amount
+     * @param \BSG\Api\V2\Model\MessagePriceObject|null $amount amount
      *
      * @return self
      */
@@ -898,7 +898,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets rcs_options
      *
-     * @return \BSG\\Api\\V2\Model\Options|null
+     * @return \BSG\Api\V2\Model\Options|null
      */
     public function getRcsOptions()
     {
@@ -908,7 +908,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets rcs_options
      *
-     * @param \BSG\\Api\\V2\Model\Options|null $rcs_options rcs_options
+     * @param \BSG\Api\V2\Model\Options|null $rcs_options rcs_options
      *
      * @return self
      */
@@ -925,7 +925,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets alternative_channels
      *
-     * @return \BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannels|null
+     * @return \BSG\Api\V2\Model\MessageApiSchemaAlternativeChannels|null
      */
     public function getAlternativeChannels()
     {
@@ -935,7 +935,7 @@ class MessageApiSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets alternative_channels
      *
-     * @param \BSG\\Api\\V2\Model\MessageApiSchemaAlternativeChannels|null $alternative_channels alternative_channels
+     * @param \BSG\Api\V2\Model\MessageApiSchemaAlternativeChannels|null $alternative_channels alternative_channels
      *
      * @return self
      */

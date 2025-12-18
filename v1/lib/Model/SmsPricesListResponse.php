@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V1\Model;
+namespace BSG\Api\V1\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V1\ObjectSerializer;
+use \BSG\Api\V1\ObjectSerializer;
 
 /**
  * SmsPricesListResponse Class Doc Comment
  *
  * @category Class
  * @description Response containing SMS pricing information for different countries and operators
- * @package  BSG\\Api\\V1
+ * @package  BSG\Api\V1
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class SmsPricesListResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'error' => 'int',
         'error_description' => 'string',
-        'prices' => '\BSG\\Api\\V1\Model\PriceInfo[]'
+        'prices' => '\BSG\Api\V1\Model\SmspriceslistPricesItem[]'
     ];
 
     /**
@@ -388,7 +388,7 @@ class SmsPricesListResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets prices
      *
-     * @return \BSG\\Api\\V1\Model\PriceInfo[]
+     * @return \BSG\Api\V1\Model\SmspriceslistPricesItem[]
      */
     public function getPrices()
     {
@@ -398,7 +398,7 @@ class SmsPricesListResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets prices
      *
-     * @param \BSG\\Api\\V1\Model\PriceInfo[] $prices Array of SMS pricing information
+     * @param \BSG\Api\V1\Model\SmspriceslistPricesItem[] $prices Array of SMS pricing information
      *
      * @return self
      */

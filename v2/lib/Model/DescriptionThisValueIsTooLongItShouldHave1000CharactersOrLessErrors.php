@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * DescriptionThisValueIsTooLongItShouldHave1000CharactersOrLessErrors Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -49,7 +49,7 @@ class DescriptionThisValueIsTooLongItShouldHave1000CharactersOrLessErrors implem
       *
       * @var string
       */
-    protected static $openAPIModelName = 'descriptionThisValueIsTooLongItShouldHave1000CharactersOrLess_errors';
+    protected static $openAPIModelName = 'descriptionThisValueIsTooLongItShouldHave1000CharactersOrLessErrors';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

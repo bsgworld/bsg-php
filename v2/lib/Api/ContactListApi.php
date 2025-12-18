@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Api;
+namespace BSG\Api\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use BSG\\Api\\V2\ApiException;
-use BSG\\Api\\V2\Configuration;
-use BSG\\Api\\V2\HeaderSelector;
-use BSG\\Api\\V2\ObjectSerializer;
+use BSG\Api\V2\ApiException;
+use BSG\Api\V2\Configuration;
+use BSG\Api\V2\HeaderSelector;
+use BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactListApi Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -151,9 +151,9 @@ class ContactListApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ContactList200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactList422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ContactList200Response|\BSG\Api\V2\Model\ContactList400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactList422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactList($id, string $contentType = self::contentTypes['contactList'][0])
     {
@@ -169,9 +169,9 @@ class ContactListApi
      * @param  int $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactList'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ContactList200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactList422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ContactList200Response|\BSG\Api\V2\Model\ContactList400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactList422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactListWithHttpInfo($id, string $contentType = self::contentTypes['contactList'][0])
     {
@@ -202,11 +202,11 @@ class ContactListApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ContactList200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactList200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactList200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactList200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -224,16 +224,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactList200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactList200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactList400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactList400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -251,16 +251,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactList400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -278,16 +278,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -305,16 +305,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactList422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactList422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactList422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactList422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -332,16 +332,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactList422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactList422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -359,7 +359,7 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -378,7 +378,7 @@ class ContactListApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ContactList200Response';
+            $returnType = '\BSG\Api\V2\Model\ContactList200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -411,7 +411,7 @@ class ContactListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactList200Response',
+                        '\BSG\Api\V2\Model\ContactList200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -419,7 +419,7 @@ class ContactListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ContactList400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -427,7 +427,7 @@ class ContactListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -435,7 +435,7 @@ class ContactListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -443,7 +443,7 @@ class ContactListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactList422Response',
+                        '\BSG\Api\V2\Model\ContactList422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -451,7 +451,7 @@ class ContactListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -495,7 +495,7 @@ class ContactListApi
      */
     public function contactListAsyncWithHttpInfo($id, string $contentType = self::contentTypes['contactList'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ContactList200Response';
+        $returnType = '\BSG\Api\V2\Model\ContactList200Response';
         $request = $this->contactListRequest($id, $contentType);
 
         return $this->client
@@ -635,12 +635,12 @@ class ContactListApi
      *
      * Add contacts to the list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListAttachRequest $contact_list_attach_request contact_list_attach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListAttach'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListAttach422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return object|\BSG\Api\V2\Model\ContactListAttach400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListAttach422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactListAttach($contact_list_attach_request, string $contentType = self::contentTypes['contactListAttach'][0])
     {
@@ -653,12 +653,12 @@ class ContactListApi
      *
      * Add contacts to the list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListAttach'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListAttach422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\BSG\Api\V2\Model\ContactListAttach400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListAttach422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactListAttachWithHttpInfo($contact_list_attach_request, string $contentType = self::contentTypes['contactListAttach'][0])
     {
@@ -716,11 +716,11 @@ class ContactListApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListAttach400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListAttach400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -738,16 +738,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListAttach400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -765,16 +765,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -792,16 +792,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactListAttach422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListAttach422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactListAttach422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListAttach422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -819,16 +819,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactListAttach422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListAttach422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -846,7 +846,7 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -906,7 +906,7 @@ class ContactListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\ContactListAttach400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -914,7 +914,7 @@ class ContactListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -922,7 +922,7 @@ class ContactListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -930,7 +930,7 @@ class ContactListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactListAttach422Response',
+                        '\BSG\Api\V2\Model\ContactListAttach422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -938,7 +938,7 @@ class ContactListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -953,7 +953,7 @@ class ContactListApi
      *
      * Add contacts to the list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListAttach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -974,7 +974,7 @@ class ContactListApi
      *
      * Add contacts to the list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListAttach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1024,7 +1024,7 @@ class ContactListApi
     /**
      * Create request for operation 'contactListAttach'
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListAttach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1121,16 +1121,16 @@ class ContactListApi
      *
      * Create list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListCreateRequest $contact_list_create_request contact_list_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListCreate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ContactList200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListCreate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ContactListCreate201Response|\BSG\Api\V2\Model\ContactListCreate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListCreate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
-    public function contactListCreate($contact_list_update_request, string $contentType = self::contentTypes['contactListCreate'][0])
+    public function contactListCreate($contact_list_create_request, string $contentType = self::contentTypes['contactListCreate'][0])
     {
-        list($response) = $this->contactListCreateWithHttpInfo($contact_list_update_request, $contentType);
+        list($response) = $this->contactListCreateWithHttpInfo($contact_list_create_request, $contentType);
         return $response;
     }
 
@@ -1139,16 +1139,16 @@ class ContactListApi
      *
      * Create list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListCreateRequest $contact_list_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListCreate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ContactList200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListCreate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ContactListCreate201Response|\BSG\Api\V2\Model\ContactListCreate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListCreate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contactListCreateWithHttpInfo($contact_list_update_request, string $contentType = self::contentTypes['contactListCreate'][0])
+    public function contactListCreateWithHttpInfo($contact_list_create_request, string $contentType = self::contentTypes['contactListCreate'][0])
     {
-        $request = $this->contactListCreateRequest($contact_list_update_request, $contentType);
+        $request = $this->contactListCreateRequest($contact_list_create_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1175,11 +1175,11 @@ class ContactListApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\BSG\\Api\\V2\Model\ContactList200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactList200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListCreate201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1197,16 +1197,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactList200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListCreate400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListCreate400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1224,16 +1224,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListCreate400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1251,16 +1251,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1278,16 +1278,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactListCreate422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListCreate422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactListCreate422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListCreate422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1305,16 +1305,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactListCreate422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListCreate422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1332,7 +1332,7 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1351,7 +1351,7 @@ class ContactListApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ContactList200Response';
+            $returnType = '\BSG\Api\V2\Model\ContactListCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1384,7 +1384,7 @@ class ContactListApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactList200Response',
+                        '\BSG\Api\V2\Model\ContactListCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1392,7 +1392,7 @@ class ContactListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\ContactListCreate400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1400,7 +1400,7 @@ class ContactListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1408,7 +1408,7 @@ class ContactListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1416,7 +1416,7 @@ class ContactListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactListCreate422Response',
+                        '\BSG\Api\V2\Model\ContactListCreate422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1424,7 +1424,7 @@ class ContactListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1439,15 +1439,15 @@ class ContactListApi
      *
      * Create list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListCreateRequest $contact_list_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contactListCreateAsync($contact_list_update_request, string $contentType = self::contentTypes['contactListCreate'][0])
+    public function contactListCreateAsync($contact_list_create_request, string $contentType = self::contentTypes['contactListCreate'][0])
     {
-        return $this->contactListCreateAsyncWithHttpInfo($contact_list_update_request, $contentType)
+        return $this->contactListCreateAsyncWithHttpInfo($contact_list_create_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1460,16 +1460,16 @@ class ContactListApi
      *
      * Create list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListCreateRequest $contact_list_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contactListCreateAsyncWithHttpInfo($contact_list_update_request, string $contentType = self::contentTypes['contactListCreate'][0])
+    public function contactListCreateAsyncWithHttpInfo($contact_list_create_request, string $contentType = self::contentTypes['contactListCreate'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ContactList200Response';
-        $request = $this->contactListCreateRequest($contact_list_update_request, $contentType);
+        $returnType = '\BSG\Api\V2\Model\ContactListCreate201Response';
+        $request = $this->contactListCreateRequest($contact_list_create_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1510,19 +1510,19 @@ class ContactListApi
     /**
      * Create request for operation 'contactListCreate'
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListCreateRequest $contact_list_create_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function contactListCreateRequest($contact_list_update_request, string $contentType = self::contentTypes['contactListCreate'][0])
+    public function contactListCreateRequest($contact_list_create_request, string $contentType = self::contentTypes['contactListCreate'][0])
     {
 
-        // verify the required parameter 'contact_list_update_request' is set
-        if ($contact_list_update_request === null || (is_array($contact_list_update_request) && count($contact_list_update_request) === 0)) {
+        // verify the required parameter 'contact_list_create_request' is set
+        if ($contact_list_create_request === null || (is_array($contact_list_create_request) && count($contact_list_create_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $contact_list_update_request when calling contactListCreate'
+                'Missing the required parameter $contact_list_create_request when calling contactListCreate'
             );
         }
 
@@ -1545,12 +1545,12 @@ class ContactListApi
         );
 
         // for model (json/xml)
-        if (isset($contact_list_update_request)) {
+        if (isset($contact_list_create_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contact_list_update_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contact_list_create_request));
             } else {
-                $httpBody = $contact_list_update_request;
+                $httpBody = $contact_list_create_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1610,13 +1610,14 @@ class ContactListApi
      * @param  int $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListDelete'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object|\BSG\Api\V2\Model\ContactListDelete400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListDelete422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactListDelete($id, string $contentType = self::contentTypes['contactListDelete'][0])
     {
-        $this->contactListDeleteWithHttpInfo($id, $contentType);
+        list($response) = $this->contactListDeleteWithHttpInfo($id, $contentType);
+        return $response;
     }
 
     /**
@@ -1627,9 +1628,9 @@ class ContactListApi
      * @param  int $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListDelete'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\BSG\Api\V2\Model\ContactListDelete400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListDelete422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactListDeleteWithHttpInfo($id, string $contentType = self::contentTypes['contactListDelete'][0])
     {
@@ -1658,14 +1659,226 @@ class ContactListApi
             $statusCode = $response->getStatusCode();
 
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 204:
+                    if ('object' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('object' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'object', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\BSG\Api\V2\Model\ContactListDelete400Response' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\BSG\Api\V2\Model\ContactListDelete400Response' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListDelete400Response', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\BSG\Api\V2\Model\ContactListDelete422Response' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\BSG\Api\V2\Model\ContactListDelete422Response' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListDelete422Response', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 429:
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = 'object';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 204:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ContactListDelete400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1673,7 +1886,7 @@ class ContactListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1894,7 @@ class ContactListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1689,7 +1902,7 @@ class ContactListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken422Response',
+                        '\BSG\Api\V2\Model\ContactListDelete422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1697,7 +1910,7 @@ class ContactListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1741,14 +1954,27 @@ class ContactListApi
      */
     public function contactListDeleteAsyncWithHttpInfo($id, string $contentType = self::contentTypes['contactListDelete'][0])
     {
-        $returnType = '';
+        $returnType = 'object';
         $request = $this->contactListDeleteRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1868,16 +2094,16 @@ class ContactListApi
      *
      * Remove contacts from the list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListDetachRequest $contact_list_detach_request contact_list_detach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListDetach'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListDetach422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return object|\BSG\Api\V2\Model\ContactListDetach400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListDetach422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
-    public function contactListDetach($contact_list_attach_request, string $contentType = self::contentTypes['contactListDetach'][0])
+    public function contactListDetach($contact_list_detach_request, string $contentType = self::contentTypes['contactListDetach'][0])
     {
-        list($response) = $this->contactListDetachWithHttpInfo($contact_list_attach_request, $contentType);
+        list($response) = $this->contactListDetachWithHttpInfo($contact_list_detach_request, $contentType);
         return $response;
     }
 
@@ -1886,16 +2112,16 @@ class ContactListApi
      *
      * Remove contacts from the list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListDetachRequest $contact_list_detach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListDetach'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListDetach422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object|\BSG\Api\V2\Model\ContactListDetach400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListDetach422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contactListDetachWithHttpInfo($contact_list_attach_request, string $contentType = self::contentTypes['contactListDetach'][0])
+    public function contactListDetachWithHttpInfo($contact_list_detach_request, string $contentType = self::contentTypes['contactListDetach'][0])
     {
-        $request = $this->contactListDetachRequest($contact_list_attach_request, $contentType);
+        $request = $this->contactListDetachRequest($contact_list_detach_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1949,11 +2175,11 @@ class ContactListApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListDetach400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListDetach400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1971,16 +2197,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListDetach400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1998,16 +2224,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2025,16 +2251,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactListDetach422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListDetach422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactListDetach422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListDetach422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2052,16 +2278,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactListDetach422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListDetach422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2079,7 +2305,7 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2139,7 +2365,7 @@ class ContactListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ContactListDetach400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2147,7 +2373,7 @@ class ContactListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2155,7 +2381,7 @@ class ContactListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2163,7 +2389,7 @@ class ContactListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactListDetach422Response',
+                        '\BSG\Api\V2\Model\ContactListDetach422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2171,7 +2397,7 @@ class ContactListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2186,15 +2412,15 @@ class ContactListApi
      *
      * Remove contacts from the list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListDetachRequest $contact_list_detach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListDetach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contactListDetachAsync($contact_list_attach_request, string $contentType = self::contentTypes['contactListDetach'][0])
+    public function contactListDetachAsync($contact_list_detach_request, string $contentType = self::contentTypes['contactListDetach'][0])
     {
-        return $this->contactListDetachAsyncWithHttpInfo($contact_list_attach_request, $contentType)
+        return $this->contactListDetachAsyncWithHttpInfo($contact_list_detach_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2207,16 +2433,16 @@ class ContactListApi
      *
      * Remove contacts from the list
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListDetachRequest $contact_list_detach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListDetach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contactListDetachAsyncWithHttpInfo($contact_list_attach_request, string $contentType = self::contentTypes['contactListDetach'][0])
+    public function contactListDetachAsyncWithHttpInfo($contact_list_detach_request, string $contentType = self::contentTypes['contactListDetach'][0])
     {
         $returnType = 'object';
-        $request = $this->contactListDetachRequest($contact_list_attach_request, $contentType);
+        $request = $this->contactListDetachRequest($contact_list_detach_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2257,19 +2483,19 @@ class ContactListApi
     /**
      * Create request for operation 'contactListDetach'
      *
-     * @param  \BSG\\Api\\V2\Model\ContactListAttachRequest $contact_list_attach_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListDetachRequest $contact_list_detach_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListDetach'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function contactListDetachRequest($contact_list_attach_request, string $contentType = self::contentTypes['contactListDetach'][0])
+    public function contactListDetachRequest($contact_list_detach_request, string $contentType = self::contentTypes['contactListDetach'][0])
     {
 
-        // verify the required parameter 'contact_list_attach_request' is set
-        if ($contact_list_attach_request === null || (is_array($contact_list_attach_request) && count($contact_list_attach_request) === 0)) {
+        // verify the required parameter 'contact_list_detach_request' is set
+        if ($contact_list_detach_request === null || (is_array($contact_list_detach_request) && count($contact_list_detach_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $contact_list_attach_request when calling contactListDetach'
+                'Missing the required parameter $contact_list_detach_request when calling contactListDetach'
             );
         }
 
@@ -2292,12 +2518,12 @@ class ContactListApi
         );
 
         // for model (json/xml)
-        if (isset($contact_list_attach_request)) {
+        if (isset($contact_list_detach_request)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contact_list_attach_request));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contact_list_detach_request));
             } else {
-                $httpBody = $contact_list_attach_request;
+                $httpBody = $contact_list_detach_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2357,18 +2583,18 @@ class ContactListApi
      * @param  int|null $page_offset page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way way (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_field search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator search_operator (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way way (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_field search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator search_operator (optional)
      * @param  string|null $search_value search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_fields_0_field search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_fields_0_field search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListSearch'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ContactListSearch200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListSearch422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ContactListSearch200Response|\BSG\Api\V2\Model\ContactListSearch400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListSearch422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactListSearch($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $search_field = null, $search_operator = null, $search_value = null, $search_fields_0_field = null, $search_fields_0_operator = null, $search_fields_0_value = null, string $contentType = self::contentTypes['contactListSearch'][0])
     {
@@ -2384,18 +2610,18 @@ class ContactListApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator (optional)
      * @param  string|null $search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListSearch'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ContactListSearch200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListSearch422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ContactListSearch200Response|\BSG\Api\V2\Model\ContactListSearch400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListSearch422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactListSearchWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $search_field = null, $search_operator = null, $search_value = null, $search_fields_0_field = null, $search_fields_0_operator = null, $search_fields_0_value = null, string $contentType = self::contentTypes['contactListSearch'][0])
     {
@@ -2426,11 +2652,11 @@ class ContactListApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ContactListSearch200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListSearch200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactListSearch200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListSearch200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2448,16 +2674,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactListSearch200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListSearch200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListSearch400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListSearch400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2475,16 +2701,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListSearch400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2502,16 +2728,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2529,16 +2755,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactListSearch422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListSearch422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactListSearch422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListSearch422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2556,16 +2782,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactListSearch422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListSearch422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2583,7 +2809,7 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2602,7 +2828,7 @@ class ContactListApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ContactListSearch200Response';
+            $returnType = '\BSG\Api\V2\Model\ContactListSearch200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2635,7 +2861,7 @@ class ContactListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactListSearch200Response',
+                        '\BSG\Api\V2\Model\ContactListSearch200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2643,7 +2869,7 @@ class ContactListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ContactListSearch400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2651,7 +2877,7 @@ class ContactListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2659,7 +2885,7 @@ class ContactListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2667,7 +2893,7 @@ class ContactListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactListSearch422Response',
+                        '\BSG\Api\V2\Model\ContactListSearch422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2675,7 +2901,7 @@ class ContactListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2693,12 +2919,12 @@ class ContactListApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator (optional)
      * @param  string|null $search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListSearch'] to see the possible values for this operation
      *
@@ -2723,12 +2949,12 @@ class ContactListApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator (optional)
      * @param  string|null $search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListSearch'] to see the possible values for this operation
      *
@@ -2737,7 +2963,7 @@ class ContactListApi
      */
     public function contactListSearchAsyncWithHttpInfo($page_offset = 0, $page_limit = 50, $sort = 'id', $way = null, $search_field = null, $search_operator = null, $search_value = null, $search_fields_0_field = null, $search_fields_0_operator = null, $search_fields_0_value = null, string $contentType = self::contentTypes['contactListSearch'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ContactListSearch200Response';
+        $returnType = '\BSG\Api\V2\Model\ContactListSearch200Response';
         $request = $this->contactListSearchRequest($page_offset, $page_limit, $sort, $way, $search_field, $search_operator, $search_value, $search_fields_0_field, $search_fields_0_operator, $search_fields_0_value, $contentType);
 
         return $this->client
@@ -2782,12 +3008,12 @@ class ContactListApi
      * @param  int|null $page_offset (optional, default to 0)
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string|null $sort (optional, default to 'id')
-     * @param  \BSG\\Api\\V2\Model\SortWay|null $way (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_operator (optional)
+     * @param  \BSG\Api\V2\Model\SortWay|null $way (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_operator (optional)
      * @param  string|null $search_value (optional)
-     * @param  \BSG\\Api\\V2\Model\ContactGroupSearchField|null $search_fields_0_field (optional)
-     * @param  \BSG\\Api\\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
+     * @param  \BSG\Api\V2\Model\ContactGroupSearchField|null $search_fields_0_field (optional)
+     * @param  \BSG\Api\V2\Model\SearchOperator|null $search_fields_0_operator (optional)
      * @param  string|null $search_fields_0_value (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListSearch'] to see the possible values for this operation
      *
@@ -2981,12 +3207,12 @@ class ContactListApi
      * Update list
      *
      * @param  int $id id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListUpdateRequest $contact_list_update_request contact_list_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListUpdate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ContactList200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListUpdate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ContactListUpdate200Response|\BSG\Api\V2\Model\ContactListUpdate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListUpdate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactListUpdate($id, $contact_list_update_request, string $contentType = self::contentTypes['contactListUpdate'][0])
     {
@@ -3000,12 +3226,12 @@ class ContactListApi
      * Update list
      *
      * @param  int $id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListUpdate'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ContactList200Response|\BSG\\Api\\V2\Model\AccountBalance400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactListUpdate422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ContactListUpdate200Response|\BSG\Api\V2\Model\ContactListUpdate400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactListUpdate422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactListUpdateWithHttpInfo($id, $contact_list_update_request, string $contentType = self::contentTypes['contactListUpdate'][0])
     {
@@ -3036,11 +3262,11 @@ class ContactListApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ContactList200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListUpdate200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactList200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListUpdate200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3058,16 +3284,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactList200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListUpdate200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\AccountBalance400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListUpdate400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\AccountBalance400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListUpdate400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3085,16 +3311,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\AccountBalance400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListUpdate400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3112,16 +3338,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3139,16 +3365,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactListUpdate422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactListUpdate422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactListUpdate422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactListUpdate422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3166,16 +3392,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactListUpdate422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactListUpdate422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3193,7 +3419,7 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3212,7 +3438,7 @@ class ContactListApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ContactList200Response';
+            $returnType = '\BSG\Api\V2\Model\ContactListUpdate200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3245,7 +3471,7 @@ class ContactListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactList200Response',
+                        '\BSG\Api\V2\Model\ContactListUpdate200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3253,7 +3479,7 @@ class ContactListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\AccountBalance400Response',
+                        '\BSG\Api\V2\Model\ContactListUpdate400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3261,7 +3487,7 @@ class ContactListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3269,7 +3495,7 @@ class ContactListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3277,7 +3503,7 @@ class ContactListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactListUpdate422Response',
+                        '\BSG\Api\V2\Model\ContactListUpdate422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3285,7 +3511,7 @@ class ContactListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3301,7 +3527,7 @@ class ContactListApi
      * Update list
      *
      * @param  int $id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3323,7 +3549,7 @@ class ContactListApi
      * Update list
      *
      * @param  int $id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3331,7 +3557,7 @@ class ContactListApi
      */
     public function contactListUpdateAsyncWithHttpInfo($id, $contact_list_update_request, string $contentType = self::contentTypes['contactListUpdate'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ContactList200Response';
+        $returnType = '\BSG\Api\V2\Model\ContactListUpdate200Response';
         $request = $this->contactListUpdateRequest($id, $contact_list_update_request, $contentType);
 
         return $this->client
@@ -3374,7 +3600,7 @@ class ContactListApi
      * Create request for operation 'contactListUpdate'
      *
      * @param  int $id (required)
-     * @param  \BSG\\Api\\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
+     * @param  \BSG\Api\V2\Model\ContactListUpdateRequest $contact_list_update_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactListUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3490,9 +3716,9 @@ class ContactListApi
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactLists'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \BSG\\Api\\V2\Model\ContactLists200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactLists422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected
+     * @return \BSG\Api\V2\Model\ContactLists200Response|\BSG\Api\V2\Model\ContactLists400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactLists422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected
      */
     public function contactLists($page_offset = 0, $page_limit = 50, string $contentType = self::contentTypes['contactLists'][0])
     {
@@ -3509,9 +3735,9 @@ class ContactListApi
      * @param  int|null $page_limit The number of items in the response (optional, default to 50)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['contactLists'] to see the possible values for this operation
      *
-     * @throws \BSG\\Api\\V2\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \BSG\Api\V2\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \BSG\\Api\\V2\Model\ContactLists200Response|\BSG\\Api\\V2\Model\RefreshToken400Response|\BSG\\Api\\V2\Model\ExpiredJwtToken|\BSG\\Api\\V2\Model\NotFound|\BSG\\Api\\V2\Model\ContactLists422Response|\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BSG\Api\V2\Model\ContactLists200Response|\BSG\Api\V2\Model\ContactLists400Response|\BSG\Api\V2\Model\ExpiredJwtToken|\BSG\Api\V2\Model\NotFound|\BSG\Api\V2\Model\ContactLists422Response|\BSG\Api\V2\Model\TooManyDuplicateRequestDetected, HTTP status code, HTTP response headers (array of strings)
      */
     public function contactListsWithHttpInfo($page_offset = 0, $page_limit = 50, string $contentType = self::contentTypes['contactLists'][0])
     {
@@ -3542,11 +3768,11 @@ class ContactListApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\BSG\\Api\\V2\Model\ContactLists200Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactLists200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactLists200Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactLists200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3564,16 +3790,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactLists200Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactLists200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\BSG\\Api\\V2\Model\RefreshToken400Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactLists400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\RefreshToken400Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactLists400Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3591,16 +3817,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\RefreshToken400Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactLists400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ExpiredJwtToken' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ExpiredJwtToken' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ExpiredJwtToken' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3618,16 +3844,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ExpiredJwtToken', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ExpiredJwtToken', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\BSG\\Api\\V2\Model\NotFound' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\NotFound' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\NotFound' !== 'string') {
+                        if ('\BSG\Api\V2\Model\NotFound' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3645,16 +3871,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\NotFound', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\NotFound', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\BSG\\Api\\V2\Model\ContactLists422Response' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\ContactLists422Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\ContactLists422Response' !== 'string') {
+                        if ('\BSG\Api\V2\Model\ContactLists422Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3672,16 +3898,16 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\ContactLists422Response', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\ContactLists422Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
+                    if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
+                        if ('\BSG\Api\V2\Model\TooManyDuplicateRequestDetected' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3699,7 +3925,7 @@ class ContactListApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected', []),
+                        ObjectSerializer::deserialize($content, '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3718,7 +3944,7 @@ class ContactListApi
                 );
             }
 
-            $returnType = '\BSG\\Api\\V2\Model\ContactLists200Response';
+            $returnType = '\BSG\Api\V2\Model\ContactLists200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3751,7 +3977,7 @@ class ContactListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactLists200Response',
+                        '\BSG\Api\V2\Model\ContactLists200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3759,7 +3985,7 @@ class ContactListApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\RefreshToken400Response',
+                        '\BSG\Api\V2\Model\ContactLists400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3767,7 +3993,7 @@ class ContactListApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ExpiredJwtToken',
+                        '\BSG\Api\V2\Model\ExpiredJwtToken',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3775,7 +4001,7 @@ class ContactListApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\NotFound',
+                        '\BSG\Api\V2\Model\NotFound',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3783,7 +4009,7 @@ class ContactListApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\ContactLists422Response',
+                        '\BSG\Api\V2\Model\ContactLists422Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3791,7 +4017,7 @@ class ContactListApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BSG\\Api\\V2\Model\TooManyDuplicateRequestDetected',
+                        '\BSG\Api\V2\Model\TooManyDuplicateRequestDetected',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3837,7 +4063,7 @@ class ContactListApi
      */
     public function contactListsAsyncWithHttpInfo($page_offset = 0, $page_limit = 50, string $contentType = self::contentTypes['contactLists'][0])
     {
-        $returnType = '\BSG\\Api\\V2\Model\ContactLists200Response';
+        $returnType = '\BSG\Api\V2\Model\ContactLists200Response';
         $request = $this->contactListsRequest($page_offset, $page_limit, $contentType);
 
         return $this->client

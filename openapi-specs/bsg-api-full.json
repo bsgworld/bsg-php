@@ -10219,9 +10219,12 @@
                     },
                     "data": {
                         "type": "object",
-                        "description": "Response data object with operation-specific fields"
+                        "description": "Response data object with operation-specific fields",
+                        "title": "DataSchema",
+                        "properties": {}
                     }
-                }
+                },
+                "title": "SuccessResponseSchema"
             },
             "ErrorResponse": {
                 "type": "object",
@@ -10243,9 +10246,12 @@
                     },
                     "data": {
                         "type": "object",
-                        "description": "Additional error context and details"
+                        "description": "Additional error context and details",
+                        "title": "DataSchema",
+                        "properties": {}
                     }
-                }
+                },
+                "title": "ErrorResponseSchema"
             },
             "HttpError400Response": {
                 "type": "object",
@@ -10263,10 +10269,14 @@
                             "type": "array",
                             "items": {
                                 "type": "string"
-                            }
-                        }
+                            },
+                            "title": "AdditionalPropertiesSchema"
+                        },
+                        "title": "ErrorsSchema",
+                        "properties": {}
                     }
-                }
+                },
+                "title": "HttpError400ResponseSchema"
             },
             "HttpError401Response": {
                 "type": "object",
@@ -10290,9 +10300,12 @@
                     },
                     "errors": {
                         "type": "object",
-                        "description": "Additional error details"
+                        "description": "Additional error details",
+                        "title": "ErrorsSchema",
+                        "properties": {}
                     }
-                }
+                },
+                "title": "Httperror401ResponseSchema"
             },
             "HttpError403Response": {
                 "type": "object",
@@ -10308,7 +10321,8 @@
                         "description": "Error message",
                         "example": "This action is unauthorized for your mode"
                     }
-                }
+                },
+                "title": "Httperror403ResponseSchema"
             },
             "HttpError404Response": {
                 "type": "object",
@@ -10324,7 +10338,8 @@
                         "description": "Error message",
                         "example": "Model not found"
                     }
-                }
+                },
+                "title": "Httperror404ResponseSchema"
             },
             "HttpError422Response": {
                 "type": "object",
@@ -10346,7 +10361,8 @@
                             "items": {
                                 "type": "string"
                             },
-                            "description": "List of validation error messages for this field"
+                            "description": "List of validation error messages for this field",
+                            "title": "AdditionalpropertiesSchema"
                         },
                         "example": {
                             "msisdn": [
@@ -10355,9 +10371,12 @@
                             "originator": [
                                 "This value is too short. It should have 3 characters or more."
                             ]
-                        }
+                        },
+                        "title": "ErrorsSchema",
+                        "properties": {}
                     }
-                }
+                },
+                "title": "Httperror422ResponseSchema"
             },
             "HttpError429Response": {
                 "type": "object",
@@ -10373,7 +10392,8 @@
                         "description": "Error message",
                         "example": "Too many duplicate request detected"
                     }
-                }
+                },
+                "title": "Httperror429ResponseSchema"
             },
             "HttpError500Response": {
                 "type": "object",
@@ -10389,7 +10409,8 @@
                         "description": "Error message",
                         "example": "An internal error occurred"
                     }
-                }
+                },
+                "title": "Httperror500ResponseSchema"
             },
             "BalanceResponse": {
                 "type": "object",
@@ -10425,7 +10446,8 @@
                         "description": "Credit limit for the account",
                         "example": "0.00"
                     }
-                }
+                },
+                "title": "BalanceresponseSchema"
             },
             "CommonPriceRequest": {
                 "type": "object",
@@ -10462,7 +10484,8 @@
                         "description": "Specific tariff code (optional, uses default if not provided)",
                         "example": "9"
                     }
-                }
+                },
+                "title": "CommonpricerequestSchema"
             },
             "CommonTariffResponse": {
                 "type": "object",
@@ -10521,10 +10544,13 @@
                                     "pattern": "^[A-Z]{3}$",
                                     "example": "USD"
                                 }
-                            }
-                        }
+                            },
+                            "title": "ServicesschemaServicesItem"
+                        },
+                        "title": "ServicesSchema"
                     }
-                }
+                },
+                "title": "CommontariffresponseSchema"
             },
             "CommonPriceResponse": {
                 "type": "object",
@@ -10571,7 +10597,8 @@
                         "description": "Mobile Network Code",
                         "example": "01"
                     }
-                }
+                },
+                "title": "CommonpriceresponseSchema"
             },
             "SmsSingleCreateRequest": {
                 "type": "object",
@@ -10729,7 +10756,8 @@
                                     "example": "unique_ref_123",
                                     "description": "Individual reference for this recipient"
                                 }
-                            }
+                            },
+                            "title": "PhonenumbersPhonesItem"
                         }
                     },
                     "reference": {
@@ -10884,7 +10912,8 @@
                                     "example": "Personalized message for this recipient",
                                     "description": "SMS text content for this specific recipient"
                                 }
-                            }
+                            },
+                            "title": "PhonenumbersPhonesItem1"
                         }
                     },
                     "reference": {
@@ -10955,155 +10984,162 @@
                     }
                 }
             },
+            "SmsPriceCheckSinglePhone": {
+                "type": "object",
+                "title": "SMS Price Check - Single Phone",
+                "required": [
+                    "destination",
+                    "msisdn",
+                    "body",
+                    "originator"
+                ],
+                "properties": {
+                    "destination": {
+                        "type": "string",
+                        "enum": [
+                            "phone"
+                        ],
+                        "example": "phone",
+                        "description": "Message destination type for single recipient"
+                    },
+                    "msisdn": {
+                        "type": "string",
+                        "title": "PhoneNumber",
+                        "pattern": "^[1-9][0-9]{7,14}$",
+                        "minLength": 8,
+                        "maxLength": 15,
+                        "example": "380953227271",
+                        "description": "Phone number in international format for price calculation"
+                    },
+                    "originator": {
+                        "type": "string",
+                        "title": "MessageSender",
+                        "minLength": 3,
+                        "maxLength": 15,
+                        "example": "BSG",
+                        "description": "Sender name for pricing calculation"
+                    },
+                    "body": {
+                        "type": "string",
+                        "title": "SmsMessageText",
+                        "maxLength": 765,
+                        "minLength": 1,
+                        "example": "Hello! This is a test message for price calculation.",
+                        "description": "SMS text content for length/parts calculation"
+                    },
+                    "transliterate": {
+                        "type": "boolean",
+                        "title": "MessageTransliterate",
+                        "default": false,
+                        "example": true,
+                        "description": "Apply transliteration (affects message length and pricing)"
+                    },
+                    "data_coding_ucs2": {
+                        "type": "boolean",
+                        "title": "UnicodeEncoding",
+                        "default": false,
+                        "example": false,
+                        "description": "Force UCS-2 encoding (affects message length and pricing)"
+                    },
+                    "tariff": {
+                        "type": "integer",
+                        "title": "TariffCode",
+                        "minimum": 1,
+                        "maximum": 999,
+                        "example": 27,
+                        "description": "Specific tariff code for pricing (optional)"
+                    }
+                }
+            },
+            "SmsPriceCheckMultiplePhones": {
+                "type": "object",
+                "title": "SMS Price Check - Multiple Phones",
+                "required": [
+                    "destination",
+                    "phones",
+                    "body",
+                    "originator"
+                ],
+                "properties": {
+                    "destination": {
+                        "type": "string",
+                        "enum": [
+                            "phones"
+                        ],
+                        "example": "phones",
+                        "description": "Message destination type for multiple recipients"
+                    },
+                    "phones": {
+                        "type": "array",
+                        "title": "PhoneNumbers",
+                        "description": "Array of phone objects for bulk price calculation",
+                        "minItems": 1,
+                        "maxItems": 1000,
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "msisdn"
+                            ],
+                            "properties": {
+                                "msisdn": {
+                                    "type": "string",
+                                    "pattern": "^[1-9][0-9]{7,14}$",
+                                    "example": "380953227271",
+                                    "description": "Phone number in international format"
+                                }
+                            },
+                            "title": "PhonenumbersPhonesItem2"
+                        }
+                    },
+                    "originator": {
+                        "type": "string",
+                        "title": "MessageSender",
+                        "minLength": 3,
+                        "maxLength": 15,
+                        "example": "BSG",
+                        "description": "Sender name for all messages"
+                    },
+                    "body": {
+                        "type": "string",
+                        "title": "SmsMessageText",
+                        "maxLength": 765,
+                        "minLength": 1,
+                        "example": "Hello! This is a bulk SMS for price calculation.",
+                        "description": "SMS text content for all recipients"
+                    },
+                    "transliterate": {
+                        "type": "boolean",
+                        "title": "MessageTransliterate",
+                        "default": false,
+                        "example": true,
+                        "description": "Apply transliteration to SMS text"
+                    },
+                    "tariff": {
+                        "type": "integer",
+                        "title": "TariffCode",
+                        "minimum": 1,
+                        "maximum": 999,
+                        "example": 27,
+                        "description": "Specific tariff code for pricing (optional)"
+                    }
+                }
+            },
             "SmsPriceCheckRequest": {
                 "title": "SMS Price Check Request",
                 "description": "Request to calculate SMS price without sending the message. Supports same three types as SMS sending: single phone, multiple phones, or OTP.",
                 "anyOf": [
                     {
-                        "type": "object",
-                        "title": "SMS Price Check - Single Phone",
-                        "required": [
-                            "destination",
-                            "msisdn",
-                            "body",
-                            "originator"
-                        ],
-                        "properties": {
-                            "destination": {
-                                "type": "string",
-                                "enum": [
-                                    "phone"
-                                ],
-                                "example": "phone",
-                                "description": "Message destination type for single recipient"
-                            },
-                            "msisdn": {
-                                "type": "string",
-                                "title": "PhoneNumber",
-                                "pattern": "^[1-9][0-9]{7,14}$",
-                                "minLength": 8,
-                                "maxLength": 15,
-                                "example": "380953227271",
-                                "description": "Phone number in international format for price calculation"
-                            },
-                            "originator": {
-                                "type": "string",
-                                "title": "MessageSender",
-                                "minLength": 3,
-                                "maxLength": 15,
-                                "example": "BSG",
-                                "description": "Sender name for pricing calculation"
-                            },
-                            "body": {
-                                "type": "string",
-                                "title": "SmsMessageText",
-                                "maxLength": 765,
-                                "minLength": 1,
-                                "example": "Hello! This is a test message for price calculation.",
-                                "description": "SMS text content for length/parts calculation"
-                            },
-                            "transliterate": {
-                                "type": "boolean",
-                                "title": "MessageTransliterate",
-                                "default": false,
-                                "example": true,
-                                "description": "Apply transliteration (affects message length and pricing)"
-                            },
-                            "data_coding_ucs2": {
-                                "type": "boolean",
-                                "title": "UnicodeEncoding",
-                                "default": false,
-                                "example": false,
-                                "description": "Force UCS-2 encoding (affects message length and pricing)"
-                            },
-                            "tariff": {
-                                "type": "integer",
-                                "title": "TariffCode",
-                                "minimum": 1,
-                                "maximum": 999,
-                                "example": 27,
-                                "description": "Specific tariff code for pricing (optional)"
-                            }
-                        }
+                        "$ref": "#/components/schemas/SmsPriceCheckSinglePhone"
                     },
                     {
-                        "type": "object",
-                        "title": "SMS Price Check - Multiple Phones",
-                        "required": [
-                            "destination",
-                            "phones",
-                            "body",
-                            "originator"
-                        ],
-                        "properties": {
-                            "destination": {
-                                "type": "string",
-                                "enum": [
-                                    "phones"
-                                ],
-                                "example": "phones",
-                                "description": "Message destination type for multiple recipients"
-                            },
-                            "phones": {
-                                "type": "array",
-                                "title": "PhoneNumbers",
-                                "description": "Array of phone objects for bulk price calculation",
-                                "minItems": 1,
-                                "maxItems": 1000,
-                                "items": {
-                                    "type": "object",
-                                    "required": [
-                                        "msisdn"
-                                    ],
-                                    "properties": {
-                                        "msisdn": {
-                                            "type": "string",
-                                            "pattern": "^[1-9][0-9]{7,14}$",
-                                            "example": "380953227271",
-                                            "description": "Phone number in international format"
-                                        }
-                                    }
-                                }
-                            },
-                            "originator": {
-                                "type": "string",
-                                "title": "MessageSender",
-                                "minLength": 3,
-                                "maxLength": 15,
-                                "example": "BSG",
-                                "description": "Sender name for all messages"
-                            },
-                            "body": {
-                                "type": "string",
-                                "title": "SmsMessageText",
-                                "maxLength": 765,
-                                "minLength": 1,
-                                "example": "Hello! This is a bulk SMS for price calculation.",
-                                "description": "SMS text content for all recipients"
-                            },
-                            "transliterate": {
-                                "type": "boolean",
-                                "title": "MessageTransliterate",
-                                "default": false,
-                                "example": true,
-                                "description": "Apply transliteration to SMS text"
-                            },
-                            "tariff": {
-                                "type": "integer",
-                                "title": "TariffCode",
-                                "minimum": 1,
-                                "maximum": 999,
-                                "example": 27,
-                                "description": "Specific tariff code for pricing (optional)"
-                            }
-                        }
+                        "$ref": "#/components/schemas/SmsPriceCheckMultiplePhones"
                     }
                 ],
                 "discriminator": {
                     "propertyName": "destination",
                     "mapping": {
-                        "phone": "#/components/schemas/SmsPriceCheckRequest/anyOf/0",
-                        "phones": "#/components/schemas/SmsPriceCheckRequest/anyOf/1"
+                        "phone": "#/components/schemas/SmsPriceCheckSinglePhone",
+                        "phones": "#/components/schemas/SmsPriceCheckMultiplePhones"
                     }
                 }
             },
@@ -11129,7 +11165,8 @@
                             123,
                             124,
                             125
-                        ]
+                        ],
+                        "title": "IdsSchema"
                     }
                 }
             },
@@ -11166,231 +11203,244 @@
                     }
                 }
             },
-            "SmsCreateResponse": {
-                "anyOf": [
-                    {
+            "SmsSingleResponse": {
+                "type": "object",
+                "title": "SMS Single Response",
+                "required": [
+                    "result"
+                ],
+                "properties": {
+                    "result": {
                         "type": "object",
-                        "title": "SMS Single Response",
                         "required": [
-                            "result"
+                            "error",
+                            "errorDescription"
                         ],
                         "properties": {
-                            "result": {
-                                "type": "object",
-                                "required": [
-                                    "error",
-                                    "errorDescription"
-                                ],
-                                "properties": {
-                                    "error": {
-                                        "type": "integer",
-                                        "title": "ErrorCode",
-                                        "description": "Error code: 0 for success, non-zero for various error conditions",
-                                        "example": 0,
-                                        "minimum": 0
-                                    },
-                                    "errorDescription": {
-                                        "type": "string",
-                                        "title": "ErrorDescription",
-                                        "description": "Human-readable error description. \"No errors\" when operation succeeds",
-                                        "example": "No errors",
-                                        "maxLength": 255
-                                    },
-                                    "reference": {
-                                        "type": "string",
-                                        "title": "MessageReference",
-                                        "description": "External reference ID provided in request or auto-generated",
-                                        "example": "unique_ref_123",
-                                        "maxLength": 50
-                                    },
-                                    "id": {
-                                        "type": "string",
-                                        "title": "MessageId",
-                                        "description": "Internal message ID assigned by SMS Gateway",
-                                        "example": "12345",
-                                        "pattern": "^[0-9]+$"
-                                    },
-                                    "price": {
-                                        "type": "number",
-                                        "title": "MessageCost",
-                                        "description": "Actual cost of sending this SMS message",
-                                        "example": 0.05,
-                                        "minimum": 0
-                                    },
-                                    "currency": {
-                                        "type": "string",
-                                        "title": "Currency",
-                                        "description": "Currency code according to ISO-4217 standard",
-                                        "example": "USD",
-                                        "pattern": "^[A-Z]{3}$",
-                                        "minLength": 3,
-                                        "maxLength": 3
-                                    },
-                                    "otp_code": {
-                                        "type": "string",
-                                        "title": "GeneratedOtpCode",
-                                        "description": "Auto-generated OTP code (only present for destination=otp requests)",
-                                        "example": "3123",
-                                        "pattern": "^[0-9A-Za-z*+!@#$%^&()\\-=\\[\\]{}\\\\]{1,20}$"
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "type": "object",
-                        "title": "SMS Multiple Response",
-                        "required": [
-                            "result"
-                        ],
-                        "properties": {
-                            "result": {
-                                "type": "array",
-                                "items": {
-                                    "type": "object",
-                                    "properties": {
-                                        "error": {
-                                            "type": "integer",
-                                            "title": "ErrorCode",
-                                            "description": "Error code: 0 for success, non-zero for various error conditions",
-                                            "example": 0,
-                                            "minimum": 0
-                                        },
-                                        "errorDescription": {
-                                            "type": "string",
-                                            "title": "ErrorDescription",
-                                            "description": "Human-readable error description. \"No errors\" when operation succeeds",
-                                            "example": "No errors",
-                                            "maxLength": 255
-                                        },
-                                        "reference": {
-                                            "type": "string",
-                                            "title": "MessageReference",
-                                            "description": "External reference ID provided in request or auto-generated",
-                                            "example": "ref_001",
-                                            "maxLength": 50
-                                        },
-                                        "id": {
-                                            "type": "string",
-                                            "title": "MessageId",
-                                            "description": "Internal message ID assigned by SMS Gateway",
-                                            "example": "12345",
-                                            "pattern": "^[0-9]+$"
-                                        },
-                                        "price": {
-                                            "type": "number",
-                                            "title": "MessageCost",
-                                            "description": "Actual cost of sending this SMS message",
-                                            "example": 0.05,
-                                            "minimum": 0
-                                        },
-                                        "currency": {
-                                            "type": "string",
-                                            "title": "Currency",
-                                            "description": "Currency code according to ISO-4217 standard",
-                                            "example": "USD",
-                                            "pattern": "^[A-Z]{3}$",
-                                            "minLength": 3,
-                                            "maxLength": 3
-                                        },
-                                        "otp_code": {
-                                            "type": "string",
-                                            "title": "OtpCode",
-                                            "description": "Generated OTP code (only for OTP destination type)",
-                                            "example": "123456",
-                                            "pattern": "^[0-9]+$"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "type": "object",
-                        "title": "SMS Task Response",
-                        "required": [
-                            "task_id",
-                            "result",
-                            "total_price",
-                            "currency"
-                        ],
-                        "properties": {
-                            "task_id": {
+                            "error": {
+                                "type": "integer",
+                                "title": "ErrorCode",
+                                "description": "Error code: 0 for success, non-zero for various error conditions",
+                                "example": 0,
+                                "minimum": 0
+                            },
+                            "errorDescription": {
                                 "type": "string",
-                                "title": "TaskId",
-                                "description": "Task ID for bulk SMS operations",
-                                "example": "1",
+                                "title": "ErrorDescription",
+                                "description": "Human-readable error description. \"No errors\" when operation succeeds",
+                                "example": "No errors",
+                                "maxLength": 255
+                            },
+                            "reference": {
+                                "type": "string",
+                                "title": "MessageReference",
+                                "description": "External reference ID provided in request or auto-generated",
+                                "example": "unique_ref_123",
+                                "maxLength": 50
+                            },
+                            "id": {
+                                "type": "string",
+                                "title": "MessageId",
+                                "description": "Internal message ID assigned by SMS Gateway",
+                                "example": "12345",
                                 "pattern": "^[0-9]+$"
                             },
-                            "result": {
-                                "type": "array",
-                                "items": {
-                                    "type": "object",
-                                    "properties": {
-                                        "error": {
-                                            "type": "integer",
-                                            "title": "ErrorCode",
-                                            "description": "Error code: 0 for success, non-zero for various error conditions",
-                                            "example": 0,
-                                            "minimum": 0
-                                        },
-                                        "errorDescription": {
-                                            "type": "string",
-                                            "title": "ErrorDescription",
-                                            "description": "Human-readable error description. \"No errors\" when operation succeeds",
-                                            "example": "No errors",
-                                            "maxLength": 255
-                                        },
-                                        "reference": {
-                                            "type": "string",
-                                            "title": "MessageReference",
-                                            "description": "External reference ID provided in request or auto-generated",
-                                            "example": "ref_001",
-                                            "maxLength": 50
-                                        },
-                                        "id": {
-                                            "type": "string",
-                                            "title": "MessageId",
-                                            "description": "Internal message ID assigned by SMS Gateway",
-                                            "example": "12345",
-                                            "pattern": "^[0-9]+$"
-                                        },
-                                        "price": {
-                                            "type": "number",
-                                            "title": "MessageCost",
-                                            "description": "Actual cost of sending this SMS message",
-                                            "example": 0.05,
-                                            "minimum": 0
-                                        },
-                                        "currency": {
-                                            "type": "string",
-                                            "title": "Currency",
-                                            "description": "Currency code according to ISO-4217 standard",
-                                            "example": "USD",
-                                            "pattern": "^[A-Z]{3}$",
-                                            "minLength": 3,
-                                            "maxLength": 3
-                                        }
-                                    }
-                                },
-                                "title": "TaskResults",
-                                "description": "Array of results for task-based SMS sending"
-                            },
-                            "total_price": {
+                            "price": {
                                 "type": "number",
-                                "title": "TaskTotalPrice",
-                                "description": "Total price for all messages in task",
-                                "example": 1.25,
+                                "title": "MessageCost",
+                                "description": "Actual cost of sending this SMS message",
+                                "example": 0.05,
                                 "minimum": 0
                             },
                             "currency": {
                                 "type": "string",
-                                "title": "TaskCurrency",
-                                "description": "Currency code for total price",
+                                "title": "Currency",
+                                "description": "Currency code according to ISO-4217 standard",
+                                "example": "USD",
                                 "pattern": "^[A-Z]{3}$",
-                                "example": "USD"
+                                "minLength": 3,
+                                "maxLength": 3
+                            },
+                            "otp_code": {
+                                "type": "string",
+                                "title": "GeneratedOtpCode",
+                                "description": "Auto-generated OTP code (only present for destination=otp requests)",
+                                "example": "3123",
+                                "pattern": "^[0-9A-Za-z*+!@#$%^&()\\-=\\[\\]{}\\\\]{1,20}$"
                             }
-                        }
+                        },
+                        "title": "ResultSchema"
+                    }
+                }
+            },
+            "SmsMultipleResponse": {
+                "type": "object",
+                "title": "SMS Multiple Response",
+                "required": [
+                    "result"
+                ],
+                "properties": {
+                    "result": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "error": {
+                                    "type": "integer",
+                                    "title": "ErrorCode",
+                                    "description": "Error code: 0 for success, non-zero for various error conditions",
+                                    "example": 0,
+                                    "minimum": 0
+                                },
+                                "errorDescription": {
+                                    "type": "string",
+                                    "title": "ErrorDescription",
+                                    "description": "Human-readable error description. \"No errors\" when operation succeeds",
+                                    "example": "No errors",
+                                    "maxLength": 255
+                                },
+                                "reference": {
+                                    "type": "string",
+                                    "title": "MessageReference",
+                                    "description": "External reference ID provided in request or auto-generated",
+                                    "example": "ref_001",
+                                    "maxLength": 50
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "title": "MessageId",
+                                    "description": "Internal message ID assigned by SMS Gateway",
+                                    "example": "12345",
+                                    "pattern": "^[0-9]+$"
+                                },
+                                "price": {
+                                    "type": "number",
+                                    "title": "MessageCost",
+                                    "description": "Actual cost of sending this SMS message",
+                                    "example": 0.05,
+                                    "minimum": 0
+                                },
+                                "currency": {
+                                    "type": "string",
+                                    "title": "Currency",
+                                    "description": "Currency code according to ISO-4217 standard",
+                                    "example": "USD",
+                                    "pattern": "^[A-Z]{3}$",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                },
+                                "otp_code": {
+                                    "type": "string",
+                                    "title": "OtpCode",
+                                    "description": "Generated OTP code (only for OTP destination type)",
+                                    "example": "123456",
+                                    "pattern": "^[0-9]+$"
+                                }
+                            },
+                            "title": "ResultschemaResultItem"
+                        },
+                        "title": "ResultSchema"
+                    }
+                }
+            },
+            "SmsTaskResponse": {
+                "type": "object",
+                "title": "SMS Task Response",
+                "required": [
+                    "task_id",
+                    "result",
+                    "total_price",
+                    "currency"
+                ],
+                "properties": {
+                    "task_id": {
+                        "type": "string",
+                        "title": "TaskId",
+                        "description": "Task ID for bulk SMS operations",
+                        "example": "1",
+                        "pattern": "^[0-9]+$"
+                    },
+                    "result": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "error": {
+                                    "type": "integer",
+                                    "title": "ErrorCode",
+                                    "description": "Error code: 0 for success, non-zero for various error conditions",
+                                    "example": 0,
+                                    "minimum": 0
+                                },
+                                "errorDescription": {
+                                    "type": "string",
+                                    "title": "ErrorDescription",
+                                    "description": "Human-readable error description. \"No errors\" when operation succeeds",
+                                    "example": "No errors",
+                                    "maxLength": 255
+                                },
+                                "reference": {
+                                    "type": "string",
+                                    "title": "MessageReference",
+                                    "description": "External reference ID provided in request or auto-generated",
+                                    "example": "ref_001",
+                                    "maxLength": 50
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "title": "MessageId",
+                                    "description": "Internal message ID assigned by SMS Gateway",
+                                    "example": "12345",
+                                    "pattern": "^[0-9]+$"
+                                },
+                                "price": {
+                                    "type": "number",
+                                    "title": "MessageCost",
+                                    "description": "Actual cost of sending this SMS message",
+                                    "example": 0.05,
+                                    "minimum": 0
+                                },
+                                "currency": {
+                                    "type": "string",
+                                    "title": "Currency",
+                                    "description": "Currency code according to ISO-4217 standard",
+                                    "example": "USD",
+                                    "pattern": "^[A-Z]{3}$",
+                                    "minLength": 3,
+                                    "maxLength": 3
+                                }
+                            },
+                            "title": "TaskresultsResultItem"
+                        },
+                        "title": "TaskResults",
+                        "description": "Array of results for task-based SMS sending"
+                    },
+                    "total_price": {
+                        "type": "number",
+                        "title": "TaskTotalPrice",
+                        "description": "Total price for all messages in task",
+                        "example": 1.25,
+                        "minimum": 0
+                    },
+                    "currency": {
+                        "type": "string",
+                        "title": "TaskCurrency",
+                        "description": "Currency code for total price",
+                        "pattern": "^[A-Z]{3}$",
+                        "example": "USD"
+                    }
+                }
+            },
+            "SmsCreateResponse": {
+                "anyOf": [
+                    {
+                        "$ref": "#/components/schemas/SmsSingleResponse"
+                    },
+                    {
+                        "$ref": "#/components/schemas/SmsMultipleResponse"
+                    },
+                    {
+                        "$ref": "#/components/schemas/SmsTaskResponse"
                     }
                 ]
             },
@@ -11424,7 +11474,7 @@
                         "description": "Array of SMS pricing information",
                         "items": {
                             "type": "object",
-                            "title": "PriceInfo",
+                            "title": "SmspriceslistPricesItem",
                             "required": [
                                 "type",
                                 "country",
@@ -11846,8 +11896,10 @@
                                     "type": "string",
                                     "example": "2025-01-01 12:00:00"
                                 }
-                            }
-                        }
+                            },
+                            "title": "ResultschemaResultItem1"
+                        },
+                        "title": "ResultSchema"
                     },
                     "total_count": {
                         "type": "integer",
@@ -11923,8 +11975,10 @@
                                     "description": "Price currency",
                                     "example": "USD"
                                 }
-                            }
-                        }
+                            },
+                            "title": "ResultschemaResultItem2"
+                        },
+                        "title": "ResultSchema"
                     }
                 }
             },
@@ -11980,8 +12034,10 @@
                                                 "example": "viber_ref_123",
                                                 "description": "External reference for this recipient"
                                             }
-                                        }
-                                    }
+                                        },
+                                        "title": "ToschemaToItem"
+                                    },
+                                    "title": "ToSchema"
                                 },
                                 "is_promotional": {
                                     "type": "integer",
@@ -12061,14 +12117,19 @@
                                                             "example": "sms_fallback_ref",
                                                             "description": "Reference for SMS fallback"
                                                         }
-                                                    }
+                                                    },
+                                                    "title": "Alt_RouteSchema"
                                                 }
-                                            }
+                                            },
+                                            "title": "ViberSchema"
                                         }
-                                    }
+                                    },
+                                    "title": "OptionsSchema"
                                 }
-                            }
-                        }
+                            },
+                            "title": "MessagesschemaMessagesItem"
+                        },
+                        "title": "MessagesSchema"
                     },
                     "tariff": {
                         "type": "integer",
@@ -12083,7 +12144,8 @@
                         "example": 86400,
                         "description": "Message validity period in seconds (max 24 hours = 86400 sec, default = 24 hours)"
                     }
-                }
+                },
+                "title": "VibercreaterequestSchema"
             },
             "ViberPricesRequest": {
                 "type": "object",
@@ -12132,13 +12194,18 @@
                                                 "example": "380953227271",
                                                 "description": "Recipient phone number in international format"
                                             }
-                                        }
-                                    }
+                                        },
+                                        "title": "ToschemaToItem1"
+                                    },
+                                    "title": "ToSchema"
                                 }
-                            }
-                        }
+                            },
+                            "title": "MessagesschemaMessagesItem1"
+                        },
+                        "title": "MessagesSchema"
                     }
-                }
+                },
+                "title": "ViberpricesrequestSchema"
             },
             "ViberPriceCheckRequest": {
                 "type": "object",
@@ -12187,13 +12254,18 @@
                                                 "example": "380953227271",
                                                 "description": "Recipient phone number in international format"
                                             }
-                                        }
-                                    }
+                                        },
+                                        "title": "ToschemaToItem2"
+                                    },
+                                    "title": "ToSchema"
                                 }
-                            }
-                        }
+                            },
+                            "title": "MessagesschemaMessagesItem2"
+                        },
+                        "title": "MessagesSchema"
                     }
-                }
+                },
+                "title": "ViberpricecheckrequestSchema"
             },
             "ViberCreateResponse": {
                 "type": "object",
@@ -12243,8 +12315,10 @@
                                     "description": "Price currency (when error = 0)",
                                     "example": "USD"
                                 }
-                            }
-                        }
+                            },
+                            "title": "ResultschemaResultItem3"
+                        },
+                        "title": "ResultSchema"
                     },
                     "total_price": {
                         "type": "number",
@@ -12259,7 +12333,8 @@
                         "example": "USD",
                         "nullable": true
                     }
-                }
+                },
+                "title": "VibercreateresponseSchema"
             },
             "ViberPricesResponse": {
                 "type": "object",
@@ -12338,10 +12413,13 @@
                                     "pattern": "^[A-Z]{3}$",
                                     "example": "USD"
                                 }
-                            }
-                        }
+                            },
+                            "title": "PricesschemaPricesItem"
+                        },
+                        "title": "PricesSchema"
                     }
-                }
+                },
+                "title": "ViberpricesresponseSchema"
             },
             "ViberPriceCheckResponse": {
                 "type": "object",
@@ -12372,7 +12450,8 @@
                         "description": "Price currency (ISO 4217)",
                         "example": "USD"
                     }
-                }
+                },
+                "title": "ViberpricecheckresponseSchema"
             },
             "ViberStatusResponse": {
                 "type": "object",
@@ -12477,9 +12556,11 @@
                                     "type": "number",
                                     "example": 0.03
                                 }
-                            }
+                            },
+                            "title": "AltRouteschemaAltRouteItem"
                         },
-                        "nullable": true
+                        "nullable": true,
+                        "title": "Alt_RouteSchema"
                     },
                     "alt_route_messages": {
                         "type": "array",
@@ -12523,11 +12604,14 @@
                                     "type": "string",
                                     "example": "BSG"
                                 }
-                            }
+                            },
+                            "title": "AltRouteMessagesschemaAltRouteMessagesItem"
                         },
-                        "nullable": true
+                        "nullable": true,
+                        "title": "Alt_Route_MessagesSchema"
                     }
-                }
+                },
+                "title": "ViberstatusresponseSchema"
             },
             "ViberMessageStatusResponse": {
                 "type": "object",
@@ -12593,71 +12677,81 @@
                         "type": "string",
                         "example": "USD"
                     }
+                },
+                "title": "VibermessagestatusresponseSchema"
+            },
+            "HlrBulkRequest": {
+                "type": "array",
+                "description": "Array of HLR requests for bulk lookup",
+                "title": "HlrBulkRequest",
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "msisdn",
+                        "reference"
+                    ],
+                    "properties": {
+                        "msisdn": {
+                            "type": "string",
+                            "example": "380953227271",
+                            "description": "Phone number in international format"
+                        },
+                        "reference": {
+                            "type": "string",
+                            "example": "unique_ref_123",
+                            "description": "External reference ID for tracking"
+                        },
+                        "tariff": {
+                            "type": "integer",
+                            "example": 8,
+                            "description": "Tariff code for pricing"
+                        },
+                        "callback_url": {
+                            "type": "string",
+                            "example": "http://your-site.com/callback",
+                            "description": "URL for delivery reports (optional)"
+                        }
+                    },
+                    "title": "HlrbulkrequestHlrbulkrequestItem"
+                }
+            },
+            "HlrSingleRequest": {
+                "type": "object",
+                "description": "Single HLR request for /check endpoint",
+                "title": "HlrSingleRequest",
+                "required": [
+                    "msisdn"
+                ],
+                "properties": {
+                    "msisdn": {
+                        "type": "string",
+                        "example": "380953227271",
+                        "description": "Phone number in international format"
+                    },
+                    "reference": {
+                        "type": "string",
+                        "example": "unique_ref_123",
+                        "description": "External reference ID for tracking (optional for sync)"
+                    },
+                    "tariff": {
+                        "type": "integer",
+                        "example": 8,
+                        "description": "Tariff code for pricing (optional, uses default if not provided)"
+                    },
+                    "callback_url": {
+                        "type": "string",
+                        "example": "http://your-site.com/callback",
+                        "description": "URL for delivery reports (optional)"
+                    }
                 }
             },
             "HlrCreateRequest": {
                 "oneOf": [
                     {
-                        "type": "array",
-                        "description": "Array of HLR requests for bulk lookup",
-                        "items": {
-                            "type": "object",
-                            "required": [
-                                "msisdn",
-                                "reference"
-                            ],
-                            "properties": {
-                                "msisdn": {
-                                    "type": "string",
-                                    "example": "380953227271",
-                                    "description": "Phone number in international format"
-                                },
-                                "reference": {
-                                    "type": "string",
-                                    "example": "unique_ref_123",
-                                    "description": "External reference ID for tracking"
-                                },
-                                "tariff": {
-                                    "type": "integer",
-                                    "example": 8,
-                                    "description": "Tariff code for pricing"
-                                },
-                                "callback_url": {
-                                    "type": "string",
-                                    "example": "http://your-site.com/callback",
-                                    "description": "URL for delivery reports (optional)"
-                                }
-                            }
-                        }
+                        "$ref": "#/components/schemas/HlrBulkRequest"
                     },
                     {
-                        "type": "object",
-                        "description": "Single HLR request for /check endpoint",
-                        "required": [
-                            "msisdn"
-                        ],
-                        "properties": {
-                            "msisdn": {
-                                "type": "string",
-                                "example": "380953227271",
-                                "description": "Phone number in international format"
-                            },
-                            "reference": {
-                                "type": "string",
-                                "example": "unique_ref_123",
-                                "description": "External reference ID for tracking (optional for sync)"
-                            },
-                            "tariff": {
-                                "type": "integer",
-                                "example": 8,
-                                "description": "Tariff code for pricing (optional, uses default if not provided)"
-                            },
-                            "callback_url": {
-                                "type": "string",
-                                "example": "http://your-site.com/callback",
-                                "description": "URL for delivery reports (optional)"
-                            }
-                        }
+                        "$ref": "#/components/schemas/HlrSingleRequest"
                     }
                 ]
             },
@@ -12677,7 +12771,8 @@
                         "example": "unique_ref_123",
                         "description": "External reference ID"
                     }
-                }
+                },
+                "title": "HlrsyncrequestSchema"
             },
             "HlrCreateResponse": {
                 "type": "object",
@@ -12717,10 +12812,13 @@
                                     "description": "Applied tariff code",
                                     "example": 8
                                 }
-                            }
-                        }
+                            },
+                            "title": "ResultschemaResultItem4"
+                        },
+                        "title": "ResultSchema"
                     }
-                }
+                },
+                "title": "HlrcreateresponseSchema"
             },
             "HlrSyncResponse": {
                 "type": "object",
@@ -12818,7 +12916,8 @@
                                 "example": "255039XXXXXXXX",
                                 "nullable": true
                             }
-                        }
+                        },
+                        "title": "DetailsSchema"
                     },
                     "createdDatetime": {
                         "type": "string",
@@ -12834,7 +12933,8 @@
                         "example": "2025-01-15 10:30:05",
                         "nullable": true
                     }
-                }
+                },
+                "title": "HlrsyncresponseSchema"
             },
             "HlrPricesResponse": {
                 "type": "object",
@@ -12913,10 +13013,13 @@
                                     "pattern": "^[A-Z]{3}$",
                                     "example": "USD"
                                 }
-                            }
-                        }
+                            },
+                            "title": "PricesschemaPricesItem1"
+                        },
+                        "title": "PricesSchema"
                     }
-                }
+                },
+                "title": "HlrpricesresponseSchema"
             },
             "HlrStatusResponse": {
                 "type": "object",
@@ -13013,7 +13116,8 @@
                                 "example": "255039XXXXXXXX",
                                 "nullable": true
                             }
-                        }
+                        },
+                        "title": "DetailsSchema"
                     },
                     "createdDatetime": {
                         "type": "string",
@@ -13029,91 +13133,102 @@
                         "example": "2025-01-15 10:30:05",
                         "nullable": true
                     }
+                },
+                "title": "HlrstatusresponseSchema"
+            },
+            "MnpSingleRequest": {
+                "type": "object",
+                "description": "Single MNP lookup request",
+                "title": "MnpSingleRequest",
+                "required": [
+                    "msisdn"
+                ],
+                "properties": {
+                    "msisdn": {
+                        "type": "string",
+                        "example": "380953227271",
+                        "description": "Phone number in international format for MNP lookup"
+                    },
+                    "reference": {
+                        "type": "string",
+                        "example": "unique_ref_123",
+                        "description": "External reference ID for tracking (optional)"
+                    },
+                    "tariff": {
+                        "type": "integer",
+                        "example": 5,
+                        "description": "Tariff code for pricing (optional, uses user default if not provided)"
+                    },
+                    "callback_url": {
+                        "type": "string",
+                        "example": "http://your-site.com/callback",
+                        "description": "URL for delivery reports (optional)"
+                    }
+                }
+            },
+            "MnpBulkRequest": {
+                "type": "object",
+                "description": "Batch MNP lookup request (JSON payload)",
+                "title": "MnpBulkRequest",
+                "required": [
+                    "msisdns"
+                ],
+                "properties": {
+                    "msisdns": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "msisdn"
+                            ],
+                            "properties": {
+                                "msisdn": {
+                                    "type": "string",
+                                    "example": "380953227271",
+                                    "description": "Phone number in international format for MNP lookup"
+                                },
+                                "tariff": {
+                                    "type": "integer",
+                                    "example": 5,
+                                    "description": "Tariff code for pricing (optional, uses user default if not provided)"
+                                },
+                                "reference": {
+                                    "type": "string",
+                                    "example": "ref_001",
+                                    "description": "External reference ID for tracking (optional)"
+                                }
+                            },
+                            "title": "MnpbulkrequestmsisdnsMsisdnsItem"
+                        },
+                        "description": "Array of phone numbers for MNP lookup",
+                        "example": [
+                            {
+                                "msisdn": "380953227271",
+                                "tariff": 5,
+                                "reference": "ref_001"
+                            },
+                            {
+                                "msisdn": "380953227272",
+                                "tariff": 5,
+                                "reference": "ref_002"
+                            }
+                        ],
+                        "title": "MnpBulkRequestMsisdns"
+                    },
+                    "reference": {
+                        "type": "string",
+                        "example": "batch_ref_123",
+                        "description": "Global reference ID for the entire batch"
+                    }
                 }
             },
             "MnpCreateRequest": {
                 "oneOf": [
                     {
-                        "type": "object",
-                        "description": "Single MNP lookup request",
-                        "required": [
-                            "msisdn"
-                        ],
-                        "properties": {
-                            "msisdn": {
-                                "type": "string",
-                                "example": "380953227271",
-                                "description": "Phone number in international format for MNP lookup"
-                            },
-                            "reference": {
-                                "type": "string",
-                                "example": "unique_ref_123",
-                                "description": "External reference ID for tracking (optional)"
-                            },
-                            "tariff": {
-                                "type": "integer",
-                                "example": 5,
-                                "description": "Tariff code for pricing (optional, uses user default if not provided)"
-                            },
-                            "callback_url": {
-                                "type": "string",
-                                "example": "http://your-site.com/callback",
-                                "description": "URL for delivery reports (optional)"
-                            }
-                        }
+                        "$ref": "#/components/schemas/MnpSingleRequest"
                     },
                     {
-                        "type": "object",
-                        "description": "Batch MNP lookup request (JSON payload)",
-                        "required": [
-                            "msisdns"
-                        ],
-                        "properties": {
-                            "msisdns": {
-                                "type": "array",
-                                "items": {
-                                    "type": "object",
-                                    "required": [
-                                        "msisdn"
-                                    ],
-                                    "properties": {
-                                        "msisdn": {
-                                            "type": "string",
-                                            "example": "380953227271",
-                                            "description": "Phone number in international format for MNP lookup"
-                                        },
-                                        "tariff": {
-                                            "type": "integer",
-                                            "example": 5,
-                                            "description": "Tariff code for pricing (optional, uses user default if not provided)"
-                                        },
-                                        "reference": {
-                                            "type": "string",
-                                            "example": "ref_001",
-                                            "description": "External reference ID for tracking (optional)"
-                                        }
-                                    }
-                                },
-                                "description": "Array of phone numbers for MNP lookup",
-                                "example": [
-                                    {
-                                        "msisdn": "380953227271",
-                                        "tariff": 5,
-                                        "reference": "ref_001"
-                                    },
-                                    {
-                                        "msisdn": "380953227272",
-                                        "tariff": 5,
-                                        "reference": "ref_002"
-                                    }
-                                ]
-                            },
-                            "reference": {
-                                "type": "string",
-                                "example": "batch_ref_123",
-                                "description": "Global reference ID for the entire batch"
-                            }
-                        }
+                        "$ref": "#/components/schemas/MnpBulkRequest"
                     }
                 ]
             },
@@ -13147,7 +13262,8 @@
                                     "example": "ref_001",
                                     "description": "External reference ID for tracking (optional)"
                                 }
-                            }
+                            },
+                            "title": "MsisdnsschemaMsisdnsItem"
                         },
                         "description": "Array of phone numbers for MNP lookup",
                         "example": [
@@ -13161,14 +13277,16 @@
                                 "tariff": 5,
                                 "reference": "ref_002"
                             }
-                        ]
+                        ],
+                        "title": "MsisdnsSchema"
                     },
                     "reference": {
                         "type": "string",
                         "example": "batch_ref_123",
                         "description": "Global reference ID for the entire batch (optional)"
                     }
-                }
+                },
+                "title": "MnpbatchcreaterequestSchema"
             },
             "MnpCreateResponse": {
                 "type": "object",
@@ -13271,10 +13389,13 @@
                                             "description": "Full operator name with country",
                                             "example": "MTS Ukraine"
                                         }
-                                    }
+                                    },
+                                    "title": "InfoSchema"
                                 }
-                            }
-                        }
+                            },
+                            "title": "ResultschemaResultItem5"
+                        },
+                        "title": "ResultSchema"
                     },
                     "total_price": {
                         "type": "number",
@@ -13288,7 +13409,8 @@
                         "pattern": "^[A-Z]{3}$",
                         "example": "USD"
                     }
-                }
+                },
+                "title": "MnpcreateresponseSchema"
             },
             "MnpStatusResponse": {
                 "type": "object",
@@ -13348,7 +13470,8 @@
                         "description": "External reference ID for tracking",
                         "example": "unique_ref_123"
                     }
-                }
+                },
+                "title": "MnpstatusresponseSchema"
             },
             "MnpPricesResponse": {
                 "type": "object",
@@ -13427,10 +13550,13 @@
                                     "pattern": "^[A-Z]{3}$",
                                     "example": "USD"
                                 }
-                            }
-                        }
+                            },
+                            "title": "PricesschemaPricesItem2"
+                        },
+                        "title": "PricesSchema"
                     }
-                }
+                },
+                "title": "MnppricesresponseSchema"
             },
             "MnpServiceStatusResponse": {
                 "type": "object",
@@ -13470,7 +13596,8 @@
                         "description": "Number of MNP lookup requests today",
                         "example": 50
                     }
-                }
+                },
+                "title": "MnpservicestatusresponseSchema"
             },
             "ExportCreateRequest": {
                 "type": "object",
@@ -13541,7 +13668,8 @@
                                 "description": "Filter by originator/sender",
                                 "example": "BSG"
                             }
-                        }
+                        },
+                        "title": "FiltersSchema"
                     }
                 }
             },
@@ -13662,7 +13790,8 @@
                         "example": [
                             "sms.delivery",
                             "viber.delivery"
-                        ]
+                        ],
+                        "title": "EventsSchema"
                     },
                     "reference": {
                         "type": "string",
@@ -13712,9 +13841,11 @@
                                     "sms.delivery",
                                     "viber.delivery"
                                 ],
-                                "description": "Subscribed event types"
+                                "description": "Subscribed event types",
+                                "title": "EventsSchema"
                             }
-                        }
+                        },
+                        "title": "DataSchema"
                     }
                 }
             },
@@ -13756,7 +13887,8 @@
                             "sms.delivery",
                             "viber.delivery"
                         ],
-                        "description": "Subscribed event types"
+                        "description": "Subscribed event types",
+                        "title": "EventsSchema"
                     },
                     "last_success": {
                         "type": "string",

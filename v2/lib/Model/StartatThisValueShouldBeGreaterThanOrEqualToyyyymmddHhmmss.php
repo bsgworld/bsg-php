@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmss Class Doc Comment
  *
  * @category Class
  * @description {start_at} - This value should be greater than or equal to \\\&quot;yyyy-mm-dd hh:mm:ss\\
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmss implements Mode
       */
     protected static $openAPITypes = [
         'message' => 'string',
-        'errors' => '\BSG\\Api\\V2\Model\StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmssErrors'
+        'errors' => '\BSG\Api\V2\Model\StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmssErrors'
     ];
 
     /**
@@ -327,7 +327,7 @@ class StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmss implements Mode
     /**
      * Gets errors
      *
-     * @return \BSG\\Api\\V2\Model\StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmssErrors|null
+     * @return \BSG\Api\V2\Model\StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmssErrors|null
      */
     public function getErrors()
     {
@@ -337,7 +337,7 @@ class StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmss implements Mode
     /**
      * Sets errors
      *
-     * @param \BSG\\Api\\V2\Model\StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmssErrors|null $errors errors
+     * @param \BSG\Api\V2\Model\StartatThisValueShouldBeGreaterThanOrEqualToyyyymmddHhmmssErrors|null $errors errors
      *
      * @return self
      */

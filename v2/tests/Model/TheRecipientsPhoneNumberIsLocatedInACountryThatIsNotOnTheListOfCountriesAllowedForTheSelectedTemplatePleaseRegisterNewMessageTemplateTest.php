@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace BSG\\Api\\V2\Test\Model;
+namespace BSG\Api\V2\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description The recipients phone number is located in a country that is not on the list of countries allowed for the selected template. Please register new message template
- * @package     BSG\\Api\\V2
+ * @package     BSG\Api\V2
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

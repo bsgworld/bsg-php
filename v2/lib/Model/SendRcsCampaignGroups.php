@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * SendRcsCampaignGroups Class Doc Comment
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,8 +62,8 @@ class SendRcsCampaignGroups implements ModelInterface, ArrayAccess, \JsonSeriali
         'tariff_code' => 'int',
         'validity' => 'int',
         'start_at' => '\DateTime',
-        'options' => '\BSG\\Api\\V2\Model\Options',
-        'alternative_channel' => '\BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel',
+        'options' => '\BSG\Api\V2\Model\Options',
+        'alternative_channel' => '\BSG\Api\V2\Model\SendRcsCampaignGroupsAlternativeChannel',
         'add_to_contact_book' => 'bool',
         'check_stop_list' => 'bool'
     ];
@@ -97,7 +97,7 @@ class SendRcsCampaignGroups implements ModelInterface, ArrayAccess, \JsonSeriali
         'sender' => false,
         'tariff_code' => false,
         'validity' => false,
-        'start_at' => false,
+        'start_at' => true,
         'options' => false,
         'alternative_channel' => true,
         'add_to_contact_book' => false,
@@ -528,7 +528,14 @@ class SendRcsCampaignGroups implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setStartAt($start_at)
     {
         if (is_null($start_at)) {
-            throw new \InvalidArgumentException('non-nullable start_at cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'start_at');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('start_at', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['start_at'] = $start_at;
 
@@ -538,7 +545,7 @@ class SendRcsCampaignGroups implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets options
      *
-     * @return \BSG\\Api\\V2\Model\Options
+     * @return \BSG\Api\V2\Model\Options
      */
     public function getOptions()
     {
@@ -548,7 +555,7 @@ class SendRcsCampaignGroups implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets options
      *
-     * @param \BSG\\Api\\V2\Model\Options $options options
+     * @param \BSG\Api\V2\Model\Options $options options
      *
      * @return self
      */
@@ -565,7 +572,7 @@ class SendRcsCampaignGroups implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets alternative_channel
      *
-     * @return \BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel|null
+     * @return \BSG\Api\V2\Model\SendRcsCampaignGroupsAlternativeChannel|null
      */
     public function getAlternativeChannel()
     {
@@ -575,7 +582,7 @@ class SendRcsCampaignGroups implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets alternative_channel
      *
-     * @param \BSG\\Api\\V2\Model\SendRcsCampaignGroupsAlternativeChannel|null $alternative_channel alternative_channel
+     * @param \BSG\Api\V2\Model\SendRcsCampaignGroupsAlternativeChannel|null $alternative_channel alternative_channel
      *
      * @return self
      */

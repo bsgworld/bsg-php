@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace BSG\\Api\\V2\Model;
+namespace BSG\Api\V2\Model;
 
 use \ArrayAccess;
-use \BSG\\Api\\V2\ObjectSerializer;
+use \BSG\Api\V2\ObjectSerializer;
 
 /**
  * ContactSchema Class Doc Comment
  *
  * @category Class
  * @description Contact data
- * @package  BSG\\Api\\V2
+ * @package  BSG\Api\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,9 +60,9 @@ class ContactSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'phone' => 'int',
-        'fields' => 'array<string,string>[]',
+        'fields' => '\BSG\Api\V2\Model\ContactFieldValuesObject',
         'created_at' => '\DateTime',
-        'groups' => '\BSG\\Api\\V2\Model\ContactGroupSchema[]',
+        'groups' => '\BSG\Api\V2\Model\ContactGroups',
         'hlr_status' => 'string',
         'hlr_last_check' => '\DateTime'
     ];
@@ -414,7 +414,7 @@ class ContactSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fields
      *
-     * @return array<string,string>[]|null
+     * @return \BSG\Api\V2\Model\ContactFieldValuesObject|null
      */
     public function getFields()
     {
@@ -424,7 +424,7 @@ class ContactSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fields
      *
-     * @param array<string,string>[]|null $fields List of contact custom field values
+     * @param \BSG\Api\V2\Model\ContactFieldValuesObject|null $fields fields
      *
      * @return self
      */
@@ -468,7 +468,7 @@ class ContactSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets groups
      *
-     * @return \BSG\\Api\\V2\Model\ContactGroupSchema[]|null
+     * @return \BSG\Api\V2\Model\ContactGroups|null
      */
     public function getGroups()
     {
@@ -478,7 +478,7 @@ class ContactSchema implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets groups
      *
-     * @param \BSG\\Api\\V2\Model\ContactGroupSchema[]|null $groups contains embedded data of the list where the contact is added
+     * @param \BSG\Api\V2\Model\ContactGroups|null $groups groups
      *
      * @return self
      */
@@ -487,8 +487,6 @@ class ContactSchema implements ModelInterface, ArrayAccess, \JsonSerializable
         if (is_null($groups)) {
             throw new \InvalidArgumentException('non-nullable groups cannot be null');
         }
-
-
         $this->container['groups'] = $groups;
 
         return $this;
