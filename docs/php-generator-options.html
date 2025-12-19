@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Generator Options | OpenAPI Generator v7.12.0</title>
+    <style>
+        :root {
+            --bg: #0a2032;
+            --bg-card: #122a42;
+            --bg-alt: #1a3a52;
+            --text: #e2e8f0;
+            --text-muted: #a0aec0;
+            --accent: #63b3ed;
+            --accent2: #68d391;
+            --code: #fbd38d;
+            --code-bg: #2d3748;
+            --border: #4a5568;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 30px 20px;
+        }
+
+        .container { max-width: 1300px; margin: 0 auto; }
+
+        h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 5px; }
+        h2 { font-size: 1.1rem; color: var(--text); margin: 30px 0 15px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+
+        .subtitle { color: var(--text-muted); margin-bottom: 25px; font-size: 0.9rem; }
+        .subtitle a { color: var(--accent); }
+
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 14px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.8rem;
+            color: var(--code);
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 25px;
+        }
+
+        .example-box h3 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .example-box code { color: var(--code); background: var(--code-bg); padding: 1px 5px; border-radius: 3px; }
+
+        .search-input {
+            width: 100%;
+            max-width: 350px;
+            padding: 8px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .search-input:focus { outline: none; border-color: var(--accent); }
+
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+
+        th {
+            text-align: left;
+            padding: 10px 12px;
+            background: var(--bg-alt);
+            border-bottom: 2px solid var(--border);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+        tr:hover { background: rgba(99,179,237,0.1); }
+
+        .col-name { min-width: 320px; width: 320px; }
+
+        .opt-name {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-weight: 600;
+            color: #fff;
+            font-size: 0.85rem;
+        }
+
+        .opt-usage {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.75rem;
+            color: var(--code);
+            background: var(--code-bg);
+            padding: 3px 6px;
+            border-radius: 3px;
+            display: block;
+            margin-bottom: 6px;
+            word-break: break-all;
+        }
+
+        .opt-desc { color: var(--text); }
+        .opt-desc-uk { color: var(--text-muted); font-size: 0.8rem; margin-top: 4px; }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 5px;
+            font-weight: 500;
+        }
+        .badge-type { background: #f97316; color: #1e3a8a; font-weight: 700; }
+        .badge-default { background: #fb923c; color: #1e3a8a; font-weight: 700; }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 600px) {
+            .col-name { width: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OpenAPI Generator — PHP Options</h1>
+        <p class="subtitle">
+            v7.12.0 |
+            <a href="https://openapi-generator.tech/docs/generators/php/" target="_blank">PHP Docs</a> |
+            <a href="https://openapi-generator.tech/docs/globals/" target="_blank">Global Properties</a>
+        </p>
+
+        <div class="example-box">
+            <h3>Використання параметрів</h3>
+            <p style="margin-bottom:10px"><strong>Config Options</strong> — через <code>-p</code> або <code>--additional-properties</code>:</p>
+            <pre>docker run --rm openapitools/openapi-generator-cli:v7.12.0 generate \
+    -i openapi.json -g php -o ./generated \
+    -p 'invokerPackage=BSG\Api\V2,composerPackageName=bsg/php-sdk,licenseName=MIT'
+
+# або кожен окремо:
+    --additional-properties=invokerPackage=BSG\Api\V2 \
+    --additional-properties=composerPackageName=bsg/php-sdk</pre>
+            <p style="margin-top:15px"><strong>Global Properties</strong> — через <code>--global-property</code> або окремий флаг:</p>
+            <pre># через --global-property:
+    --global-property=generateAliasAsModel=true,apiTests=false
+
+# або окремим флагом:
+    --generate-alias-as-model</pre>
+        </div>
+
+        <h2>Global Properties</h2>
+        <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.85rem">Глобальні параметри що впливають на всі генератори</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-name">Параметр</th>
+                    <th>Опис</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="opt-name">generateAliasAsModel</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">false</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">--global-property generateAliasAsModel=true</code>
+                        <div class="opt-desc">Генерувати класи для alias-типів (array, map).</div>
+                        <div class="opt-desc-uk">Якщо schema це <code>type: array</code> без <code>false</code> — клас не створюється, тільки type hint. З <code>true</code> — повноцінний клас <code>HlrBulkRequest</code>.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="opt-name">apiTests</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">--global-property apiTests=false</code>
+                        <div class="opt-desc">Генерувати тести для API класів.</div>
+                        <div class="opt-desc-uk">Створює <code>test/Api/SmsApiTest.php</code> з заглушками. <code>false</code> — не генерувати (менше файлів).</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="opt-name">modelTests</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">--global-property modelTests=false</code>
+                        <div class="opt-desc">Генерувати тести для Model класів.</div>
+                        <div class="opt-desc-uk">Створює <code>test/Model/MessageTest.php</code>. Зазвичай не потрібні — це просто DTO.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="opt-name">apiDocs</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">--global-property apiDocs=false</code>
+                        <div class="opt-desc">Генерувати документацію для API.</div>
+                        <div class="opt-desc-uk">Створює <code>docs/Api/SmsApi.md</code> з описом методів. <code>false</code> — якщо є своя документація.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="opt-name">modelDocs</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">--global-property modelDocs=false</code>
+                        <div class="opt-desc">Генерувати документацію для моделей.</div>
+                        <div class="opt-desc-uk">Створює <code>docs/Model/Message.md</code> з таблицею полів.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="opt-name">verbose</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">false</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">--global-property verbose=true</code>
+                        <div class="opt-desc">Детальний вивід логів.</div>
+                        <div class="opt-desc-uk">Показує кожен згенерований файл та рішення генератора. Корисно для debug.</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>PHP Config Options</h2>
+        <p style="color:var(--text-muted);margin-bottom:15px;font-size:0.85rem">Параметри специфічні для PHP генератора</p>
+
+        <input type="text" class="search-input" placeholder="Пошук..." id="search" aria-label="Пошук параметрів">
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-name">Параметр</th>
+                    <th>Опис</th>
+                </tr>
+            </thead>
+            <tbody id="options">
+                <tr data-search="invokerpackage namespace">
+                    <td>
+                        <span class="opt-name">invokerPackage</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'invokerPackage=BSG\Api\V2'</code>
+                        <div class="opt-desc">Кореневий namespace для всіх класів.</div>
+                        <div class="opt-desc-uk">→ <code>BSG\Api\V2\Api\SmsApi</code>, <code>BSG\Api\V2\Model\Message</code>, <code>BSG\Api\V2\Configuration</code></div>
+                    </td>
+                </tr>
+                <tr data-search="composerpackagename composer">
+                    <td>
+                        <span class="opt-name">composerPackageName</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'composerPackageName=bsg/sdk'</code>
+                        <div class="opt-desc">Назва пакету для composer.json (vendor/package).</div>
+                        <div class="opt-desc-uk">→ <code>"name": "bsg/sdk"</code> — те, що пишуть в <code>composer require bsg/sdk</code></div>
+                    </td>
+                </tr>
+                <tr data-search="packagename readme title">
+                    <td>
+                        <span class="opt-name">packageName</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'packageName=BSG API Client'</code>
+                        <div class="opt-desc">Людська назва пакету для README.</div>
+                        <div class="opt-desc-uk">→ <code># BSG API Client</code> — заголовок README.md</div>
+                    </td>
+                </tr>
+                <tr data-search="artifacturl homepage">
+                    <td>
+                        <span class="opt-name">artifactUrl</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'artifactUrl=https://bsg.world/'</code>
+                        <div class="opt-desc">Homepage в composer.json.</div>
+                        <div class="opt-desc-uk">→ <code>"homepage": "https://bsg.world/"</code> — посилання на Packagist</div>
+                    </td>
+                </tr>
+                <tr data-search="artifactversion version">
+                    <td>
+                        <span class="opt-name">artifactVersion</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'artifactVersion=1.0.0'</code>
+                        <div class="opt-desc">Версія пакету (зазвичай не потрібно).</div>
+                        <div class="opt-desc-uk">Composer бере версію з git tag, цей параметр для README/docs.</div>
+                    </td>
+                </tr>
+                <tr data-search="licensename license mit">
+                    <td>
+                        <span class="opt-name">licenseName</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'licenseName=MIT'</code>
+                        <div class="opt-desc">Ліцензія для composer.json.</div>
+                        <div class="opt-desc-uk">→ <code>"license": "MIT"</code> — SPDX ідентифікатор (MIT, Apache-2.0, GPL-3.0)</div>
+                    </td>
+                </tr>
+                <tr data-search="developerorganization author">
+                    <td>
+                        <span class="opt-name">developerOrganization</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'developerOrganization=BSG World'</code>
+                        <div class="opt-desc">Автор/організація в composer.json.</div>
+                        <div class="opt-desc-uk">→ <code>"authors": [{"name": "BSG World"}]</code></div>
+                    </td>
+                </tr>
+                <tr data-search="developerorganizationurl">
+                    <td>
+                        <span class="opt-name">developerOrganizationUrl</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'developerOrganizationUrl=https://bsg.world'</code>
+                        <div class="opt-desc">URL автора в composer.json.</div>
+                        <div class="opt-desc-uk">→ <code>"authors": [{"homepage": "https://bsg.world"}]</code></div>
+                    </td>
+                </tr>
+                <tr data-search="library guzzle psr-18 http">
+                    <td>
+                        <span class="opt-name">library</span>
+                        <span class="badge badge-type">string</span>
+                        <span class="badge badge-default">guzzle</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'library=psr-18'</code>
+                        <div class="opt-desc">HTTP клієнт для запитів.</div>
+                        <div class="opt-desc-uk"><code>guzzle</code> — жорстка залежність на Guzzle 7. <code>psr-18</code> — будь-який PSR-18 клієнт (Symfony, Buzz, etc).</div>
+                    </td>
+                </tr>
+                <tr data-search="srcbasepath lib src directory">
+                    <td>
+                        <span class="opt-name">srcBasePath</span>
+                        <span class="badge badge-type">string</span>
+                        <span class="badge badge-default">lib</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'srcBasePath=src'</code>
+                        <div class="opt-desc">Директорія для згенерованого коду.</div>
+                        <div class="opt-desc-uk"><code>lib</code> → <code>lib/Api/</code>, <code>lib/Model/</code>. <code>src</code> → <code>src/Api/</code>, <code>src/Model/</code></div>
+                    </td>
+                </tr>
+                <tr data-search="apipackage api namespace">
+                    <td>
+                        <span class="opt-name">apiPackage</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'apiPackage=Services'</code>
+                        <div class="opt-desc">Під-namespace для API класів.</div>
+                        <div class="opt-desc-uk">За замовчуванням <code>Api</code> → <code>BSG\Api\V2\Api\SmsApi</code>. Якщо <code>Services</code> → <code>BSG\Api\V2\Services\SmsApi</code></div>
+                    </td>
+                </tr>
+                <tr data-search="modelpackage model namespace">
+                    <td>
+                        <span class="opt-name">modelPackage</span>
+                        <span class="badge badge-type">string</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'modelPackage=DTO'</code>
+                        <div class="opt-desc">Під-namespace для Model класів.</div>
+                        <div class="opt-desc-uk">За замовчуванням <code>Model</code>. Якщо <code>DTO</code> → <code>BSG\Api\V2\DTO\Message</code></div>
+                    </td>
+                </tr>
+                <tr data-search="variablenamingconvention snake camel">
+                    <td>
+                        <span class="opt-name">variableNamingConvention</span>
+                        <span class="badge badge-type">string</span>
+                        <span class="badge badge-default">snake_case</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'variableNamingConvention=camelCase'</code>
+                        <div class="opt-desc">Стиль іменування змінних в коді.</div>
+                        <div class="opt-desc-uk"><code>snake_case</code> → <code>$user_name</code>. <code>camelCase</code> → <code>$userName</code>. PSR-12 рекомендує camelCase.</div>
+                    </td>
+                </tr>
+                <tr data-search="hidegenerationtimestamp timestamp">
+                    <td>
+                        <span class="opt-name">hideGenerationTimestamp</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'hideGenerationTimestamp=false'</code>
+                        <div class="opt-desc">Приховати timestamp в згенерованих файлах.</div>
+                        <div class="opt-desc-uk"><code>true</code> — чистіший git diff (немає змін дати при перегенерації). <code>false</code> — додає коментар коли згенеровано.</div>
+                    </td>
+                </tr>
+                <tr data-search="sortparamsbyrequiredflag sort required">
+                    <td>
+                        <span class="opt-name">sortParamsByRequiredFlag</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'sortParamsByRequiredFlag=false'</code>
+                        <div class="opt-desc">Сортувати параметри методів: required першими.</div>
+                        <div class="opt-desc-uk"><code>true</code> → <code>send($to, $text, $from = null)</code>. <code>false</code> — порядок як в OpenAPI spec.</div>
+                    </td>
+                </tr>
+                <tr data-search="sortmodelpropertiesbyrequiredflag">
+                    <td>
+                        <span class="opt-name">sortModelPropertiesByRequiredFlag</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'sortModelPropertiesByRequiredFlag=false'</code>
+                        <div class="opt-desc">Сортувати властивості моделей: required першими.</div>
+                        <div class="opt-desc-uk">Впливає на порядок у конструкторі та документації. <code>false</code> — порядок як в OpenAPI schema.</div>
+                    </td>
+                </tr>
+                <tr data-search="ensureuniqueparams unique">
+                    <td>
+                        <span class="opt-name">ensureUniqueParams</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'ensureUniqueParams=false'</code>
+                        <div class="opt-desc">Гарантувати унікальність імен параметрів.</div>
+                        <div class="opt-desc-uk">Якщо в path і query є <code>id</code> — додасть суфікс: <code>$id</code>, <code>$id2</code>. Рідко потрібно вимикати.</div>
+                    </td>
+                </tr>
+                <tr data-search="prependformorbodyparameters form body">
+                    <td>
+                        <span class="opt-name">prependFormOrBodyParameters</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">false</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'prependFormOrBodyParameters=true'</code>
+                        <div class="opt-desc">Body/form параметри на початку сигнатури.</div>
+                        <div class="opt-desc-uk"><code>false</code> → <code>create($id, $body)</code>. <code>true</code> → <code>create($body, $id)</code>. Зазвичай не потрібно.</div>
+                    </td>
+                </tr>
+                <tr data-search="legacydiscriminatorbehavior discriminator oneof">
+                    <td>
+                        <span class="opt-name">legacyDiscriminatorBehavior</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'legacyDiscriminatorBehavior=false'</code>
+                        <div class="opt-desc">Стратегія обробки discriminator для oneOf/anyOf.</div>
+                        <div class="opt-desc-uk"><code>true</code> — старий стиль (всі варіанти в одному класі). <code>false</code> — сучасний (окремі класи + interface). Для OAS 3.x краще <code>false</code>.</div>
+                    </td>
+                </tr>
+                <tr data-search="disallowadditionalpropertiesifnotpresent additional">
+                    <td>
+                        <span class="opt-name">disallowAdditionalPropertiesIfNotPresent</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">true</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'disallowAdditionalPropertiesIfNotPresent=false'</code>
+                        <div class="opt-desc">Поведінка additionalProperties якщо не вказано в schema.</div>
+                        <div class="opt-desc-uk"><code>true</code> — заборонити додаткові поля. <code>false</code> — дозволити (як в JSON Schema spec). Якщо API повертає невідомі поля — ставте <code>false</code>.</div>
+                    </td>
+                </tr>
+                <tr data-search="enumunknowndefaultcase enum fallback">
+                    <td>
+                        <span class="opt-name">enumUnknownDefaultCase</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">false</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'enumUnknownDefaultCase=true'</code>
+                        <div class="opt-desc">Додати fallback для невідомих enum значень.</div>
+                        <div class="opt-desc-uk"><code>true</code> → enum матиме <code>UNKNOWN_DEFAULT_OPEN_API</code>. Корисно якщо API може повернути нове значення enum, яке SDK ще не знає.</div>
+                    </td>
+                </tr>
+                <tr data-search="allowunicodeidentifiers unicode">
+                    <td>
+                        <span class="opt-name">allowUnicodeIdentifiers</span>
+                        <span class="badge badge-type">bool</span>
+                        <span class="badge badge-default">false</span>
+                    </td>
+                    <td>
+                        <code class="opt-usage">-p 'allowUnicodeIdentifiers=true'</code>
+                        <div class="opt-desc">Дозволити Unicode в іменах (змінних, класів).</div>
+                        <div class="opt-desc-uk">Якщо OpenAPI має <code>статус</code> — з <code>false</code> перейменує на <code>status</code>, з <code>true</code> залишить <code>$статус</code>. Зазвичай не потрібно.</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer>
+            <a href="https://openapi-generator.tech/docs/generators/php/">PHP Generator</a> |
+            <a href="https://openapi-generator.tech/docs/globals/">Global Properties</a> |
+            <a href="https://github.com/OpenAPITools/openapi-generator">GitHub</a> |
+            BSG PHP SDK
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('search').addEventListener('input', e => {
+            const q = e.target.value.toLowerCase();
+            document.querySelectorAll('#options tr').forEach(r => {
+                const t = (r.dataset.search + ' ' + r.textContent).toLowerCase();
+                r.classList.toggle('hidden', q && !t.includes(q));
+            });
+        });
+    </script>
+</body>
+</html>

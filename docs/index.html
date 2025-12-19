@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BSG PHP SDK - Documentation</title>
     <style>
+        :root {
+            --bg: #0a2032;
+            --bg-card: #122a42;
+            --bg-alt: #1a3a52;
+            --text: #e2e8f0;
+            --text-muted: #a0aec0;
+            --accent: #63b3ed;
+            --accent2: #68d391;
+            --accent-red: #f56565;
+            --code: #fbd38d;
+            --border: #234;
+        }
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,50 +25,50 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text);
             max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
-            background: #f8f9fa;
+            background: var(--bg);
         }
         h1 {
-            color: #1a1a2e;
+            color: var(--accent);
             margin-bottom: 10px;
             font-size: 2.5em;
         }
         h2 {
-            color: #16213e;
+            color: var(--text);
             margin-top: 50px;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #e94560;
+            border-bottom: 2px solid var(--accent-red);
         }
         h3 {
-            color: #0f3460;
+            color: var(--accent);
             margin-top: 25px;
             margin-bottom: 15px;
         }
         h4 {
-            color: #16213e;
+            color: var(--text);
             margin-top: 20px;
             margin-bottom: 10px;
         }
         .subtitle {
-            color: #666;
+            color: var(--text-muted);
             font-size: 1.2em;
             margin-bottom: 30px;
         }
         .nav {
-            background: white;
+            background: var(--bg-card);
             border-radius: 10px;
             padding: 20px;
             margin: 30px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
         }
         .nav-title {
             font-weight: bold;
             margin-bottom: 15px;
-            color: #1a1a2e;
+            color: var(--text);
         }
         .nav ul {
             list-style: none;
@@ -65,7 +77,7 @@
             gap: 10px;
         }
         .nav a {
-            color: #e94560;
+            color: var(--accent);
             text-decoration: none;
         }
         .nav a:hover {
@@ -78,144 +90,120 @@
             margin: 30px 0;
         }
         .package-card {
-            background: white;
+            background: var(--bg-card);
             border-radius: 10px;
             padding: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-left: 4px solid #e94560;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent-red);
         }
         .package-card.v2 {
-            border-left-color: #28a745;
+            border-left-color: var(--accent2);
         }
         .package-card h4 {
-            color: #e94560;
+            color: var(--accent-red);
             margin-bottom: 10px;
             margin-top: 0;
         }
         .package-card.v2 h4 {
-            color: #28a745;
+            color: var(--accent2);
         }
         .package-card code {
             display: block;
-            background: #f1f1f1;
+            background: var(--bg-alt);
             padding: 8px 12px;
             border-radius: 5px;
             margin: 10px 0;
             font-size: 0.9em;
+            color: var(--code);
         }
         .package-card .namespace {
-            color: #666;
+            color: var(--text-muted);
             font-size: 0.9em;
         }
+        .package-card p {
+            color: var(--text-muted);
+        }
         pre {
-            background: #1a1a2e;
-            color: #f8f8f2;
+            background: var(--bg-alt);
+            color: var(--code);
             padding: 20px;
             border-radius: 8px;
             overflow-x: auto;
             margin: 15px 0;
+            border: 1px solid var(--border);
         }
         code {
             font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
             font-size: 0.9em;
         }
         .inline-code {
-            background: #e9ecef;
+            background: var(--bg-alt);
             padding: 2px 8px;
             border-radius: 4px;
-            color: #e94560;
-        }
-        .step {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            margin: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .step-number {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background: #e94560;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
-            font-weight: bold;
-            margin-right: 10px;
+            color: var(--accent);
         }
         .note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
+            background: rgba(251, 211, 141, 0.1);
+            border-left: 4px solid #fbd38d;
             padding: 15px 20px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
         }
         .note-title {
             font-weight: bold;
-            color: #856404;
+            color: #fbd38d;
         }
         .info {
-            background: #d1ecf1;
-            border-left: 4px solid #17a2b8;
+            background: rgba(99, 179, 237, 0.1);
+            border-left: 4px solid var(--accent);
             padding: 15px 20px;
             margin: 20px 0;
             border-radius: 0 8px 8px 0;
         }
         .info-title {
             font-weight: bold;
-            color: #0c5460;
-        }
-        .warning {
-            background: #f8d7da;
-            border-left: 4px solid #dc3545;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .warning-title {
-            font-weight: bold;
-            color: #721c24;
+            color: var(--accent);
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            background: white;
+            background: var(--bg-card);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
         }
         th, td {
             padding: 15px;
             text-align: left;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border);
         }
         th {
-            background: #1a1a2e;
-            color: white;
+            background: var(--bg-alt);
+            color: var(--text);
         }
         tr:hover {
-            background: #f8f9fa;
+            background: rgba(99, 179, 237, 0.1);
         }
         .tree {
-            background: white;
+            background: var(--bg-card);
             border-radius: 8px;
             padding: 20px;
             font-family: monospace;
             white-space: pre;
             overflow-x: auto;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+            color: var(--code);
         }
         .workflow-steps {
             counter-reset: step;
         }
         .workflow-step {
-            background: white;
+            background: var(--bg-card);
             border-radius: 10px;
             padding: 20px;
             margin: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
             position: relative;
             padding-left: 60px;
         }
@@ -226,7 +214,7 @@
             left: 20px;
             width: 30px;
             height: 30px;
-            background: #e94560;
+            background: var(--accent-red);
             color: white;
             border-radius: 50%;
             text-align: center;
@@ -234,25 +222,26 @@
             font-weight: bold;
         }
         .todo-list {
-            background: white;
+            background: var(--bg-card);
             border-radius: 10px;
             padding: 25px;
             margin: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
         }
         .todo-item {
             padding: 8px 0;
             display: flex;
             align-items: center;
             gap: 10px;
+            color: var(--text-muted);
         }
         .todo-item input[type="checkbox"] {
             width: 18px;
             height: 18px;
         }
-        .priority-high { border-left: 4px solid #dc3545; }
-        .priority-medium { border-left: 4px solid #ffc107; }
-        .priority-low { border-left: 4px solid #28a745; }
+        .priority-high { border-left: 4px solid var(--accent-red); }
+        .priority-medium { border-left: 4px solid #fbd38d; }
+        .priority-low { border-left: 4px solid var(--accent2); }
         ul, ol {
             margin: 15px 0;
             padding-left: 25px;
@@ -261,7 +250,7 @@
             margin: 8px 0;
         }
         a {
-            color: #e94560;
+            color: var(--accent);
         }
         .badge {
             display: inline-block;
@@ -271,12 +260,12 @@
             font-weight: bold;
         }
         .badge-v1 {
-            background: #e94560;
+            background: var(--accent-red);
             color: white;
         }
         .badge-v2 {
-            background: #28a745;
-            color: white;
+            background: var(--accent2);
+            color: #0a2032;
         }
     </style>
 </head>
@@ -295,6 +284,7 @@
             <li><a href="#git">Git Workflow</a></li>
             <li><a href="#github-actions">GitHub Actions</a></li>
             <li><a href="#sdk-generation">SDK Generation</a></li>
+            <li><a href="php-generator-options.html">Generator Options Reference</a></li>
             <li><a href="#installation">Installation</a></li>
             <li><a href="#examples">Usage Examples</a></li>
             <li><a href="#testing">Testing</a></li>
@@ -328,27 +318,34 @@
     <div class="tree">bsg-php/
 ├── .github/
 │   └── workflows/
-│       └── split.yml          # Auto-split to separate repos
+│       └── split.yml               # Auto-split to separate repos
+├── .claude/
+│   └── CLAUDE.md                   # Claude Code context
 ├── docs/
-│   └── installation.html      # Installation documentation
-├── openapi-specs/             # OpenAPI specs for SDK generation
-│   ├── bsg-api-full.json      # V1 BSG API (~672KB)
-│   └── one-api-merged.json    # V2 One-API (~1.4MB)
-├── v1/                        # BSG API SDK (bsg/php-api-sdk-v1)
+│   ├── index.html                  # This documentation
+│   └── php-generator-options.html  # PHP generator options reference
+├── openapi-specs/                  # OpenAPI specs for SDK generation
+│   ├── bsg-api-full.json           # V1 BSG API (~672KB)
+│   └── one-api-merged.json         # V2 One-API (~1.4MB)
+├── templates/                      # Custom Mustache templates
+│   ├── README.mustache             # README template
+│   ├── api_doc.mustache            # API docs template
+│   └── model_doc.mustache          # Model docs template
+├── v1/                             # BSG API SDK (bsg/php-api-sdk-v1)
 │   ├── composer.json
 │   ├── README.md
 │   └── lib/
-│       ├── Api/               # SMSApi, ViberApi, HLRApi, MNPApi...
-│       ├── Model/             # DTO classes
+│       ├── Api/                    # SMSApi, ViberApi, HLRApi, MNPApi...
+│       ├── Model/                  # DTO classes
 │       └── Configuration.php
-├── v2/                        # One-API SDK (bsg/php-api-sdk)
+├── v2/                             # One-API SDK (bsg/php-api-sdk)
 │   ├── composer.json
 │   ├── README.md
 │   └── lib/
-│       ├── Api/               # AccountApi, SmsCampaignsApi...
-│       ├── Model/             # DTO classes
+│       ├── Api/                    # AccountApi, SmsCampaignsApi...
+│       ├── Model/                  # DTO classes
 │       └── Configuration.php
-├── composer.json              # Monorepo orchestrator
+├── composer.json                   # Monorepo orchestrator
 ├── .gitignore
 ├── LICENSE
 └── README.md</div>
@@ -481,26 +478,30 @@
 
     <h3>OpenAPI Generator Versions</h3>
     <ul>
-        <li><code class="inline-code">v7.10.0</code> &rarr; PHP 7.4+ (recommended)</li>
-        <li><code class="inline-code">v7.12.0</code> &rarr; PHP 7.4+</li>
+        <li><code class="inline-code">v7.10.0</code> &rarr; PHP 7.4+ | PHP 8.0 (recommended)</li>
+        <li><code class="inline-code">v7.12.0</code> &rarr; PHP 7.4+ | PHP 8.0 (used)</li>
         <li><code class="inline-code">v7.17.0</code> &rarr; PHP 8.1+ (latest, October 2025)</li>
     </ul>
 
     <h3>Generate V1 SDK (BSG API)</h3>
     <p>Run from monorepo root:</p>
-    <pre><code># Generate to temporary directory
-docker run --rm \
+    <pre><code>docker run --rm \
     -v "$(pwd)":/workspace \
     openapitools/openapi-generator-cli:v7.12.0 generate \
     -i /workspace/openapi-specs/bsg-api-full.json \
     -g php \
     -o /workspace/v1-generated \
-    --git-user-id "bsgworld" \
+    -t /workspace/templates \
+    --git-user-id "bsg" \
     --git-repo-id "php-api-sdk-v1" \
     -p 'invokerPackage=BSG\Api\V1' \
     -p 'packageName=BSG API PHP Client' \
     -p 'composerPackageName=bsg/php-api-sdk-v1' \
-    --skip-validate-spec
+    -p 'artifactUrl=https://bsg.world/' \
+    -p 'licenseName=MIT' \
+    -p 'developerOrganization=BSG World' \
+    -p 'developerOrganizationUrl=https://bsg.world' \
+    --global-property generateAliasAsModel=true
 
 # Move generated files
 rm -rf v1/lib && mv v1-generated/lib v1/
@@ -510,19 +511,23 @@ rm -rf v1-generated</code></pre>
 
     <h3>Generate V2 SDK (One-API)</h3>
     <p>Run from monorepo root:</p>
-    <pre><code># Generate to temporary directory
-docker run --rm \
+    <pre><code>docker run --rm \
     -v "$(pwd)":/workspace \
     openapitools/openapi-generator-cli:v7.12.0 generate \
     -i /workspace/openapi-specs/one-api-merged.json \
     -g php \
     -o /workspace/v2-generated \
-    --git-user-id "bsgworld" \
+    -t /workspace/templates \
+    --git-user-id "bsg" \
     --git-repo-id "php-api-sdk" \
     -p 'invokerPackage=BSG\Api\V2' \
     -p 'packageName=BSG One-API PHP Client' \
     -p 'composerPackageName=bsg/php-api-sdk' \
-    --skip-validate-spec
+    -p 'artifactUrl=https://bsg.world/' \
+    -p 'licenseName=MIT' \
+    -p 'developerOrganization=BSG World' \
+    -p 'developerOrganizationUrl=https://bsg.world' \
+    --global-property generateAliasAsModel=true
 
 # Move generated files
 rm -rf v2/lib && mv v2-generated/lib v2/
@@ -531,6 +536,7 @@ cp v2-generated/README.md v2/
 rm -rf v2-generated</code></pre>
 
     <h3>Generator Parameters</h3>
+    <p>See <a href="php-generator-options.html">PHP Generator Options</a> for full list with detailed descriptions.</p>
     <table>
         <tr>
             <th>Parameter</th>
@@ -539,8 +545,8 @@ rm -rf v2-generated</code></pre>
         </tr>
         <tr>
             <td><code class="inline-code">invokerPackage</code></td>
-            <td>Namespace for PHP classes</td>
-            <td><code class="inline-code">BSG\\Api\\V1</code></td>
+            <td>Root namespace for PHP classes</td>
+            <td><code class="inline-code">BSG\Api\V1</code></td>
         </tr>
         <tr>
             <td><code class="inline-code">composerPackageName</code></td>
@@ -548,24 +554,24 @@ rm -rf v2-generated</code></pre>
             <td><code class="inline-code">bsg/php-api-sdk-v1</code></td>
         </tr>
         <tr>
-            <td><code class="inline-code">packageName</code></td>
-            <td>Human-readable package name</td>
-            <td><code class="inline-code">BSG API PHP Client</code></td>
+            <td><code class="inline-code">artifactUrl</code></td>
+            <td>Homepage URL for composer.json</td>
+            <td><code class="inline-code">https://bsg.world/</code></td>
         </tr>
         <tr>
-            <td><code class="inline-code">--git-user-id</code></td>
-            <td>GitHub organization</td>
-            <td><code class="inline-code">bsgworld</code></td>
+            <td><code class="inline-code">licenseName</code></td>
+            <td>License identifier</td>
+            <td><code class="inline-code">MIT</code></td>
         </tr>
         <tr>
-            <td><code class="inline-code">--git-repo-id</code></td>
-            <td>GitHub repository name</td>
-            <td><code class="inline-code">php-api-sdk-v1</code></td>
+            <td><code class="inline-code">-t</code></td>
+            <td>Custom templates directory</td>
+            <td><code class="inline-code">/workspace/templates</code></td>
         </tr>
         <tr>
-            <td><code class="inline-code">--skip-validate-spec</code></td>
-            <td>Skip OpenAPI validation</td>
-            <td>-</td>
+            <td><code class="inline-code">--global-property generateAliasAsModel</code></td>
+            <td>Generate classes for alias types (array)</td>
+            <td><code class="inline-code">true</code></td>
         </tr>
     </table>
 
@@ -671,33 +677,34 @@ php test.php</code></pre>
 
     <div class="todo-list priority-high">
         <h4>High Priority</h4>
-        <div class="todo-item"><input type="checkbox" disabled> Commit new files to monorepo branch</div>
-        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">docs/installation.html</code> - Installation docs</div>
-        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">openapi-specs/bsg-api-full.json</code> - V1 OpenAPI spec</div>
-        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">openapi-specs/one-api-merged.json</code> - V2 OpenAPI spec</div>
-        <div class="todo-item"><input type="checkbox" disabled> Create GitHub repositories:</div>
-        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">bsgworld/php-api-sdk</code> (for V2 One-API)</div>
-        <div class="todo-item" style="padding-left: 30px;"><input type="checkbox" disabled> <code class="inline-code">bsgworld/php-api-sdk-v1</code> (for V1 BSG API)</div>
-        <div class="todo-item"><input type="checkbox" disabled> Add <code class="inline-code">SPLIT_TOKEN</code> secret to bsg-php repository settings</div>
-        <div class="todo-item"><input type="checkbox" disabled> Create tag <code class="inline-code">v1.0.0-beta</code> for first release</div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Commit new files to monorepo branch</label></div>
+        <div class="todo-item" style="padding-left: 30px;"><label><input type="checkbox" disabled> <code class="inline-code">docs/installation.html</code> - Installation docs</label></div>
+        <div class="todo-item" style="padding-left: 30px;"><label><input type="checkbox" disabled> <code class="inline-code">openapi-specs/bsg-api-full.json</code> - V1 OpenAPI spec</label></div>
+        <div class="todo-item" style="padding-left: 30px;"><label><input type="checkbox" disabled> <code class="inline-code">openapi-specs/one-api-merged.json</code> - V2 OpenAPI spec</label></div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Create GitHub repositories:</label></div>
+        <div class="todo-item" style="padding-left: 30px;"><label><input type="checkbox" disabled> <code class="inline-code">bsgworld/php-api-sdk</code> (for V2 One-API)</label></div>
+        <div class="todo-item" style="padding-left: 30px;"><label><input type="checkbox" disabled> <code class="inline-code">bsgworld/php-api-sdk-v1</code> (for V1 BSG API)</label></div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Add <code class="inline-code">SPLIT_TOKEN</code> secret to bsg-php repository settings</label></div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Create tag <code class="inline-code">v1.0.0-beta</code> for first release</label></div>
     </div>
 
     <div class="todo-list priority-medium">
         <h4>Medium Priority</h4>
-        <div class="todo-item"><input type="checkbox" disabled> Test SDK installation from monorepo</div>
-        <div class="todo-item"><input type="checkbox" disabled> Test auto-split workflow</div>
-        <div class="todo-item"><input type="checkbox" disabled> Register packages on Packagist</div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Test SDK installation from monorepo</label></div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Test auto-split workflow</label></div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Register packages on Packagist</label></div>
     </div>
 
     <div class="todo-list priority-low">
         <h4>Low Priority</h4>
-        <div class="todo-item"><input type="checkbox" disabled> Add PHPUnit tests for SDK</div>
-        <div class="todo-item"><input type="checkbox" disabled> Setup CI/CD for auto-tests</div>
-        <div class="todo-item"><input type="checkbox" disabled> Create CHANGELOG.md</div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Add PHPUnit tests for SDK</label></div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Setup CI/CD for auto-tests</label></div>
+        <div class="todo-item"><label><input type="checkbox" disabled> Create CHANGELOG.md</label></div>
     </div>
 
     <h2>Related Links</h2>
     <ul>
+        <li><strong>PHP Generator Options:</strong> <a href="php-generator-options.html">Full parameter reference</a></li>
         <li><strong>GitHub Organization:</strong> <a href="https://github.com/bsgworld">github.com/bsgworld</a></li>
         <li><strong>Website:</strong> <a href="https://bsg.world">bsg.world</a></li>
         <li><strong>Developer Docs:</strong> <a href="https://bsg.world/developers">bsg.world/developers</a></li>
