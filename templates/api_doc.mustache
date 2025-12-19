@@ -47,15 +47,38 @@ $apiInstance = new {{invokerPackage}}\Api\{{classname}}(
     $config{{/hasAuthMethods}}
 );
 {{^vendorExtensions.x-group-parameters}}
-{{#allParams}}${{paramName}} = {{{example}}}; // {{{dataType}}}{{#description}} | {{{.}}}{{/description}}
-{{/allParams}}{{#servers}}{{#-first}}
+{{#allParams}}
+{{#isPrimitiveType}}
+${{paramName}} = {{{example}}}; // {{{dataType}}}{{#description}} | {{{.}}}{{/description}}
+{{/isPrimitiveType}}
+{{^isPrimitiveType}}
+{{#isBodyParam}}
+${{paramName}} = json_decode('{{{example}}}', true); // {{{dataType}}}{{#description}} | {{{.}}}{{/description}}
+{{/isBodyParam}}
+{{^isBodyParam}}
+${{paramName}} = {{{example}}}; // {{{dataType}}}{{#description}} | {{{.}}}{{/description}}
+{{/isBodyParam}}
+{{/isPrimitiveType}}
+{{/allParams}}
+{{#servers}}{{#-first}}
 $hostIndex = 0;
 $variables = [{{#variables}}
     '{{{name}}}' => '{{{default}}}{{^default}}YOUR_VALUE{{/default}}',{{/variables}}
 ];
 {{/-first}}{{/servers}}{{/vendorExtensions.x-group-parameters}}{{#vendorExtensions.x-group-parameters}}
 $associative_array = [
-{{#allParams}}    '{{paramName}}' => {{{example}}}, // {{{dataType}}}{{#description}} | {{{.}}}{{/description}}
+{{#allParams}}
+{{#isPrimitiveType}}
+    '{{paramName}}' => {{{example}}}, // {{{dataType}}}{{#description}} | {{{.}}}{{/description}}
+{{/isPrimitiveType}}
+{{^isPrimitiveType}}
+{{#isBodyParam}}
+    '{{paramName}}' => json_decode('{{{example}}}', true), // {{{dataType}}}{{#description}} | {{{.}}}{{/description}}
+{{/isBodyParam}}
+{{^isBodyParam}}
+    '{{paramName}}' => {{{example}}}, // {{{dataType}}}{{#description}} | {{{.}}}{{/description}}
+{{/isBodyParam}}
+{{/isPrimitiveType}}
 {{/allParams}}
 {{#servers}}{{#-first}}
     'hostIndex' => 0,
