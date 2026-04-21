@@ -1,6 +1,3 @@
 .idea
 vendor
-composer.lock
-composer.phar
-phpunit-5.7.14.phar
 .DS_Store
